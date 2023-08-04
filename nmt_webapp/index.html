@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Phần mềm dịch máy đa ngôn ngữ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">  
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .ui-resizable-se {
+        bottom: 17px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#tgt_text" ).resizable({
+        handles: "se"
+      });
+    } );
+    $( function() {
+      $( "#src_text" ).resizable({
+        handles: "se"
+      });
+    } );
+    $( function() {
+      $('#src_langs').change(function(){
+        swap = $('#cur_src_lang').val()
+        $('#cur_src_lang').val(this.value)
+        if ($('#cur_dst_lang').val() == $('#cur_src_lang').val()){
+          $('#dst_langs').val(swap)
+          $('#cur_dst_lang').val(swap)
+        }
+        // alert($('#cur_src_lang').val())
+      });
+      $('#dst_langs').change(function(){    
+        swap = $('#cur_dst_lang').val()
+        $('#cur_dst_lang').val(this.value)
+        if ($('#cur_src_lang').val() == $('#cur_dst_lang').val()){
+          $('#src_langs').val(swap)
+          $('#cur_src_lang').val(swap)
+        }
+        // alert($('#cur_dst_lang').val())
+      });
+      $( "#translate_button" ).button();
+      $( "#translate_button" ).click( function( event ) {
+        // alert($('#cur_src_lang').val() + '-' + $('#cur_dst_lang').val())
+          $.ajax({
+            url: "http://localhost:5000/translate",
+            type: "GET",                    
+            data: {
+              text: $( "#src_text" ).val(),
+              langpair: $('#cur_src_lang').val() + '-' + $('#cur_dst_lang').val(),
+              do_moses: true
+            },
+            success: function (result) {            
+              $( "#tgt_text" ).val(result.translation);
+            },
+            error: function (err) {
+              alert('Sorry! We can not reach translation service.');            
+            },
+          })
+      } );
+    } );
+    </script>
+  </head>
+  <body>
+  <div style="margin-top: 50px; margin-bottom: auto;">
+    <h1>Phần mềm dịch máy đa ngôn ngữ</h1>
+    </br>
+    <fieldset style="padding: 5px;">
+      <legend>Chọn ngôn ngữ nguồn-đích cần dịch </legend>
+      <div style="float: left;">
+        <div  style="display: inline-block; margin: 5px 10px;">
+          <label for="src_langs">Ngôn ngữ nguồn:</label>
+          <select name="src_langs" id="src_langs" value="zh">
+            <option value="en">Tiếng Anh</option>
+            <option value="de">Tiếng Đức</option>
+            <option value="es">Tiếng Tây Ban Nha</option>
+            <option value="ru">Tiếng Nga</option>
+            <option value="fr">Tiếng Pháp</option>
+            <option value="zh" selected="selected">Tiếng Trung</option>
+            <option value="khr">Tiếng Khmer</option>
+            <option value="la">Tiếng Lào</option>
+            <option value="kh">Tiếng Campuchia</option>
+          </select>
+          <input type="hidden" id="cur_src_lang" name="cur_src_lang" value="zh">
+        </div>
+        <div style="display: inline-block; margin: 5px 10px;">
+          <label for="dst_langs">Ngôn ngữ đích:</label>
+          <select name="dst_langs" id="dst_langs" value="en">
+            <option value="en" selected="selected">Tiếng Anh</option>
+            <option value="de">Tiếng Đức</option>
+            <option value="es">Tiếng Tây Ban Nha</option>
+            <option value="ru">Tiếng Nga</option>
+            <option value="fr">Tiếng Pháp</option>
+            <option value="zh">Tiếng Trung</option>
+            <option value="khr">Tiếng Khmer</option>
+            <option value="la">Tiếng Lào</option>
+            <option value="kh">Tiếng Campuchia</option>
+          </select>
+          <input type="hidden" id="cur_dst_lang" name="cur_dst_lang" value="en">
+        </div>
+        <div style="display: inline-block; margin: 5px 10px;">
+          <button id="translate_button" style="padding: 3px 20px; margin-bottom: 5px;">Dịch văn bản</button>
+        </div>
+      </div>
+    </fieldset>
+    </br>
+    <div style="float: left;">
+      <div style="display: inline-block; min-height: 200px;">
+        <textarea id="src_text" style="width: 500px; height: 200px; line-height: 130%" placeholder="Nhập nội dung cần dịch vào đây..."></textarea>
+      </div>
+      <div style="display: inline-block; min-height: 200px;">
+        <textarea id="tgt_text" style="width: 500px; height: 200px; line-height: 130%;" readonly></textarea>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
