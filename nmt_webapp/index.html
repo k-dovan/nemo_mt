@@ -9,24 +9,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">  
     <link rel="stylesheet" href="style.css">
-    <style>
-      .ui-resizable-se {
-        bottom: 17px;
-      }
-    </style>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+      textarea::selection {
+        background-color: rgb(0, 110, 255);
+        color: white;
+      }
+    </style>
     <script>
-    $( function() {
-      $( "#tgt_text" ).resizable({
-        handles: "se"
-      });
-    } );
-    $( function() {
-      $( "#src_text" ).resizable({
-        handles: "se"
-      });
-    } );
+    function auto_grow(src_textarea, dst_textarea) {
+      src_textarea.style.height = "0px";
+      dst_textarea.style.height = "0px";
+
+      default_height = 150;
+      max_height = (src_textarea.scrollHeight > dst_textarea.scrollHeight)? src_textarea.scrollHeight:dst_textarea.scrollHeight;
+
+      if (max_height > default_height){
+        src_textarea.style.height = (max_height) + "px";
+        dst_textarea.style.height = (max_height) + "px";
+      }
+      else {
+        src_textarea.style.height = default_height + "px";
+        dst_textarea.style.height = default_height + "px";
+      }
+    };
     $( function() {
       $('#src_langs').change(function(){
         swap = $('#cur_src_lang').val()
@@ -45,9 +52,6 @@
           $('#cur_src_lang').val(swap)
         }
         // alert($('#cur_dst_lang').val())
-      });
-      $( "#src_text" ).change(function(){
-        alert(this.scrollHeight);
       });
       $( "#translate_button" ).button();
       $( "#translate_button" ).click( function( event ) {
@@ -72,14 +76,14 @@
     </script>
   </head>
   <body>
-  <div style="margin-top: 50px; margin-bottom: auto;">
+  <div style="margin-top: 50px; margin-bottom: auto; width: 80%;">
     <h1>Phần mềm dịch máy đa ngôn ngữ</h1>
     </br>
     <fieldset style="padding: 5px;">
-      <legend>Chọn ngôn ngữ nguồn-đích cần dịch </legend>
+      <legend style="font-size: large;">Chọn ngôn ngữ nguồn-đích cần dịch </legend>
       <div style="float: left;">
         <div  style="display: inline-block; margin: 5px 10px;">
-          <label for="src_langs">Ngôn ngữ nguồn:</label>
+          <label for="src_langs" style="font-size: medium;">Ngôn ngữ nguồn:</label>
           <select name="src_langs" id="src_langs" value="zh">
             <option value="en">Tiếng Anh</option>
             <option value="de">Tiếng Đức</option>
@@ -94,7 +98,7 @@
           <input type="hidden" id="cur_src_lang" name="cur_src_lang" value="zh">
         </div>
         <div style="display: inline-block; margin: 5px 10px;">
-          <label for="dst_langs">Ngôn ngữ đích:</label>
+          <label for="dst_langs" style="font-size: medium;">Ngôn ngữ đích:</label>
           <select name="dst_langs" id="dst_langs" value="en">
             <option value="en" selected="selected">Tiếng Anh</option>
             <option value="de">Tiếng Đức</option>
@@ -114,13 +118,9 @@
       </div>
     </fieldset>
     </br>
-    <div style="float: left;">
-      <div style="display: inline-block; min-height: 200px;">
-        <textarea id="src_text" style="width: 500px; height: 200px; line-height: 130%" placeholder="Nhập nội dung cần dịch vào đây..."></textarea>
-      </div>
-      <div style="display: inline-block; min-height: 200px;">
-        <textarea id="tgt_text" style="width: 500px; height: 200px; line-height: 130%;" readonly></textarea>
-      </div>
+    <div style="display: flex;">
+      <textarea id="src_text" oninput="auto_grow(this, document.getElementById('tgt_text'))" style="margin: 3px; font-size: medium; width: 50%; height: 150px; line-height: 130%; padding: 10px; background-color: white; text-emphasis-color: blue; border-radius: 7px; border-width: 2px;" placeholder="Nhập nội dung cần dịch vào đây..."></textarea>
+      <textarea id="tgt_text" oninput="auto_grow(document.getElementById('src_text'), this)" style="margin: 3px; font-size: medium; width: 50%; height: 150px; line-height: 130%; padding: 10px; background-color: white; text-emphasis-color: blue; border-radius: 7px; border-width: 2px;" readonly></textarea>
     </div>
   </div>
   </body>
