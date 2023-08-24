@@ -1,127 +1,131 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Phần mềm dịch máy đa ngôn ngữ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">  
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <style>
-      textarea::selection {
-        background-color: rgb(0, 110, 255);
-        color: white;
-      }
-    </style>
-    <script>
-    function auto_grow(src_textarea, dst_textarea) {
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phần mềm dịch máy đa ngôn ngữ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/circular_progressbar.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <style>
+    textarea::selection {
+      background-color: rgb(0, 110, 255);
+      color: white;
+    }
+  </style>
+  <script>
+    function auto_grow(src_textarea, tgt_textarea) {
       src_textarea.style.height = "0px";
-      dst_textarea.style.height = "0px";
+      tgt_textarea.style.height = "0px";
 
       default_height = 150;
-      max_height = (src_textarea.scrollHeight > dst_textarea.scrollHeight)? src_textarea.scrollHeight:dst_textarea.scrollHeight;
+      extra_height = 5;
+      max_height = (src_textarea.scrollHeight > tgt_textarea.scrollHeight) ? src_textarea.scrollHeight : tgt_textarea.scrollHeight;
 
-      if (max_height > default_height){
-        src_textarea.style.height = (max_height) + "px";
-        dst_textarea.style.height = (max_height) + "px";
+      if (max_height > default_height) {
+        src_textarea.style.height = (max_height + extra_height) + "px";
+        tgt_textarea.style.height = (max_height + extra_height) + "px";
       }
       else {
-        src_textarea.style.height = default_height + "px";
-        dst_textarea.style.height = default_height + "px";
+        src_textarea.style.height = default_height + extra_height + "px";
+        tgt_textarea.style.height = default_height + extra_height + "px";
       }
     };
-    $( function() {
-      $('#src_langs').change(function(){
+    $(function () {
+      $('#src_langs').change(function () {
         swap = $('#cur_src_lang').val()
         $('#cur_src_lang').val(this.value)
-        if ($('#cur_dst_lang').val() == $('#cur_src_lang').val()){
-          $('#dst_langs').val(swap)
-          $('#cur_dst_lang').val(swap)
+        if ($('#cur_tgt_lang').val() == $('#cur_src_lang').val()) {
+          $('#tgt_langs').val(swap)
+          $('#cur_tgt_lang').val(swap)
         }
         // alert($('#cur_src_lang').val())
       });
-      $('#dst_langs').change(function(){    
-        swap = $('#cur_dst_lang').val()
-        $('#cur_dst_lang').val(this.value)
-        if ($('#cur_src_lang').val() == $('#cur_dst_lang').val()){
+      $('#tgt_langs').change(function () {
+        swap = $('#cur_tgt_lang').val()
+        $('#cur_tgt_lang').val(this.value)
+        if ($('#cur_src_lang').val() == $('#cur_tgt_lang').val()) {
           $('#src_langs').val(swap)
           $('#cur_src_lang').val(swap)
         }
-        // alert($('#cur_dst_lang').val())
+        // alert($('#cur_tgt_lang').val())
       });
-      $( "#translate_button" ).button();
-      $( "#translate_button" ).click( function( event ) {
-        // alert($('#cur_src_lang').val() + '-' + $('#cur_dst_lang').val())
-          $.ajax({
-            url: "http://localhost:5000/translate",
-            type: "GET",                    
-            data: {
-              text: $( "#src_text" ).val(),
-              langpair: $('#cur_src_lang').val() + '-' + $('#cur_dst_lang').val(),
-              do_moses: true
-            },
-            success: function (result) {            
-              $( "#tgt_text" ).val(result.translation);
-            },
-            error: function (err) {
-              alert('Sorry! We can not reach translation service.');            
-            },
-          })
-      } );
-    } );
-    </script>
-  </head>
-  <body>
+      $("#translate_button").button();
+      $("#translate_button").click(function (event) {
+        // alert($('#cur_src_lang').val() + '-' + $('#cur_tgt_lang').val())
+        // show progress bar
+        $("#progress_bar").show();
+        $.ajax({
+          url: "http://localhost:5000/translate",
+          type: "GET",
+          data: {
+            text: $("#src_text").val(),
+            langpair: $('#cur_src_lang').val() + '-' + $('#cur_tgt_lang').val(),
+            do_moses: true
+          },
+          success: function (result) {
+            $("#tgt_text").val(result.translation);
+            // hide progress bar
+            $("#progress_bar").hide();
+          },
+          error: function (err) {
+            alert('Xin lỗi! Phần mềm chưa hỗ trợ dịch từ ' + $('#src_langs option:selected').text() + ' sang ' + $('#tgt_langs option:selected').text());
+            // hide progress bar
+            $("#progress_bar").hide();
+          },
+        })
+      });
+    });
+  </script>
+</head>
+
+<body>
   <div style="margin-top: 50px; margin-bottom: auto; width: 80%;">
     <h1>Phần mềm dịch máy đa ngôn ngữ</h1>
     </br>
     <fieldset style="padding: 5px;">
-      <legend style="font-size: large;">Chọn ngôn ngữ nguồn-đích cần dịch </legend>
+      <legend style="font-size: x-large;">Chọn ngôn ngữ nguồn-đích cần dịch </legend>
       <div style="float: left;">
-        <div  style="display: inline-block; margin: 5px 10px;">
-          <label for="src_langs" style="font-size: medium;">Ngôn ngữ nguồn:</label>
-          <select name="src_langs" id="src_langs" value="zh">
-            <option value="en">Tiếng Anh</option>
-            <option value="de">Tiếng Đức</option>
-            <option value="es">Tiếng Tây Ban Nha</option>
-            <option value="ru">Tiếng Nga</option>
-            <option value="fr">Tiếng Pháp</option>
-            <option value="zh" selected="selected">Tiếng Trung</option>
-            <option value="khr">Tiếng Khmer</option>
-            <option value="la">Tiếng Lào</option>
-            <option value="kh">Tiếng Campuchia</option>
-          </select>
-          <input type="hidden" id="cur_src_lang" name="cur_src_lang" value="zh">
-        </div>
         <div style="display: inline-block; margin: 5px 10px;">
-          <label for="dst_langs" style="font-size: medium;">Ngôn ngữ đích:</label>
-          <select name="dst_langs" id="dst_langs" value="en">
-            <option value="en" selected="selected">Tiếng Anh</option>
-            <option value="de">Tiếng Đức</option>
-            <option value="es">Tiếng Tây Ban Nha</option>
-            <option value="ru">Tiếng Nga</option>
-            <option value="fr">Tiếng Pháp</option>
+          <label for="src_langs" style="font-size: larger;">Ngôn ngữ nguồn:</label>
+          <select name="src_langs" id="src_langs" value="zh" style="font-size: larger;">
+            <option value="km" selected="selected">Tiếng Khmer</option>
             <option value="zh">Tiếng Trung</option>
-            <option value="khr">Tiếng Khmer</option>
-            <option value="la">Tiếng Lào</option>
-            <option value="kh">Tiếng Campuchia</option>
+            <option value="ru">Tiếng Nga</option>
           </select>
-          <input type="hidden" id="cur_dst_lang" name="cur_dst_lang" value="en">
+          <input type="hidden" id="cur_src_lang" name="cur_src_lang" value="km">
         </div>
         <div style="display: inline-block; margin: 5px 10px;">
-          <button id="translate_button" style="padding: 3px 20px; margin-bottom: 5px;">Dịch văn bản</button>
+          <label for="tgt_langs" style="font-size: larger;">Ngôn ngữ đích:</label>
+          <select name="tgt_langs" id="tgt_langs" value="en" style="font-size: larger;">
+            <option value="en" selected="selected">Tiếng Anh</option>
+            <option value="vi">Tiếng Việt</option>
+          </select>
+          <input type="hidden" id="cur_tgt_lang" name="cur_tgt_lang" value="en">
         </div>
+        <div style="display: inline-block; margin: 5px 10px;">
+          <button id="translate_button" style="padding: 3px 20px; margin-bottom: 5px; font-size: larger;">Dịch văn
+            bản</button>
+        </div>
+        <progress id="progress_bar" class="pure-material-progress-circular" style="display: none;" />
       </div>
     </fieldset>
     </br>
     <div style="display: flex;">
-      <textarea id="src_text" oninput="auto_grow(this, document.getElementById('tgt_text'))" style="margin: 3px; font-size: medium; width: 50%; height: 150px; line-height: 130%; padding: 10px; background-color: white; text-emphasis-color: blue; border-radius: 7px; border-width: 2px;" placeholder="Nhập nội dung cần dịch vào đây..."></textarea>
-      <textarea id="tgt_text" oninput="auto_grow(document.getElementById('src_text'), this)" style="margin: 3px; font-size: medium; width: 50%; height: 150px; line-height: 130%; padding: 10px; background-color: white; text-emphasis-color: blue; border-radius: 7px; border-width: 2px;" readonly></textarea>
+      <textarea id="src_text" oninput="auto_grow(this, document.getElementById('tgt_text'))"
+        style="margin: 3px; font-size: larger; width: 50%; height: 150px; line-height: 130%; padding: 10px; background-color: white; text-emphasis-color: blue; border-radius: 7px; border-width: 2px;"
+        placeholder="Nhập nội dung cần dịch vào đây..."></textarea>
+      <textarea id="tgt_text" oninput="auto_grow(document.getElementById('src_text'), this)"
+        style="margin: 3px; font-size: larger; width: 50%; height: 150px; line-height: 130%; padding: 10px; background-color: white; text-emphasis-color: blue; border-radius: 7px; border-width: 2px;"
+        readonly></textarea>
     </div>
   </div>
-  </body>
+</body>
+
 </html>

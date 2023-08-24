@@ -23,7 +23,15 @@ import nemo.collections.nlp as nemo_nlp
 from nemo.utils import logging
 from utils import split_long_text
 
-MODELS_DICT = {}
+from seamless_m4t import MySeamlessT2TT
+
+# save both nemo and seamlessM4T models
+NEMO_MODELS_DICT = {}
+
+# declare seamless multi-model
+seamless_model = None
+# seamless supported language pairs
+SEAMLESS_SUPPORTED_LANG_PAIRS = ["km-en"]
 
 model = None
 api = Flask(__name__)
@@ -31,7 +39,7 @@ CORS(api)
 
 api.config['JSON_AS_ASCII'] = False
 
-def initialize(config_file_path: str):
+def init_nemo(config_file_path: str):
     """
     Loads 'language-pair to NMT model mapping'
     """
@@ -58,11 +66,20 @@ def initialize(config_file_path: str):
                 model = nemo_nlp.models.machine_translation.MTEncDecModel.restore_from(restore_path=value)
             if torch.cuda.is_available():
                 model = model.cuda()
-            MODELS_DICT[key] = model
+            NEMO_MODELS_DICT[key] = model
     else:
         raise ValueError("Did not find the config.json or it was empty")
     logging.info("NMT service started")
 
+def init_seamless_m4t():
+    global seamless_model
+    seamless_model = MySeamlessT2TT()
+
+def write_response(content: str):
+    res = {'translation': content}
+    response = flask.jsonify(res, )
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    return response
 
 @api.route('/translate', methods=['GET'])
 def get_translation():
@@ -75,47 +92,50 @@ def get_translation():
         else:
             period_char = "."
         src = request.args["text"]
-        do_moses = request.args.get('do_moses', False)
-        if langpair in MODELS_DICT:
-            # deal with long source text            
-            if do_moses:
-                if len(src) <= max_length:
-                    results = MODELS_DICT[langpair].translate(
-                        [src], source_lang=langpair.split('-')[0], target_lang=langpair.split('-')[1]
-                    )
-                else:
-                    passages = split_long_text(src, max_length=max_length, period_char=period_char)
-                    
-                    results = MODELS_DICT[langpair].translate(
-                    passages, source_lang=langpair.split('-')[0], target_lang=langpair.split('-')[1])
-            else:
-                if len(src) <= max_length:
-                    results = MODELS_DICT[langpair].translate([src])
-                else:
-                    passages = split_long_text(src, max_length=max_length, period_char=period_char)
-                    results = MODELS_DICT[langpair].translate(passages)
+
+        # set mt model
+        mt_model = None
+        if langpair in NEMO_MODELS_DICT:
+            mt_model = NEMO_MODELS_DICT[langpair]
+        elif langpair in SEAMLESS_SUPPORTED_LANG_PAIRS:
+            mt_model = seamless_model
+        else:
+            logging.error(f"Got the following langpair: {langpair} which was not found")
+
+        if mt_model is not None:
+
+            # if there's no text to translate
+            if len(src.strip()) == 0:
+                return write_response("")
             
-            # combine translated text
-            translated_text = ''.join(results)
+            # deal with long source text
+            # bool array `paragaph_flags` with same length as `passages` array 
+            # indicating if passage at index `i` of `passages` finishes current paragraph
+            # and the next passage will belong to a new paragraph
+            paragraphs, ext_characters = split_long_text(src, max_length=max_length, period_char=period_char)
+            
+            # same interface for both nemo and seamless models
+            translated_paragraphs = mt_model.translate(paragraphs,
+                                        source_lang=langpair.split('-')[0], 
+                                        target_lang=langpair.split('-')[1]
+                                        )
+            translated_text = ""
+            for text, ext_chr in zip(translated_paragraphs, ext_characters):                
+                translated_text += (text + ext_chr)
+            # strip last space character
+            translated_text = translated_text.strip()
 
             duration = time.time() - time_s
             logging.info(
                 f"Translated in {duration}. Input was: {request.args['text']} <############> Translation was: {translated_text}"
             )
-            res = {'translation': translated_text}
-            response = flask.jsonify(res, )
-            response.headers.add('Access-Control-Allow-Origin', '*')
-            return response
 
-        else:
-            logging.error(f"Got the following langpair: {langpair} which was not found")
+            return write_response(translated_text)
+        
     except Exception as ex:
-        res = {'translation': str(ex)}
-        response = flask.jsonify(res)
-        response.headers.add('Access-Control-Allow-Origin', '*')
-        return res
-
+        return write_response(ex)
 
 if __name__ == '__main__':
-    initialize('config.json')
+    init_nemo('config.json')
+    init_seamless_m4t()
     api.run(host='0.0.0.0')
