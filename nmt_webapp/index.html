@@ -62,7 +62,7 @@
         // show progress bar
         $("#progress_bar").show();
         $.ajax({
-          url: "http://localhost:5000/translate",
+          url: "http://192.168.1.119:5000/translate",
           type: "GET",
           data: {
             text: $("#src_text").val(),
@@ -71,10 +71,13 @@
           },
           success: function (result) {
             $("#tgt_text").val(result.translation);
+            // trigger `oninput` event
+            $("#tgt_text").trigger('oninput');
             // hide progress bar
             $("#progress_bar").hide();
           },
           error: function (err) {
+            // alert(err);
             alert('Xin lỗi! Phần mềm chưa hỗ trợ dịch từ ' + $('#src_langs option:selected').text() + ' sang ' + $('#tgt_langs option:selected').text());
             // hide progress bar
             $("#progress_bar").hide();
@@ -84,48 +87,55 @@
     });
   </script>
 </head>
-
-<body>
-  <div style="margin-top: 50px; margin-bottom: auto; width: 80%;">
-    <h1>Phần mềm dịch máy đa ngôn ngữ</h1>
-    </br>
-    <fieldset style="padding: 5px;">
-      <legend style="font-size: x-large;">Chọn ngôn ngữ nguồn-đích cần dịch </legend>
-      <div style="float: left;">
-        <div style="display: inline-block; margin: 5px 10px;">
-          <label for="src_langs" style="font-size: larger;">Ngôn ngữ nguồn:</label>
-          <select name="src_langs" id="src_langs" value="zh" style="font-size: larger;">
-            <option value="km" selected="selected">Tiếng Khmer</option>
-            <option value="zh">Tiếng Trung</option>
-            <option value="ru">Tiếng Nga</option>
-          </select>
-          <input type="hidden" id="cur_src_lang" name="cur_src_lang" value="km">
+<body style="overflow-x: hidden; height: 98vh;">
+  <div style="display: flex; flex-direction: column; height: 100%; width: 80%;">
+    <div style="flex: 90%; margin-top: 50px;">
+      <h1>Phần mềm dịch máy đa ngôn ngữ</h1>
+      </br>
+      <fieldset style="padding: 5px;">
+        <legend style="font-size: x-large;">Chọn ngôn ngữ nguồn-đích cần dịch </legend>
+        <div style="float: left;">
+          <div style="display: inline-block; margin: 5px 10px;">
+            <label for="src_langs" style="font-size: larger;">Ngôn ngữ nguồn:</label>
+            <select name="src_langs" id="src_langs" value="zh" style="font-size: larger;">
+              <option value="km" selected="selected">Tiếng Khmer</option>
+              <option value="zh">Tiếng Trung</option>
+              <option value="ru">Tiếng Nga</option>
+            </select>
+            <input type="hidden" id="cur_src_lang" name="cur_src_lang" value="km">
+          </div>
+          <div style="display: inline-block; margin: 5px 10px;">
+            <label for="tgt_langs" style="font-size: larger;">Ngôn ngữ đích:</label>
+            <select name="tgt_langs" id="tgt_langs" value="en" style="font-size: larger;">
+              <option value="en" selected="selected">Tiếng Anh</option>
+              <option value="vi">Tiếng Việt</option>
+            </select>
+            <input type="hidden" id="cur_tgt_lang" name="cur_tgt_lang" value="en">
+          </div>
+          <div style="display: inline-block; margin: 5px 10px;">
+            <button id="translate_button" style="padding: 3px 20px; margin-bottom: 5px; font-size: larger;">Dịch văn
+              bản</button>
+          </div>
+          <progress id="progress_bar" class="pure-material-progress-circular" style="display: none;" />
         </div>
-        <div style="display: inline-block; margin: 5px 10px;">
-          <label for="tgt_langs" style="font-size: larger;">Ngôn ngữ đích:</label>
-          <select name="tgt_langs" id="tgt_langs" value="en" style="font-size: larger;">
-            <option value="en" selected="selected">Tiếng Anh</option>
-            <option value="vi">Tiếng Việt</option>
-          </select>
-          <input type="hidden" id="cur_tgt_lang" name="cur_tgt_lang" value="en">
-        </div>
-        <div style="display: inline-block; margin: 5px 10px;">
-          <button id="translate_button" style="padding: 3px 20px; margin-bottom: 5px; font-size: larger;">Dịch văn
-            bản</button>
-        </div>
-        <progress id="progress_bar" class="pure-material-progress-circular" style="display: none;" />
+      </fieldset>
+      </br>
+      <div style="display: flex;">
+        <textarea id="src_text" oninput="auto_grow(this, document.getElementById('tgt_text'))"
+          style="margin: 3px; font-size: larger; width: 50%; height: 150px; line-height: 130%; padding: 10px; background-color: white; text-emphasis-color: blue; border-radius: 7px; border-width: 2px;"
+          placeholder="Nhập nội dung cần dịch vào đây..."></textarea>
+        <textarea id="tgt_text" onchange="{alert('OK');}" oninput="auto_grow(document.getElementById('src_text'), this)"
+          style="margin: 3px; font-size: larger; width: 50%; height: 150px; line-height: 130%; padding: 10px; background-color: white; text-emphasis-color: blue; border-radius: 7px; border-width: 2px;"
+          readonly></textarea>
       </div>
-    </fieldset>
-    </br>
-    <div style="display: flex;">
-      <textarea id="src_text" oninput="auto_grow(this, document.getElementById('tgt_text'))"
-        style="margin: 3px; font-size: larger; width: 50%; height: 150px; line-height: 130%; padding: 10px; background-color: white; text-emphasis-color: blue; border-radius: 7px; border-width: 2px;"
-        placeholder="Nhập nội dung cần dịch vào đây..."></textarea>
-      <textarea id="tgt_text" oninput="auto_grow(document.getElementById('src_text'), this)"
-        style="margin: 3px; font-size: larger; width: 50%; height: 150px; line-height: 130%; padding: 10px; background-color: white; text-emphasis-color: blue; border-radius: 7px; border-width: 2px;"
-        readonly></textarea>
+    </div>
+    <div style="flex: 10%; font-size: larger; line-height: 50%; text-align: center;">
+      <p>
+        Liên hệ chính: TS. Nguyễn Thế Hùng, SĐT: 0976.788.617; ThS. Đỗ Văn Khánh, SĐT: 038.304.7626.
+      <p>
+      <p>&copy; 2023 Nhóm nghiên cứu NLP, Phòng Hệ thống Tự động hóa Chỉ huy-Điều khiển/Viện 10.</p>
+      </p>
     </div>
   </div>
 </body>
-
 </html>

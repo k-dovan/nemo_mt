@@ -18,6 +18,7 @@ import flask
 import torch
 from flask import Flask, json, request
 from flask_cors import CORS
+from waitress import serve
 
 import nemo.collections.nlp as nemo_nlp
 from nemo.utils import logging
@@ -138,4 +139,4 @@ def get_translation():
 if __name__ == '__main__':
     init_nemo('config.json')
     init_seamless_m4t()
-    api.run(host='0.0.0.0')
+    serve(api, host="0.0.0.0", port=5000)
