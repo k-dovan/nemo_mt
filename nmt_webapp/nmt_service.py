@@ -95,7 +95,7 @@ def free_cache(used_thresh: int = 0.5):
 def get_translation():
     try:
         time_s = time.time()
-        max_length = 128       
+        max_length = 256       
         langpair = request.args["langpair"]
         if "zh-" in langpair or "jp-" in langpair:
             period_char = "。"
@@ -123,12 +123,21 @@ def get_translation():
             # indicating if passage at index `i` of `passages` finishes current paragraph
             # and the next passage will belong to a new paragraph
             paragraphs, ext_characters = split_long_text(src, max_length=max_length, period_char=period_char)
+
+            # print ('>>> paragraphs splitted: ', paragraphs)
             
             # same interface for both nemo and seamless models
-            translated_paragraphs = mt_model.translate(paragraphs,
+            # due to missing translation with batch translation 
+            # we translate single paragraph at a time and combine them
+            translated_paragraphs = []
+            for p in paragraphs:
+                translated_paragraphs.extend(mt_model.translate([p],
                                         source_lang=langpair.split('-')[0], 
                                         target_lang=langpair.split('-')[1]
-                                        )
+                                        ))
+            
+            # print ('>>> paragraphs translated: ', translated_paragraphs)
+
             translated_text = ""
             for text, ext_chr in zip(translated_paragraphs, ext_characters):                
                 translated_text += (text + ext_chr)
