@@ -1,0 +1,28 @@
+import torch
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+from typing import List
+
+tokenizer_en2vi = AutoTokenizer.from_pretrained("vinai/vinai-translate-en2vi", src_lang="en_XX")
+model_en2vi = AutoModelForSeq2SeqLM.from_pretrained("vinai/vinai-translate-en2vi")
+device_en2vi = torch.device("cuda")
+model_en2vi.to(device_en2vi)
+
+
+def translate_en2vi(en_texts: List[str]) -> List[str]:
+    input_ids = tokenizer_en2vi(en_texts, padding=True, return_tensors="pt").to(device_en2vi)
+    output_ids = model_en2vi.generate(
+        **input_ids,
+        decoder_start_token_id=tokenizer_en2vi.lang_code_to_id["vi_VN"],
+        num_return_sequences=1,
+        num_beams=5,
+        early_stopping=True
+    )
+    vi_texts = tokenizer_en2vi.batch_decode(output_ids, skip_special_tokens=True)
+    return vi_texts
+
+if __name__ == "__main__":
+    # The input may consist of multiple text sequences, with the number of text sequences in the input ranging from 1 up to 8, 16, 32, or even higher, depending on the GPU memory.
+    en_texts = ["Discipline implies adherence to specific well-defined rules. It essentially is the most common way of preparing oneself in dutifulness, self-control, expertise, etc. To be more exact, discipline in a way is an essential prerequisite of a civilized society. The absence of discipline means decay. As Aristotle properly put it, “Discipline is obedience to rules formed by the society for the good of all.” How about we take an illustration of the solar system which is administered by specific regulations to keep up with amazing harmony and equilibrium? Without this order, there would be absolute turmoil. Similarly, talents blossom only in a disciplined person. Discipline, in this way, is fundamental for self-awareness and cultural as well as public success. Without it, there can be no settled arrangement of regulation, no scientific advances, no modern or innovative accomplishments, and so forth. No army can put up a brave front against an enemy if it lacks discipline. That is the reason the military follows a specific set of rules. It demands loyalty to the nation and to superior officers, along with a feeling of partnership and status to adapt to a crisis. It’s a given that the absence of discipline here could be disastrous. By the way, there is a growing significance of discipline in student life. Since the seeds are sown in school life, carelessness since those days might be awful for the career as well as for building character. By and large, students disregard the disciplinary approach in their work, and their dawdling and easygoing mentality turn out to be extremely dear to them, commonly making them discouraged and extremely disappointed. One doesn’t use one’s ideal ability because of the absence of discipline. We have seen the outcome of numerous incredible characters who by sheer focused approach made all the difference for themselves as well as for society all in all. The existences of Mahatma Gandhi, Chandra Bose, Swami Vivekananda, and Pandit Nehru all concocted their game plans carefully and followed them stringently in an arranged manner. Of course, they have turned into a motivation for an entire age of people. Similarly, those who didn’t care for discipline in their life went into oblivion. In a game/sport, you have an umpire/referee to uphold the rules of the game so the play could be in the right spirit. Every player has to observe the rules stringently. Important here is the absence of discipline even in off-field exercises can choose a player’s fate. The genuine model is Sachin Tendulkar and Vinod Kambli, Both started playing together in school days, and specialists thought of them as equivalent in ability. In any case, the outcome is before us. Today Sachin is the world’s most noteworthy! run-getter and century-producer in both ODI and tests, though Vinod’s career finished suddenly in spite of a decent start. Unquestionably Kambli couldn’t deal with his needs in a disciplined manner. One of the significant components of discipline is actual immaculateness. Genuine substantial virtue calls for contribution to great activities. Great activities and great contemplations lead to immaculateness of psyche and keenness. Gandhiji characterized brahmacharya as the discipline which comprises command over every one of the faculties in thought, word, or deed. One more part of discipline is practising limitation in any activity. Genuine freedom is an exceptionally esteemed and esteemed honour in our general public. In any case, we can’t give outright freedom. Discipline includes a restriction on freedom, which is vital for the interest of society. It is the state which acts through regulations that guarantee equity and fairness of chance for all. So it is true to say that discipline ensures justice and fair play. To conclude, discipline is not only desirable but indispensable. Wherever discipline and guidelines of lead are missing, moral and material disintegration has set in. The bad habit never has an opportunity to crawl into a disciplined man. Youngsters experiencing childhood in focused and cheerful homes become dependable grown-ups. The rising crime graph in society can be attributed to the lack of discipline.",
+                "When I exercise in a private space, I feel more comfortable.",
+                "i haven't been to a public gym before when i exercise in a private space i feel more comfortable"]
+    print(translate_en2vi(en_texts))

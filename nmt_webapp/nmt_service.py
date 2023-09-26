@@ -25,6 +25,7 @@ from nemo.utils import logging
 from utils import split_long_text
 
 from seamless_m4t import MySeamlessT2TT
+from nmt_en2vi import translate_en2vi
 
 # save both nemo and seamlessM4T models
 NEMO_MODELS_DICT = {}
@@ -95,13 +96,24 @@ def free_cache(used_thresh: int = 0.5):
 def get_translation():
     try:
         time_s = time.time()
-        max_length = 256       
+        max_length = 256 
+        
+        src = request.args["text"]   
         langpair = request.args["langpair"]
-        if "zh-" in langpair or "jp-" in langpair:
+        source_lang = langpair.split('-')[0]
+        target_lang = langpair.split('-')[1]
+
+        if source_lang == "zh" or source_lang == "jp":
             period_char = "。"
         else:
             period_char = "."
-        src = request.args["text"]
+        
+        use_en2vi = False
+        if target_lang == "vi":
+            use_en2vi = True
+            # update langpair to `-en`
+            langpair = f'{source_lang}-en'
+            target_lang = 'en'
 
         # set mt model
         mt_model = None
@@ -132,10 +144,14 @@ def get_translation():
             translated_paragraphs = []
             for p in paragraphs:
                 translated_paragraphs.extend(mt_model.translate([p],
-                                        source_lang=langpair.split('-')[0], 
-                                        target_lang=langpair.split('-')[1]
+                                        source_lang=source_lang, 
+                                        target_lang=target_lang
                                         ))
             
+            # check if we need to translate to vi
+            if use_en2vi:
+                translated_paragraphs = translate_en2vi(translated_paragraphs)
+
             # print ('>>> paragraphs translated: ', translated_paragraphs)
 
             translated_text = ""
