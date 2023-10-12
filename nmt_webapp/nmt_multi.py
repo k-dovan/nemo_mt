@@ -23,7 +23,7 @@ LANGUAGE_MAP = {
     "km": "khm"
 }
 
-class MySeamlessT2TT:
+class My_NMT_T2TT:
     def __init__(self, model_name: str = "seamlessM4T_medium"):
 
         if torch.cuda.is_available():
@@ -49,5 +49,5 @@ class MySeamlessT2TT:
         return translations
 
 if __name__ == "__main__":
-    m4t_model = MySeamlessT2TT()
+    m4t_model = My_NMT_T2TT()
     print (m4t_model.translate(["យ៉ាង ណា ក៏ ដោយ បូតុលូសស៊ី ស៊ុត ចូល លើក ទី ៤ នៃ ការ ទាត់ បាល់ ពិន័យ នៃ ប្រកួត នេះ ហើយ បន្ទាប់ មក ម័ររូ ប៊ីហ្គាម៉ាស្កូ និង អេនត្រា ម៉ាស៊ី បាន ស៊ុត ចូល នាំ អោយ អ៊ីតាលី ឈ្នះ ។"]))

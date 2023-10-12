@@ -3880,3 +3880,827 @@ Prefix dict has been built successfully.
     Meanwhile, on September 11, the carrier formation of Shandong entered the Western Pacific through the Bus Strait. [6] According to the author, at least 13 People's Liberation Army warships were operating near Tai Island. The carrier formation of Shandong, along with eight frigates of the East China Sea Fleet, had no short board for air defense, air defense, anti-ship, anti-submarine, and ground strikes, and the proper "destroyer fleet."
 [NeMo I 2023-09-23 03:14:41 nmt_service:139] Translated in 0.47437620162963867. Input was: 9月9号，美国海军拉尔夫·约翰逊号驱逐舰(DDG-114)与加拿大渥太华号护卫舰(FFH-341)穿航台湾海峡期间，声称遇到一艘解放军的“情报船”，船上装有特殊的雷达系统，拍照后还要事后好好研究。经网友@板凳和瓜子 辨认，其实就是一艘钓鱿鱼的渔船，两侧灯用来吸引鱿鱼。
      <############> Translation was: On 9 September, while crossing the Taiwan Strait with the Canadian frigate USS Ottawa (FFH-341), the US destroyer Ralph Johnson claimed to have encountered a PLA "intelligence ship" equipped with a special radar system, which he had to study after taking photographs. Identified by users bench and melon seed In fact, it is a fishing boat for trout Both sides of the lights are used to attract trout
+[NeMo I 2023-09-26 04:09:29 nmt_service:50] Starting NMT service
+[NeMo I 2023-09-26 04:09:29 nmt_service:51] I will attempt to load all the models listed in config.json.
+[NeMo I 2023-09-26 04:09:29 nmt_service:52] Edit config.json to disable models you don't need.
+[NeMo I 2023-09-26 04:09:29 nmt_service:54] CUDA is available. Running on GPU
+[NeMo I 2023-09-26 04:09:29 nmt_service:64] Loading model for zh-en from file: NGC/nmt_zh_en_transformer24x6
+[NeMo I 2023-09-26 04:09:29 cloud:58] Found existing object /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo.
+[NeMo I 2023-09-26 04:09:29 cloud:64] Re-using file from: /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo
+[NeMo I 2023-09-26 04:09:29 common:913] Instantiating model from pre-trained checkpoint
+[NeMo I 2023-09-26 04:09:39 tokenizer_utils:179] Getting YouTokenToMeTokenizer with model: /tmp/tmp8fewlijc/ee189b32ae0a4c12b7ba4c4d7c1a2391_tokenizer.decoder.32000.BPE.model with r2l: False.
+[NeMo I 2023-09-26 04:09:39 tokenizer_utils:179] Getting YouTokenToMeTokenizer with model: /tmp/tmp8fewlijc/e23f0b142e474fcb86db8bc428a03e8a_tokenizer.encoder.32000.BPE.model with r2l: False.
+[NeMo W 2023-09-26 04:09:39 modelPT:161] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    src_file_name: null
+    tgt_file_name: null
+    use_tarred_dataset: true
+    tar_files:
+    - /data/tarred_dataset_old_plus_paracrawl_4k_tokens/parallel.batches.tokens.4000._OP_0..769_CL_.tar
+    - /data/tarred_dataset_old_plus_paracrawl_zh_en_r2l_distilled_4k_tokens/parallel.batches.tokens.4000._OP_0..745_CL_.tar
+    metadata_file:
+    - /data/tarred_dataset_old_plus_paracrawl_4k_tokens/metadata.tokens.4000.json
+    - /data/tarred_dataset_old_plus_paracrawl_zh_en_r2l_distilled_4k_tokens/metadata.tokens.4000.json
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 100
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: true
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: true
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: true
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: random
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities:
+    - 0.6
+    - 0.4
+    
+[NeMo W 2023-09-26 04:09:39 modelPT:168] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    src_file_name:
+    - /data/wmt19-zh-en.clean.tok.src
+    - /data/wmt20-zh-en.clean.tok.src
+    - /data/wmt18-zh-en.clean.tok.src
+    tgt_file_name:
+    - /data/wmt19-zh-en.clean.tok.ref
+    - /data/wmt20-zh-en.clean.tok.ref
+    - /data/wmt18-zh-en.clean.tok.ref
+    use_tarred_dataset: false
+    tar_files: null
+    metadata_file: null
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 1000
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: false
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: false
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: false
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities: null
+    
+[NeMo W 2023-09-26 04:09:39 modelPT:174] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    src_file_name: /data/wmt19-en-zh.clean.tok.src
+    tgt_file_name: /data/wmt19-en-zh.clean.tok.src
+    use_tarred_dataset: false
+    tar_files: null
+    metadata_file: null
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 1000
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: false
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: false
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: false
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities: null
+    
+[NeMo W 2023-09-26 04:09:39 nlp_overrides:253] Apex was not found. Please see the NeMo README for installation instructions: https://github.com/NVIDIA/apex
+    Megatron-based models require Apex to function correctly.
+[NeMo I 2023-09-26 04:09:44 save_restore_connector:249] Model MTEncDecModel was successfully restored from /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo.
+[NeMo I 2023-09-26 04:09:44 nmt_service:74] NMT service started
+2023-09-26 04:09:44,254 INFO -- waitress: Serving on http://0.0.0.0:5000
+[NeMo I 2023-09-26 04:58:44 nmt_service:50] Starting NMT service
+[NeMo I 2023-09-26 04:58:44 nmt_service:51] I will attempt to load all the models listed in config.json.
+[NeMo I 2023-09-26 04:58:44 nmt_service:52] Edit config.json to disable models you don't need.
+[NeMo I 2023-09-26 04:58:44 nmt_service:54] CUDA is available. Running on GPU
+[NeMo I 2023-09-26 04:58:44 nmt_service:64] Loading model for zh-en from file: NGC/nmt_zh_en_transformer24x6
+[NeMo I 2023-09-26 04:58:44 cloud:58] Found existing object /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo.
+[NeMo I 2023-09-26 04:58:44 cloud:64] Re-using file from: /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo
+[NeMo I 2023-09-26 04:58:44 common:913] Instantiating model from pre-trained checkpoint
+[NeMo I 2023-09-26 04:58:54 tokenizer_utils:179] Getting YouTokenToMeTokenizer with model: /tmp/tmpk9_nd8uf/ee189b32ae0a4c12b7ba4c4d7c1a2391_tokenizer.decoder.32000.BPE.model with r2l: False.
+[NeMo I 2023-09-26 04:58:54 tokenizer_utils:179] Getting YouTokenToMeTokenizer with model: /tmp/tmpk9_nd8uf/e23f0b142e474fcb86db8bc428a03e8a_tokenizer.encoder.32000.BPE.model with r2l: False.
+[NeMo W 2023-09-26 04:58:54 modelPT:161] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    src_file_name: null
+    tgt_file_name: null
+    use_tarred_dataset: true
+    tar_files:
+    - /data/tarred_dataset_old_plus_paracrawl_4k_tokens/parallel.batches.tokens.4000._OP_0..769_CL_.tar
+    - /data/tarred_dataset_old_plus_paracrawl_zh_en_r2l_distilled_4k_tokens/parallel.batches.tokens.4000._OP_0..745_CL_.tar
+    metadata_file:
+    - /data/tarred_dataset_old_plus_paracrawl_4k_tokens/metadata.tokens.4000.json
+    - /data/tarred_dataset_old_plus_paracrawl_zh_en_r2l_distilled_4k_tokens/metadata.tokens.4000.json
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 100
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: true
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: true
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: true
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: random
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities:
+    - 0.6
+    - 0.4
+    
+[NeMo W 2023-09-26 04:58:54 modelPT:168] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    src_file_name:
+    - /data/wmt19-zh-en.clean.tok.src
+    - /data/wmt20-zh-en.clean.tok.src
+    - /data/wmt18-zh-en.clean.tok.src
+    tgt_file_name:
+    - /data/wmt19-zh-en.clean.tok.ref
+    - /data/wmt20-zh-en.clean.tok.ref
+    - /data/wmt18-zh-en.clean.tok.ref
+    use_tarred_dataset: false
+    tar_files: null
+    metadata_file: null
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 1000
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: false
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: false
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: false
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities: null
+    
+[NeMo W 2023-09-26 04:58:54 modelPT:174] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    src_file_name: /data/wmt19-en-zh.clean.tok.src
+    tgt_file_name: /data/wmt19-en-zh.clean.tok.src
+    use_tarred_dataset: false
+    tar_files: null
+    metadata_file: null
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 1000
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: false
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: false
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: false
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities: null
+    
+[NeMo W 2023-09-26 04:58:54 nlp_overrides:253] Apex was not found. Please see the NeMo README for installation instructions: https://github.com/NVIDIA/apex
+    Megatron-based models require Apex to function correctly.
+[NeMo I 2023-09-26 04:58:59 save_restore_connector:249] Model MTEncDecModel was successfully restored from /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo.
+[NeMo I 2023-09-26 04:58:59 nmt_service:74] NMT service started
+2023-09-26 04:58:59,600 INFO -- waitress: Serving on http://0.0.0.0:5000
+Building prefix dict from the default dictionary ...
+2023-09-26 06:54:48,090 DEBUG -- jieba: Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+2023-09-26 06:54:48,091 DEBUG -- jieba: Loading model from cache /tmp/jieba.cache
+Loading model cost 0.461 seconds.
+2023-09-26 06:54:48,552 DEBUG -- jieba: Loading model cost 0.461 seconds.
+Prefix dict has been built successfully.
+2023-09-26 06:54:48,552 DEBUG -- jieba: Prefix dict has been built successfully.
+[NeMo W 2023-09-26 06:54:49 nemo_logging:349] /home/tdh/nemo_mt/nmt_webapp/venv/lib/python3.8/site-packages/transformers/generation/utils.py:1369: UserWarning: Using `max_length`'s default (1024) to control the generation length. This behaviour is deprecated and will be removed from the config in v5 of Transformers -- we recommend using `max_new_tokens` to control the maximum length of the generation.
+      warnings.warn(
+    
+[NeMo I 2023-09-26 06:54:50 nmt_service:164] Translated in 2.182413101196289. Input was: 琼航警103/23，北部湾，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E及20-05.0N/109-11.0E诸点连线水域范围内进行实弹射击训练。禁止驶入。 <############> Translation was: Joan Air Police 103 / 23, Vịnh Beibu, từ 0800 giờ ngày 13 tháng 9 đến 1200 giờ ngày 14 tháng 9, sẽ tiến hành huấn luyện bắn trực tiếp trong vùng biển của 19-59.0 N / 109-11.0E, 19-59.0 N / 109-17.0E, 20-05.0 N / 109-17.0E và 20-05.0 N / 109-11.0E điểm. Lái xe bị cấm.
+[NeMo I 2023-09-26 07:42:53 nmt_service:164] Translated in 1.560835599899292. Input was: 琼航警100/23，南海，自2023年9月8日至9月10日，每日0600时至1830时，在18-51.87N/110-30.65E、18-51.87N/110-36.35E、18-46.47N/110-36.35E和18-46.47N/110-30.65E四点连线水域范围内进行军事训练，禁止驶入。 <############> Translation was: Joan Aviation Police 100 / 23, Biển Đông, từ ngày 8 tháng 9 đến ngày 10 tháng 9 năm 2023, từ 0600 giờ đến 1830 giờ hàng ngày, huấn luyện quân sự bị cấm trong vùng biển liên kết bốn điểm 18-51.87 N / 110-30.65E, 18-51.87 N / 110-36.35E, 18-46.47 N / 110-36.35E và 18-46.47 N / 110-30.65E.
+[NeMo I 2023-09-26 07:44:11 nmt_service:164] Translated in 1.3366875648498535. Input was: 琼航警99/23,南海,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。 <############> Translation was: Cảnh sát Qiong Hang 99 23, Biển Đông, ngày 30 tháng 8 đến ngày 1 tháng 9 năm 2023, giàn khoan "Haiyang Oil 676" "Haiyang Oil 944" được kéo từ 18-35,61N 107-45,78E đến 18-37,24N 107-43,73E, chiều dài kéo 300 mét, tốc độ 4 hải lý. Làm ơn buông ra.
+[NeMo I 2023-09-26 07:45:28 nmt_service:164] Translated in 1.809143304824829. Input was: 在9月13日外交部例行记者会上，有记者提问称，美国和加拿大军舰通过台湾海峡，近日有报道称，中国在台湾岛附近进行大型军事演习，外交部能否进一步介绍有关情况？
+    　　毛宁表示，关于美加军舰过航台湾海峡，中国人民解放军东部战区的新闻发言人已经发表了谈话，你可以查阅。
+    　　毛宁强调，台湾是中国领土不可分割的一部分，中国捍卫国家主权和领土完整的决心是坚定不移的，有关方面应当立即停止此类的挑衅行动，不要做台海和平稳定的麻烦制造者。
+     <############> Translation was: Tại cuộc họp báo thường kỳ của Bộ Ngoại giao vào ngày 13 tháng 9, một phóng viên đã hỏi rằng các tàu chiến Hoa Kỳ và Canada đi qua Eo biển Đài Loan. Có những báo cáo gần đây cho biết Trung Quốc đang tiến hành các cuộc tập trận quân sự quy mô lớn gần đảo Đài Loan. Bộ Ngoại giao có thể cung cấp thêm thông tin không?
+    Mao Ning nói rằng liên quan đến việc thông qua các tàu chiến Mỹ-Canada qua eo biển Đài Loan, người phát ngôn báo chí của Nhà hát Đông Quân Giải phóng Nhân dân đã đưa ra một tuyên bố, bạn có thể kiểm tra.
+    Mao Ning nhấn mạnh rằng Đài Loan là một phần không thể tách rời của lãnh thổ Trung Quốc. Quyết tâm của Trung Quốc để bảo vệ chủ quyền quốc gia và toàn vẹn lãnh thổ là không thay đổi. Các bên liên quan nên ngay lập tức ngăn chặn các hành động khiêu khích như vậy và kiềm chế không trở thành kẻ gây rối vì hoà bình và ổn định ở eo biển Đài Loan.
+[NeMo I 2023-09-26 07:49:32 nmt_service:164] Translated in 2.1556291580200195. Input was:  据中国媒体公开报道，中泰双方400余名联训官兵3日在泰国梭桃邑军港参加“蓝色突击—2023”海军联合训练开训仪式。泰国海军消息显示，中国海军039潜艇也罕见地同时期抵达梭桃邑海军基地。军事专家对《环球时报》表示，中国海军潜艇抵泰主要是为了展示其综合性能，让泰国更好了解和熟悉中国潜艇。
+        据“人民海军”发布消息称，此次联训是落实中泰两国两军领导人达成共识的有力举措，是自2010年首次举行系列联训的延续。公开报道显示，2010年10月至11月，“蓝色突击―2010”中泰海军陆战队联合训练在泰国举行，此后，“蓝色突击”系列演习相继举行了三次。
+     <############> Translation was: Theo báo cáo phương tiện truyền thông Trung Quốc, hơn 400 sĩ quan và binh sĩ từ Trung Quốc và Thái Lan đã tham gia vào "Blue Assault-2023" hải quân phối hợp đào tạo và đào tạo tại cảng quân sự Suotaozhan ở Thái Lan. Theo các nguồn tin của hải quân Thái Lan, tàu ngầm Trung Quốc 039 đã đến căn cứ hải quân Subaru cùng một lúc Các chuyên gia quân sự nói với Hoàn Cầu Thời báo rằng tàu ngầm hải quân Trung Quốc đến Thái Lan chủ yếu để chứng minh hiệu suất toàn diện của nó và cho phép Thái Lan hiểu rõ hơn và làm quen với tàu ngầm Trung Quốc.
+    Theo thông cáo báo chí của Hải quân Nhân dân, khoá đào tạo chung này là một biện pháp mạnh mẽ để thực hiện sự đồng thuận mà các nhà lãnh đạo của hai quân đội đạt được và là sự tiếp nối của loạt khoá đào tạo chung được tổ chức lần đầu tiên Các báo cáo công khai cho thấy từ tháng 10 đến tháng 11 năm 2010, cuộc tập trận phối hợp "Blue Assault-2010" của Thuỷ quân lục chiến Trung Quốc-Thái Lan đã được tổ chức tại Thái Lan, và kể từ đó, loạt bài tập "Blue Assault" đã được tổ chức ba lần liên tiếp.
+[NeMo I 2023-09-26 07:50:39 nmt_service:164] Translated in 1.6893856525421143. Input was: 这段时间台海方向闹出的幺蛾子太多了，不光是岛内那帮“台独”分子在上蹿下跳，一些域外国家，主要就是美国，始终不愿放弃他们“以台制华”的野心，还要拉着一些“盟友”来挑事，是可忍孰不可忍？
+    最近美国、日本、法国在琉球群岛东部以及东海部分海域，举行了一场海上联合军演。
+    这场军演其中最大的看点，就是美国和日本总计出动了3艘航母参加，美军派出了两艘“尼米兹”级核动力航母，分别是“里根”号和“尼米兹”号，同时美军还派出了B-52战略轰炸机。
+    
+     <############> Translation was: Lần này có quá nhiều con xúc xắc theo hướng Eo biển Đài Loan. Nó không chỉ là băng đảng của các yếu tố "độc lập Đài Loan" nhảy lên và xuống trên đảo. Một số nước ngoài, chủ yếu là Hoa Kỳ, đã không sẵn sàng từ bỏ tham vọng "làm cho Trung Quốc với Đài Loan".
+    Hoa Kỳ, Nhật Bản và Pháp gần đây đã tổ chức một cuộc tập trận hải quân chung ở phía đông quần đảo Ryukyu và một phần của Biển Hoa Đông.
+    Một trong những điểm nổi bật của cuộc tập trận là sự tham gia của ba tàu sân bay từ Hoa Kỳ và Nhật Bản, hai tàu sân bay chạy bằng năng lượng hạt nhân lớp Nimitz, Reagan và Nimitz, và máy bay ném bom chiến lược B-52.
+[NeMo I 2023-09-26 07:54:22 nmt_service:164] Translated in 2.6980233192443848. Input was: 月9日至28日，中国人民解放军与老挝人民军在老挝库玛丹学院训练场，共同组织了“友谊盾牌-2023”联合演习，这是两军首次组织的实战课目演习，对于巩固双边传统友谊、提升联合行动能力、维护地区安全稳定具有重要意义。联演主要有3个特点：一是内容紧贴实战。参演兵力按实战要求联合编组，课目设置符合两军实战规范，重在检验提升两军实战能力。二是指挥精准高效。双方组建联合导演部、指挥所，编设指挥组和4个作战指挥控制中心，议定作战指挥要则，探索完善联合指挥机制。三是行动协同密切。区分火力突击、冲击突破、合力拔点、分割围剿4个阶段组织综合演练，精确控制联合行动，实战验证分布聚能、强插快打、合围歼敌等战法。 <############> Translation was: Từ ngày 9 đến 28 tháng 9, Quân đội Giải phóng Nhân dân và Quân đội Nhân dân Lào đã phối hợp tổ chức cuộc tập trận chung Friendship Shield-2023 tại sân tập của Học viện Kumadan ở Lào. Đây là cuộc tập trận chiến đấu đầu tiên do hai quân đội tổ chức, có ý nghĩa to lớn trong việc củng cố tình hữu nghị truyền thống song phương, tăng cường khả năng hành động chung và duy trì an ninh và ổn định khu vực. Bài tập chung có ba tính năng chính: Đầu tiên, nội dung gần với chiến đấu thực tế. Các đội quân tham gia được tổ chức chung theo yêu cầu chiến đấu thực tế và chương trình giảng dạy được thiết lập phù hợp với các chỉ tiêu chiến đấu thực tế của hai đội quân, tập trung vào thử nghiệm và cải thiện Thứ hai, chỉ huy là chính xác và hiệu quả. Hai bên thành lập các bộ phận giám đốc chung và các vị trí chỉ huy, thành lập các nhóm chỉ huy và bốn trung tâm chỉ huy và kiểm soát hoạt động, đồng ý về các hướng dẫn chỉ huy hoạt động và khám phá và cải thiện cơ chế chỉ huy chung. Thứ ba, hành động phối hợp. Tổ chức diễn tập toàn diện trong bốn giai đoạn: tấn công hoả lực, tác động đột phá, kéo ra chung, và bộ phận bao vây, và kiểm soát chính xác các hoạt động chung.
+[NeMo I 2023-09-26 08:07:55 nmt_service:164] Translated in 2.5679373741149902. Input was: 月9日至28日，中国人民解放军与老挝人民军在老挝库玛丹学院训练场，共同组织了“友谊盾牌-2023”联合演习，这是两军首次组织的实战课目演习，对于巩固双边传统友谊、提升联合行动能力、维护地区安全稳定具有重要意义。联演主要有3个特点：一是内容紧贴实战。参演兵力按实战要求联合编组，课目设置符合两军实战规范，重在检验提升两军实战能力。二是指挥精准高效。双方组建联合导演部、指挥所，编设指挥组和4个作战指挥控制中心，议定作战指挥要则，探索完善联合指挥机制。三是行动协同密切。区分火力突击、冲击突破、合力拔点、分割围剿4个阶段组织综合演练，精确控制联合行动，实战验证分布聚能、强插快打、合围歼敌等战法。 <############> Translation was: Từ ngày 9 đến 28 tháng 9, Quân đội Giải phóng Nhân dân và Quân đội Nhân dân Lào đã phối hợp tổ chức cuộc tập trận chung Friendship Shield-2023 tại sân tập của Học viện Kumadan ở Lào. Đây là cuộc tập trận chiến đấu đầu tiên do hai quân đội tổ chức, có ý nghĩa to lớn trong việc củng cố tình hữu nghị truyền thống song phương, tăng cường khả năng hành động chung và duy trì an ninh và ổn định khu vực. Bài tập chung có ba tính năng chính: Đầu tiên, nội dung gần với chiến đấu thực tế. Các đội quân tham gia được tổ chức chung theo yêu cầu chiến đấu thực tế và chương trình giảng dạy được thiết lập phù hợp với các chỉ tiêu chiến đấu thực tế của hai đội quân, tập trung vào thử nghiệm và cải thiện Thứ hai, chỉ huy là chính xác và hiệu quả. Hai bên thành lập các bộ phận giám đốc chung và các vị trí chỉ huy, thành lập các nhóm chỉ huy và bốn trung tâm chỉ huy và kiểm soát hoạt động, đồng ý về các hướng dẫn chỉ huy hoạt động và khám phá và cải thiện cơ chế chỉ huy chung. Thứ ba, hành động phối hợp. Tổ chức diễn tập toàn diện trong bốn giai đoạn: tấn công hoả lực, tác động đột phá, kéo ra chung, và bộ phận bao vây, và kiểm soát chính xác các hoạt động chung.
+[NeMo I 2023-09-26 08:08:02 nmt_service:164] Translated in 2.531555652618408. Input was: 月9日至28日，中国人民解放军与老挝人民军在老挝库玛丹学院训练场，共同组织了“友谊盾牌-2023”联合演习，这是两军首次组织的实战课目演习，对于巩固双边传统友谊、提升联合行动能力、维护地区安全稳定具有重要意义。联演主要有3个特点：一是内容紧贴实战。参演兵力按实战要求联合编组，课目设置符合两军实战规范，重在检验提升两军实战能力。二是指挥精准高效。双方组建联合导演部、指挥所，编设指挥组和4个作战指挥控制中心，议定作战指挥要则，探索完善联合指挥机制。三是行动协同密切。区分火力突击、冲击突破、合力拔点、分割围剿4个阶段组织综合演练，精确控制联合行动，实战验证分布聚能、强插快打、合围歼敌等战法。 <############> Translation was: Từ ngày 9 đến 28 tháng 9, Quân đội Giải phóng Nhân dân và Quân đội Nhân dân Lào đã phối hợp tổ chức cuộc tập trận chung Friendship Shield-2023 tại sân tập của Học viện Kumadan ở Lào. Đây là cuộc tập trận chiến đấu đầu tiên do hai quân đội tổ chức, có ý nghĩa to lớn trong việc củng cố tình hữu nghị truyền thống song phương, tăng cường khả năng hành động chung và duy trì an ninh và ổn định khu vực. Bài tập chung có ba tính năng chính: Đầu tiên, nội dung gần với chiến đấu thực tế. Các đội quân tham gia được tổ chức chung theo yêu cầu chiến đấu thực tế và chương trình giảng dạy được thiết lập phù hợp với các chỉ tiêu chiến đấu thực tế của hai đội quân, tập trung vào thử nghiệm và cải thiện Thứ hai, chỉ huy là chính xác và hiệu quả. Hai bên thành lập các bộ phận giám đốc chung và các vị trí chỉ huy, thành lập các nhóm chỉ huy và bốn trung tâm chỉ huy và kiểm soát hoạt động, đồng ý về các hướng dẫn chỉ huy hoạt động và khám phá và cải thiện cơ chế chỉ huy chung. Thứ ba, hành động phối hợp. Tổ chức diễn tập toàn diện trong bốn giai đoạn: tấn công hoả lực, tác động đột phá, kéo ra chung, và bộ phận bao vây, và kiểm soát chính xác các hoạt động chung.
+[NeMo I 2023-09-26 08:08:06 nmt_service:164] Translated in 2.015754461288452. Input was: 日常巡逻边境线的任务也面临着各种意想不到的情况。清华大学化学系2017级本科生李永亮也是退伍返校的学生，在与部队机关直保营官兵座谈时，他对带队连长的故事印象深刻：此前一支队伍在巡逻中突然遭遇大雪封山，道路难行，无法跟部队取得联系。几位战士以雪充饥，轮流在前面开路。连长担心战士们遇到老虎、豹子、熊之类的猎食性动物，他将步枪交给了下山探路的两名同志，自己则将手枪弹药上了膛，随时准备应对突发情况。万幸，两名同志顺利找到了一户老乡，并与部队取得了联系。 <############> Translation was: Nhiệm vụ tuần tra biên giới hàng ngày cũng phải đối mặt với nhiều tình huống bất ngờ khác nhau. Li Yongliang, một sinh viên đại học năm 2017 thuộc Khoa Hoá học tại Đại học Thanh Hoa, cũng là một sinh viên đã nghỉ hưu trở lại trường. Khi nói chuyện với các sĩ quan và binh sĩ của đơn vị quân đội trực tiếp bảo vệ tiểu đoàn, anh rất ấn tượng với câu chuyện của người lãnh đạo công ty. Đói vì tuyết, nhiều chiến binh thay phiên nhau lái xe về phía trước. Lo sợ rằng những người lính đang gặp phải những kẻ săn mồi như hổ, báo và gấu, chỉ huy đại đội đã trao khẩu súng trường của mình cho hai đồng đội xuống đồi để tìm đường, và nạp đạn cho khẩu súng lục của mình, sẵn sàng đáp trả. May mắn thay, hai đồng chí đã tìm được một ngôi nhà cũ và liên lạc với quân đội.
+[NeMo I 2023-09-26 08:11:24 nmt_service:164] Translated in 1.5635781288146973. Input was: 9月06日，美空军一架WC-135R核侦察机从嘉手纳起飞，穿过中国东海防空识别区后抵近中国大陆海岸，而后沿东海海岸径直向北，至青岛以南黄海海域对华进行抵近侦察，最近距连云港附近的领海基点约21海里。 <############> Translation was: Vào ngày 6 tháng 9, một máy bay trinh sát hạt nhân WC-135R của Không quân Hoa Kỳ đã cất cánh từ Kadena, băng qua Vùng Nhận dạng Phòng không Biển Hoa Đông của Trung Quốc và đến bờ biển lục địa Trung Quốc. Sau đó, nó tiến lên phía bắc dọc theo bờ biển Đông Trung Quốc đến Hoàng Hải phía nam Thanh Đảo để tiến hành trinh sát gần tên lửa đến Trung Quốc, cách căn cứ lãnh hải gần Lian khoảng 21 hải lý
+[NeMo I 2023-09-26 08:12:07 nmt_service:164] Translated in 1.3559024333953857. Input was: 琼航警103/23，北部湾，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E及20-05.0N/109-11.0E诸点连线水域范围内进行实弹射击训练。禁止驶入 <############> Translation was: Joan Air Police 103 / 23, Vịnh Beibu, từ 0800 giờ ngày 13 tháng 9 đến 1200 giờ ngày 14 tháng 9, sẽ tiến hành huấn luyện bắn trực tiếp trong vùng biển của 19-59.0 N / 109-11.0E, 19-59.0 N / 109-17.0E, 20-05.0 N / 109-17.0E và 20-05.0 N / 109-11.0E điểm. Lái xe bị cấm.
+[NeMo I 2023-09-26 08:13:27 nmt_service:164] Translated in 1.557046890258789. Input was: 琼航警100/23，南海，自2023年9月8日至9月10日，每日0600时至1830时，在18-51.87N/110-30.65E、18-51.87N/110-36.35E、18-46.47N/110-36.35E和18-46.47N/110-30.65E四点连线水域范围内进行军事训练，禁止驶入。 <############> Translation was: Joan Aviation Police 100 / 23, Biển Đông, từ ngày 8 tháng 9 đến ngày 10 tháng 9 năm 2023, từ 0600 giờ đến 1830 giờ hàng ngày, huấn luyện quân sự bị cấm trong vùng biển liên kết bốn điểm 18-51.87 N / 110-30.65E, 18-51.87 N / 110-36.35E, 18-46.47 N / 110-36.35E và 18-46.47 N / 110-30.65E.
+[NeMo I 2023-09-26 08:15:17 nmt_service:164] Translated in 1.498917818069458. Input was: 8月11日，根据美海军“里根”号航母舰载机“灰狗”C-2A（AE045E）飞行轨迹判断，航母打击群在菲律宾东部海域航行。综合AIS、舰载机ADS-B和遥感影像，里根号航母在7月11日经过巽他海峡，7月16日在印度尼西亚巴厘岛进行港口访问，8月1日停靠在澳大利亚达尔文基地，8月7日在苏拉威西海活动，然后进入菲律宾海北上。 <############> Translation was: Vào ngày 11 tháng 8, đội đặc nhiệm tàu sân bay tấn công lên đường ngoài khơi bờ biển phía Đông Philippines, căn cứ theo quỹ đạo bay của máy bay Hải quân Mỹ Greyhound C-2A (AE045E) USS Reagan. Kết hợp với các thiết bị AIS, ADS-B và viễn thám, Reagan băng qua eo biển Sunda vào ngày 11 tháng 7, viếng thăm cảng Bali, Indonesia vào ngày 16 tháng 7, cập cảng Darwin, Australia vào ngày 1 tháng 8, và hoạt động tại biển Sulawesi vào ngày 7 tháng 8 trước khi hướng lên phía Bắc vào biển Philippine.
+[NeMo I 2023-09-26 08:19:52 nmt_service:164] Translated in 1.3077960014343262. Input was: 琼航警103/23，北部湾，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E及20-05.0N/109-11.0E诸点连线水域范围内进行实弹射击训练。禁止驶入。 <############> Translation was: Joan Air Police 103 / 23, Vịnh Beibu, từ 0800 giờ ngày 13 tháng 9 đến 1200 giờ ngày 14 tháng 9, sẽ tiến hành huấn luyện bắn trực tiếp trong vùng biển của 19-59.0 N / 109-11.0E, 19-59.0 N / 109-17.0E, 20-05.0 N / 109-17.0E và 20-05.0 N / 109-11.0E điểm. Lái xe bị cấm.
+[NeMo I 2023-09-26 08:20:07 nmt_service:164] Translated in 1.534663200378418. Input was: 中新网9月29日电 据“国防部发布”微信公众号消息，9月29日下午，国防部举行例行记者会，国防部新闻局副局长、国防部新闻发言人谭克非大校答记者问。谭克非介绍，根据中俄两军年度合作计划，中国人民解放军抽组精干力量赴俄罗斯乌苏里斯克市谢尔盖耶夫斯基训练场和日本海相关海域，参加于2022年8月31日至9月7日举行的“东方-2022”演习，共有包括中俄在内的14个国家参加此次演习。 <############> Translation was: Vào chiều ngày 29 tháng 9, Bộ Quốc phòng đã tổ chức một cuộc họp báo thường kỳ, Phó Cục trưởng Cục Thông tin Bộ Quốc phòng và Người phát ngôn Báo chí Bộ Quốc phòng Thiếu tá Jiang Kefei trả lời các phóng viên. Theo kế hoạch hợp tác hàng năm giữa quân đội hai nước, Quân đội Giải phóng Nhân dân Trung Quốc (PLA) đã thu hút các lực lượng có khả năng tham gia cuộc tập trận "Đông Phương-2022" được tổ chức từ ngày 31 tháng 8 đến ngày 7 tháng 9 năm 2022 tại sân tập Sergeyevsky ở Ussuriysk, Nga và các vùng biển liên quan của Biển Nhật Bản.
+[NeMo I 2023-09-26 08:23:22 nmt_service:164] Translated in 2.3707826137542725. Input was: 谭克非介绍，根据中俄两军年度合作计划，中国人民解放军抽组精干力量赴俄罗斯乌苏里斯克市谢尔盖耶夫斯基训练场和日本海相关海域，参加于2022年8月31日至9月7日举行的“东方-2022”演习，共有包括中俄在内的14个国家参加此次演习。中方此次参演充分利用陌生复杂环境，按照各领域覆盖、多层级参演、大体系支撑、全要素联动的要求，精心编组功能完备的指挥、作战和支援保障力量，精心组织跨境投送、作战筹划、实兵行动和野战保障，全面锻炼提升了境外遂行军事行动的能力。演习期间，多国部队联合战役指挥部合帐筹谋，共同研究探讨战术战法，多国实兵部队同台竞技，相互之间联得紧、融得深，交流了经验做法，加深了战斗友谊。 <############> Translation was: Theo kế hoạch hợp tác hàng năm giữa quân đội hai nước, Quân đội Giải phóng Nhân dân Trung Quốc (PLA) đã thu hút các lực lượng có khả năng tham gia cuộc tập trận "Đông Phương-2022" được tổ chức từ ngày 31 tháng 8 đến ngày 7 tháng 9 năm 2022 tại sân tập Sergeyevsky ở Ussuriysk, Nga và các vùng biển liên quan của Biển Nhật Bản. Tận dụng tối đa môi trường xa lạ và phức tạp, Trung Quốc đã tổ chức cẩn thận các lực lượng chỉ huy, chiến đấu và hỗ trợ đầy đủ chức năng theo yêu cầu bao trùm các lĩnh vực khác nhau, tham gia đa cấp, hỗ trợ hệ thống lớn và liên kết mọi yếu tố, tổ chức cẩn thận giao hàng qua biên giới, lập kế hoạch chiến đấu, hoạt động quân sự thực tế và hỗ trợ hiện trường, và cải thiện toàn diện khả năng thực hiện các hoạt động quân sự ở nước ngoài. Trong cuộc tập trận, chỉ huy hoạt động chung của lực lượng đa quốc gia đã cùng lên kế hoạch, cùng nghiên cứu và thảo luận về các phương pháp chiến thuật chiến tranh, quân đội thực sự đa quốc gia cạnh tranh với nhau, liên kết chặt chẽ với nhau, tích hợp sâu sắc, trao đổi kinh nghiệm và thực tiễn, và làm sâu sắc thêm tình hữu nghị chiến đấu.
+[NeMo I 2023-09-26 08:25:56 nmt_service:164] Translated in 1.5805792808532715. Input was: 琼航警100/23，南海，自2023年9月8日至9月10日，每日0600时至1830时，在18-51.87N/110-30.65E、18-51.87N/110-36.35E、18-46.47N/110-36.35E和18-46.47N/110-30.65E四点连线水域范围内进行军事训练，禁止驶入。 <############> Translation was: Joan Aviation Police 100 / 23, Biển Đông, từ ngày 8 tháng 9 đến ngày 10 tháng 9 năm 2023, từ 0600 giờ đến 1830 giờ hàng ngày, huấn luyện quân sự bị cấm trong vùng biển liên kết bốn điểm 18-51.87 N / 110-30.65E, 18-51.87 N / 110-36.35E, 18-46.47 N / 110-36.35E và 18-46.47 N / 110-30.65E.
+[NeMo I 2023-09-26 08:32:47 nmt_service:164] Translated in 1.5560522079467773. Input was: 琼航警87/23，南海，自2023年7月29日0000时至8月2日2400时，在20-22.55N/111-12.32E、17-04.60N/114-28.52E、15-42.25N/113-16.53E和18-28.93N/110-32.73E四点连线水域范围内进行军事训练，禁止驶入。 <############> Translation was: Cảnh sát hàng không Qiong 87-23, Biển Đông, từ 0000 giờ vào ngày 29 tháng 7 năm 2023 đến 2400 giờ vào ngày 2 tháng 8 năm 2023, huấn luyện quân sự bị cấm trong vùng biển liên kết bốn điểm 20-22,55 N / 111-12,32E, 17-04.60 N / 114-28,52E, 15-42,25 N / 113-16,53E và 18-28,93 N / 110-32,73E.
+[NeMo I 2023-09-26 08:34:38 nmt_service:164] Translated in 2.1223435401916504. Input was:  手持新加坡 SAR-21 步枪的解放军战士
+    6 月，中国海军参加了印尼举行的 " 科莫多 -2023" 多国海上联合演习，另外中国和越南各派出两艘军舰在北部湾进行了第 34 次联合巡逻。
+    7 月，中国与泰国空军联合组织了 " 鹰击 -2023" 演习。在日本海，中国与俄罗斯举行了 " 北部 · 联合 -2023" 海上军事演习。另外在新疆举行了 " 锋刃 -2023" 国际狙击手比赛。
+    8 月，中国与阿联酋空军在新疆举行首次联训。然后还有中泰陆军 " 突击 -2023" 联合训练。
+    9 月，中泰海军又举行了 " 蓝色突击 -2023" 联合演习。几乎同时，中国又派出部队前往新加坡，参加中新 " 合作 -2023" 陆军联合训练。
+     <############> Translation was: Máy bay chiến đấu của Quân đội Giải phóng Nhân dân được trang bị súng trường Singapore SAR-21
+    Vào tháng 6, Hải quân Trung Quốc đã tham gia cuộc tập trận chung hàng hải đa quốc gia "Komodo-2023" của Indonesia, và Trung Quốc và Việt Nam đã gửi hai tàu chiến để tiến hành tuần tra chung lần thứ 34 trong vịnh Beibu.
+    Vào tháng 7, Trung Quốc và Không quân Thái Lan phối hợp tổ chức cuộc tập trận Eagle Strike-2023. Trên biển Nhật Bản, Trung Quốc và Nga đã tổ chức các cuộc tập trận hải quân "Liên minh phương Bắc-2023". Một cuộc thi bắn tỉa quốc tế được gọi là "Fengxian-2023" cũng được tổ chức tại Tân Cương.
+    Vào tháng 8, Trung Quốc và Không quân Các Tiểu vương quốc Ả Rập Thống nhất đã tổ chức khoá huấn luyện chung đầu tiên tại Tân Cương, sau đó là khoá huấn luyện chung của Quân đội Trung Quốc-Thái Lan Commando-2023.
+    Vào tháng 9, hải quân Trung Quốc và Thái Lan đã tổ chức một cuộc tập trận chung khác "Blue Assault-2023". Gần như cùng thời điểm, Trung Quốc gửi quân đến Singapore để huấn luyện chung của Quân đội Hợp tác Trung-Singapore-2023.
+[NeMo I 2023-09-26 08:34:48 nmt_service:164] Translated in 2.104555368423462. Input was:  手持新加坡 SAR-21 步枪的解放军战士
+    6 月，中国海军参加了印尼举行的 " 科莫多 -2023" 多国海上联合演习，另外中国和越南各派出两艘军舰在北部湾进行了第 34 次联合巡逻。
+    7 月，中国与泰国空军联合组织了 " 鹰击 -2023" 演习。在日本海，中国与俄罗斯举行了 " 北部 · 联合 -2023" 海上军事演习。另外在新疆举行了 " 锋刃 -2023" 国际狙击手比赛。
+    8 月，中国与阿联酋空军在新疆举行首次联训。然后还有中泰陆军 " 突击 -2023" 联合训练。
+    9 月，中泰海军又举行了 " 蓝色突击 -2023" 联合演习。几乎同时，中国又派出部队前往新加坡，参加中新 " 合作 -2023" 陆军联合训练。
+     <############> Translation was: Máy bay chiến đấu của Quân đội Giải phóng Nhân dân được trang bị súng trường Singapore SAR-21
+    Vào tháng 6, Hải quân Trung Quốc đã tham gia cuộc tập trận chung hàng hải đa quốc gia "Komodo-2023" của Indonesia, và Trung Quốc và Việt Nam đã gửi hai tàu chiến để tiến hành tuần tra chung lần thứ 34 trong vịnh Beibu.
+    Vào tháng 7, Trung Quốc và Không quân Thái Lan phối hợp tổ chức cuộc tập trận Eagle Strike-2023. Trên biển Nhật Bản, Trung Quốc và Nga đã tổ chức các cuộc tập trận hải quân "Liên minh phương Bắc-2023". Một cuộc thi bắn tỉa quốc tế được gọi là "Fengxian-2023" cũng được tổ chức tại Tân Cương.
+    Vào tháng 8, Trung Quốc và Không quân Các Tiểu vương quốc Ả Rập Thống nhất đã tổ chức khoá huấn luyện chung đầu tiên tại Tân Cương, sau đó là khoá huấn luyện chung của Quân đội Trung Quốc-Thái Lan Commando-2023.
+    Vào tháng 9, hải quân Trung Quốc và Thái Lan đã tổ chức một cuộc tập trận chung khác "Blue Assault-2023". Gần như cùng thời điểm, Trung Quốc gửi quân đến Singapore để huấn luyện chung của Quân đội Hợp tác Trung-Singapore-2023.
+[NeMo I 2023-09-26 08:36:31 nmt_service:164] Translated in 1.8031549453735352. Input was: 江苏省苏州市“2023安辐二号”辐射事故综合应急演习成功在昆山举行。演习以放射源丢失后搜寻和收贮、非密封放射性物质撒落后收贮为背景，事故等级为较大辐射事故，启动Ⅲ应急响应。演习设置了事故报告、应急启动、应急响应、舆情应对、非密封放射性物质洒落收贮、放射源搜寻和处置、应急终止共7个科目。
+    此次演习检验了生态环境、公安、卫生、宣传等相关部门应对两起较大辐射事故的应急响应、组织协调、协同作战能力，检验了应急预案的实用性和可操作性。
+    
+     <############> Translation was: Thành phố Tô Châu, tỉnh Giang Tô "2023 Anzhao số 2" tai nạn bức xạ khẩn cấp toàn diện khoan đã được tổ chức thành công tại Côn Sơn. Bài tập được tiến hành trong bối cảnh tìm kiếm và lưu trữ sau khi mất nguồn phóng xạ và lưu trữ muộn các vật liệu phóng xạ không được niêm phong. Mức độ tai nạn được phân loại là tai nạn bức xạ lớn và phản ứng khẩn cấp plutonium là Các bài tập bao gồm báo cáo tai nạn, khởi động khẩn cấp, ứng phó khẩn cấp, phản ứng dư luận, lưu trữ tràn vật liệu phóng xạ chưa niêm phong, tìm kiếm và xử lý các nguồn phóng xạ và chấm dứt khẩn cấp.
+    Cuộc tập trận đã kiểm tra khả năng ứng phó khẩn cấp, phối hợp tổ chức và khả năng hợp tác chiến đấu của các phòng ban liên quan như sinh thái và môi trường, an ninh công cộng, y tế và công khai để đối phó với hai vụ tai nạn bức xạ lớn, và kiểm tra tính thực tế và khả năng hoạt động của các kế hoạch khẩn cấp.
+[NeMo I 2023-09-26 08:37:00 nmt_service:164] Translated in 2.72074556350708. Input was: 一、作业时间
+    2023年9月2日至2023年10月31日。
+    二、作业船舶
+    钻井平台：“勘探三号”轮；
+    作业船舶：“海洋石油671”轮、“海洋石油670”轮。
+    三、作业内容
+    海上钻井作业。
+    四、作业范围
+    以18°10′38.492″N，110°45′22.014″E为中心，半径为1海里的范围内区域。
+    五、注意事项
+    （一）钻井平台按有关规定显示信号，夜间船体四周有信号灯闪烁，井架顶部有红色闪烁灯。
+    （二）作业船舶联系方式为VHF16、VHF8。
+    （三）过往船舶应加强瞭望，注意避让，避免穿越安全作业区，以策安全。
+    （四）如施工作业提前结束，将不再另行通告。
+    特此通告。
+     <############> Translation was: I. Thời gian hoạt động
+    Nó diễn ra từ ngày 2 tháng 9 năm 2023 đến ngày 31 tháng 10 năm 2023.
+    II. Điều khiển tàu biển
+    Nền tảng khoan: Bánh xe "Khám phá số 3";
+    Vận hành tàu: tàu "dầu ngoài khơi 671", tàu "dầu ngoài khơi 670".
+    Thứ ba, nội dung công việc
+    Hoạt động khoan ngoài khơi.
+    IV. Phạm vi hoạt động
+    Nó có tâm tại 18 10 38.492 N, 110 45 22.014 E với bán kính 1 hải lý.
+    V. Thận trọng
+    (1) Nền tảng khoan hiển thị tín hiệu theo các quy định có liên quan. Có đèn tín hiệu nhấp nháy xung quanh thân tàu vào ban đêm và đèn nhấp nháy màu đỏ ở trên cùng của giàn khoan
+    (2) VHF16 và VHF8 là chi tiết liên lạc của các tàu hoạt động.
+    (3) Tàu trong quá khứ phải tăng cường cảnh giác, chú ý tránh và tránh vượt qua các khu vực hoạt động an toàn để có biện pháp an toàn.
+    (4) Nếu công trình xây dựng được hoàn thành trước thời hạn, sẽ không có thông báo thêm.
+    Quý vị đã được thông báo.
+[NeMo I 2023-09-26 08:38:17 nmt_service:164] Translated in 1.2872111797332764. Input was: 琼航警99/23,南海,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。 <############> Translation was: Cảnh sát Qiong Hang 99 23, Biển Đông, ngày 30 tháng 8 đến ngày 1 tháng 9 năm 2023, giàn khoan "Haiyang Oil 676" "Haiyang Oil 944" được kéo từ 18-35,61N 107-45,78E đến 18-37,24N 107-43,73E, chiều dài kéo 300 mét, tốc độ 4 hải lý. Làm ơn buông ra.
+[NeMo I 2023-09-26 08:41:46 nmt_service:164] Translated in 2.754061222076416. Input was: 琼航警93/23，琼州海峡，2023年8月16日1200时起，南海伏季休渔期结束，将有大量渔船通过琼州海峡出海作业。希过往船舶加强了望、谨慎驾驶、注意避让。
+    琼航警62/23，南海，自2023年6月23日1000时至6月24日1800时在20-04.50N/110-55.50E、20-04.50N/111-21.33E、19-46.83N/111-21.33E、19-46.83N/111-00.00E四点连线水域和18-59.00N/110-31.00E、18-59.00N/110-44.50E、18-43.33N/110-44.50E、18-43.33N/110-31.00E四点连线水域范围内进行军事训练，禁止驶入。
+     <############> Translation was: Cảnh sát Hàng không Qiong 93-23, Eo biển Qiongzhou, Từ 1200 giờ vào ngày 16 tháng 8 năm 2023, một số lượng lớn tàu đánh cá sẽ hoạt động qua eo biển Qiongzhou sau khi kết thúc thời kỳ đánh bắt Vuji ở Biển Đông Tôi hy vọng rằng các tàu đi qua tăng cường cảnh giác, lái xe cẩn thận, chú ý để tránh.
+    Joan Aviation Police 62 / 23, Biển Đông, từ 1000 giờ vào ngày 23 tháng 6 năm 2023 đến 1800 giờ vào ngày 24 tháng 6 năm 2023, huấn luyện quân sự bị cấm trong vùng biển liên kết bốn điểm 20-04.50 N / 110-55.50E, 20-04.50 N / 111-21.33E, 19-46.83 N / 111-21.33E, 19-46.83N / 111-00.00E và 18-59.00N / 110-31.00E, 18-59.00N / 110-44.50E, 18-43.33N / 110-44.50E, 18-43.33N / 110-31.00E.
+[NeMo I 2023-09-26 08:42:25 nmt_service:164] Translated in 1.5976176261901855. Input was: 9月06日，美空军一架WC-135R核侦察机从嘉手纳起飞，穿过中国东海防空识别区后抵近中国大陆海岸，而后沿东海海岸径直向北，至青岛以南黄海海域对华进行抵近侦察，最近距连云港附近的领海基点约21海里。
+    
+     <############> Translation was: Vào ngày 6 tháng 9, một máy bay trinh sát hạt nhân WC-135R của Không quân Hoa Kỳ đã cất cánh từ Kadena, băng qua Vùng Nhận dạng Phòng không Biển Hoa Đông của Trung Quốc và đến bờ biển lục địa Trung Quốc. Sau đó, nó tiến lên phía bắc dọc theo bờ biển Đông Trung Quốc đến Hoàng Hải phía nam Thanh Đảo để tiến hành trinh sát gần tên lửa đến Trung Quốc, cách căn cứ lãnh hải gần Lian khoảng 21 hải lý
+[NeMo I 2023-09-26 08:42:28 nmt_service:164] Translated in 0.9887115955352783. Input was: 琼航警93/23，琼州海峡，2023年8月16日1200时起，南海伏季休渔期结束，将有大量渔船通过琼州海峡出海作业。希过往船舶加强了望、谨慎驾驶、注意避让。 <############> Translation was: Cảnh sát Hàng không Qiong 93-23, Eo biển Qiongzhou, Từ 1200 giờ vào ngày 16 tháng 8 năm 2023, một số lượng lớn tàu đánh cá sẽ hoạt động qua eo biển Qiongzhou sau khi kết thúc thời kỳ đánh bắt Vuji ở Biển Đông Tôi hy vọng rằng các tàu đi qua tăng cường cảnh giác, lái xe cẩn thận, chú ý để tránh.
+[NeMo I 2023-09-26 08:44:08 nmt_service:164] Translated in 2.379673719406128. Input was: 琼航警62/23，南海，自2023年6月23日1000时至6月24日1800时在20-04.50N/110-55.50E、20-04.50N/111-21.33E、19-46.83N/111-21.33E、19-46.83N/111-00.00E四点连线水域和18-59.00N/110-31.00E、18-59.00N/110-44.50E、18-43.33N/110-44.50E、18-43.33N/110-31.00E四点连线水域范围内进行军事训练，禁止驶入。 <############> Translation was: Joan Aviation Police 62 / 23, Biển Đông, từ 1000 giờ vào ngày 23 tháng 6 năm 2023 đến 1800 giờ vào ngày 24 tháng 6 năm 2023, huấn luyện quân sự bị cấm trong vùng biển liên kết bốn điểm 20-04.50 N / 110-55.50E, 20-04.50 N / 111-21.33E, 19-46.83 N / 111-21.33E, 19-46.83N / 111-00.00E và 18-59.00N / 110-31.00E, 18-59.00N / 110-44.50E, 18-43.33N / 110-44.50E, 18-43.33N / 110-31.00E.
+[NeMo I 2023-09-26 08:45:48 nmt_service:164] Translated in 1.8072683811187744. Input was: 在9月13日外交部例行记者会上，有记者提问称，美国和加拿大军舰通过台湾海峡，近日有报道称，中国在台湾岛附近进行大型军事演习，外交部能否进一步介绍有关情况？
+    　　毛宁表示，关于美加军舰过航台湾海峡，中国人民解放军东部战区的新闻发言人已经发表了谈话，你可以查阅。
+    　　毛宁强调，台湾是中国领土不可分割的一部分，中国捍卫国家主权和领土完整的决心是坚定不移的，有关方面应当立即停止此类的挑衅行动，不要做台海和平稳定的麻烦制造者。
+     <############> Translation was: Tại cuộc họp báo thường kỳ của Bộ Ngoại giao vào ngày 13 tháng 9, một phóng viên đã hỏi rằng các tàu chiến Hoa Kỳ và Canada đi qua Eo biển Đài Loan. Có những báo cáo gần đây cho biết Trung Quốc đang tiến hành các cuộc tập trận quân sự quy mô lớn gần đảo Đài Loan. Bộ Ngoại giao có thể cung cấp thêm thông tin không?
+    Mao Ning nói rằng liên quan đến việc thông qua các tàu chiến Mỹ-Canada qua eo biển Đài Loan, người phát ngôn báo chí của Nhà hát Đông Quân Giải phóng Nhân dân đã đưa ra một tuyên bố, bạn có thể kiểm tra.
+    Mao Ning nhấn mạnh rằng Đài Loan là một phần không thể tách rời của lãnh thổ Trung Quốc. Quyết tâm của Trung Quốc để bảo vệ chủ quyền quốc gia và toàn vẹn lãnh thổ là không thay đổi. Các bên liên quan nên ngay lập tức ngăn chặn các hành động khiêu khích như vậy và kiềm chế không trở thành kẻ gây rối vì hoà bình và ổn định ở eo biển Đài Loan.
+[NeMo I 2023-09-26 08:50:09 nmt_service:164] Translated in 1.5009522438049316. Input was: 8月11日，根据美海军“里根”号航母舰载机“灰狗”C-2A（AE045E）飞行轨迹判断，航母打击群在菲律宾东部海域航行。综合AIS、舰载机ADS-B和遥感影像，里根号航母在7月11日经过巽他海峡，7月16日在印度尼西亚巴厘岛进行港口访问，8月1日停靠在澳大利亚达尔文基地，8月7日在苏拉威西海活动，然后进入菲律宾海北上。
+     <############> Translation was: Vào ngày 11 tháng 8, đội đặc nhiệm tàu sân bay tấn công lên đường ngoài khơi bờ biển phía Đông Philippines, căn cứ theo quỹ đạo bay của máy bay Hải quân Mỹ Greyhound C-2A (AE045E) USS Reagan. Kết hợp với các thiết bị AIS, ADS-B và viễn thám, Reagan băng qua eo biển Sunda vào ngày 11 tháng 7, viếng thăm cảng Bali, Indonesia vào ngày 16 tháng 7, cập cảng Darwin, Australia vào ngày 1 tháng 8, và hoạt động tại biển Sulawesi vào ngày 7 tháng 8 trước khi hướng lên phía Bắc vào biển Philippine.
+[NeMo I 2023-09-26 08:54:43 nmt_service:164] Translated in 2.680201530456543. Input was: AIS信号显示，2月20日，尼米兹号航母打击群成员“迪云”号与“韦恩·迈耶”号驱逐舰经苏里高海峡进入菲律宾海。2月19日，打击群成员“迪卡特”号与“韦恩·迈耶”号驱逐舰在苏禄海活动，同日，一架美海军P-8A反潜巡逻机自菲律宾克拉克机场起飞，提供ISR（情报、侦察、监视）支援。据三艘驱逐舰航行轨迹推断，尼米兹号航母打击群已于2月18日自巴拉巴克海峡进入苏禄海，结束此次南海部署。
+    尼米兹号航母打击群此次部署活动时间长，轨迹呈闭环。打击群于1月12日自巴士海峡进入南海，活动时间长达38天，是近年来美海军航母在南海部署时间最长的一次。部署期间，除短暂访问新加坡和配合美防长访菲外，长时间位印马交界水域和万安盆地以南海域活动。2月11日开始，尼米兹号航母打击群还与马金岛号两栖戒备群在此进行了“联合远征打击力量（ESF）”作战训练
+    
+     <############> Translation was: Theo tín hiệu AIS, vào ngày 20 tháng 2, các tàu khu trục Diyun và Wayne Meyer, thành viên của đội tàu sân bay của Nimitz, tiến vào biển Philippine ngang qua eo biển Surigao. Vào ngày 19 tháng 2, Decatur và tàu khu trục Wayne Meyer đang hoạt động trong biển Sulu, và cùng ngày hôm đó, một máy bay tuần tra chống tàu ngầm P-8A của Hải quân cất cánh từ sân bay Clark ở Philippines để hỗ trợ tình báo, trinh sát và giám sát. Theo quỹ đạo của ba tàu khu trục, Nimitz tiến vào biển Sulu từ eo biển Balabak vào ngày 18 tháng 2, kết thúc việc bố trí hoạt động tại Biển Đông.
+    Nhóm tấn công tàu sân bay Nimitz được triển khai trong một thời gian dài và có quỹ đạo vòng kín. Nhóm tấn công tiến vào Biển Đông từ eo biển Bus vào ngày 12 tháng 1 và kéo dài 38 ngày, khiến nó trở thành đợt triển khai tàu sân bay dài nhất của Hải quân Hoa Kỳ ở Biển Đông trong những năm gần đây. Trong quá trình triển khai, ngoài một chuyến thăm ngắn đến Singapore và một chuyến thăm Philippines với Bộ trưởng Quốc phòng Hoa Kỳ, nó đã hoạt động trong một thời gian dài ở vùng biển giáp biên giới Ấn Độ và Bắt đầu từ ngày 11 tháng 2, đội đặc nhiệm tàu sân bay Nimitz tiến hành huấn luyện tác chiến phối hợp Lực lượng Tấn công Viễn chinh (ESF) cùng với đội sẵn sàng đổ bộ Mackin Island.
+[NeMo I 2023-09-26 09:00:15 nmt_service:164] Translated in 1.7803380489349365. Input was: 总书记的一周（9月18日—9月24日）
+    跟着总书记的考察足迹丨走进“鲁南明珠”枣庄
+    习近平山东行丨走进枣庄市冠世榴园
+    中华人民共和国和尼泊尔联合声明（全文）
+    国新办发布《携手构建人类命运共同体：中国的倡议与行动》白皮书 （全文）
+    神舟十二号至十五号航天员授称颁奖大会在北京举行
+    走边疆·看变化丨卡昝河边防连:做边关民族团结的“石榴籽”
+    我军“和平天使”医疗队在柬埔寨开展医疗服务纪事
+    我海军阿坝舰紧急救助菲律宾受伤渔民
+     <############> Translation was: Tuần lễ của Tổng Bí thư (18 tháng 9 - 24 tháng 9)
+    Theo dấu chân kiểm tra của tổng thư ký vào "viên ngọc của Lunan" Zaozhuang
+    Dòng Xi Jinping Sơn Đông vào Zaozhuang Guanshi vườn sầu riêng
+    Tuyên bố chung của Cộng hoà Nhân dân Trung Hoa và Nepal
+    Văn phòng mới của Hội đồng Nhà nước đã phát hành một cuốn sách trắng có tựa đề "Hợp tác cùng nhau để xây dựng một cộng đồng chia sẻ tương lai cho nhân loại: các sáng kiến của Trung Quốc và
+    Lễ trao giải phi hành gia Thần Châu 12-15 được tổ chức tại Bắc Kinh
+    Đi bộ biên giới Nhìn vào sự thay đổi Công ty Biên giới Sông Cajun: Làm đoàn kết quốc gia cửa khẩu "hạt lựu"
+    Đội ngũ y tế "Thiên thần hoà bình" của quân đội chúng tôi thực hiện Biên niên sử dịch vụ y tế tại Campuchia
+    Hải quân Aba của tôi cứu hộ khẩn cấp ngư dân bị thương ở Philippines
+[NeMo I 2023-09-26 09:02:15 nmt_service:164] Translated in 0.8372745513916016. Input was: 7月31日，中央军委晋升上将军衔仪式在北京八一大楼举行。中央军委主席习近平出席晋衔仪式。这是习近平等领导同志同晋升上将军衔的军官合影。
+     <############> Translation was: Vào ngày 31 tháng 7, lễ thăng cấp bậc tướng của Uỷ ban Quân sự Trung ương đã được tổ chức tại Toà nhà Bayi Bắc Kinh. Chủ tịch Tập Cận Bình đã tham dự buổi lễ. Đây là một bức ảnh nhóm của Tập Cận Bình và các đồng chí lãnh đạo khác với các sĩ quan được thăng cấp tướng.
+[NeMo I 2023-09-26 09:03:04 nmt_service:164] Translated in 2.1237926483154297. Input was: 据中国媒体公开报道，中泰双方400余名联训官兵3日在泰国梭桃邑军港参加“蓝色突击—2023”海军联合训练开训仪式。泰国海军消息显示，中国海军039潜艇也罕见地同时期抵达梭桃邑海军基地。军事专家对《环球时报》表示，中国海军潜艇抵泰主要是为了展示其综合性能，让泰国更好了解和熟悉中国潜艇。
+        据“人民海军”发布消息称，此次联训是落实中泰两国两军领导人达成共识的有力举措，是自2010年首次举行系列联训的延续。公开报道显示，2010年10月至11月，“蓝色突击―2010”中泰海军陆战队联合训练在泰国举行，此后，“蓝色突击”系列演习相继举行了三次。
+     <############> Translation was: Theo báo cáo phương tiện truyền thông Trung Quốc, hơn 400 sĩ quan và binh sĩ từ Trung Quốc và Thái Lan đã tham gia vào "Blue Assault-2023" hải quân phối hợp đào tạo và đào tạo tại cảng quân sự Suotaozhan ở Thái Lan. Theo các nguồn tin của hải quân Thái Lan, tàu ngầm Trung Quốc 039 đã đến căn cứ hải quân Subaru cùng một lúc Các chuyên gia quân sự nói với Hoàn Cầu Thời báo rằng tàu ngầm hải quân Trung Quốc đến Thái Lan chủ yếu để chứng minh hiệu suất toàn diện của nó và cho phép Thái Lan hiểu rõ hơn và làm quen với tàu ngầm Trung Quốc.
+    Theo thông cáo báo chí của Hải quân Nhân dân, khoá đào tạo chung này là một biện pháp mạnh mẽ để thực hiện sự đồng thuận mà các nhà lãnh đạo của hai quân đội đạt được và là sự tiếp nối của loạt khoá đào tạo chung được tổ chức lần đầu tiên Các báo cáo công khai cho thấy từ tháng 10 đến tháng 11 năm 2010, cuộc tập trận phối hợp "Blue Assault-2010" của Thuỷ quân lục chiến Trung Quốc-Thái Lan đã được tổ chức tại Thái Lan, và kể từ đó, loạt bài tập "Blue Assault" đã được tổ chức ba lần liên tiếp.
+[NeMo I 2023-09-26 09:03:47 nmt_service:164] Translated in 2.7426209449768066. Input was: 西北某机场，空军航空兵某旅一架战机结束训练后呼啸归来。战机着陆，只听机尾处“嘭”的一声响，一具阻力伞瞬间弹出、逆风绽放，拖拽着疾速滑行的战机慢慢减速。
+    
+    跑道旁不远处，保伞员张蓬勃示意飞行员抛伞。看到阻力伞脱落，他和战友立即冲上去，顶着机尾未散的热浪，将几十公斤重的伞具快速拖到跑道旁，整个过程不到20秒。“跑道上战机接续起降，捡伞慢了，就可能危及其他战机安全。”张蓬勃介绍说，每次飞行训练，他和战友一趟趟奋力奔跑、手拉肩扛，常常累得汗流浃背。
+    
+    保伞员是习惯叫法，专业称呼是救生装具员。在航空兵部队，这虽是个“小众”专业，却与飞行安全息息相关。每次训练结束后，保伞员都要细致检查伞衣有无破损、部件有无丢失。抖动、捻拨、捋直、整理、折叠、打包……每个动作标准熟练，每个环节准确无误。 <############> Translation was: Tại một sân bay ở phía tây bắc, một lữ đoàn hàng không của Không quân đã bay trở lại sau khi huấn luyện. Máy bay hạ cánh, chỉ lắng nghe âm thanh "bang" ở đuôi máy bay, một chiếc ô kháng chiến ngay lập tức bật lên, chống lại những bông hoa gió, kéo máy bay chiến đấu lướt nhanh chậm lại.
+    
+    Không xa đường băng, lính dù Trương Phong ra hiệu cho phi công thả dù. Khi nhìn thấy chiếc ô kháng cự rơi ra, anh và các đồng đội của mình đã lao lên và kéo hàng chục kg lên đường băng trong vòng chưa đầy 20 giây, trong sức nóng của cái đuôi vẫn còn tản nhiệt. "Máy bay tiếp tục cất cánh và hạ cánh trên đường băng, nhặt dù chậm, nó có thể gây nguy hiểm cho sự an toàn của các máy bay khác." Zhang Fangfang nói rằng mỗi lần huấn luyện bay, anh và các đồng đội của mình chạy mạnh, tay trong tay, thường đổ mồ hôi.
+    
+    Lính nhảy dù thường được gọi, và tên chuyên nghiệp của họ là thiết bị cứu sinh. Trong lực lượng hàng không, đây là một nghề "thích hợp", nhưng nó liên quan chặt chẽ đến an toàn bay. Vào cuối mỗi khoá đào tạo, người bảo vệ ô phải kiểm tra cẩn thận xem chiếc ô có bị hư hỏng hay các bộ phận bị thiếu hay không. Jitter, quay số, làm thẳng, hoàn thiện, gấp, đóng gói... Mỗi tiêu chuẩn hành động thành thạo, mỗi liên kết là chính xác.
+[NeMo I 2023-09-26 09:03:50 nmt_service:164] Translated in 1.6494481563568115. Input was: 这段时间台海方向闹出的幺蛾子太多了，不光是岛内那帮“台独”分子在上蹿下跳，一些域外国家，主要就是美国，始终不愿放弃他们“以台制华”的野心，还要拉着一些“盟友”来挑事，是可忍孰不可忍？
+    最近美国、日本、法国在琉球群岛东部以及东海部分海域，举行了一场海上联合军演。
+    这场军演其中最大的看点，就是美国和日本总计出动了3艘航母参加，美军派出了两艘“尼米兹”级核动力航母，分别是“里根”号和“尼米兹”号，同时美军还派出了B-52战略轰炸机。
+    
+     <############> Translation was: Lần này có quá nhiều con xúc xắc theo hướng Eo biển Đài Loan. Nó không chỉ là băng đảng của các yếu tố "độc lập Đài Loan" nhảy lên và xuống trên đảo. Một số nước ngoài, chủ yếu là Hoa Kỳ, đã không sẵn sàng từ bỏ tham vọng "làm cho Trung Quốc với Đài Loan".
+    Hoa Kỳ, Nhật Bản và Pháp gần đây đã tổ chức một cuộc tập trận hải quân chung ở phía đông quần đảo Ryukyu và một phần của Biển Hoa Đông.
+    Một trong những điểm nổi bật của cuộc tập trận là sự tham gia của ba tàu sân bay từ Hoa Kỳ và Nhật Bản, hai tàu sân bay chạy bằng năng lượng hạt nhân lớp Nimitz, Reagan và Nimitz, và máy bay ném bom chiến lược B-52.
+[NeMo I 2023-09-26 09:05:48 nmt_service:164] Translated in 2.6816132068634033. Input was: 月9日至28日，中国人民解放军与老挝人民军在老挝库玛丹学院训练场，共同组织了“友谊盾牌-2023”联合演习，这是两军首次组织的实战课目演习，对于巩固双边传统友谊、提升联合行动能力、维护地区安全稳定具有重要意义。联演主要有3个特点：一是内容紧贴实战。参演兵力按实战要求联合编组，课目设置符合两军实战规范，重在检验提升两军实战能力。二是指挥精准高效。双方组建联合导演部、指挥所，编设指挥组和4个作战指挥控制中心，议定作战指挥要则，探索完善联合指挥机制。三是行动协同密切。区分火力突击、冲击突破、合力拔点、分割围剿4个阶段组织综合演练，精确控制联合行动，实战验证分布聚能、强插快打、合围歼敌等战法。
+     <############> Translation was: Từ ngày 9 đến 28 tháng 9, Quân đội Giải phóng Nhân dân và Quân đội Nhân dân Lào đã phối hợp tổ chức cuộc tập trận chung Friendship Shield-2023 tại sân tập của Học viện Kumadan ở Lào. Đây là cuộc tập trận chiến đấu đầu tiên do hai quân đội tổ chức, có ý nghĩa to lớn trong việc củng cố tình hữu nghị truyền thống song phương, tăng cường khả năng hành động chung và duy trì an ninh và ổn định khu vực. Bài tập chung có ba tính năng chính: Đầu tiên, nội dung gần với chiến đấu thực tế. Các đội quân tham gia được tổ chức chung theo yêu cầu chiến đấu thực tế và chương trình giảng dạy được thiết lập phù hợp với các chỉ tiêu chiến đấu thực tế của hai đội quân, tập trung vào thử nghiệm và cải thiện Thứ hai, chỉ huy là chính xác và hiệu quả. Hai bên thành lập các bộ phận giám đốc chung và các vị trí chỉ huy, thành lập các nhóm chỉ huy và bốn trung tâm chỉ huy và kiểm soát hoạt động, đồng ý về các hướng dẫn chỉ huy hoạt động và khám phá và cải thiện cơ chế chỉ huy chung. Thứ ba, hành động phối hợp. Tổ chức diễn tập toàn diện trong bốn giai đoạn: tấn công hoả lực, tác động đột phá, kéo ra chung, và bộ phận bao vây, và kiểm soát chính xác các hoạt động chung.
+[NeMo I 2023-09-26 09:06:07 nmt_service:164] Translated in 1.757920265197754. Input was: 当地时间2月11日，联合国驻黎巴嫩临时部队（联黎部队）在位于黎南部辛尼亚村的中国第21批赴黎维和多功能工兵分队营区举行代号“猛虎-2023”演习，中国维和官兵出色完成联黎部队雇员及其家属紧急疏散课目演练。 <############> Translation was: Vào ngày 11 tháng 2, giờ địa phương, Lực lượng lâm thời Liên Hợp Quốc tại Lebanon (UNIFIL) đã tổ chức một cuộc tập trận có tên mã là "Tiger-2023" trong khu vực tiểu đoàn của đội ngũ đơn vị kỹ thuật đa vai trò gìn giữ hoà bình 21st Trung Quốc đặt tại làng Sinya ở miền nam Lebanon. Những người gìn giữ hoà bình và binh lính Trung Quốc đã hoàn thành thành công các khoá học sơ tán khẩn cấp cho nhân viên UNIFIL và gia đình của họ.
+[NeMo I 2023-09-26 09:06:14 nmt_service:164] Translated in 1.5169758796691895. Input was: 中新网9月29日电 据“国防部发布”微信公众号消息，9月29日下午，国防部举行例行记者会，国防部新闻局副局长、国防部新闻发言人谭克非大校答记者问。谭克非介绍，根据中俄两军年度合作计划，中国人民解放军抽组精干力量赴俄罗斯乌苏里斯克市谢尔盖耶夫斯基训练场和日本海相关海域，参加于2022年8月31日至9月7日举行的“东方-2022”演习，共有包括中俄在内的14个国家参加此次演习。 <############> Translation was: Vào chiều ngày 29 tháng 9, Bộ Quốc phòng đã tổ chức một cuộc họp báo thường kỳ, Phó Cục trưởng Cục Thông tin Bộ Quốc phòng và Người phát ngôn Báo chí Bộ Quốc phòng Thiếu tá Jiang Kefei trả lời các phóng viên. Theo kế hoạch hợp tác hàng năm giữa quân đội hai nước, Quân đội Giải phóng Nhân dân Trung Quốc (PLA) đã thu hút các lực lượng có khả năng tham gia cuộc tập trận "Đông Phương-2022" được tổ chức từ ngày 31 tháng 8 đến ngày 7 tháng 9 năm 2022 tại sân tập Sergeyevsky ở Ussuriysk, Nga và các vùng biển liên quan của Biển Nhật Bản.
+[NeMo I 2023-09-26 09:09:54 nmt_service:164] Translated in 1.220550298690796. Input was: 此次演习，以任务区爆发大规模冲突，安全局势严重恶化，中国维和部队接收、保护、转移联黎部队雇员及其家属为背景，旨在检验中国维和部队安全保障能力。演习持续3个小时，中国维和分队出动100余名官兵和10辆车辆装备，圆满完成紧急避险、营区防卫、武装护送等8个课目演练。 <############> Translation was: Cuộc tập trận nhằm kiểm tra khả năng an toàn và an ninh của lực lượng gìn giữ hoà bình Trung Quốc trong bối cảnh xung đột quy mô lớn trong khu vực nhiệm vụ và sự suy giảm nghiêm trọng của tình hình an ninh, cũng như việc tiếp nhận, bảo vệ và chuyển giao nhân viên UNIFIL và gia đình họ Cuộc tập trận kéo dài ba giờ, với đơn vị gìn giữ hoà bình Trung Quốc phái hơn 100 binh sĩ và 10 phương tiện và thiết bị để hoàn thành thành công tám cuộc tập trận, bao gồm sơ tán khẩn cấp, phòng thủ trại và hộ tống vũ trang.
+[NeMo I 2023-09-26 09:10:25 nmt_service:164] Translated in 2.346604347229004. Input was: 谭克非介绍，根据中俄两军年度合作计划，中国人民解放军抽组精干力量赴俄罗斯乌苏里斯克市谢尔盖耶夫斯基训练场和日本海相关海域，参加于2022年8月31日至9月7日举行的“东方-2022”演习，共有包括中俄在内的14个国家参加此次演习。中方此次参演充分利用陌生复杂环境，按照各领域覆盖、多层级参演、大体系支撑、全要素联动的要求，精心编组功能完备的指挥、作战和支援保障力量，精心组织跨境投送、作战筹划、实兵行动和野战保障，全面锻炼提升了境外遂行军事行动的能力。演习期间，多国部队联合战役指挥部合帐筹谋，共同研究探讨战术战法，多国实兵部队同台竞技，相互之间联得紧、融得深，交流了经验做法，加深了战斗友谊。 <############> Translation was: Theo kế hoạch hợp tác hàng năm giữa quân đội hai nước, Quân đội Giải phóng Nhân dân Trung Quốc (PLA) đã thu hút các lực lượng có khả năng tham gia cuộc tập trận "Đông Phương-2022" được tổ chức từ ngày 31 tháng 8 đến ngày 7 tháng 9 năm 2022 tại sân tập Sergeyevsky ở Ussuriysk, Nga và các vùng biển liên quan của Biển Nhật Bản. Tận dụng tối đa môi trường xa lạ và phức tạp, Trung Quốc đã tổ chức cẩn thận các lực lượng chỉ huy, chiến đấu và hỗ trợ đầy đủ chức năng theo yêu cầu bao trùm các lĩnh vực khác nhau, tham gia đa cấp, hỗ trợ hệ thống lớn và liên kết mọi yếu tố, tổ chức cẩn thận giao hàng qua biên giới, lập kế hoạch chiến đấu, hoạt động quân sự thực tế và hỗ trợ hiện trường, và cải thiện toàn diện khả năng thực hiện các hoạt động quân sự ở nước ngoài. Trong cuộc tập trận, chỉ huy hoạt động chung của lực lượng đa quốc gia đã cùng lên kế hoạch, cùng nghiên cứu và thảo luận về các phương pháp chiến thuật chiến tranh, quân đội thực sự đa quốc gia cạnh tranh với nhau, liên kết chặt chẽ với nhau, tích hợp sâu sắc, trao đổi kinh nghiệm và thực tiễn, và làm sâu sắc thêm tình hữu nghị chiến đấu.
+[NeMo I 2023-09-26 09:11:53 nmt_service:164] Translated in 2.1283609867095947. Input was: 手持新加坡 SAR-21 步枪的解放军战士
+    6 月，中国海军参加了印尼举行的 " 科莫多 -2023" 多国海上联合演习，另外中国和越南各派出两艘军舰在北部湾进行了第 34 次联合巡逻。
+    7 月，中国与泰国空军联合组织了 " 鹰击 -2023" 演习。在日本海，中国与俄罗斯举行了 " 北部 • 联合 -2023" 海上军事演习。另外在新疆举行了 " 锋刃 -2023" 国际狙击手比赛。
+    8 月，中国与阿联酋空军在新疆举行首次联训。然后还有中泰陆军 " 突击 -2023" 联合训练。
+    9 月，中泰海军又举行了 " 蓝色突击 -2023" 联合演习。几乎同时，中国又派出部队前往新加坡，参加中新 " 合作 -2023" 陆军联合训练。
+     <############> Translation was: Máy bay chiến đấu của Quân đội Giải phóng Nhân dân được trang bị súng trường Singapore SAR-21
+    Vào tháng 6, Hải quân Trung Quốc đã tham gia cuộc tập trận chung hàng hải đa quốc gia "Komodo-2023" của Indonesia, và Trung Quốc và Việt Nam đã gửi hai tàu chiến để tiến hành tuần tra chung lần thứ 34 trong vịnh Beibu.
+    Vào tháng 7, Trung Quốc và Không quân Thái Lan phối hợp tổ chức cuộc tập trận Eagle Strike-2023. Trên biển Nhật Bản, Trung Quốc và Nga đã tổ chức các cuộc tập trận hải quân "Liên minh phương Bắc-2023". Một cuộc thi bắn tỉa quốc tế được gọi là "Fengxian-2023" cũng được tổ chức tại Tân Cương.
+    Vào tháng 8, Trung Quốc và Không quân Các Tiểu vương quốc Ả Rập Thống nhất đã tổ chức khoá huấn luyện chung đầu tiên tại Tân Cương, sau đó là khoá huấn luyện chung của Quân đội Trung Quốc-Thái Lan Commando-2023.
+    Vào tháng 9, hải quân Trung Quốc và Thái Lan đã tổ chức một cuộc tập trận chung khác "Blue Assault-2023". Gần như cùng thời điểm, Trung Quốc gửi quân đến Singapore để huấn luyện chung của Quân đội Hợp tác Trung-Singapore-2023.
+[NeMo I 2023-09-26 09:12:52 nmt_service:164] Translated in 2.058091402053833. Input was: 另外还有一些多国联合演习，也是外交意义大于实战意义，例如今年 6 月去印尼参加的 " 科莫多 -2023" 联合演习，一共有来自印尼、中国、美国、俄罗斯、新加坡、巴基斯坦等国的 40 多艘舰艇，那么多国家不同型号的军舰混在一起，真要搞实兵对抗演练显然不现实。
+    因此，演习期间进行了舰队阅兵、医疗、工程、文化、海军乐队等交流。演练了海上拦截、海上搜救、损管等科目。真正的意义是实现了多国军队之间的沟通联系。
+     <############> Translation was: Ngoài ra, có một số cuộc tập trận chung đa quốc gia có ý nghĩa ngoại giao lớn hơn ý nghĩa chiến đấu thực tế. Ví dụ, cuộc tập trận chung Komodo-2023, đã đến Indonesia vào tháng 6 năm nay, liên quan đến hơn 40 tàu từ Indonesia, Trung Quốc, Hoa Kỳ, Nga, Singapore, Pakistan và các nước khác. Vì vậy, nhiều quốc gia có các loại tàu chiến khác nhau trộn lẫn với nhau, vì vậy rõ ràng là không thực tế khi thực sự tham gia vào các cuộc tập trận chiến đấu thực tế.
+    Do đó, trong quá trình diễn tập, các cuộc trao đổi như diễu hành hạm đội, điều trị y tế, kỹ thuật, văn hoá và ban nhạc hải quân đã được tiến hành. Các đối tượng can thiệp hàng hải, tìm kiếm cứu nạn hàng hải và quản lý thiệt hại đã được diễn tập. Điều thực sự quan trọng là giao tiếp giữa các quân đội đa quốc gia đã đạt được.
+[NeMo I 2023-09-26 09:14:18 nmt_service:164] Translated in 1.8019895553588867. Input was: 江苏省苏州市“2023安辐二号”辐射事故综合应急演习成功在昆山举行。演习以放射源丢失后搜寻和收贮、非密封放射性物质撒落后收贮为背景，事故等级为较大辐射事故，启动Ⅲ应急响应。演习设置了事故报告、应急启动、应急响应、舆情应对、非密封放射性物质洒落收贮、放射源搜寻和处置、应急终止共7个科目。
+    此次演习检验了生态环境、公安、卫生、宣传等相关部门应对两起较大辐射事故的应急响应、组织协调、协同作战能力，检验了应急预案的实用性和可操作性。
+     <############> Translation was: Thành phố Tô Châu, tỉnh Giang Tô "2023 Anzhao số 2" tai nạn bức xạ khẩn cấp toàn diện khoan đã được tổ chức thành công tại Côn Sơn. Bài tập được tiến hành trong bối cảnh tìm kiếm và lưu trữ sau khi mất nguồn phóng xạ và lưu trữ muộn các vật liệu phóng xạ không được niêm phong. Mức độ tai nạn được phân loại là tai nạn bức xạ lớn và phản ứng khẩn cấp plutonium là Các bài tập bao gồm báo cáo tai nạn, khởi động khẩn cấp, ứng phó khẩn cấp, phản ứng dư luận, lưu trữ tràn vật liệu phóng xạ chưa niêm phong, tìm kiếm và xử lý các nguồn phóng xạ và chấm dứt khẩn cấp.
+    Cuộc tập trận đã kiểm tra khả năng ứng phó khẩn cấp, phối hợp tổ chức và khả năng hợp tác chiến đấu của các phòng ban liên quan như sinh thái và môi trường, an ninh công cộng, y tế và công khai để đối phó với hai vụ tai nạn bức xạ lớn, và kiểm tra tính thực tế và khả năng hoạt động của các kế hoạch khẩn cấp.
+[NeMo I 2023-09-26 09:15:58 nmt_service:164] Translated in 1.728327989578247. Input was: 2021年10月下旬，越南陆续在其非法占领的南沙群岛毕生礁、无乜礁、鸿庥岛、敦谦沙洲和柏礁等岛礁启动了大规模填海造岛工程。特别是毕生礁，越南计划将毕生礁陆地面积将扩大至76万平方米，扩建后的港池可以停靠多艘“猎豹”3.9级导弹护卫舰等大型军舰。。越南通过扩建毕生礁和无乜礁，组建战斗群，可以形成攻防兼备、互为犄角、相互支援的态势，加强对航道的控制，增加对邻国的军事压力，具有长远的战略意义。
+    
+     <############> Translation was: Vào cuối tháng 10 năm 2021, Việt Nam đã bắt đầu các dự án khai hoang đảo quy mô lớn ở các đảo bị chiếm đóng bất hợp pháp của Nam Sa Qundao bao gồm Lifetime Reef, Wudi Reef, Hong Lai Island, Dunqian Sandbank và Bai Jiao. Đặc biệt, Việt Nam có kế hoạch mở rộng diện tích đất của Lifetime Reef đến 760.000 mét vuông, và hồ bơi cảng mở rộng có thể cập cảng tàu chiến lớn như tàu khu trục tên lửa Cheetah 3.9-class. Thông qua việc mở rộng các rạn san hô Lifelong và Loud Reef và hình thành các nhóm chiến đấu, Việt Nam có thể phát triển một tư thế tấn công và phòng thủ, hỗ trợ lẫn nhau, tăng cường kiểm soát các tuyến đường biển và tăng áp lực quân sự lên các nước láng giềng, có ý nghĩa chiến lược lâu dài.
+[NeMo I 2023-09-26 09:17:56 nmt_service:164] Translated in 1.6272642612457275. Input was: 9月06日，美空军一架WC-135R核侦察机从嘉手纳起飞，穿过中国东海防空识别区后抵近中国大陆海岸，而后沿东海海岸径直向北，至青岛以南黄海海域对华进行抵近侦察，最近距连云港附近的领海基点约21海里。
+     <############> Translation was: Vào ngày 6 tháng 9, một máy bay trinh sát hạt nhân WC-135R của Không quân Hoa Kỳ đã cất cánh từ Kadena, băng qua Vùng Nhận dạng Phòng không Biển Hoa Đông của Trung Quốc và đến bờ biển lục địa Trung Quốc. Sau đó, nó tiến lên phía bắc dọc theo bờ biển Đông Trung Quốc đến Hoàng Hải phía nam Thanh Đảo để tiến hành trinh sát gần tên lửa đến Trung Quốc, cách căn cứ lãnh hải gần Lian khoảng 21 hải lý
+[NeMo I 2023-09-26 09:19:19 nmt_service:164] Translated in 1.7007462978363037. Input was: 据“哨兵”卫星影像显示，2021年3月至2023年8月，越南在其侵占的南沙岛礁上的扩建工程进展迅猛。过去30个月以来，越南已在鸿庥岛（图2）、敦谦沙洲（图3）、毕生礁（图4）、无乜礁（图5）、柏礁（图6）这5处岛礁新增扩建面积约2.78km²。
+    其中，柏礁的填海造陆规模空前，至今已扩建近1km²，不排除修建机场的可能性。
+     <############> Translation was: Dự án mở rộng của Việt Nam trên rạn san hô Trường Sa bị chiếm đoạt từ tháng 3 năm 2021 đến tháng 8 năm 2023 đang tiến triển nhanh chóng, theo hình ảnh vệ tinh Sentinel. Trong 30 tháng qua, Việt Nam đã bổ sung khoảng 2,78 km diện tích mở rộng thêm cho năm rạn san hô: Đảo Hương Lai (Hình 2), Bãi cát Dần Khiên (Hình 3), Rạn san hô trọn đời (Hình 4), Rạn san hô Loud (Hình 5) và Bãi Cay (Hình 6).
+    Trong số đó, quy mô cải tạo đất chưa từng có tại Bay Reef đã được mở rộng gần 1km, điều này không loại trừ khả năng xây dựng một
+[NeMo I 2023-09-26 09:21:08 nmt_service:164] Translated in 1.531343698501587. Input was: 8月11日，根据美海军“里根”号航母舰载机“灰狗”C-2A（AE045E）飞行轨迹判断，航母打击群在菲律宾东部海域航行。综合AIS、舰载机ADS-B和遥感影像，里根号航母在7月11日经过巽他海峡，7月16日在印度尼西亚巴厘岛进行港口访问，8月1日停靠在澳大利亚达尔文基地，8月7日在苏拉威西海活动，然后进入菲律宾海北上。 <############> Translation was: Vào ngày 11 tháng 8, đội đặc nhiệm tàu sân bay tấn công lên đường ngoài khơi bờ biển phía Đông Philippines, căn cứ theo quỹ đạo bay của máy bay Hải quân Mỹ Greyhound C-2A (AE045E) USS Reagan. Kết hợp với các thiết bị AIS, ADS-B và viễn thám, Reagan băng qua eo biển Sunda vào ngày 11 tháng 7, viếng thăm cảng Bali, Indonesia vào ngày 16 tháng 7, cập cảng Darwin, Australia vào ngày 1 tháng 8, và hoạt động tại biển Sulawesi vào ngày 7 tháng 8 trước khi hướng lên phía Bắc vào biển Philippine.
+[NeMo I 2023-09-26 09:24:25 nmt_service:164] Translated in 1.5920186042785645. Input was: 综合菲律宾武装部队和中国海警局消息，北京时间2023年8月5日上午9时许，中国海警对试图向仁爱礁坐滩军舰运送建筑材料的菲补给船进行了拦截，同时放行了另一艘运送日常物品的补给船。此举再次表明了中方在该问题上的严正态度，基于人道主义精神，中方允许菲进行日常物品补给，但坚决反对任何试图运送加固材料的举动 <############> Translation was: Kết hợp với thông tin từ Lực lượng Vũ trang Philippines và Cục Tuần duyên Trung Quốc, vào khoảng 9 giờ sáng giờ Bắc Kinh ngày 5 tháng 8 năm 2023, lực lượng tuần duyên Trung Quốc đã chặn một tàu tiếp tế của Philippines đang cố gắng cung cấp vật liệu xây dựng cho tàu chiến bãi biển tại Rạn san hô Renai, trong khi thả một tàu tiếp tế khác chở các mặt hàng hàng ngày. Động thái này một lần nữa thể hiện thái độ long trọng của Trung Quốc về vấn đề này. Dựa trên tinh thần nhân đạo, Trung Quốc cho phép Philippines thực hiện nguồn cung cấp hàng ngày, nhưng kiên quyết phản đối bất kỳ nỗ lực nào để cung cấp vật liệu gia cố.
+[NeMo I 2023-09-26 09:25:46 nmt_service:164] Translated in 1.273834228515625. Input was: 6月14日，根据美海军“里根”号航母舰载机“灰狗”C-2A（AE0455、AE045E）飞行轨迹判断，“里根”号航母正在穿越巴士海峡，进入南海活动。
+    6月07日至10日，根据日本海上自卫队发布消息，美海军“里根”号航母与“尼米兹”号航母参加了美日法三国在冲绳以东海域至东海海域举行的联合军演（Multi Big-Deck Event）。
+     <############> Translation was: Vào ngày 14 tháng 6, căn cứ theo quỹ đạo bay của máy bay Greyhound C-2A (AE0455, AE045E) của Hải quân Hoa Kỳ, Reagan đang băng qua eo biển Bus và tiến vào Biển Đông.
+    Vào ngày 7-10 tháng 6, theo Lực lượng Phòng vệ Biển Nhật Bản, tàu sân bay Reagan và Nimitz của Hải quân Hoa Kỳ đã tham gia một cuộc tập trận quân sự chung giữa Hoa Kỳ-Nhật Bản-Pháp ở phía đông Okinawa đến Biển Hoa Đông.
+[NeMo I 2023-09-28 03:13:03 nmt_service:164] Translated in 1.2330381870269775. Input was: 9月9号，美国海军拉尔夫•约翰逊号驱逐舰(DDG-114)与加拿大渥太华号护卫舰(FFH-341)穿航台湾海峡期间，声称遇到一艘解放军的“情报船”，船上装有特殊的雷达系统，拍照后还要事后好好研究。经网友@板凳和瓜子 辨认，其实就是一艘钓鱿鱼的渔船，两侧灯用来吸引鱿鱼 <############> Translation was: Vào ngày 9 tháng 9, trong khi vượt qua eo biển Đài Loan với tàu khu trục Canada USS Ottawa (FFH-341), tàu khu trục Ralph Johnson của Hải quân Hoa Kỳ tuyên bố đã gặp phải một "tàu tình báo" của PLA được trang bị một hệ thống radar đặc biệt. Được xác định bởi cư dân mạng băng ghế dự bị và hạt dưa Trong thực tế, nó là một chiếc thuyền đánh cá cho cá hồi Cả hai mặt của đèn được sử dụng để
+[NeMo I 2023-09-28 03:18:53 nmt_service:164] Translated in 3.0473954677581787. Input was: 东海舰队8艘主力舰出宫古，或是东、南联合军演—根据日本防卫省发布的消息，9月11号，中国海军8艘驱护舰通过宫古海峡进入西太活动，8艘舰艇分别为052C型驱逐舰郑州舰、052D型驱逐舰包头舰、绍兴舰、厦门舰、054A型护卫舰红河舰、宜兴舰(红河舰和宜兴舰是新批次的054A，也是首次远洋)、以及两艘现代级驱逐舰福州舰和宁波舰。
+    与此同时，9月11号，山东舰航母编队通过巴士海峡进入西太活动(图6为以前图片)。根据作者 发布的消息，至少有13艘解放军军舰在台岛附近活动。山东舰航母编队加上东海舰队的8艘驱护舰，制空、防空、反舰、反潜、对地打击没有短板，妥妥的“灭国舰队”。
+     <############> Translation was: Tám tàu chiến chủ lực của Hạm đội Biển Đông Trung Quốc De Miyako, hoặc các cuộc tập trận quân sự chung Đông và Nam - Theo Bộ Quốc phòng Nhật Bản, vào ngày 11 tháng 9, tám tàu khu trục Hải quân Trung Quốc đã tiến vào Tây Thái Bình Dương qua eo biển Miyako, tám tàu: tàu khu trục loại 052C Trịnh Châu, tàu khu trục loại 052D Bao Đầu, Thiệu Hưng, Hạ Môn, tàu khu trục loại 054A Red River, Yixing (Red River và Yixing là lô 054A mới và đi biển đầu tiên), và hai tàu khu trục hạng hiện đại Phúc Châu và Ninh Ba.
+    Trong khi đó, vào ngày 11 tháng 9, đội hình tàu sân bay của Sơn Đông tiến vào Tây Thái Bình Dương qua eo biển Bus (Hình 6). Ít nhất 13 tàu chiến của Quân Giải phóng Nhân dân Trung Quốc đang hoạt động gần đảo Thái, theo thông tin do các tác giả công bố. Đội hình tàu sân bay Sơn Đông cộng với tám tàu khu trục của Hạm đội Biển Đông, phòng không, phòng không, chống tàu, chống tàu ngầm, tấn công mặt đất mà không có bảng ngắn, "hạm đội khu trục" thích hợp.
+[NeMo I 2023-09-28 03:57:44 nmt_service:164] Translated in 1.5338757038116455. Input was: 9月16日，是第23个全民国防教育日。当前，“全民国防教育月”活动正在全国上下广泛开展。近日印发的《关于组织开展2023年“全民国防教育月”活动的通知》强调，要“教育引导广大干部群众强化国防观念和忧患意识 ”。国防观念是保卫国家安全、履行国防义务的思想意识，是牵系国家安危和民族兴衰的重要精神因素。一个国家、一个民族，要赢得生存和发展，国家安全意识须臾不能松懈、国防观念一刻不能缺少。 <############> Translation was: Ngày 16 tháng 9 là ngày giáo dục quốc phòng lần thứ 23. Hiện nay, hoạt động “Tháng giáo dục quốc phòng" được triển khai rộng rãi trên cả nước. Gần đây đã ban hành "thông báo về việc tổ chức các hoạt động" tháng giáo dục quốc phòng 2023 ", nhấn mạnh rằng" giáo dục nên hướng dẫn quần chúng tăng cường các khái niệm quốc phòng và nhận thức về mối quan tâm. " Khái niệm quốc phòng là tư tưởng bảo vệ an ninh quốc gia và thực hiện nghĩa vụ quốc phòng. Nó là một yếu tố tinh thần quan trọng ảnh hưởng đến an ninh của đất nước và sự trỗi dậy và sụp đổ của Để cho một quốc gia và một quốc gia giành được sự sống còn và phát triển, ý thức an ninh quốc gia không được nới lỏng và khái niệm quốc phòng không được thiếu.
+[NeMo I 2023-09-28 04:29:53 nmt_service:164] Translated in 0.5897645950317383. Input was: 但在此问题上,过度的反应可能会损害大西洋两岸关系,可能导致双方受损。 <############> Translation was: Tuy nhiên, trong trường hợp này, phản ứng thái quá có thể gây tổn hại cho mối quan hệ xuyên Đại Tây Dương, có khả năng gây tổn hại cho cả hai bên.
+[NeMo I 2023-09-28 04:34:47 nmt_service:164] Translated in 1.5070712566375732. Input was: 菲军西部司令部9月6日至7日的南沙空中巡逻，在鲎藤礁发现了23艘中国渔船，在仙宾礁发现了5艘中国渔船，在大渊滩发现了2艘中国渔船。
+    大渊滩应该是有史以来首次上新闻。大渊滩在北纬10度04~44分，东经116度02~20分范围内。位于南沙群岛东北部，在费信岛东北方。东北—西南延伸达56公里，宽约13公里。水深一般为18米。
+     <############> Translation was: Tuần tra trên không của Bộ Tư lệnh phương Tây Philippines tại Nam Sa từ ngày 6 đến 7 tháng 9 đã phát hiện 23 tàu đánh cá Trung Quốc tại rạn san hô Lantau, 5 tàu đánh cá Trung Quốc tại rạn san hô Xianbin và 2 tàu đánh cá Trung Quốc tại bãi biển Dayutan.
+    Nó được cho là lần đầu tiên trong lịch sử. Nó nằm trong khoảng 10 độ 04-44 phút vĩ độ bắc và 116 độ 02-20 phút kinh độ đông. Nằm ở phía đông bắc của quần đảo Nam Sa, phía đông bắc của đảo Feixin. Đông Bắc - Tây Nam mở rộng 56 km, rộng khoảng 13 km. Độ sâu của nước thường là 18 mét.
+[NeMo I 2023-09-28 04:35:39 nmt_service:164] Translated in 2.4509198665618896. Input was: 山东舰航母战斗群位吕宋岛东北——根据日本防卫省发布的消息，9月13号，中国海军山东舰航母战斗群，包括052D型驱逐舰桂林舰、长沙舰，054A型护卫舰咸宁舰、许昌舰以及901型综合补给舰查干湖舰，在宫古岛以南650公里处活动(图2，这块关你小日本啥事？)。
+    山东舰在此处活动，可以看做一石三鸟，可以对台岛进行打击，可以对关岛方向进行拒止，同时威慑菲律宾吕松岛上的美军基地。
+    从日本防卫省发布的照片可以看出，山东舰正在进行歼15舰载战斗机的起飞作业(图3)。目前编队中没有发现055型驱逐舰。
+    日本海上自卫队村雨级驱逐舰有明号(DD-109)负责跟踪监视，有明号于9月11号离开佐世保
+     <############> Translation was: Nhóm chiến đấu tàu sân bay Sơn Đông phía đông bắc Luzon - Vào ngày 13 tháng 9, nhóm chiến đấu tàu sân bay Sơn Đông của Hải quân Trung Quốc, bao gồm các tàu khu trục Kiểu 052D Quế Lâm và Trường Sa, tàu khu trục Kiểu 054A Xianning và Xuchang, và tàu cung cấp phức hợp Kiểu 901 Hồ Chagan, di chuyển 650 km về phía nam đảo Miyako, theo Bộ Quốc phòng Nhật Bản.
+    Các tàu chiến Sơn Đông đang hoạt động ở đây, và có thể được xem như ba con chim đá, có khả năng tấn công đảo Đài Loan, chặn hướng Guam, và ngăn chặn các căn cứ của Mỹ trên đảo Luzon ở Philippines.
+    Như có thể thấy từ những bức ảnh do Bộ Quốc phòng Nhật Bản phát hành, con tàu đang cất cánh từ con tàu chở máy bay chiến đấu (Hình 3). Không có tàu khu trục Type 055 nào được tìm thấy trong đội hình hiện tại.
+    Tàu khu trục Ariake (DD-109) của Lực lượng Phòng vệ Biển Nhật Bản, chịu trách nhiệm theo dõi và giám sát, rời Sasebo vào ngày 11 tháng 9.
+[NeMo I 2023-09-28 04:36:38 nmt_service:164] Translated in 2.596254587173462. Input was: 山东舰航母战斗群位吕宋岛东北—根据日本防卫省发布的消息，9月13号，中国海军山东舰航母战斗群，包括052D型驱逐舰桂林舰、长沙舰，054A型护卫舰咸宁舰、许昌舰以及901型综合补给舰查干湖舰，在宫古岛以南650公里处活动(图2，这块关你小日本啥事？)。
+    山东舰在此处活动，可以看做一石三鸟，可以对台岛进行打击，可以对关岛方向进行拒止，同时威慑菲律宾吕松岛上的美军基地。
+    从日本防卫省发布的照片可以看出，山东舰正在进行歼15舰载战斗机的起飞作业(图3)。目前编队中没有发现055型驱逐舰。
+    日本海上自卫队村雨级驱逐舰有明号(DD-109)负责跟踪监视，有明号于9月11号离开佐世保
+     <############> Translation was: Đông Bắc Luzon - Vào ngày 13 tháng 9, theo Bộ Quốc phòng Nhật Bản, nhóm tàu sân bay chiến đấu Sơn Đông của Hải quân Trung Quốc, bao gồm các tàu khu trục Kiểu 052D Quế Lâm và Trường Sa, tàu khu trục Kiểu 054A Tiên Ninh và Xương Xương, và tàu tiếp tế phức hợp Kiểu 901 Hồ Chagan, đã di chuyển 650 km về phía nam đảo Miyako (Hình 2, một giai thoại về Nhật Bản nhỏ bé của bạn?).
+    Các tàu chiến Sơn Đông đang hoạt động ở đây, và có thể được xem như ba con chim đá, có khả năng tấn công đảo Đài Loan, chặn hướng Guam, và ngăn chặn các căn cứ của Mỹ trên đảo Luzon ở Philippines.
+    Như có thể thấy từ những bức ảnh do Bộ Quốc phòng Nhật Bản phát hành, con tàu đang cất cánh từ con tàu chở máy bay chiến đấu (Hình 3). Không có tàu khu trục Type 055 nào được tìm thấy trong đội hình hiện tại.
+    Tàu khu trục Ariake (DD-109) của Lực lượng Phòng vệ Biển Nhật Bản, chịu trách nhiệm theo dõi và giám sát, rời Sasebo vào ngày 11 tháng 9.
+[NeMo I 2023-09-28 04:39:00 nmt_service:164] Translated in 0.5422101020812988. Input was: 企业与各省市人民委员会就生产、劳动者出行、住宿方案达成一致。 <############> Translation was: Doanh nghiệp và Uỷ ban nhân dân tỉnh, thành phố trực thuộc Trung ương thống nhất kế hoạch sản xuất, đi lại, ăn ở của công nhân.
+[NeMo I 2023-09-28 06:36:41 nmt_service:164] Translated in 0.6006436347961426. Input was: 我很希望能更上一层楼,所以看到贵公司的招聘信息后,就打算换个工作。 <############> Translation was: Tôi rất muốn đưa sự nghiệp của mình lên một tầm cao mới, vì vậy một khi tôi thấy lời mời làm việc của bạn, tôi dự định sẽ thay đổi công việc.
+[NeMo I 2023-09-28 06:40:32 nmt_service:164] Translated in 1.5264039039611816. Input was: 菲军西部司令部9月6日至7日的南沙空中巡逻，在鲎藤礁发现了23艘中国渔船，在仙宾礁发现了5艘中国渔船，在大渊滩发现了2艘中国渔船。
+    大渊滩应该是有史以来首次上新闻。大渊滩在北纬10度04~44分，东经116度02~20分范围内。位于南沙群岛东北部，在费信岛东北方。东北—西南延伸达56公里，宽约13公里。水深一般为18米。
+     <############> Translation was: Tuần tra trên không của Bộ Tư lệnh phương Tây Philippines tại Nam Sa từ ngày 6 đến 7 tháng 9 đã phát hiện 23 tàu đánh cá Trung Quốc tại rạn san hô Lantau, 5 tàu đánh cá Trung Quốc tại rạn san hô Xianbin và 2 tàu đánh cá Trung Quốc tại bãi biển Dayutan.
+    Nó được cho là lần đầu tiên trong lịch sử. Nó nằm trong khoảng 10 độ 04-44 phút vĩ độ bắc và 116 độ 02-20 phút kinh độ đông. Nằm ở phía đông bắc của quần đảo Nam Sa, phía đông bắc của đảo Feixin. Đông Bắc - Tây Nam mở rộng 56 km, rộng khoảng 13 km. Độ sâu của nước thường là 18 mét.
+[NeMo I 2023-09-28 09:39:03 nmt_service:164] Translated in 0.5249698162078857. Input was: 我很希望能更上一层楼,所以看到贵公司的招聘信息后,就打算换个工作。.. <############> Translation was: Tôi rất muốn đi xa hơn, vì vậy sau khi thấy lời mời làm việc của bạn, tôi dự định sẽ thay đổi công việc của mình..
+[NeMo I 2023-09-28 09:39:14 nmt_service:164] Translated in 0.453951358795166. Input was: 我很希望能更上一层楼,所以看到贵公司的招聘信息后,就打算换个工作 <############> Translation was: Tôi rất muốn đi xa hơn, vì vậy một khi tôi thấy lời mời làm việc của bạn, tôi sẽ thay đổi công việc.
+[NeMo I 2023-09-28 09:39:37 nmt_service:164] Translated in 0.5918910503387451. Input was: 我很希望能更上一层楼,所以看到贵公司的招聘信息后,就打算换个工作。 <############> Translation was: Tôi rất muốn đưa sự nghiệp của mình lên một tầm cao mới, vì vậy một khi tôi thấy lời mời làm việc của bạn, tôi dự định sẽ thay đổi công việc.
+[NeMo I 2023-09-29 02:59:27 nmt_service:164] Translated in 2.4802639484405518. Input was: 自“南海仲裁案”闹剧发生后，南海形势进一步复杂化，但在中国及相关国家的努力下，近两年有了明显的缓和。然而，近日外媒报道，越占南沙群岛西礁地区出现包括疑似干船坞在内的新设施，相关资料显示，仅2016年越南就在其所占的10座岛礁上进行了“改造和填充”。这表明越南在希望维持南海稳定的同时并未真正减少在南海的侵权活动。并且越南曾多次公开表示，欢迎美日印澳等域外国家在南海发挥“建设性作用”，并且还加强了与日本、韩国、印尼、菲律宾和马来西亚等与中国有海洋纠纷的国家之间的海上合作，加强了与有关国家在官员互访和培训、联合演练、执法经验交流等方面的海上合作。 <############> Translation was: Tình hình ở Biển Đông đã trở nên phức tạp hơn kể từ khi xảy ra trò hề của vụ kiện trọng tài Biển Đông, nhưng với những nỗ lực của Trung Quốc và các nước liên quan, đã có một sự nới lỏng rõ rệt trong hai năm qua Tuy nhiên, truyền thông nước ngoài gần đây đưa tin rằng các cơ sở mới, bao gồm cả bến cảng bị nghi ngờ, đã xuất hiện ở quần đảo phía Tây của quần đảo Trường Sa, nơi Việt Nam chiếm đóng 10 hòn đảo và rạn san hô chỉ trong năm 2016. Điều này cho thấy mong muốn duy trì ổn định ở Biển Đông của Việt Nam không đi kèm với bất kỳ sự giảm thiểu vi phạm thực sự nào. Việt Nam đã nhiều lần công khai nói rằng họ hoan nghênh "vai trò xây dựng" của Mỹ, Nhật Bản, Ấn Độ, Úc và các nước phi khu vực khác ở Biển Đông. Họ cũng đã tăng cường hợp tác hàng hải với các nước có tranh chấp hàng hải với Trung Quốc như Nhật Bản, Hàn Quốc, Indonesia, Philippines và Malaysia, và tăng cường hợp tác hàng hải với các nước có liên quan trong các lĩnh vực như thăm chính thức và đào tạo, tập trận chung và kinh nghiệm thực thi pháp luật
+[NeMo I 2023-09-29 04:43:35 nmt_service:164] Translated in 1.313812494277954. Input was: 【越南非法扩建南沙群岛无乜礁】越占南沙群岛无乜礁2021年12月28日卫星图现施工迹象，目前判断是开挖潟湖航道。无乜礁是越南侵占南沙群岛最东端，位置极其重要。毕生礁、鸿庥岛、敦谦沙洲、柏礁正在扩建中。无乜礁是越南此批次扩建的第5个岛礁。 <############> Translation was: Vào ngày 28 tháng 12 năm 2021, hình ảnh vệ tinh cho thấy dấu hiệu xây dựng. Hiện tại, người ta đã xác định rằng Kênh Penghu đã được khai quật. Wudi Reef là điểm cực đông của quần đảo Trường Sa do Việt Nam chiếm đóng, và vị trí của nó là vô cùng quan trọng. Lifetime Reef, đảo Hương Lai, Dunqian Sandbank và Bãi Cay đang được mở rộng. Wudi Reef là rạn san hô thứ năm được mở rộng bởi Việt Nam trong lô này.
+[NeMo I 2023-09-29 04:44:58 nmt_service:164] Translated in 3.1365718841552734. Input was: 马来西亚海事执法局把3艘越南渔船抢了。
+    4月16日11时左右，越南广义省渔船QNg 90918 TS（图1）在南沙群岛越占南薇滩和越占安波沙洲之间（图2，08°02'N，112°25'E ），遇到了马来西亚海事执法局的Gagah级230吨近海巡逻炮艇KM Bistari 3915（图3）。船老大觉得这里附近都是越南占领的岛礁，已经是马来西亚的200海里控制海域之外了（图4），没当回事。
+    结果，马来西亚持枪海警7人乘坐冲锋舟强行登船，逼迫船长和42名船员全部出舱蹲在船头，交出1万美元和全部手机、手表、戒指、项链后才能放人。船长表示，我们出门不带贵重财物。
+    最后马警察搜查全船，抢走了5部手机和1吨多鱿鱼干，还要船长登上炮艇签字认罪。船长不同意离船，被打了一顿。还有另外两艘越南渔船也被抢。
+    这时，越南两艘值班的渔检船闻讯分别从安波沙洲和南威岛赶来，马海警连忙逃走。
+     <############> Translation was: Cơ quan Thực thi Hàng hải Malaysia đã bắt giữ ba tàu đánh cá Việt Nam.
+    Vào khoảng 11: 00 ngày 16 tháng 4, tàu đánh cá Việt Nam QNg 90918 TS (Hình 1) đã đụng độ với pháo hạm tuần tra ngoài khơi KM Bistari 3915 (Hình 3) của Cơ quan Thực thi Hàng hải Malaysia, giữa bãi biển Nam Việt và bãi biển Ambo thuộc quần đảo Nam Sa (Hình 2, 08 02'N, 112 25'E). Chủ tàu cảm thấy rằng khu vực này bị bao quanh bởi các đảo và rạn san hô do Việt Nam chiếm đóng, vốn đã nằm ngoài tầm kiểm soát của Malaysia 200 hải lý (Hình 4).
+    Kết quả là, bảy lính tuần duyên vũ trang Malaysia đã buộc phải lên tàu trong một chiếc thuyền máy, buộc thuyền trưởng và 42 thành viên phi hành đoàn ra khỏi mũi tàu, bàn giao 10.000 đô la và tất cả điện thoại di động, đồng hồ, nhẫn và dây chuyền trước khi thả họ. Thuyền trưởng nói chúng tôi ra ngoài mà không mang theo gì.
+    Cuối cùng, cảnh sát Malaysia đã khám xét tàu và tịch thu năm điện thoại di động và một tấn cá khô. Thuyền trưởng lên tàu súng để ký một lời thú tội. Thuyền trưởng từ chối rời khỏi tàu và bị đánh đập. Hai tàu đánh cá khác của Việt Nam cũng bị cướp.
+    Vào thời điểm này, hai tàu kiểm ngư Việt Nam đang làm nhiệm vụ nghe nói rằng họ đã đến từ bãi cát Ambo và đảo Nam Vi, tương ứng.
+[NeMo I 2023-09-29 04:45:10 nmt_service:164] Translated in 0.3560903072357178. Input was: 一、作业时间
+    2023年9月2日至2023年10月31日。 <############> Translation was: I. Thời gian hoạt động
+    Nó diễn ra từ ngày 2 tháng 9 năm 2023 đến ngày 31 tháng 10 năm 2023.
+[NeMo I 2023-09-29 04:45:27 nmt_service:164] Translated in 1.108973503112793. Input was: 越南首次公布了越占南沙柏礁的非法填海施工现场视频。
+    今年4月1日，欧洲哨兵2A（Sentinel-2A）商业卫星图像显示，南沙群岛的越占柏礁的西北侧礁盘内侧出现了新施工点，疑似挖泥船通过在东南侧礁盘上近期挖通的潟湖航道，进入潟湖内部施工。
+     <############> Translation was: Lần đầu tiên, Việt Nam công bố các video về các công trình khai hoang bất hợp pháp trên rạn san hô Nam Sabah do Việt Nam chiếm đóng.
+    Vào tháng Tư 1 năm nay, Sentinel-2A hình ảnh vệ tinh thương mại cho thấy rằng một trang web xây dựng mới xuất hiện bên trong rạn san hô phía tây bắc của Yuzhan Bay Reef ở quần đảo Nam Sa.
+[NeMo I 2023-09-29 04:49:39 nmt_service:164] Translated in 0.9123008251190186. Input was: 据中国媒体公开报道，中泰双方400余名联训官兵3日在泰国梭桃邑军港参加“蓝色突击—2023”海军联合训练开训仪式。 <############> Translation was: Theo báo cáo phương tiện truyền thông Trung Quốc, hơn 400 sĩ quan và binh sĩ từ Trung Quốc và Thái Lan đã tham gia vào "Blue Assault-2023" hải quân phối hợp đào tạo và đào tạo tại cảng quân sự Suotaozhan ở Thái Lan.
+[NeMo I 2023-09-29 04:51:14 nmt_service:164] Translated in 1.0946540832519531. Input was:  据中国媒体公开报道，中泰双方400余名联训官兵3日在泰国梭桃邑军港参加“蓝色突击—2023”海军联合训练开训仪式。泰国海军消息显示，中国海军039潜艇也罕见地同时期抵达梭桃邑海军基地。 <############> Translation was: Theo báo cáo phương tiện truyền thông Trung Quốc, hơn 400 sĩ quan và binh sĩ từ Trung Quốc và Thái Lan đã tham gia vào "Blue Assault-2023" hải quân phối hợp đào tạo và đào tạo tại cảng quân sự Suotaozhan ở Thái Lan. Theo các nguồn tin của hải quân Thái Lan, tàu ngầm Trung Quốc 039 đã đến căn cứ hải quân Subaru cùng một lúc
+[NeMo I 2023-09-29 04:56:14 nmt_service:164] Translated in 0.4161491394042969. Input was: 提升联合行动能力、维护地区安全稳定具有重要意义。 <############> Translation was: Điều quan trọng là phải tăng cường khả năng hành động chung và duy trì an ninh và ổn định khu vực.
+[NeMo I 2023-09-29 04:56:30 nmt_service:164] Translated in 0.3986086845397949. Input was: 联演主要有3个特点：一是内容紧贴实战。 <############> Translation was: Màn trình diễn có ba tính năng chính: Thứ nhất, nội dung gần với chiến đấu thực tế.
+[NeMo I 2023-10-01 00:59:14 nmt_service:164] Translated in 1.771327018737793. Input was: 2021年10月下旬，越南陆续在其非法占领的南沙群岛毕生礁、无乜礁、鸿庥岛、敦谦沙洲和柏礁等岛礁启动了大规模填海造岛工程。特别是毕生礁，越南计划将毕生礁陆地面积将扩大至76万平方米，扩建后的港池可以停靠多艘“猎豹”3.9级导弹护卫舰等大型军舰。。越南通过扩建毕生礁和无乜礁，组建战斗群，可以形成攻防兼备、互为犄角、相互支援的态势，加强对航道的控制，增加对邻国的军事压力，具有长远的战略意义。 <############> Translation was: Vào cuối tháng 10 năm 2021, Việt Nam đã bắt đầu các dự án khai hoang đảo quy mô lớn ở các đảo bị chiếm đóng bất hợp pháp của Nam Sa Qundao bao gồm Lifetime Reef, Wudi Reef, Hong Lai Island, Dunqian Sandbank và Bai Jiao. Đặc biệt, Việt Nam có kế hoạch mở rộng diện tích đất của Lifetime Reef đến 760.000 mét vuông, và hồ bơi cảng mở rộng có thể cập cảng tàu chiến lớn như tàu khu trục tên lửa Cheetah 3.9-class. Thông qua việc mở rộng các rạn san hô Lifelong và Loud Reef và hình thành các nhóm chiến đấu, Việt Nam có thể phát triển một tư thế tấn công và phòng thủ, hỗ trợ lẫn nhau, tăng cường kiểm soát các tuyến đường biển và tăng áp lực quân sự lên các nước láng giềng, có ý nghĩa chiến lược lâu dài.
+[NeMo I 2023-10-01 01:00:07 nmt_service:164] Translated in 2.1287143230438232. Input was: 菲律宾军方正在考虑使用舰载直升机突破中国海警船的封锁，为仁爱礁破船守军运送物资。
+    但他们私下承认：这是毫无意义的。
+    因为目前菲军的舰载直升机太小，只能运送少量的补给品，而中国并不会在海上拦截这种正常的补给。菲律宾真正需要的是运送建筑材料。
+    菲军已经有了携带直升机的船坞登陆舰，但真正需要的，是大型直升机，例如美制CH-47支奴干直升机（购买俄制米-17的合同已经被取消）。
+    但是，低空抛投建筑材料，会直接砸毁破船。大型直升机在破船上降落，也会压垮破船。所以，空运建筑材料的前提，是先海运建筑材料以加固破船的甲板，这样还是会被中国海警拦截。（其实CH-47能在LST甲板上降落半截就不错了）
+     <############> Translation was: Quân đội Philippines đang xem xét sử dụng trực thăng trên tàu để vượt qua sự phong toả của các tàu bảo vệ bờ biển Trung Quốc và cung cấp vật tư cho những người đắm tàu ở Rạn san hô Renai.
+    Nhưng họ công khai thừa nhận: Điều này thật vô nghĩa.
+    Bởi vì hạm đội trực thăng quân sự hiện tại của Philippines quá nhỏ để chỉ mang theo một lượng nhỏ vật tư và Trung Quốc sẽ không chặn các nguồn cung cấp bình thường như vậy trên biển, điều Philippines thực sự cần là cung cấp vật liệu xây dựng.
+    Philippines đã có tàu đổ bộ chở trực thăng, nhưng những gì thực sự cần là máy bay trực thăng lớn hơn, chẳng hạn như CH-47 Nugan của Mỹ (hợp đồng mua Mi-17 của Nga đã bị huỷ bỏ).
+    Tuy nhiên, thả vật liệu xây dựng ở độ cao thấp sẽ trực tiếp phá huỷ con tàu. Máy bay trực thăng lớn hạ cánh trên tàu cũng sẽ nghiền nát con tàu. Do đó, tiền đề cho vận chuyển hàng không vật liệu xây dựng là để tàu vật liệu xây dựng đầu tiên để củng cố boong tàu, do đó nó vẫn sẽ bị chặn bởi bờ biển Trung Quốc (Trên thực tế, CH-47 đã hạ cánh được nửa chừng trên sàn đáp LST).
+[NeMo I 2023-10-01 01:01:07 nmt_service:164] Translated in 2.1656649112701416. Input was: 据印度《第一新闻》（firstpost）报道，菲律宾外交部长恩里克•A•马纳洛 (Enrique A. Manalo) 于6月27日至30日访问印度，同印度外长苏杰生共同主持“印菲双边合作委员会第五次会议”并发表《联合声明》。
+    
+    在《联合声明》中，两国外长强调需要和平解决争端并遵守国际法，特别是《联合国海洋法公约》和2016年南海仲裁案。这是印度首次反对中国的海事主张，要求北京遵守2016年南海仲裁案的裁决。
+    
+    此前，印度已向菲律宾销售3个团的布拉莫斯岸基反舰导弹系统。合同价值3.75亿美元，2023年底开始交付，2024年将交付完成第一个“移动综合体”，包括指挥车、雷达、发射系统等，到2025年，所有3个导弹团都将交付完成
+     <############> Translation was: Theo First News của Ấn Độ (firstpost), Bộ trưởng Ngoại giao Philippines Enrique A. Manalo đã đến thăm Ấn Độ từ ngày 27 đến 30 tháng 6, đồng chủ trì cuộc họp thứ năm của Hội đồng Hợp tác song phương Ấn Độ-Philippines với Bộ trưởng Ngoại giao Ấn Độ Sujitsheng và đưa ra một tuyên bố chung.
+    
+    Trong Tuyên bố chung, hai Bộ trưởng Ngoại giao nhấn mạnh sự cần thiết phải giải quyết tranh chấp một cách hoà bình và tuân thủ luật pháp quốc tế, đặc biệt là Công ước Liên hợp quốc về Luật Biển và Biển Đông 2016. Đây là lần đầu tiên Ấn Độ phản đối các yêu sách hàng hải của Trung Quốc và yêu cầu Bắc Kinh tuân thủ phán quyết của trọng tài Biển Đông 2016.
+    
+    Trước đó, Ấn Độ đã bán ba trung đoàn tên lửa chống hạm đặt căn cứ trên bờ Bramos cho Philippines. Hợp đồng trị giá 375 triệu đô la, với việc giao hàng bắt đầu vào cuối năm 2023 và "phức hợp di động" đầu tiên bao gồm xe chỉ huy, radar, hệ thống phóng và nhiều thứ khác sẽ được giao vào năm 2024, với cả ba trung đoàn tên lửa sẽ hoàn thành vào năm 2025.
+[NeMo I 2023-10-01 01:01:51 nmt_service:164] Translated in 2.3652710914611816. Input was: 🇵🇭菲律宾和🇺🇸美国海军陆战队将于7月13日在“2023年海军陆战队航空支援活动”抗登陆联合演习期间，在三描礼士圣安东尼奥海岸附近举行另一次击沉演习（SINKEX）。两支部队将在离岸10至12英里处，击沉一艘退役的菲律宾海军军舰——BRP Lake Caliraya“卡里拉亚湖”号油料补给舰。
+    这是菲律宾海军第一艘补给舰，也是菲律宾海军最大的舰艇，拥有岸对舰、舰对岸、舰对舰加油能力。该舰原系中国浙江台州市中兴船舶有限公司2007年建造的“拉普-拉普”号民用成品油船。该船在2014年3月被菲律宾国家石油公司捐给菲律宾海军后，菲律宾海军在八打雁和甲米地的干船坞对该船进行了维修，然后加入现役。2020年退役。
+    这次抗登陆联合演习，有菲律宾武装部队的约1257名人员（其中115名预备役军人）参加，另外1444名人员来自美军。
+     <############> Translation was: Đúng không? Hai lực lượng sẽ ở ngoài khơi 10-12 dặm để đánh chìm một tàu chiến của Hải quân Philippines đã ngừng hoạt động, tàu cung cấp nhiên liệu BRP Lake Caliraya.
+    Đây là tàu tiếp tế đầu tiên của Hải quân Philippines và là tàu lớn nhất của Hải quân Philippines, với khả năng tiếp nhiên liệu từ tàu này sang tàu khác. Con tàu ban đầu được đóng vào năm 2007 bởi Công ty TNHH Đóng tàu Zhongxing, thành phố Thái Châu, tỉnh Chiết Giang, Trung Quốc. Sau khi con tàu được Tổng công ty Dầu khí Quốc gia Philippines tặng cho Hải quân Philippines vào tháng 3 năm 2014, Hải quân Philippines đã thực hiện công việc bảo trì con tàu tại các ụ tàu ở Batangas và Krabi trước khi tham gia phục vụ tích cực. Ngừng hoạt động vào năm 2020.
+    Cuộc tập trận chống đổ bộ chung có sự tham gia của khoảng 1.257 nhân viên từ Lực lượng Vũ trang Philippines (115 quân nhân dự bị) và 1.444 nhân viên từ Quân đội Hoa Kỳ.
+[NeMo I 2023-10-01 01:02:41 nmt_service:164] Translated in 4.1363914012908936. Input was: 5月29日至6月4日，菲律宾当局邀请了来自瑞士、澳大利亚和法国的一批旅行者，乘坐民船非法开展南沙群岛旅游。他们曾一度登上中业岛附近的沙洲，还收到了来自渚碧礁基站的手机短信“欢迎来到中国”。
+    国家计算机病毒应急处理中心和360公司今天（4日）联合发布了一份调查报告，揭秘了美国中央情报局利用网络攻击他国的相关情况，披露部分发生在中国和其他国家的网络安全典型案事件的具体过程，全面深入分析美国中央情报局的网络攻击窃密和相关现实危害活动，以及其对美国成为“黑客帝国”所做的贡献。
+    2020年，360公司独立发现一个从未被外界曝光的网络攻击组织，该组织使用与美国中央情报局相关联的网络武器工具，针对中国和其他国家受害目标实施网络攻击，攻击活动最早可以追溯到2011年，相关攻击一直延续至今。被攻击目标涉及各国重要信息基础设施、航空航天、科研机构、石油石化、大型互联网公司以及政府机构等诸多方面。
+    由国家计算机病毒应急处理中心和360公司联合成立的调查组发现在规模庞大的全球性网络攻击行动中，美国中央情报局大量使用“零日”漏洞，其中包括一大批至今未被公开披露的后门和漏洞（部分功能已得到验证），在世界各地建立“僵尸”网络和攻击跳板网络，针对网络服务器、网络终端、交换机和路由器，以及数量众多的工业控制设备分阶段实施攻击入侵行动。
+    
+     <############> Translation was: Từ ngày 29 tháng 5 đến ngày 4 tháng 6, chính quyền Philippines đã mời một nhóm du khách từ Thuỵ Sĩ, Úc và Pháp thực hiện du lịch bất hợp pháp tại quần đảo Trường Sa bằng thuyền dân sự. Họ từng lên một bãi cát gần đảo Trung Nghĩa và nhận được một tin nhắn văn bản từ Trạm cơ sở rạn san hô Liêu Bi nói rằng "Chào mừng bạn đến Trung Quốc".
+    Trung tâm ứng phó khẩn cấp virus máy tính quốc gia và 360 đã công bố một báo cáo điều tra ngày hôm nay (thứ 4), tiết lộ việc CIA sử dụng các cuộc tấn công mạng chống lại các quốc gia khác, tiết lộ quy trình cụ thể của một số trường hợp an ninh mạng điển hình ở Trung Quốc và các quốc gia khác, phân tích chuyên sâu toàn diện về hành vi trộm cắp tấn công mạng của CIA và các hoạt động gây hại trong thế giới thực có liên quan, và đóng góp của nó cho Hoa Kỳ trở thành một "đế chế hack".
+    Vào năm 2020, 360 đã độc lập phát hiện ra một tổ chức tấn công mạng chưa từng thấy, sử dụng các công cụ vũ khí mạng có liên quan đến CIA để thực hiện các cuộc tấn công mạng chống lại Trung Quốc và các mục tiêu khác, có từ năm 2011 và tiếp tục cho đến ngày nay. Các mục tiêu liên quan đến cơ sở hạ tầng thông tin quan trọng của các quốc gia, hàng không vũ trụ, các tổ chức nghiên cứu khoa học, dầu khí và hoá dầu, các công ty Internet lớn và các cơ quan chính phủ.
+    Một nhóm điều tra do Trung tâm ứng phó khẩn cấp virus máy tính quốc gia và 360 thành lập đã phát hiện ra rằng CIA đã sử dụng rộng rãi các lỗ hổng "zero-day" trong các cuộc tấn công mạng toàn cầu quy mô lớn, bao gồm một số lượng lớn các backdoor và lỗ hổng (một số trong đó đã được xác minh) chưa được tiết lộ công khai, để tạo ra các mạng "botnet" và tấn công các mạng bàn đạp trên toàn thế giới, và tiến hành các cuộc tấn công theo giai đoạn chống lại các máy chủ mạng, thiết bị đầu cuối mạng, thiết bị chuyển mạch và bộ định tuyến, cũng như nhiều thiết bị điều khiển công nghiệp.
+[NeMo I 2023-10-01 01:03:17 nmt_service:164] Translated in 3.248314619064331. Input was: 国家计算机病毒应急处理中心和360公司今天（4日）联合发布了一份调查报告，揭秘了美国中央情报局利用网络攻击他国的相关情况，披露部分发生在中国和其他国家的网络安全典型案事件的具体过程，全面深入分析美国中央情报局的网络攻击窃密和相关现实危害活动，以及其对美国成为“黑客帝国”所做的贡献。
+    2020年，360公司独立发现一个从未被外界曝光的网络攻击组织，该组织使用与美国中央情报局相关联的网络武器工具，针对中国和其他国家受害目标实施网络攻击，攻击活动最早可以追溯到2011年，相关攻击一直延续至今。被攻击目标涉及各国重要信息基础设施、航空航天、科研机构、石油石化、大型互联网公司以及政府机构等诸多方面。
+    由国家计算机病毒应急处理中心和360公司联合成立的调查组发现在规模庞大的全球性网络攻击行动中，美国中央情报局大量使用“零日”漏洞，其中包括一大批至今未被公开披露的后门和漏洞（部分功能已得到验证），在世界各地建立“僵尸”网络和攻击跳板网络，针对网络服务器、网络终端、交换机和路由器，以及数量众多的工业控制设备分阶段实施攻击入侵行动
+    
+    
+     <############> Translation was: Trung tâm ứng phó khẩn cấp virus máy tính quốc gia và 360 đã công bố một báo cáo điều tra ngày hôm nay (thứ 4), tiết lộ việc CIA sử dụng các cuộc tấn công mạng chống lại các quốc gia khác, tiết lộ quy trình cụ thể của một số trường hợp an ninh mạng điển hình ở Trung Quốc và các quốc gia khác, phân tích chuyên sâu toàn diện về hành vi trộm cắp tấn công mạng của CIA và các hoạt động gây hại trong thế giới thực có liên quan, và đóng góp của nó cho Hoa Kỳ trở thành một "đế chế hack".
+    Vào năm 2020, 360 đã độc lập phát hiện ra một tổ chức tấn công mạng chưa từng thấy, sử dụng các công cụ vũ khí mạng có liên quan đến CIA để thực hiện các cuộc tấn công mạng chống lại Trung Quốc và các mục tiêu khác, có từ năm 2011 và tiếp tục cho đến ngày nay. Các mục tiêu liên quan đến cơ sở hạ tầng thông tin quan trọng của các quốc gia, hàng không vũ trụ, các tổ chức nghiên cứu khoa học, dầu khí và hoá dầu, các công ty Internet lớn và các cơ quan chính phủ.
+    Một nhóm điều tra do Trung tâm ứng phó khẩn cấp virus máy tính quốc gia và 360 thành lập đã phát hiện ra rằng CIA đã sử dụng rộng rãi các lỗ hổng "zero-day" trong các cuộc tấn công mạng toàn cầu quy mô lớn, bao gồm một số lượng lớn các backdoor và lỗ hổng (một số trong đó đã được xác minh) chưa được tiết lộ công khai, để tạo ra các mạng "botnet" và tấn công các mạng bàn đạp trên toàn thế giới, và tiến hành các cuộc tấn công theo giai đoạn chống lại các máy chủ mạng, thiết bị đầu cuối mạng, thiết bị chuyển mạch và bộ định tuyến, cũng như nhiều thiết bị điều khiển công nghiệp.
+[NeMo I 2023-10-01 01:04:12 nmt_service:164] Translated in 1.8083884716033936. Input was: 中国没有出台禁止购买和使用苹果等外国品牌手机的法律法规和政策文件。但我们近期确实注意到，有媒体曝出苹果手机有关安全事件。中国政府高度重视网络和信息安全，对内外资企业一视同仁、平等对待。我们希望在华经营的所有手机企业都能够严格遵守《中华人民共和国数据安全法》、《中华人民共和国个人信息保护法》等法律法规，加强信息安全管理，保护消费者存储在手机中的数据不被任何个人、任何组织窃取，确保信息安全。 <############> Translation was: Trung Quốc không có luật, quy định hoặc tài liệu chính sách cấm mua và sử dụng các thương hiệu nước ngoài như Apple. Tuy nhiên, gần đây chúng tôi đã nhận thấy rằng một số phương tiện truyền thông đã phơi bày các sự cố bảo mật liên quan đến điện thoại Apple. Chính phủ Trung Quốc rất coi trọng an ninh mạng và thông tin và đối xử bình đẳng với các doanh nghiệp trong và ngoài nước. Chúng tôi hy vọng rằng tất cả các công ty điện thoại di động hoạt động tại Trung Quốc có thể tuân thủ nghiêm ngặt các luật và quy định như Luật Bảo mật Dữ liệu của Cộng hoà Nhân dân Trung Hoa và Luật Bảo vệ Thông tin Cá nhân của Cộng hoà Nhân dân Trung Hoa, tăng cường quản lý bảo mật thông tin, bảo vệ dữ liệu người tiêu dùng được lưu trữ trong điện thoại di động khỏi bị đánh cắp
+[NeMo I 2023-10-01 01:04:44 nmt_service:164] Translated in 2.2681140899658203. Input was: 习近平指出，中国—中亚合作论坛成立以来，规模不断扩大，影响力日益提升。中国同中亚五国通过这一论坛共谋合作、共享发展，有力增进了相互了解和传统友谊，谱写了睦邻友好、携手共进的新篇章。
+    习近平强调，今年是共建“一带一路”倡议提出10周年，中国同中亚国家共建“一带一路”合作走在国际社会前列。今年5月，中国—中亚峰会成功举行，中国同中亚国家关系迈入新时代。新形势下，中国—中亚合作大有可为，也必将大有作为。希望各方以举办第十届中国—中亚合作论坛为契机，充分发挥论坛平台作用，加强互学互鉴，深化共建“一带一路”合作，推动中国同中亚国家关系发展取得更多丰硕成果。
+     <############> Translation was: XI chỉ ra rằng kể từ khi thành lập Diễn đàn Hợp tác Trung Quốc-Trung Á, nó đã được mở rộng quy mô và tăng ảnh hưởng Thông qua diễn đàn này, Trung Quốc và năm nước Trung Á đã tìm kiếm sự hợp tác và phát triển chung, tăng cường mạnh mẽ sự hiểu biết lẫn nhau và tình hữu nghị truyền thống và viết một chương mới về láng giềng tốt, tình hữu nghị và tiến bộ chung.
+    Tập Cận Bình nhấn mạnh rằng năm nay đánh dấu kỷ niệm 10 năm thành lập Sáng kiến Vành đai và Con đường, và Trung Quốc và các nước Trung Á đang đi đầu trong cộng đồng quốc tế trong việc cùng nhau xây dựng Vành đai và Con đường. Vào tháng 5 năm nay, Hội nghị thượng đỉnh Trung Quốc-Trung Á đã được tổ chức thành công. Quan hệ Trung Quốc-Trung Á với các nước Trung Á đã bước vào một kỷ nguyên mới. Trong hoàn cảnh mới, hợp tác Trung Quốc-Trung Á đầy hứa hẹn và chắc chắn sẽ làm được nhiều Chúng tôi hy vọng rằng tất cả các bên có thể coi Diễn đàn Hợp tác Trung Quốc-Trung Á lần thứ 10 là cơ hội để phát huy đầy đủ vai trò của nó như một nền tảng, tăng cường học hỏi lẫn nhau, tăng cường hợp tác trong việc cùng xây dựng Sáng kiến Vành đai và Con đường và thúc đẩy sự phát triển của quan hệ Trung Quốc-Trung Á
+[NeMo I 2023-10-01 01:05:22 nmt_service:164] Translated in 2.204063892364502. Input was: 王毅说，近年来，在双方共同努力下，中意关系保持高水平发展，走在中欧关系前列。两国领导人保持密切交往，为双边关系把舵定向，夯实互信根基。中意文化和旅游年精彩纷呈，古罗马文明展吸引超过30万中国民众，两国相互支持办好北京和米兰冬奥会，古丝绸之路传承的千年友谊历久弥新。共建“一带一路”合作硕果累累。过去5年，中意贸易额从500亿美元增长至近800亿美元，意大利对华出口增长约30%。依托上海进博会、海南消博会等平台，各类意大利优质商品走进中国千家万户。中意合作的首艘中国国产大型邮轮顺利起航，意企业参与CR929大飞机项目进展顺利，双方形成两轮第三方市场重点合作项目清单。 <############> Translation was: Wang Yi nói rằng trong những năm gần đây, với những nỗ lực phối hợp của hai bên, quan hệ Trung Quốc-Ý đã duy trì sự phát triển cấp cao và đi đầu trong Lãnh đạo hai nước duy trì trao đổi chặt chẽ để định hướng quan hệ song phương và củng cố nền tảng tin cậy lẫn nhau. Năm văn hoá và du lịch Trung-Ý rất rực rỡ. Triển lãm Văn minh La Mã đã thu hút hơn 300.000 người Trung Quốc. Hai nước ủng hộ nhau trong việc tổ chức Thế vận hội mùa đông Bắc Kinh và Milan, và tình bạn ngàn năm được thừa hưởng bởi Con đường tơ lụa cổ đại đã được Cùng nhau xây dựng hợp tác "Vành đai và Con đường" đã có kết quả. Trong năm năm qua, thương mại Trung Quốc-Ý đã tăng từ 50 tỷ đô la lên gần 80 tỷ đô la và xuất khẩu của Ý sang Trung Quốc đã tăng Dựa vào các nền tảng như Triển lãm Nhập khẩu Thượng Hải và Triển lãm Người tiêu dùng Hải Nam, tất cả các loại sản phẩm chất lượng của Ý đều xâm nhập vào hàng ngàn hộ gia đình ở Trung Quốc. Tàu du lịch lớn đầu tiên do Trung Quốc sản xuất hợp tác Trung-Ý đã ra khơi thành công. Công ty Ý đã tham gia vào dự án máy bay lớn CR929 một cách suôn sẻ và hai bên đã hình thành hai vòng danh sách các dự án hợp tác chính
+[NeMo I 2023-10-01 01:06:07 nmt_service:164] Translated in 2.365936040878296. Input was: 当前，世界之变、时代之变、历史之变正以前所未有的方式展开，和平赤字、发展赤字、安全赤字、治理赤字不断加重，人类前途命运再次来到何去何从的十字路口。同时，世界多极化、经济全球化持续演进，和平、发展、合作、共赢的时代潮流不可阻挡，讲团结、促合作、求进步仍然是人心所向。
+    今年是习近平主席提出构建人类命运共同体理念十周年。面对世界百年未有之大变局，习近平主席立足中国，胸怀世界，创造性提出构建人类命运共同体理念，为世界未来发展指明方向，为应对共同挑战提供方案。十年来，构建人类命运共同体从理念转化为行动，从愿景转变为现实。中国呼吁国际社会践行真正的多边主义，维护以联合国为核心的国际体系，支持联合国在国际事务中发挥核心作用，推动全球治理体系发展完善，共同构建人类命运共同体。
+     <############> Translation was: Hiện nay, những thay đổi trên thế giới, thời đại và lịch sử đang diễn ra theo những cách chưa từng có. Thâm hụt hoà bình, thâm hụt phát triển, thâm hụt an ninh và thâm hụt quản trị tiếp tục tăng lên. Một lần nữa, tương lai và số phận của nhân loại đang ở ngã tư đường. Đồng thời, một thế giới đa cực và toàn cầu hoá kinh tế tiếp tục phát triển, và xu hướng hoà bình, phát triển, hợp tác và kết quả cùng có lợi của thời đại là không thể ngăn cản.
+    Năm nay đánh dấu kỷ niệm 10 năm Chủ tịch Tập Cận Bình đề xuất xây dựng một cộng đồng với một tương lai chung Trước những thay đổi chưa từng có trên thế giới trong một thế kỷ, Chủ tịch Tập Cận Bình, có trụ sở tại Trung Quốc và với thế giới trong tâm trí, đã sáng tạo đề xuất khái niệm xây dựng một cộng đồng với một tương lai chung cho nhân loại, vạch ra lộ trình cho Trong thập kỷ qua, việc xây dựng một cộng đồng với một tương lai chung cho nhân loại đã được chuyển đổi từ ý tưởng sang hành động và từ tầm nhìn sang thực tế. Trung Quốc kêu gọi cộng đồng quốc tế thực hành chủ nghĩa đa phương thực sự, duy trì hệ thống quốc tế với Liên Hợp Quốc làm nòng cốt, hỗ trợ Liên Hợp Quốc đóng vai trò trung tâm trong các vấn đề quốc tế, thúc đẩy phát triển và cải thiện hệ thống quản trị toàn cầu và cùng nhau xây dựng một cộng đồng
+[NeMo I 2023-10-01 01:06:44 nmt_service:164] Translated in 2.61197566986084. Input was: 汪文斌：中方对瑞士返还中国文物表示赞赏。中瑞两国2013年签订《中华人民共和国政府与瑞士联邦委员会关于非法进出境文化财产及其返还的协定》。协定签署后，双方在此框架下开展了一系列务实交流合作。2014年12月，瑞方首次向中方返还1件汉代陶俑。上周，瑞方第二次向中方归还了在近两年的4起刑事案件中查获并没收的5件中国文物，其中包括4件陶瓷器和1枚钱币。此次文物返还是中瑞两国在文化遗产保护领域合作的又一次成功实践，对增进两国人民之间的相互了解与友谊发挥了积极作用，也对在全球范围打击文物走私、保护文物安全、扩大政府间合作具有示范意义。中方愿继续与瑞方深化在文物追索返还、古代文明研究、联合考古、古迹修复等领域合作，携手促进文明交流互鉴，为中瑞关系发展创造更多亮点。 <############> Translation was: Wang Wenbin: Trung Quốc khen ngợi Thuỵ Sĩ vì đã trả lại di tích văn hoá Trung Quốc. Năm 2013, Trung Quốc và Thuỵ Sĩ đã ký Thoả thuận giữa Chính phủ Cộng hoà Nhân dân Trung Hoa và Hội đồng Liên bang Thuỵ Sĩ về Nhập cảnh bất hợp pháp Kể từ khi ký kết thoả thuận, hai bên đã tiến hành một loạt các trao đổi và hợp tác thực tế trong khuôn khổ này. Vào tháng 12 năm 2014, Thuỵ Sĩ lần đầu tiên trở về Trung Quốc một mảnh gốm thời nhà Hán Tuần trước, Thuỵ Sĩ trở lại Trung Quốc lần thứ hai, năm cổ vật Trung Quốc đã bị thu giữ và tịch thu trong bốn vụ án hình sự trong gần hai năm, bao gồm bốn đồ gốm và một đồng xu. Sự trở lại này là một thực tiễn hợp tác thành công khác giữa Trung Quốc và Thuỵ Sĩ trong lĩnh vực bảo vệ di sản văn hoá. Nó đã đóng một vai trò tích cực trong việc tăng cường sự hiểu biết lẫn nhau và tình hữu nghị giữa hai dân tộc và có ý nghĩa gương mẫu trong việc chống buôn lậu di tích văn hoá, bảo vệ an toàn di tích văn hoá và mở rộng hợp tác liên chính phủ trên toàn thế giới. Trung Quốc sẵn sàng tiếp tục tăng cường hợp tác với Thuỵ Sĩ trong các lĩnh vực như phục hồi di tích văn hoá, nghiên cứu về các nền văn minh cổ đại, khảo cổ học chung và khôi phục các di tích lịch sử, và cùng thúc đẩy trao đổi và học hỏi lẫn nhau giữa các nền văn minh để tạo ra nhiều hơn
+[NeMo I 2023-10-01 01:07:16 nmt_service:164] Translated in 2.5111446380615234. Input was: 汪文斌：“振华28”轮在美国佛罗里达州杰克逊维尔港遭遇美执法人员无理盘查滋扰，部分船员个人电子设备遭收缴扣押，离美航行计划被迫推迟，船方后续运营及船员工作生活受到影响。中方已向美方提出严正交涉。
+    必须指出，近年来，美国以各种借口对中国公民入境设置障碍，无理干涉持有正常签证的中国留学生入境，特别是屡屡以中方人员政治信仰和共产党员身份等为借口无端盘查滋扰，这是赤裸裸的意识形态偏见和冷战思维的体现，中方对此强烈不满、坚决反对。我们敦促美方纠正错误做法，停止对中方赴美人员无理盘查滋扰，停止侵犯中方人员合法权益，停止打着国家安全旗号阻挠、破坏中美间正常人文交流和经贸合作，避免此类事件再次发生。中方将采取一切必要措施坚决维护中国公民合法权益。
+     <############> Translation was: Wang Wenbin: Tàu Zhenhua 28 bị điều tra vô lý bởi các nhân viên thực thi pháp luật Hoa Kỳ tại Port Jacksonville, Florida. Một số thiết bị điện tử cá nhân của phi hành đoàn đã bị thu giữ và thu giữ. Trung Quốc đã ký kết các đại diện long trọng với phía Mỹ.
+    Phải chỉ ra rằng trong những năm gần đây, Hoa Kỳ đã thiết lập những trở ngại cho việc nhập cảnh của công dân Trung Quốc dưới nhiều lý do khác nhau và can thiệp một cách vô lý vào việc nhập cảnh của sinh viên Trung Quốc có thị thực thường xuyên. Đặc biệt, nó đã nhiều lần tiến hành các cuộc điều tra không chính đáng về những phiền toái dưới những lý do như niềm tin chính trị của nhân viên Trung Quốc và tư cách thành viên của Đảng Cộng sản. Điều này Chúng tôi kêu gọi phía Hoa Kỳ sửa chữa các thông lệ sai trái của mình, ngừng điều tra và quấy rối một cách vô lý nhân viên Trung Quốc đến thăm Hoa Kỳ, ngừng vi phạm quyền và lợi ích hợp pháp của nhân viên Trung Quốc, ngừng cản trở và phá hoại giao lưu giữa người với người bình thường và hợp tác kinh tế và thương mại giữa Trung Quốc và Hoa Kỳ dưới biểu ngữ Trung Quốc sẽ thực hiện tất cả các biện pháp cần thiết để kiên quyết bảo vệ quyền và lợi ích hợp pháp của công dân Trung Quốc.
+[NeMo I 2023-10-01 01:07:42 nmt_service:164] Translated in 1.3595776557922363. Input was: 汪文斌：中方已多次就日本核污染水排海问题表明严正立场。对于日本政府强行启动向海洋排放核污染水这种自私自利、极不负责任的行径，国际社会普遍给予批评并采取相关防范措施。中方主管部门依据中国法律法规以及世贸组织《实施卫生与植物卫生措施协定》相关规定，对原产地为日本的水产品采取紧急措施，完全正当、合理、必要。
+     <############> Translation was: Wang Wenbin: Trung Quốc đã nhiều lần tuyên bố lập trường trang trọng của mình về vấn đề thoát nước ô nhiễm hạt nhân của Nhật Bản. Cộng đồng quốc tế đã chỉ trích rộng rãi và thực hiện các biện pháp phòng ngừa chống lại hành động ích kỷ và vô trách nhiệm của Chính phủ Nhật Bản để ép buộc xả nước bị ô nhiễm hạt nhân xuống biển. Theo quy định của pháp luật Trung Quốc và các quy định có liên quan của Hiệp định WTO về thực hiện các biện pháp vệ sinh và kiểm dịch thực vật, các cơ quan có thẩm quyền của Trung Quốc đã thực hiện các biện pháp khẩn cấp đối với các sản phẩm thuỷ sản có nguồn gốc từ Nhật Bản,
+[NeMo I 2023-10-01 01:10:56 nmt_service:164] Translated in 2.7120280265808105. Input was: AIS信号显示，2月20日，尼米兹号航母打击群成员“迪云”号与“韦恩•迈耶”号驱逐舰经苏里高海峡进入菲律宾海。2月19日，打击群成员“迪卡特”号与“韦恩•迈耶”号驱逐舰在苏禄海活动，同日，一架美海军P-8A反潜巡逻机自菲律宾克拉克机场起飞，提供ISR（情报、侦察、监视）支援。据三艘驱逐舰航行轨迹推断，尼米兹号航母打击群已于2月18日自巴拉巴克海峡进入苏禄海，结束此次南海部署。
+    尼米兹号航母打击群此次部署活动时间长，轨迹呈闭环。打击群于1月12日自巴士海峡进入南海，活动时间长达38天，是近年来美海军航母在南海部署时间最长的一次。部署期间，除短暂访问新加坡和配合美防长访菲外，长时间位印马交界水域和万安盆地以南海域活动。2月11日开始，尼米兹号航母打击群还与马金岛号两栖戒备群在此进行了“联合远征打击力量（ESF）”作战训练
+     <############> Translation was: Theo tín hiệu AIS, vào ngày 20 tháng 2, các tàu khu trục Diyun và Wayne Meyer, thành viên của đội tàu sân bay của Nimitz, tiến vào biển Philippine ngang qua eo biển Surigao. Vào ngày 19 tháng 2, tàu khu trục Wayne Meyer và tàu khu trục Decatur hoạt động tại biển Sulu, và cùng ngày hôm đó, một máy bay tuần tra chống tàu ngầm P-8A của Hải quân cất cánh từ sân bay Clark tại Philippines để hỗ trợ hoạt động tình báo, trinh sát và giám sát. Theo quỹ đạo của ba tàu khu trục, Nimitz tiến vào biển Sulu từ eo biển Balabak vào ngày 18 tháng 2, kết thúc việc bố trí hoạt động tại Biển Đông.
+    Nhóm tấn công tàu sân bay Nimitz được triển khai trong một thời gian dài và có quỹ đạo vòng kín. Nhóm tấn công tiến vào Biển Đông từ eo biển Bus vào ngày 12 tháng 1 và kéo dài 38 ngày, khiến nó trở thành đợt triển khai tàu sân bay dài nhất của Hải quân Hoa Kỳ ở Biển Đông trong những năm gần đây. Trong quá trình triển khai, ngoài một chuyến thăm ngắn đến Singapore và một chuyến thăm Philippines với Bộ trưởng Quốc phòng Hoa Kỳ, nó đã hoạt động trong một thời gian dài ở vùng biển giáp biên giới Ấn Độ và Bắt đầu từ ngày 11 tháng 2, đội đặc nhiệm tàu sân bay Nimitz tiến hành huấn luyện tác chiến phối hợp Lực lượng Tấn công Viễn chinh (ESF) cùng với đội sẵn sàng đổ bộ Mackin Island.
+[NeMo I 2023-10-01 01:11:39 nmt_service:164] Translated in 1.2810449600219727. Input was: 今天，菲律宾海军第41特遣部队的何塞•黎刹号（BRP Jose Rizal，FF-150）护卫舰和美国海军第七舰队的拉尔夫•约翰逊号（USS Ralph Johnson，DDG-114）驱逐舰在巴拉望岛以西的南海进行师级战术演习。
+    菲官方称，这项活动是在共同防御委员会-安全参与委员会框架下进行的，旨在发展两国海军之间的作战互操作性。
+     <############> Translation was: Hôm nay, tàu khu trục BRP Jose Rizal (FF-150) thuộc Lực lượng Đặc nhiệm 41 của Hải quân Philippines và tàu khu trục USS Ralph Johnson (DDG-114) thuộc Hạm đội 7 của Hải quân Hoa Kỳ tiến hành các cuộc tập trận chiến thuật ở Biển Đông phía tây Palawan.
+    Quan chức Philippines cho biết hoạt động này được tiến hành trong khuôn khổ Uỷ ban Tham gia An ninh-Uỷ ban Quốc phòng chung và nhằm mục đích phát triển khả năng tương tác hoạt động giữa hải quân hai nước.
+[NeMo I 2023-10-01 01:13:08 nmt_service:164] Translated in 1.3432974815368652. Input was: 菲律宾国防部7月的一份报告中，确认了菲律宾空军多用途战斗机采购项目的状态，即采购“鹰狮”战斗机，仅等待与瑞典签署谅解备忘录。
+    萨博将出售10架单座JAS-39C和4架双座JAS-39D。这些飞机是由萨博部分制造的，以保持工厂正常运转，直到生产更新的JAS-39E/F“鹰狮 NG”。
+    配置不详，可能是MS20+。
+     <############> Translation was: Một báo cáo tháng 7 của Bộ Quốc phòng Philippines đã xác nhận tình trạng của dự án mua sắm máy bay chiến đấu đa chức năng của Không quân Philippines, mua sắm máy bay chiến đấu Eagle, chỉ trong khi chờ ký kết biên bản ghi nhớ với Thuỵ Điển.
+    Saab sẽ bán 10 chiếc JAS-39C một chỗ và 4 chiếc JAS-39D hai chỗ. Máy bay được Saab sản xuất một phần để duy trì hoạt động của nhà máy cho đến khi JAS-39E / F "Eagle NG" được nâng cấp.
+    Không rõ cấu hình, có thể là MS20.
+[NeMo I 2023-10-01 01:14:38 nmt_service:164] Translated in 1.932842493057251. Input was: 悉尼大学美国研究中心外交政策与国防项目研究员布莱克•赫辛格建议：因为菲律宾的坐滩废旧登陆舰即将解体，美国海军陆战队应该直接对南沙仁爱礁实施军事占领。
+    具体做法是：把二手的油气平台（图片仅供参考）拖到南沙，架设在仁爱礁的礁盘上，美菲两军陆战队联合驻扎。美国海军负责施工中的护航，不用害怕中国的海警船和渔船。
+    作者认为，美军进驻菲律宾，引发杜特尔特等菲国人士的不满，说是把菲律宾本土变成了战场，并非真实帮菲保卫南海。现在美军可以一步到位，将战场转移到远海，并履行了保卫盟友的诺言
+     <############> Translation was: Blake Hersinger, một nhà nghiên cứu thuộc Chương trình Chính sách Đối ngoại và Quốc phòng tại Trung tâm Nghiên cứu Hoa Kỳ của Đại học Sydney, cho rằng vì tàu đổ bộ bãi biển cũ của Philippines sắp tan rã, Thuỷ quân lục chiến Hoa Kỳ nên tiếp quản Nans.
+    Điều này được thực hiện bằng cách kéo một giàn khoan dầu khí đã qua sử dụng (hình ảnh chỉ mang tính tham khảo) đến Nansha và dựng nó trên các rạn san hô Renai Reef, nơi Thuỷ quân lục chiến Hoa Kỳ và Philippines sẽ Hải quân Hoa Kỳ chịu trách nhiệm hộ tống tàu đang được xây dựng, mà không sợ tàu tuần duyên và tàu đánh cá Trung Quốc.
+    Theo tác giả, sự hiện diện của quân đội Mỹ ở Philippines đã gây ra sự bất mãn trong số những người Philippines như Duterte, người nói rằng họ đã biến đất liền Philippines thành một chiến trường chứ không phải là thực sự giúp Philippines bảo vệ Bây giờ quân đội Mỹ có thể can thiệp, di chuyển chiến trường ra xa và thực hiện lời hứa bảo vệ các đồng minh của mình.
+[NeMo I 2023-10-01 01:15:55 nmt_service:164] Translated in 1.824021339416504. Input was: 中方对柬埔寨选举产生新一届国会并成立新一届政府表示热烈祝贺。相信在洪玛奈首相领导下，柬新政府将在国家建设事业中取得新的更大成就。
+    中柬是“铁杆”朋友，两国友谊历经国际风云变幻，始终坚如磐石。中方将一如既往支持柬埔寨国家建设发展，愿同柬新政府一道，致力于构建高质量、高水平、高标准的新时代中柬命运共同体，持续深化中柬全面战略合作伙伴关系，让中柬“铁杆”友谊焕发出更大的生机活力，更好造福两国人民。
+     <############> Translation was: Trung Quốc nồng nhiệt chúc mừng Campuchia về cuộc bầu cử Quốc hội mới và thành lập chính phủ mới. Chúng tôi tin rằng dưới sự lãnh đạo của Thủ tướng Hun Manai, chính phủ Campuchia mới sẽ đạt được những thành tựu mới và lớn hơn trong sự nghiệp
+    Trung Quốc và Campuchia là những người bạn "cứng rắn". Tình bạn giữa hai nước luôn vững chắc thông qua những thay đổi quốc tế. Trung Quốc sẽ tiếp tục hỗ trợ phát triển và phát triển quốc gia của Campuchia, và sẵn sàng làm việc với chính phủ Campuchia mới để xây dựng một cộng đồng tương lai chia sẻ giữa Trung Quốc và Campuchia trong kỷ nguyên mới với chất lượng cao, tiêu chuẩn cao và tiêu chuẩn cao, và liên tục làm sâu sắc thêm quan hệ đối tác chiến lược toàn diện Trung Quốc-Campuchia để khôi phục Trung Quốc-Campuchia
+[NeMo I 2023-10-01 01:23:40 nmt_service:164] Translated in 2.2790961265563965. Input was: 昨天，外交部副部长孙卫东召见日本驻华大使垂秀夫，就此向日方提出严正交涉。中方指出，日本政府无视国际社会的强烈质疑和反对，执意宣布即将启动福岛核污染水排海。这一行径公然向包括中国在内的周边国家和国际社会转嫁核污染风险、将一己私利凌驾于地区和世界各国民众长远福祉之上，极其自私自利，极不负责任。中方表示严重关切和强烈反对。
+    海洋是全人类赖以生存的蓝色家园，不容日方随意倾倒核污染水。日方强推核污染水排海，无疑是在拿全球海洋环境和全人类健康当赌注。如果日方真有诚意解决邻国的关切，就应当立即停止强推排海计划，在不预设结果的前提下开展交流，充分讨论所有可能的安全处置方案。
+     <############> Translation was: Hôm qua, Thứ trưởng Ngoại giao Tôn Duy Đông đã triệu tập Đại sứ Nhật Bản tại Trung Quốc Hiroo Tsuru và gửi đại diện long trọng với phía Nhật Bản về vấn đề này. Trung Quốc chỉ ra rằng chính phủ Nhật Bản đã bỏ qua những nghi ngờ và phản đối mạnh mẽ của cộng đồng quốc tế và khăng khăng tuyên bố sự khởi đầu sắp xảy ra của hệ thống thoát nước bị ô nhiễm hạt nhân Fukushima. Hành động này là cực kỳ tự phục vụ và vô trách nhiệm trong việc công khai truyền tải nguy cơ ô nhiễm hạt nhân cho các nước láng giềng bao gồm Trung Quốc và cộng đồng quốc tế và ưu tiên lợi ích cá nhân đối với phúc lợi lâu dài của người dân trong khu vực và trên thế giới. Trung Quốc bày tỏ quan ngại sâu sắc và phản đối mạnh mẽ.
+    Đại dương là ngôi nhà màu xanh mà tất cả nhân loại phụ thuộc vào sự sống còn của nó. Nhật Bản không thể đổ nước bị ô nhiễm hạt nhân theo ý muốn. Sự thúc đẩy của phía Nhật Bản đối với việc thoát nước bị ô nhiễm hạt nhân chắc chắn đang đặt cược vào môi trường biển toàn cầu và sức khoẻ của toàn nhân loại Nếu phía Nhật Bản thực sự có thiện chí giải quyết các mối quan tâm của các nước láng giềng, họ nên ngay lập tức ngừng thúc đẩy các kế hoạch giải phóng mặt bằng hàng hải, tiến hành trao đổi mà không dự đoán kết quả và thảo luận đầy đủ tất cả các lựa chọn xử lý an toàn có thể có.
+[NeMo I 2023-10-01 01:24:04 nmt_service:164] Translated in 1.430586576461792. Input was: 这次是习近平主席第四次对南非进行国事访问。当地时间昨天上午，习近平主席在比勒陀利亚同南非总统拉马福萨举行了富有成果的会谈并共同会见记者。两国元首就新时代中南关系发展以及共同关心的国际和地区问题深入交换意见，达成重要共识，一致同意，携手推动中南全面战略伙伴关系不断迈上新台阶，携手构建高水平中南命运共同体。 <############> Translation was: Đây là chuyến thăm cấp nhà nước lần thứ tư của Chủ tịch Tập Cận Bình tới Nam Phi. Sáng hôm qua, giờ địa phương, Chủ tịch Tập Cận Bình đã tổ chức các cuộc đàm phán hiệu quả với Tổng thống Nam Phi Ramaphosa tại Pretoria và cùng gặp gỡ báo chí. Hai nguyên thủ quốc gia đã trao đổi quan điểm sâu sắc về sự phát triển quan hệ Trung Quốc-Nam Phi và các vấn đề quốc tế và khu vực quan tâm chung trong kỷ nguyên mới và đạt được sự đồng thuận quan trọng. Họ đồng ý hợp tác để nâng cao quan hệ đối tác chiến lược toàn diện Trung Quốc-Nam Phi lên một tầm cao mới và xây dựng một
+[NeMo I 2023-10-01 01:24:59 nmt_service:164] Translated in 1.5632755756378174. Input was: 方一贯坚决反对建交国与中国台湾地区进行任何形式的官方往来，包括商签任何具有主权意涵和官方性质的协定。美方行径违反一个中国原则和中美三个联合公报规定，违背美方做出的仅与台保持非官方关系的承诺，向“台独”分裂势力发出错误信号。
+    中方维护国家主权和领土完整的意志坚定不移。我们敦促美方立即改弦更张，撤销所谓“法案”，停止推进“倡议”谈判，不要在错误道路上越走越远。
+     <############> Translation was: Ông Fang luôn kiên quyết phản đối bất kỳ hình thức trao đổi chính thức nào giữa các quốc gia có quan hệ ngoại giao với Đài Loan, bao gồm đàm phán bất kỳ thoả thuận nào có ý nghĩa chủ quyền và tính chất chính thức. Các hành động của Hoa Kỳ vi phạm nguyên tắc một Trung Quốc và các điều khoản của ba thông cáo chung Trung Quốc-Hoa Kỳ, vi phạm cam kết của Hoa Kỳ chỉ duy trì quan hệ không chính thức với Đài Loan và gửi tín hiệu sai cho các lực lượng ly khai "độc lập Đài Loan".
+    Ý chí của Trung Quốc để bảo vệ chủ quyền quốc gia và toàn vẹn lãnh thổ là không dao động. Chúng tôi kêu gọi phía Hoa Kỳ ngay lập tức thay đổi hướng đi, rút cái gọi là "hoá đơn", ngừng thúc đẩy các cuộc đàm phán "sáng kiến" và không đi sâu hơn vào con đường sai lầm.
+[NeMo I 2023-10-01 01:25:20 nmt_service:164] Translated in 1.4536993503570557. Input was: 中国从不刻意追求贸易顺差，中欧贸易顺差是产业结构、产业分工、贸易方式以及外部因素综合作用的客观结果。长期以来，绝大部分欧盟在华企业从中欧贸易中获利丰厚，这也是他们在华经营展业的根本原因。近年来，欧盟收紧对华高技术产品出口，是影响欧对华出口潜力发挥、造成贸易不平衡的直接原因。如果欧方真想解决贸易不平衡，就不应指责中方，而应取消对华出口限制。
+     <############> Translation was: Trung Quốc không bao giờ theo đuổi thặng dư thương mại. Thặng dư thương mại Trung Quốc-EU là kết quả khách quan của sự kết hợp của cấu trúc công nghiệp, phân công lao động công nghiệp, mô hình thương mại và các yếu tố bên ngoài. Trong một thời gian dài, phần lớn các doanh nghiệp EU tại Trung Quốc đã thu được lợi nhuận từ thương mại Trung Quốc-EU, đây cũng là nguyên nhân gốc rễ của hoạt động kinh doanh triển lãm của họ tại Trung Quốc Trong những năm gần đây, EU đã thắt chặt xuất khẩu các sản phẩm công nghệ cao sang Trung Quốc, điều này đã ảnh hưởng đến tiềm năng xuất khẩu của EU sang Trung Quốc và gây ra sự mất cân bằng thương mại. Nếu EU thực sự muốn giải quyết sự mất cân bằng thương mại, họ không nên đổ lỗi cho Trung Quốc mà nên dỡ bỏ các hạn chế xuất khẩu đối với Trung Quốc.
+[NeMo I 2023-10-01 01:25:54 nmt_service:164] Translated in 4.322205066680908. Input was: 中国海警局新闻发言人已作了详细介绍。中国外交部已向菲方提出严正交涉。
+    我想强调的是，仁爱礁是中国南沙群岛的一部分。菲方多次明确承诺拖走在该礁非法“坐滩”的军舰，但24年过去了，菲方不但未拖走该军舰，还企图对其大规模维修加固，实现对仁爱礁的永久占领。菲方行为严重违反国际法和中国与东盟国家签署的《南海各方行为宣言》。中方再次敦促菲方立即从仁爱礁拖走“坐滩”军舰，恢复仁爱礁无人无设施的状态。
+    南海仲裁案所谓裁决违反包括《联合国海洋法公约》在内的国际法，是非法的、无效的。中国不接受、不承认该裁决，不接受任何基于该裁决的主张和行动。这一立场是明确的、坚定的，是维护国际法治的正当举措。
+    一段时间以来，中方通过外交渠道多次同菲方就仁爱礁问题进行沟通，明确要求菲方不得向非法“坐滩”军舰运送用于大规模维修加固的建筑物资，并提议双方尽快商谈管控仁爱礁局势的措施。但菲方无视中方的善意和诚意，执意向仁爱礁“坐滩”军舰运送用于维修加固的建筑物资，这是此次事态的起因。中国海警依法采取措施维护中方主权和海洋权益，现场操作专业、克制，无可非议。
+    菲律宾是中国重要的海上邻国，中菲双方曾就管控海上争议达成重要共识。中方愿继续通过对话协商与菲方妥善处理海上问题，共同维护双边关系和海上局势稳定。
+    
+     <############> Translation was: Người phát ngôn của Cục Cảnh sát biển Trung Quốc đã cho biết chi tiết và Bộ Ngoại giao Trung Quốc đã gửi đại diện long trọng với phía Philippines.
+    Tôi muốn nhấn mạnh rằng rạn san hô Renai là một phần của quần đảo Nam Sa của Trung Quốc. Philippines đã nhiều lần đưa ra những cam kết rõ ràng về việc kéo tàu chiến bị "bắn" bất hợp pháp trên rạn san hô, nhưng sau 24 năm, Philippines không chỉ thất bại trong việc kéo tàu chiến, mà còn cố gắng củng cố nó với việc bảo trì rộng rãi và đạt được sự chiếm đóng vĩnh viễn của rạn san hô Ren 'ai. Hành động của Philippines vi phạm nghiêm trọng luật pháp quốc tế và Tuyên bố về ứng xử của các bên ở Biển Đông do Trung Quốc và các nước ASEAN ký kết. Trung Quốc một lần nữa kêu gọi Philippines ngay lập tức đưa tàu chiến "bên bờ biển" của mình ra khỏi Rạn san hô Renai và khôi phục Rạn san hô Renai về trạng thái không có người ở.
+    Cái gọi là giải thưởng trong trường hợp trọng tài Biển Đông vi phạm luật pháp quốc tế, bao gồm Công ước Liên hợp quốc về Luật Biển, và là bất hợp pháp và không hợp lệ. Trung Quốc không chấp nhận hoặc công nhận phán quyết và không chấp nhận bất kỳ đề xuất hoặc hành động nào dựa trên nó. Vị trí này rõ ràng và vững chắc và tạo thành một biện pháp hợp pháp để duy trì luật pháp quốc tế.
+    Trong một thời gian, Trung Quốc đã nhiều lần liên lạc với Philippines về vấn đề rạn san hô Ren'ai thông qua các kênh ngoại giao, rõ ràng yêu cầu Philippines không cung cấp vật liệu xây dựng để bảo trì và tăng cường quy mô lớn cho các tàu chiến "bãi biển" bất hợp pháp, và đề xuất rằng hai bên thảo luận về các biện pháp kiểm soát tình hình tại rạn san hô Ren'ai. Tuy nhiên, Philippines phớt lờ thiện chí và sự chân thành của Trung Quốc và nhấn mạnh vào việc cung cấp vật liệu xây dựng để bảo trì và tăng cường cho tàu chiến "bãi biển" tại Renai Jiao, đó là nguyên nhân của sự cố này. Cảnh sát biển Trung Quốc đã thực hiện các biện pháp theo quy định của pháp luật để bảo vệ chủ quyền, quyền và lợi ích hàng hải của Trung Quốc và tiến hành các hoạt động tại chỗ với tính chuyên nghiệp và kiềm chế.
+    Philippines là một nước láng giềng hàng hải quan trọng của Trung Quốc, và Trung Quốc và Philippines đã đạt được sự đồng thuận quan trọng về quản lý tranh chấp hàng hải. Trung Quốc sẵn sàng tiếp tục xử lý đúng đắn các vấn đề hàng hải với Philippines thông qua đối thoại và tham vấn và cùng nhau bảo vệ quan hệ song phương và ổn định hàng hải.
+[NeMo I 2023-10-01 03:34:33 nmt_service:164] Translated in 0.9409279823303223. Input was: 5月29日至6月4日，菲律宾当局邀请了来自瑞士、澳大利亚和法国的一批旅行者，乘坐民船非法开展南沙群岛旅游。他们曾一度登上中业岛附近的沙洲，还收到了来自渚碧礁基站的手机短信“欢迎来到中国”。 <############> Translation was: Từ ngày 29 tháng 5 đến ngày 4 tháng 6, chính quyền Philippines đã mời một nhóm du khách từ Thuỵ Sĩ, Úc và Pháp thực hiện du lịch bất hợp pháp tại quần đảo Trường Sa bằng thuyền dân sự. Họ từng lên một bãi cát gần đảo Trung Nghĩa và nhận được một tin nhắn văn bản từ Trạm cơ sở rạn san hô Liêu Bi nói rằng "Chào mừng bạn đến Trung Quốc".
+[NeMo I 2023-10-01 04:49:31 nmt_service:164] Translated in 1.53224515914917. Input was: 两年多来，福岛核污染水排海计划的正当性、合法性、安全性一直受到国际社会质疑。日方迄未解决国际社会关于核污染水净化装置长期可靠性、核污染水数据真实准确性、排海监测安排的有效性等重大关切。中方等利益攸关方多次指出，如果核污染水是安全的，就没有必要排海，如果不安全，就更不应该排海。日本强推核污染水排海，不正当、不合理、不必要 <############> Translation was: Trong hơn hai năm, tính hợp pháp, hợp pháp và an toàn của chương trình thoát nước ô nhiễm hạt nhân của Fukushima đã bị cộng đồng quốc tế đặt câu hỏi. Phía Nhật Bản vẫn chưa giải quyết các mối quan tâm lớn của cộng đồng quốc tế về độ tin cậy lâu dài của các thiết bị lọc nước bị ô nhiễm hạt nhân, độ chính xác thực sự của dữ liệu nước bị ô nhiễm hạt nhân và hiệu quả của các thoả thuận giám sát thoát nước biển. Trung Quốc và các bên liên quan đã nhiều lần chỉ ra rằng nếu nước bị ô nhiễm hạt nhân là an toàn, không cần phải xả biển, và nếu nó không an toàn, thậm chí ít hơn nên được thải ra. Việc Nhật Bản thúc đẩy thoát nước ô nhiễm hạt nhân là không chính đáng, không hợp lý và không cần thiết.
+[NeMo I 2023-10-01 04:57:12 nmt_service:164] Translated in 2.0199954509735107. Input was: 金砖合作倡导开放包容、互利共赢，为的是实现共同发展、普遍繁荣，不搞阵营对抗，与“小圈子”“小集团”有本质不同。金砖机制的蓬勃发展，是南南合作平台的拓展，是维护和平力量的增强，是世界正义阵线的扩大，是发展中国家团结合作的又一个重要里程碑，受到绝大多数国家欢迎。我们将同金砖伙伴一道，继续深化金砖战略伙伴关系，拓展“金砖+”合作模式，充实政治安全、经贸财金、人文交流“三轮驱动”合作架构，不断谱写新兴市场国家和发展中国家团结合作谋发展的新篇章，为推动构建人类命运共同体贡献力量。 <############> Translation was: Hợp tác BRICS ủng hộ sự cởi mở, toàn diện, cùng có lợi và cùng có lợi để đạt được sự phát triển chung và thịnh vượng phổ quát mà không tham gia vào cuộc đối đầu phe phái, về cơ bản khác với "vòng tròn nhỏ" và "nhóm nhỏ". Sự phát triển hưng thịnh của cơ chế BRICS là mở rộng nền tảng hợp tác Nam-Nam, tăng cường lực lượng vì hoà bình, mở rộng mặt trận công lý thế giới và một cột mốc quan trọng khác trong đoàn kết và hợp tác giữa các nước đang phát triển, Cùng với các đối tác BRICS của chúng tôi, chúng tôi sẽ tiếp tục làm sâu sắc thêm quan hệ đối tác chiến lược BRICS, mở rộng mô hình hợp tác "BRICS Plus", làm phong phú thêm khuôn khổ hợp tác "ba bánh" về chính trị và an ninh, kinh tế, tài chính và giao lưu văn hoá giữa người với người và không ngừng viết một chương mới về đoàn kết và hợp tác phát triển giữa các thị trường mới nổi và các nước đang phát triển
+[NeMo I 2023-10-01 04:59:07 nmt_service:164] Translated in 1.4372317790985107. Input was: 9月12日，由中国船舶集团旗下广船国际联合中船贸易建造的7000车双燃料汽车运输船正式交付，这也是华南地区建造的首艘双燃料汽车运输船。汽车运输船就像一座漂浮在海上的巨型“立体车库”，作为运输船型，不仅要考虑安全性，环保经济也是非常重要的指标。为此技术人员为这艘船安装了最新的天然气、燃油双燃料推进系统。 <############> Translation was: Vào ngày 12 tháng 9, tàu vận tải phương tiện hai nhiên liệu 7.000 xe do Tập đoàn đóng tàu Quảng Châu Ship International và China Shipbuilding Trade của Tập đoàn đóng tàu Trung Quốc đóng đã chính thức được giao, đây cũng là tàu vận tải phương tiện hai nhiên liệu đầu tiên được đóng tại Nam Trung Quốc. Tàu vận tải ô tô giống như một "nhà để xe kín" khổng lồ nổi trên biển. Là một loại tàu vận tải, điều quan trọng không chỉ là xem xét an toàn, mà còn bảo vệ môi trường và kinh tế. Với mục đích này, các kỹ thuật viên đã lắp đặt hệ thống đẩy nhiên liệu kép nhiên liệu khí mới nhất cho con tàu.
+[NeMo I 2023-10-01 04:59:32 nmt_service:164] Translated in 1.8273024559020996. Input was: 近日，在国家计算机病毒应急处理中心会同360公司配合侦办西北工业大学被美国国家安全局（NSA）网络攻击案过程中，成功提取了“二次约会”间谍软件的多个样本，并锁定了这起网络间谍行动背后NSA工作人员的真实身份。报告显示，该软件是NSA开发的网络间谍武器，可实现网络流量窃听劫持、中间人攻击、插入恶意代码等恶意功能，它与其它恶意软件配合可以完成复杂的网络“间谍”活动。经层层溯源，工作人员们发现了上千台遍布各国的网络设备中仍在隐蔽运行“二次约会”间谍软件及其衍生版本，并发现被NSA远程控制的跳板服务器，其中多数分布在德国、日本、韩国、印度和中国台湾。 <############> Translation was: Gần đây, Trung tâm ứng phó khẩn cấp virus máy tính quốc gia, cùng với 360, đã trích xuất thành công nhiều mẫu phần mềm gián điệp "hẹn hò thứ cấp" và khoá danh tính thực sự của nhân viên NSA đằng sau hoạt động gián điệp mạng này. Theo báo cáo, phần mềm này là một vũ khí gián điệp mạng được phát triển bởi NSA. Nó có thể đạt được các chức năng độc hại như nghe lén và không tặc lưu lượng mạng, tấn công trung gian và chèn mã độc. Sau nhiều lớp truy xuất nguồn gốc, nhân viên đã tìm thấy hàng ngàn thiết bị mạng trên khắp các quốc gia vẫn chạy phần mềm gián điệp "hẹn hò thứ cấp" và các dẫn xuất của nó bị ẩn và tìm thấy các máy chủ bàn đạp được NSA điều khiển từ xa, chủ yếu ở Đức, Nhật Bản, Hàn Quốc, Ấn Độ và Đài Loan.
+[NeMo I 2023-10-01 04:59:56 nmt_service:164] Translated in 2.1008200645446777. Input was: 9月12日下午，中国和新加坡“合作-2023”陆军联合训练圆满结束，中新双方在新加坡陆军第3师裕廊营区举行联训结束仪式。
+    12日上午，中新联训分队进行联合城市反恐实兵综合演练，参训队员混编为联合特遣队，组织了情报侦察、包围封控、立体突入、火力打击、解救人质、快速撤离等内容演练，有效检验和提升了两军联合行动能力。
+    结束仪式上，两军官兵庄重地奏唱国歌。中新双方观摩团团长共同检阅联训分队，并为优秀参训队员颁发证书。
+     <############> Translation was: Vào chiều ngày 12 tháng 9, khoá huấn luyện chung của Quân đội "Hợp tác-2023" của Trung Quốc và Singapore đã hoàn thành thành công. Hai bên đã tổ chức một buổi lễ huấn luyện chung tại Trại Jurong, Sư đoàn 3 của Quân đội Singapore
+    Vào sáng ngày 12 tháng 12, Đơn vị huấn luyện chung Trung-Singapore đã tiến hành một cuộc tập trận huấn luyện chống khủng bố đô thị chung. Những người tham gia được trộn lẫn vào các lực lượng đặc nhiệm chung và tổ chức các cuộc tập trận về trinh sát tình báo, bao vây và kiểm soát, xâm nhập ba chiều, tấn công hoả hoạn, giải cứu con tin và sơ tán nhanh chóng, thử nghiệm hiệu quả và cải thiện khả năng hoạt động chung của hai quân đội.
+    Kết thúc buổi lễ, các sĩ quan, chiến sĩ quân đội hai nước đã long trọng hát quốc ca. Các trưởng đoàn quan sát Trung Quốc và Singapore đã cùng nhau xem xét đơn vị huấn luyện chung và trao chứng chỉ cho những người tham gia xuất sắc.
+[NeMo I 2023-10-01 05:00:38 nmt_service:164] Translated in 3.102471113204956. Input was: 有人一直问菲律宾海岸警卫队最近几次补给到底有没有成功将钢板等建材运到仁爱礁非法坐滩的登陆舰上，都回答累了，简单说几句。
+    首先，@中国海警 已经明确说了，不允许运送建材上去，只出于人道主义允许运送食物和水等生存必需品；
+    其次，现场有很多影像资料，进入仁爱礁之前，附近海域不仅有海警船负责抵近查证，还有渔船配合围堵，中国船只的吨位、数量、航速都有压倒性优势，假如发现有不该让他送上去的物资，它能送上去？
+    再次，有人说，有没有可能把物资藏船底，偷偷送上去。海警说了“全程跟监，有效归置”，什么叫全程，什么叫有效，菲船进入仁爱礁盘内的补给期间显然也在中国控制之下。不会以为只有菲律宾的船才能进礁盘吧？
+    最后，也是最直接的一点，就菲律宾那点尿性，把咱出于人道主义的放行都能宣传成重大胜利。如果把建材送上去了，还用得着你在这猜，你信不信它早宣传地比韩国还牛了？
+     <############> Translation was: Một số người đã hỏi liệu Cảnh sát biển Philippines đã thành công trong việc đưa các tấm thép và các vật liệu xây dựng khác đến tàu đổ bộ bất hợp pháp tại Rạn san hô Ren Ai hay chưa.
+    Trước hết, Cảnh sát biển Trung Quốc đã làm rõ rằng nó không được phép vận chuyển vật liệu xây dựng để đi lên, chỉ cho phép nhân đạo để vận chuyển thực phẩm và nước và khác
+    Thứ hai, có rất nhiều dữ liệu video tại hiện trường. Trước khi vào Rạn san hô Renai, không chỉ có tàu bảo vệ bờ biển ở vùng biển gần đó chịu trách nhiệm tiếp cận xác minh, mà còn có tàu đánh cá hợp tác với ngăn chặn. Trọng tải, số lượng và tốc độ của tàu Trung Quốc có lợi thế áp đảo. Nếu bạn tìm thấy bất kỳ tài liệu nào không nên gửi cho anh ta,
+    Một lần nữa, người ta nói rằng không có khả năng giấu đồ tiếp tế dưới thuyền và gửi chúng một cách bí mật. Lực lượng bảo vệ bờ biển cho biết "theo dõi đầy đủ, vị trí hiệu quả", toàn bộ quá trình là gì, điều gì có hiệu quả, tàu Philippines vào rạn san hô Renai trong thời gian cung cấp dường như cũng nằm dưới sự kiểm soát của Trung Quốc. Anh không nghĩ là chỉ có thuyền của Philippines mới vào được rạn san hô sao?
+    Cuối cùng, và trực tiếp nhất, trong trường hợp nước tiểu của Philippines, việc phóng thích nhân đạo của chúng tôi có thể được công bố như một chiến thắng lớn. Nếu bạn gửi vật liệu xây dựng, bạn vẫn có thể sử dụng nó ở đây đoán, bạn có tin rằng nó đã được quảng cáo sớm hơn Hàn Quốc?
+[NeMo I 2023-10-01 05:01:11 nmt_service:164] Translated in 0.7970542907714844. Input was: 当地时间9月13日上午，印度尼西亚总统佐科前往位于该国首都雅加达的哈利姆高铁车站，首次乘坐雅万高铁。（总台记者 陶家乐）  <############> Translation was: Vào sáng ngày 13 tháng 9, giờ địa phương, Tổng thống Indonesia Joko Widodo đã đến ga đường sắt cao tốc Halim ở thủ đô Jakarta của đất nước và lần đầu tiên tham gia Đường sắt cao tốc Yavan. (
+[NeMo I 2023-10-01 05:01:16 nmt_service:164] Translated in 0.7775306701660156. Input was: 当地时间9月13日上午，印度尼西亚总统佐科前往位于该国首都雅加达的哈利姆高铁车站，首次乘坐雅万高铁。（总台记者 陶家乐）  <############> Translation was: Vào sáng ngày 13 tháng 9, giờ địa phương, Tổng thống Indonesia Joko Widodo đã đến ga đường sắt cao tốc Halim ở thủ đô Jakarta của đất nước và lần đầu tiên tham gia Đường sắt cao tốc Yavan. (
+[NeMo I 2023-10-01 05:01:44 nmt_service:164] Translated in 1.2430121898651123. Input was: 南海研究论坛：南沙群岛越占南威岛2019年卫星图。环岛的礁盘边缘布设有防登陆桩砦类障物。机场跑道两侧，密密麻麻的堑壕体系清晰可见。另外岛东北部还有牵引式火炮的地下掩体和品字形防空导弹阵地，以及越南空军377师292雷达团雷达11站的远程对空预警雷达 <############> Translation was: Diễn đàn Nghiên cứu Biển Đông: Bản đồ vệ tinh năm 2019 của đảo Nanwei do Việt Nam chiếm đóng ở Nam Sa Qundao. Cọc chống đổ bộ và rào cản được đặt xung quanh rìa rạn san hô. Ở cả hai bên của đường băng, hệ thống heli dày đặc có thể nhìn thấy rõ ràng. Ngoài ra còn có các hầm ngầm cho pháo kéo và các vị trí tên lửa phòng không hình chốt ở phía đông bắc của hòn đảo, cũng như radar cảnh báo sớm tầm xa tại 11 trạm của Trung đoàn Radar.
+[NeMo I 2023-10-01 05:23:18 nmt_service:164] Translated in 1.5549230575561523. Input was: 中方一贯坚决反对建交国与中国台湾地区进行任何形式的官方往来，包括商签任何具有主权意涵和官方性质的协定。美方行径违反一个中国原则和中美三个联合公报规定，违背美方做出的仅与台保持非官方关系的承诺，向“台独”分裂势力发出错误信号。
+    中方维护国家主权和领土完整的意志坚定不移。我们敦促美方立即改弦更张，撤销所谓“法案”，停止推进“倡议”谈判，不要在错误道路上越走越远。
+     <############> Translation was: Trung Quốc luôn kiên quyết phản đối bất kỳ hình thức trao đổi chính thức nào giữa các nước có quan hệ ngoại giao với Đài Loan, bao gồm đàm phán bất kỳ thoả thuận nào có ý nghĩa chủ quyền và bản chất chính thức. Các hành động của Hoa Kỳ vi phạm nguyên tắc một Trung Quốc và các điều khoản của ba thông cáo chung Trung Quốc-Hoa Kỳ, vi phạm cam kết của Hoa Kỳ chỉ duy trì quan hệ không chính thức với Đài Loan và gửi tín hiệu sai cho các lực lượng ly khai "độc lập Đài Loan".
+    Ý chí của Trung Quốc để bảo vệ chủ quyền quốc gia và toàn vẹn lãnh thổ là không dao động. Chúng tôi kêu gọi phía Hoa Kỳ ngay lập tức thay đổi hướng đi, rút cái gọi là "hoá đơn", ngừng thúc đẩy các cuộc đàm phán "sáng kiến" và không đi sâu hơn vào con đường sai lầm.
+[NeMo I 2023-10-02 07:23:53 nmt_service:164] Translated in 0.5632095336914062. Input was: 公司配合侦办西北工业大学被美国国家安全局（NSA）网络攻击案过程中 <############> Translation was: Công ty hợp tác trong cuộc điều tra của Đại học Bách khoa Tây Bắc bởi Cơ quan An ninh Quốc gia Hoa Kỳ (NSA) cyberattack
+[NeMo I 2023-10-02 07:24:09 nmt_service:164] Translated in 1.8461942672729492. Input was: 公司配合侦办西北工业大学被美国国家安全局（NSA）网络攻击案过程中，成功提取了“二次约会”间谍软件的多个样本，并锁定了这起网络间谍行动背后NSA工作人员的真实身份。报告显示，该软件是NSA开发的网络间谍武器，可实现网络流量窃听劫持、中间人攻击、插入恶意代码等恶意功能，它与其它恶意软件配合可以完成复杂的网络“间谍”活动。经层层溯源，工作人员们发现了上千台遍布各国的网络设备中仍在隐蔽运行“二次约会”间谍软件及其衍生版本，并发现被NSA远程控制的跳板服务器，其中多数分布在德国、日本、韩国、印度和中国台湾。 <############> Translation was: Trong quá trình điều tra cuộc tấn công mạng vào Đại học Bách khoa Tây Bắc của Cơ quan An ninh Quốc gia Hoa Kỳ (NSA), công ty đã trích xuất thành công nhiều mẫu phần mềm gián điệp "hẹn hò thứ cấp" và khoá danh tính thực sự của nhân viên NSA đằng sau hoạt động gián điệp mạng. Theo báo cáo, phần mềm này là một vũ khí gián điệp mạng được phát triển bởi NSA. Nó có thể đạt được các chức năng độc hại như nghe lén và không tặc lưu lượng mạng, tấn công trung gian và chèn mã độc. Sau nhiều lớp truy xuất nguồn gốc, nhân viên đã tìm thấy hàng ngàn thiết bị mạng trên khắp các quốc gia vẫn chạy phần mềm gián điệp "hẹn hò thứ cấp" và các dẫn xuất của nó bị ẩn và tìm thấy các máy chủ bàn đạp được NSA điều khiển từ xa, chủ yếu ở Đức, Nhật Bản, Hàn Quốc, Ấn Độ và Đài Loan.
+[NeMo I 2023-10-02 07:24:40 nmt_service:164] Translated in 1.8223233222961426. Input was: 近日，在国家计算机病毒应急处理中心会同360公司配合侦办西北工业大学被美国国家安全局（NSA）网络攻击案过程中，成功提取了“二次约会”间谍软件的多个样本，并锁定了这起网络间谍行动背后NSA工作人员的真实身份。报告显示，该软件是NSA开发的网络间谍武器，可实现网络流量窃听劫持、中间人攻击、插入恶意代码等恶意功能，它与其它恶意软件配合可以完成复杂的网络“间谍”活动。经层层溯源，工作人员们发现了上千台遍布各国的网络设备中仍在隐蔽运行“二次约会”间谍软件及其衍生版本，并发现被NSA远程控制的跳板服务器，其中多数分布在德国、日本、韩国、印度和中国台湾。 <############> Translation was: Gần đây, Trung tâm ứng phó khẩn cấp virus máy tính quốc gia, cùng với 360, đã trích xuất thành công nhiều mẫu phần mềm gián điệp "hẹn hò thứ cấp" và khoá danh tính thực sự của nhân viên NSA đằng sau hoạt động gián điệp mạng này. Theo báo cáo, phần mềm này là một vũ khí gián điệp mạng được phát triển bởi NSA. Nó có thể đạt được các chức năng độc hại như nghe lén và không tặc lưu lượng mạng, tấn công trung gian và chèn mã độc. Sau nhiều lớp truy xuất nguồn gốc, nhân viên đã tìm thấy hàng ngàn thiết bị mạng trên khắp các quốc gia vẫn chạy phần mềm gián điệp "hẹn hò thứ cấp" và các dẫn xuất của nó bị ẩn và tìm thấy các máy chủ bàn đạp được NSA điều khiển từ xa, chủ yếu ở Đức, Nhật Bản, Hàn Quốc, Ấn Độ và Đài Loan.
+[NeMo I 2023-10-02 07:26:44 nmt_service:164] Translated in 0.8227677345275879. Input was: 当地时间9月13日上午，印度尼西亚总统佐科前往位于该国首都雅加达的哈利姆高铁车站，首次乘坐雅万高铁。（总台记者 陶家乐）  <############> Translation was: Vào sáng ngày 13 tháng 9, giờ địa phương, Tổng thống Indonesia Joko Widodo đã đến ga đường sắt cao tốc Halim ở thủ đô Jakarta của đất nước và lần đầu tiên tham gia Đường sắt cao tốc Yavan. (
+[NeMo I 2023-10-02 07:27:53 nmt_service:164] Translated in 0.18321967124938965. Input was: National security agency <############> Translation was: Cơ quan an ninh quốc gia
+[NeMo I 2023-10-02 07:30:10 nmt_service:164] Translated in 0.9730067253112793. Input was: 近日，在国家计算机病毒应急处理中心会同360公司配合侦办西北工业大学被美国国家安全局（NSA）网络攻击案过程中，成功提取了“二次约会”间谍软件的多个样本，并锁定了这起网络间谍行动背后National security agency工作人员的真实身份。 <############> Translation was: Gần đây, Trung tâm ứng phó khẩn cấp virus máy tính quốc gia, cùng với 360, đã trích xuất thành công nhiều mẫu phần mềm gián điệp "ngày thứ hai" và khoá danh tính thực sự của nhân viên Cơ quan An ninh Quốc gia đằng sau hoạt động gián điệp mạng.
+[NeMo I 2023-10-02 07:30:46 nmt_service:164] Translated in 0.9767835140228271. Input was: Recently，在国家计算机病毒应急处理中心会同360公司配合侦办西北工业大学被美国国家安全局（NSA）网络攻击案过程中，成功提取了“二次约会”间谍软件的多个样本，并锁定了这起网络间谍行动背后National security agency工作人员的真实身份。 <############> Translation was: Gần đây, Trung tâm ứng phó khẩn cấp virus máy tính quốc gia, cùng với 360, đã trích xuất thành công nhiều mẫu phần mềm gián điệp "ngày thứ hai" và khoá danh tính thực sự của nhân viên Cơ quan An ninh Quốc gia đằng sau hoạt động gián điệp mạng.
+[NeMo I 2023-10-02 07:32:27 nmt_service:164] Translated in 0.9790732860565186. Input was: Recently，在国家计算机病毒应急处理中心会同360公司配合侦办西北工业大学被美国国家安全局（NSA）网络攻击案过程中，成功提取了“二次约会”间谍软件的多个样本，并锁定了这起网络间谍行动背后National security agency工作人员的真实身份。 <############> Translation was: Gần đây, Trung tâm ứng phó khẩn cấp virus máy tính quốc gia, cùng với 360, đã trích xuất thành công nhiều mẫu phần mềm gián điệp "ngày thứ hai" và khoá danh tính thực sự của nhân viên Cơ quan An ninh Quốc gia đằng sau hoạt động gián điệp mạng.
+[NeMo I 2023-10-02 07:33:05 nmt_service:164] Translated in 1.7821893692016602. Input was: 近日，在国家计算机病毒应急处理中心会同360公司配合侦办西北工业大学被美国国家安全局（NSA）网络攻击案过程中，成功提取了“二次约会”间谍软件的多个样本，并锁定了这起网络间谍行动背后NSA工作人员的真实身份。报告显示，该软件是NSA开发的网络间谍武器，可实现网络流量窃听劫持、中间人攻击、插入恶意代码等恶意功能，它与其它恶意软件配合可以完成复杂的网络“间谍”活动。经层层溯源，工作人员们发现了上千台遍布各国的网络设备中仍在隐蔽运行“二次约会”间谍软件及其衍生版本，并发现被NSA远程控制的跳板服务器，其中多数分布在德国、日本、韩国、印度和中国台湾。 <############> Translation was: Gần đây, Trung tâm ứng phó khẩn cấp virus máy tính quốc gia, cùng với 360, đã trích xuất thành công nhiều mẫu phần mềm gián điệp "hẹn hò thứ cấp" và khoá danh tính thực sự của nhân viên NSA đằng sau hoạt động gián điệp mạng này. Theo báo cáo, phần mềm này là một vũ khí gián điệp mạng được phát triển bởi NSA. Nó có thể đạt được các chức năng độc hại như nghe lén và không tặc lưu lượng mạng, tấn công trung gian và chèn mã độc. Sau nhiều lớp truy xuất nguồn gốc, nhân viên đã tìm thấy hàng ngàn thiết bị mạng trên khắp các quốc gia vẫn chạy phần mềm gián điệp "hẹn hò thứ cấp" và các dẫn xuất của nó bị ẩn và tìm thấy các máy chủ bàn đạp được NSA điều khiển từ xa, chủ yếu ở Đức, Nhật Bản, Hàn Quốc, Ấn Độ và Đài Loan.
+[NeMo I 2023-10-02 07:33:31 nmt_service:164] Translated in 1.953763484954834. Input was: Recently，在国家计算机病毒应急处理中心会同360公司配合侦办西北工业大学被美国国家安全局（National Security Agency）网络攻击案过程中，成功提取了“二次约会”间谍软件的多个样本，并锁定了这起网络间谍行动背后NSA工作人员的真实身份。报告显示，该软件是NSA开发的网络间谍武器，可实现网络流量窃听劫持、中间人攻击、插入恶意代码等恶意功能，它与其它恶意软件配合可以完成复杂的网络“间谍”活动。经层层溯源，工作人员们发现了上千台遍布各国的网络设备中仍在隐蔽运行“二次约会”间谍软件及其衍生版本，并发现被NSA远程控制的跳板服务器，其中多数分布在德国、日本、韩国、印度和中国台湾。 <############> Translation was: Gần đây, Trung tâm ứng phó khẩn cấp virus máy tính quốc gia đã làm việc với 360 để điều tra cuộc tấn công mạng vào Đại học Bách khoa Tây Bắc của Cơ quan An ninh Quốc gia, trích xuất thành công nhiều mẫu phần mềm gián điệp "ngày thứ hai" và khoá danh tính thực sự của nhân viên NSA đằng sau hoạt động gián điệp mạng. Theo báo cáo, phần mềm này là một vũ khí gián điệp mạng được phát triển bởi NSA. Nó có thể đạt được các chức năng độc hại như nghe lén và không tặc lưu lượng mạng, tấn công trung gian và chèn mã độc. Sau nhiều lớp truy xuất nguồn gốc, nhân viên đã tìm thấy hàng ngàn thiết bị mạng trên khắp các quốc gia vẫn chạy phần mềm gián điệp "hẹn hò thứ cấp" và các dẫn xuất của nó bị ẩn và tìm thấy các máy chủ bàn đạp được NSA điều khiển từ xa, chủ yếu ở Đức, Nhật Bản, Hàn Quốc, Ấn Độ và Đài Loan.
+[NeMo I 2023-10-02 07:33:51 nmt_service:164] Translated in 1.2506775856018066. Input was: Recently，在国家计算机病毒应急处理中心会同360公司配合侦办西北工业大学被美国国家安全局（National Security Agency）网络攻击案过程中，成功提取了“二次约会”间谍软件的多个样本，并锁定了这起网络间谍行动背后NSA工作人员的真实身份。 <############> Translation was: Gần đây, Trung tâm ứng phó khẩn cấp virus máy tính quốc gia đã làm việc với 360 để điều tra cuộc tấn công mạng vào Đại học Bách khoa Tây Bắc của Cơ quan An ninh Quốc gia, trích xuất thành công nhiều mẫu phần mềm gián điệp "ngày thứ hai" và khoá danh tính thực sự của nhân viên NSA đằng sau hoạt động gián điệp mạng.
+[NeMo I 2023-10-11 08:44:40 nmt_service:50] Starting NMT service
+[NeMo I 2023-10-11 08:44:40 nmt_service:51] I will attempt to load all the models listed in config.json.
+[NeMo I 2023-10-11 08:44:40 nmt_service:52] Edit config.json to disable models you don't need.
+[NeMo I 2023-10-11 08:44:40 nmt_service:54] CUDA is available. Running on GPU
+[NeMo I 2023-10-11 08:44:40 nmt_service:64] Loading model for zh-en from file: NGC/nmt_zh_en_transformer24x6
+[NeMo I 2023-10-11 08:44:40 cloud:58] Found existing object /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo.
+[NeMo I 2023-10-11 08:44:40 cloud:64] Re-using file from: /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo
+[NeMo I 2023-10-11 08:44:40 common:913] Instantiating model from pre-trained checkpoint
+[NeMo I 2023-10-11 08:44:51 tokenizer_utils:179] Getting YouTokenToMeTokenizer with model: /tmp/tmp6f2fo0lx/ee189b32ae0a4c12b7ba4c4d7c1a2391_tokenizer.decoder.32000.BPE.model with r2l: False.
+[NeMo I 2023-10-11 08:44:51 tokenizer_utils:179] Getting YouTokenToMeTokenizer with model: /tmp/tmp6f2fo0lx/e23f0b142e474fcb86db8bc428a03e8a_tokenizer.encoder.32000.BPE.model with r2l: False.
+[NeMo W 2023-10-11 08:44:51 modelPT:161] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    src_file_name: null
+    tgt_file_name: null
+    use_tarred_dataset: true
+    tar_files:
+    - /data/tarred_dataset_old_plus_paracrawl_4k_tokens/parallel.batches.tokens.4000._OP_0..769_CL_.tar
+    - /data/tarred_dataset_old_plus_paracrawl_zh_en_r2l_distilled_4k_tokens/parallel.batches.tokens.4000._OP_0..745_CL_.tar
+    metadata_file:
+    - /data/tarred_dataset_old_plus_paracrawl_4k_tokens/metadata.tokens.4000.json
+    - /data/tarred_dataset_old_plus_paracrawl_zh_en_r2l_distilled_4k_tokens/metadata.tokens.4000.json
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 100
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: true
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: true
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: true
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: random
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities:
+    - 0.6
+    - 0.4
+    
+[NeMo W 2023-10-11 08:44:51 modelPT:168] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    src_file_name:
+    - /data/wmt19-zh-en.clean.tok.src
+    - /data/wmt20-zh-en.clean.tok.src
+    - /data/wmt18-zh-en.clean.tok.src
+    tgt_file_name:
+    - /data/wmt19-zh-en.clean.tok.ref
+    - /data/wmt20-zh-en.clean.tok.ref
+    - /data/wmt18-zh-en.clean.tok.ref
+    use_tarred_dataset: false
+    tar_files: null
+    metadata_file: null
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 1000
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: false
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: false
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: false
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities: null
+    
+[NeMo W 2023-10-11 08:44:51 modelPT:174] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    src_file_name: /data/wmt19-en-zh.clean.tok.src
+    tgt_file_name: /data/wmt19-en-zh.clean.tok.src
+    use_tarred_dataset: false
+    tar_files: null
+    metadata_file: null
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 1000
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: false
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: false
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: false
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities: null
+    
+[NeMo W 2023-10-11 08:44:51 nlp_overrides:253] Apex was not found. Please see the NeMo README for installation instructions: https://github.com/NVIDIA/apex
+    Megatron-based models require Apex to function correctly.
+[NeMo I 2023-10-11 08:44:56 save_restore_connector:249] Model MTEncDecModel was successfully restored from /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo.
+[NeMo I 2023-10-11 08:44:56 nmt_service:74] NMT service started
+2023-10-11 08:44:56,959 INFO -- waitress: Serving on http://0.0.0.0:5000
+Building prefix dict from the default dictionary ...
+2023-10-11 08:45:02,350 DEBUG -- jieba: Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+2023-10-11 08:45:02,350 DEBUG -- jieba: Loading model from cache /tmp/jieba.cache
+Loading model cost 0.466 seconds.
+2023-10-11 08:45:02,817 DEBUG -- jieba: Loading model cost 0.466 seconds.
+Prefix dict has been built successfully.
+2023-10-11 08:45:02,817 DEBUG -- jieba: Prefix dict has been built successfully.
+[NeMo W 2023-10-11 08:45:04 nemo_logging:349] /home/tdh/nemo_mt/nmt_webapp/venv/lib/python3.8/site-packages/transformers/generation/utils.py:1369: UserWarning: Using `max_length`'s default (1024) to control the generation length. This behaviour is deprecated and will be removed from the config in v5 of Transformers -- we recommend using `max_new_tokens` to control the maximum length of the generation.
+      warnings.warn(
+    
+2023-10-11 08:45:04,873 ERROR -- nmt_service: Exception on /translate [GET]
+Traceback (most recent call last):
+  File "nmt_service.py", line 155, in get_translation
+    assert len(translated_paragraphs) == (len(ext_characters)+1)
+AssertionError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tdh/nemo_mt/nmt_webapp/venv/lib/python3.8/site-packages/flask/app.py", line 2529, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/tdh/nemo_mt/nmt_webapp/venv/lib/python3.8/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/tdh/nemo_mt/nmt_webapp/venv/lib/python3.8/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/tdh/nemo_mt/nmt_webapp/venv/lib/python3.8/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/tdh/nemo_mt/nmt_webapp/venv/lib/python3.8/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "nmt_service.py", line 179, in get_translation
+    return write_response(ex)
+  File "nmt_service.py", line 82, in write_response
+    response = flask.jsonify(res, )
+  File "/home/tdh/nemo_mt/nmt_webapp/venv/lib/python3.8/site-packages/flask/json/__init__.py", line 342, in jsonify
+    return current_app.json.response(*args, **kwargs)
+  File "/home/tdh/nemo_mt/nmt_webapp/venv/lib/python3.8/site-packages/flask/json/provider.py", line 309, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=mimetype
+  File "/home/tdh/nemo_mt/nmt_webapp/venv/lib/python3.8/site-packages/flask/json/provider.py", line 230, in dumps
+    return json.dumps(obj, **kwargs)
+  File "/usr/lib/python3.8/json/__init__.py", line 234, in dumps
+    return cls(
+  File "/usr/lib/python3.8/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.8/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/tdh/nemo_mt/nmt_webapp/venv/lib/python3.8/site-packages/flask/json/provider.py", line 122, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type AssertionError is not JSON serializable

@@ -22,16 +22,16 @@ from waitress import serve
 
 import nemo.collections.nlp as nemo_nlp
 from nemo.utils import logging
-from utils import split_long_text
+from utils import split_long_text, split_long_text_by_sentence_and_quotation
 
-from seamless_m4t import MySeamlessT2TT
+from nmt_multi import My_NMT_T2TT
 from nmt_en2vi import translate_en2vi
 
 # save both nemo and seamlessM4T models
 NEMO_MODELS_DICT = {}
 
 # declare seamless multi-model
-seamless_model = None
+nmt_multi_model = None
 # seamless supported language pairs
 SEAMLESS_SUPPORTED_LANG_PAIRS = ["km-en"]
 
@@ -73,9 +73,9 @@ def init_nemo(config_file_path: str):
         raise ValueError("Did not find the config.json or it was empty")
     logging.info("NMT service started")
 
-def init_seamless_m4t():
-    global seamless_model
-    seamless_model = MySeamlessT2TT()
+def init_nmt_multi():
+    global nmt_multi_model
+    nmt_multi_model = My_NMT_T2TT()
 
 def write_response(content: str):
     res = {'translation': content}
@@ -95,8 +95,11 @@ def free_cache(used_thresh: int = 0.5):
 @api.route('/translate', methods=['GET'])
 def get_translation():
     try:
+        # translate by sentence or by chunk of texts
+        translate_by_sentence = True
+        
         time_s = time.time()
-        max_length = 256 
+        max_length = 64
         
         src = request.args["text"]   
         langpair = request.args["langpair"]
@@ -105,8 +108,12 @@ def get_translation():
 
         if source_lang == "zh" or source_lang == "jp":
             period_char = "。"
+            open_quotes: str =  '“"‘『「'
+            close_quotes: str = '”"’』」'
         else:
             period_char = "."
+            open_quotes: str =  '"'
+            close_quotes: str = '"'
         
         use_en2vi = False
         if target_lang == "vi":
@@ -120,7 +127,7 @@ def get_translation():
         if langpair in NEMO_MODELS_DICT:
             mt_model = NEMO_MODELS_DICT[langpair]
         # elif langpair in SEAMLESS_SUPPORTED_LANG_PAIRS:
-        #     mt_model = seamless_model
+        #     mt_model = nmt_multi_model
         else:
             logging.error(f"Got the following langpair: {langpair} which was not found")
 
@@ -130,39 +137,66 @@ def get_translation():
             if len(src.strip()) == 0:
                 return write_response("")
             
-            # deal with long source text
-            # bool array `paragaph_flags` with same length as `passages` array 
-            # indicating if passage at index `i` of `passages` finishes current paragraph
-            # and the next passage will belong to a new paragraph
-            paragraphs, ext_characters = split_long_text(src, max_length=max_length, period_char=period_char)
+            if not translate_by_sentence:
+                # deal with long source text
+                # bool array `paragaph_flags` with same length as `passages` array 
+                # indicating if passage at index `i` of `passages` finishes current paragraph
+                # and the next passage will belong to a new paragraph
+                paragraphs, ext_characters = split_long_text(src, max_length=max_length, period_char=period_char)
+            else:
+                paragraphs, ext_characters = split_long_text_by_sentence_and_quotation(
+                                                    long_text=src, period_char=period_char)
 
             # print ('>>> paragraphs splitted: ', paragraphs)
+            logging.info(f"paragraphs: {paragraphs}")
+            logging.info(f"ext_characters: {ext_characters}")
             
             # same interface for both nemo and seamless models
             # due to missing translation with batch translation 
             # we translate single paragraph at a time and combine them
             translated_paragraphs = []
             for p in paragraphs:
-                translated_paragraphs.extend(mt_model.translate([p],
-                                        source_lang=source_lang, 
-                                        target_lang=target_lang
-                                        ))
+                if p.strip() == "":
+                    translated_p = [""]
+                else:
+                    translated_p = mt_model.translate([p],
+                                            source_lang=source_lang, 
+                                            target_lang=target_lang)
+                
+                # clean punctuations and quotations
+                translated_p[0] = translated_p[0].strip('." ')
+                
+                translated_paragraphs.extend(translated_p)            
+
+            logging.info(f"translated_paragraphs: {translated_paragraphs}")
             
             # check if we need to translate to vi
             if use_en2vi:
-                translated_paragraphs = translate_en2vi(translated_paragraphs)
+                translated_to_vi_paragraphs = []
+                for p in translated_paragraphs: 
+                    if p.strip() == "":
+                        translated_p = [""]
+                    else:
+                        translated_p = translate_en2vi([p])
+                    
+                    # clean punctuations and quotations
+                    translated_p[0] = translated_p[0].strip('." ')
 
-            # print ('>>> paragraphs translated: ', translated_paragraphs)
+                    translated_to_vi_paragraphs.extend(translated_p)
+                translated_paragraphs = translated_to_vi_paragraphs
+
+                logging.info(f"translated_to_vi_paragraphs: {translated_to_vi_paragraphs}")
 
             translated_text = ""
             for text, ext_chr in zip(translated_paragraphs, ext_characters):                
-                translated_text += (text + ext_chr)
+                translated_text += (text.strip() + ext_chr)
+
             # strip last space character
             translated_text = translated_text.strip()
 
             duration = time.time() - time_s
             logging.info(
-                f"Translated in {duration}. Input was: {request.args['text']} <############> Translation was: {translated_text}"
+                f"Translated in {duration}\nInput was: {src}\nTranslation was: {translated_text}"
             )
 
             # try to free cache if necessary
@@ -175,5 +209,5 @@ def get_translation():
 
 if __name__ == '__main__':
     init_nemo('config.json')
-    # init_seamless_m4t()
+    # init_nmt_multi()
     serve(api, host="0.0.0.0", port=5000)

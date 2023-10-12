@@ -235,3 +235,145 @@ Keyboard interrupt received, exiting.
 192.168.1.112 - - [13/Sep/2023 03:40:24] "GET / HTTP/1.1" 304 -
 192.168.1.112 - - [13/Sep/2023 03:40:24] "GET / HTTP/1.1" 304 -
 192.168.1.112 - - [13/Sep/2023 03:40:24] "GET / HTTP/1.1" 304 -
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+
+Keyboard interrupt received, exiting.
+192.168.1.112 - - [13/Sep/2023 03:53:40] "GET / HTTP/1.1" 304 -
+192.168.1.112 - - [13/Sep/2023 04:34:41] "GET / HTTP/1.1" 304 -
+192.168.1.112 - - [13/Sep/2023 06:42:13] "GET / HTTP/1.1" 304 -
+192.168.1.112 - - [13/Sep/2023 07:01:02] code 404, message File not found
+192.168.1.112 - - [13/Sep/2023 07:01:02] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.112 - - [13/Sep/2023 08:11:03] "GET / HTTP/1.1" 304 -
+192.168.1.112 - - [13/Sep/2023 08:11:04] "GET / HTTP/1.1" 304 -
+192.168.1.112 - - [13/Sep/2023 08:11:05] "GET / HTTP/1.1" 304 -
+192.168.1.112 - - [13/Sep/2023 08:11:06] "GET / HTTP/1.1" 304 -
+192.168.1.96 - - [14/Sep/2023 00:43:34] "GET / HTTP/1.1" 200 -
+192.168.1.96 - - [14/Sep/2023 00:43:34] "GET /style.css HTTP/1.1" 200 -
+192.168.1.96 - - [14/Sep/2023 00:43:34] "GET /styles/circular_progressbar.css HTTP/1.1" 200 -
+192.168.1.96 - - [14/Sep/2023 00:43:37] code 404, message File not found
+192.168.1.96 - - [14/Sep/2023 00:43:37] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.112 - - [14/Sep/2023 01:49:33] "GET / HTTP/1.1" 200 -
+192.168.1.112 - - [14/Sep/2023 01:49:33] "GET /styles/circular_progressbar.css HTTP/1.1" 304 -
+192.168.1.112 - - [14/Sep/2023 01:49:35] code 404, message File not found
+192.168.1.112 - - [14/Sep/2023 01:49:35] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.96 - - [14/Sep/2023 03:17:04] "GET / HTTP/1.1" 200 -
+192.168.1.96 - - [14/Sep/2023 03:17:04] "GET /style.css HTTP/1.1" 200 -
+192.168.1.96 - - [14/Sep/2023 03:17:04] "GET /styles/circular_progressbar.css HTTP/1.1" 200 -
+192.168.1.96 - - [14/Sep/2023 03:17:06] code 404, message File not found
+192.168.1.96 - - [14/Sep/2023 03:17:06] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.96 - - [14/Sep/2023 03:36:28] "GET / HTTP/1.1" 304 -
+192.168.1.96 - - [14/Sep/2023 03:37:25] "GET / HTTP/1.1" 200 -
+192.168.1.96 - - [14/Sep/2023 03:37:25] "GET /styles/circular_progressbar.css HTTP/1.1" 200 -
+192.168.1.96 - - [14/Sep/2023 03:37:25] "GET /style.css HTTP/1.1" 200 -
+192.168.1.96 - - [14/Sep/2023 03:37:27] code 404, message File not found
+192.168.1.96 - - [14/Sep/2023 03:37:27] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.112 - - [14/Sep/2023 04:36:58] "GET / HTTP/1.1" 200 -
+192.168.1.96 - - [14/Sep/2023 06:45:42] code 404, message File not found
+192.168.1.96 - - [14/Sep/2023 06:45:42] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.96 - - [14/Sep/2023 06:45:42] "GET / HTTP/1.1" 200 -
+192.168.1.112 - - [14/Sep/2023 06:45:52] "GET / HTTP/1.1" 304 -
+192.168.1.112 - - [14/Sep/2023 06:45:53] "GET / HTTP/1.1" 304 -
+192.168.1.96 - - [14/Sep/2023 07:04:12] "GET / HTTP/1.1" 304 -
+192.168.1.96 - - [14/Sep/2023 07:58:38] "GET / HTTP/1.1" 200 -
+192.168.1.96 - - [14/Sep/2023 07:58:40] code 404, message File not found
+192.168.1.96 - - [14/Sep/2023 07:58:40] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.96 - - [15/Sep/2023 00:52:25] "GET / HTTP/1.1" 304 -
+192.168.1.96 - - [15/Sep/2023 00:52:25] code 404, message File not found
+192.168.1.96 - - [15/Sep/2023 00:52:25] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.112 - - [15/Sep/2023 11:06:39] "GET / HTTP/1.1" 304 -
+192.168.1.112 - - [15/Sep/2023 11:06:40] "GET /style.css HTTP/1.1" 304 -
+192.168.1.112 - - [15/Sep/2023 11:06:41] code 404, message File not found
+192.168.1.112 - - [15/Sep/2023 11:06:41] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.96 - - [16/Sep/2023 13:40:23] "GET / HTTP/1.1" 200 -
+192.168.1.96 - - [16/Sep/2023 13:40:23] "GET /style.css HTTP/1.1" 200 -
+192.168.1.96 - - [16/Sep/2023 13:40:23] "GET /styles/circular_progressbar.css HTTP/1.1" 200 -
+192.168.1.96 - - [16/Sep/2023 13:40:23] code 404, message File not found
+192.168.1.96 - - [16/Sep/2023 13:40:23] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.96 - - [16/Sep/2023 13:43:16] "GET / HTTP/1.1" 304 -
+192.168.1.112 - - [20/Sep/2023 01:14:17] "GET / HTTP/1.1" 304 -
+192.168.1.112 - - [20/Sep/2023 01:14:18] "GET /style.css HTTP/1.1" 304 -
+192.168.1.112 - - [20/Sep/2023 01:14:18] "GET /styles/circular_progressbar.css HTTP/1.1" 304 -
+192.168.1.112 - - [20/Sep/2023 03:08:10] code 404, message File not found
+192.168.1.112 - - [20/Sep/2023 03:08:10] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.96 - - [20/Sep/2023 13:11:16] code 404, message File not found
+192.168.1.96 - - [20/Sep/2023 13:11:16] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.96 - - [23/Sep/2023 02:42:49] "GET / HTTP/1.1" 304 -
+192.168.1.96 - - [23/Sep/2023 02:42:49] "GET /styles/circular_progressbar.css HTTP/1.1" 304 -
+192.168.1.96 - - [23/Sep/2023 02:42:49] code 404, message File not found
+192.168.1.96 - - [23/Sep/2023 02:42:49] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.96 - - [23/Sep/2023 03:38:11] "GET / HTTP/1.1" 304 -
+192.168.1.96 - - [23/Sep/2023 03:41:18] "GET / HTTP/1.1" 304 -
+192.168.1.96 - - [23/Sep/2023 03:45:18] "GET / HTTP/1.1" 304 -
+192.168.1.96 - - [23/Sep/2023 04:49:01] "GET / HTTP/1.1" 304 -
+192.168.1.200 - - [25/Sep/2023 09:02:16] "GET / HTTP/1.1" 304 -
+192.168.1.200 - - [25/Sep/2023 09:02:16] "GET /style.css HTTP/1.1" 304 -
+192.168.1.200 - - [25/Sep/2023 09:02:17] code 404, message File not found
+192.168.1.200 - - [25/Sep/2023 09:02:17] "GET /favicon.ico HTTP/1.1" 404 -
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+127.0.0.1 - - [26/Sep/2023 04:42:01] "GET / HTTP/1.1" 304 -
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+192.168.1.112 - - [26/Sep/2023 04:59:45] "GET /styles/circular_progressbar.css HTTP/1.1" 304 -
+192.168.1.112 - - [26/Sep/2023 04:59:45] code 404, message File not found
+192.168.1.112 - - [26/Sep/2023 04:59:45] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.112 - - [26/Sep/2023 06:51:25] "GET / HTTP/1.1" 200 -
+192.168.1.200 - - [26/Sep/2023 06:52:18] "GET / HTTP/1.1" 200 -
+192.168.1.96 - - [26/Sep/2023 07:56:07] "GET / HTTP/1.1" 200 -
+192.168.1.96 - - [26/Sep/2023 07:56:07] "GET /style.css HTTP/1.1" 200 -
+192.168.1.96 - - [26/Sep/2023 07:56:07] "GET /styles/circular_progressbar.css HTTP/1.1" 200 -
+192.168.1.96 - - [26/Sep/2023 07:56:07] code 404, message File not found
+192.168.1.96 - - [26/Sep/2023 07:56:07] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.96 - - [26/Sep/2023 08:07:08] "GET / HTTP/1.1" 200 -
+192.168.1.96 - - [26/Sep/2023 08:07:08] "GET /style.css HTTP/1.1" 200 -
+192.168.1.96 - - [26/Sep/2023 08:07:08] "GET /styles/circular_progressbar.css HTTP/1.1" 200 -
+192.168.1.96 - - [26/Sep/2023 08:07:09] code 404, message File not found
+192.168.1.96 - - [26/Sep/2023 08:07:09] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.254 - - [26/Sep/2023 08:21:15] "GET / HTTP/1.1" 200 -
+192.168.1.254 - - [26/Sep/2023 08:21:15] "GET /style.css HTTP/1.1" 304 -
+192.168.1.254 - - [26/Sep/2023 08:21:15] "GET /styles/circular_progressbar.css HTTP/1.1" 304 -
+192.168.1.254 - - [26/Sep/2023 08:58:44] "GET / HTTP/1.1" 200 -
+192.168.1.254 - - [26/Sep/2023 08:58:44] "GET /style.css HTTP/1.1" 200 -
+192.168.1.254 - - [26/Sep/2023 08:58:44] "GET /styles/circular_progressbar.css HTTP/1.1" 200 -
+192.168.1.254 - - [26/Sep/2023 08:58:45] code 404, message File not found
+192.168.1.254 - - [26/Sep/2023 08:58:45] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.200 - - [27/Sep/2023 00:52:38] "GET / HTTP/1.1" 304 -
+192.168.1.96 - - [28/Sep/2023 03:12:46] "GET / HTTP/1.1" 200 -
+192.168.1.96 - - [28/Sep/2023 03:12:46] "GET /style.css HTTP/1.1" 200 -
+192.168.1.96 - - [28/Sep/2023 03:12:46] "GET /styles/circular_progressbar.css HTTP/1.1" 200 -
+192.168.1.96 - - [28/Sep/2023 03:12:47] code 404, message File not found
+192.168.1.96 - - [28/Sep/2023 03:12:47] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.200 - - [28/Sep/2023 04:29:24] "GET / HTTP/1.1" 304 -
+192.168.1.200 - - [29/Sep/2023 01:25:13] code 404, message File not found
+192.168.1.200 - - [29/Sep/2023 01:25:13] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.96 - - [29/Sep/2023 02:59:05] "GET / HTTP/1.1" 200 -
+192.168.1.96 - - [29/Sep/2023 02:59:05] "GET /style.css HTTP/1.1" 200 -
+192.168.1.96 - - [29/Sep/2023 02:59:05] "GET /styles/circular_progressbar.css HTTP/1.1" 200 -
+192.168.1.96 - - [29/Sep/2023 02:59:06] code 404, message File not found
+192.168.1.96 - - [29/Sep/2023 02:59:06] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.96 - - [01/Oct/2023 00:59:07] "GET / HTTP/1.1" 304 -
+192.168.1.96 - - [01/Oct/2023 00:59:07] code 404, message File not found
+192.168.1.96 - - [01/Oct/2023 00:59:07] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.254 - - [02/Oct/2023 07:23:49] "GET / HTTP/1.1" 304 -
+192.168.1.254 - - [02/Oct/2023 07:23:49] "GET /style.css HTTP/1.1" 304 -
+192.168.1.254 - - [02/Oct/2023 07:23:49] "GET /styles/circular_progressbar.css HTTP/1.1" 304 -
+192.168.1.254 - - [02/Oct/2023 07:23:50] code 404, message File not found
+192.168.1.254 - - [02/Oct/2023 07:23:50] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.254 - - [06/Oct/2023 01:23:52] "GET / HTTP/1.1" 200 -
+192.168.1.254 - - [06/Oct/2023 01:23:52] "GET /style.css HTTP/1.1" 200 -
+192.168.1.254 - - [06/Oct/2023 01:23:52] "GET /styles/circular_progressbar.css HTTP/1.1" 200 -
+192.168.1.254 - - [06/Oct/2023 01:23:53] code 404, message File not found
+192.168.1.254 - - [06/Oct/2023 01:23:53] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.200 - - [10/Oct/2023 04:30:54] "GET / HTTP/1.1" 200 -
+192.168.1.200 - - [10/Oct/2023 04:30:54] "GET /style.css HTTP/1.1" 200 -
+192.168.1.200 - - [10/Oct/2023 04:30:54] "GET /styles/circular_progressbar.css HTTP/1.1" 200 -
+192.168.1.200 - - [10/Oct/2023 04:30:56] code 404, message File not found
+192.168.1.200 - - [10/Oct/2023 04:30:56] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.112 - - [11/Oct/2023 08:44:34] "GET / HTTP/1.1" 304 -
+192.168.1.112 - - [11/Oct/2023 08:44:34] "GET /style.css HTTP/1.1" 304 -
+192.168.1.112 - - [11/Oct/2023 08:44:34] "GET /styles/circular_progressbar.css HTTP/1.1" 304 -
+192.168.1.112 - - [11/Oct/2023 08:44:35] code 404, message File not found
+192.168.1.112 - - [11/Oct/2023 08:44:35] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.96 - - [12/Oct/2023 01:34:54] code 404, message File not found
+192.168.1.96 - - [12/Oct/2023 01:34:54] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.200 - - [12/Oct/2023 07:58:26] code 404, message File not found
+192.168.1.200 - - [12/Oct/2023 07:58:26] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.200 - - [12/Oct/2023 07:58:50] "GET / HTTP/1.1" 304 -
