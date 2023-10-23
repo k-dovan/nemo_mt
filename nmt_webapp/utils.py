@@ -1,5 +1,6 @@
 import re
 from typing import List
+from utils_mapping import read_mapping_zh_en
 
 # ---------------------------- split text based on max_length --------------------------------
 def count_quotation_marks(text: str, quote_characters: str):
@@ -145,17 +146,19 @@ def get_valid_quotation_characters(text: str, open_quotes: str, close_quotes: st
 def split_long_text_by_sentence_and_quotation(
         long_text: str, 
         period_char: str = '。', 
+        comma_char: str = '，',
         open_quotes: str =  '“"‘『「',
         close_quotes: str = '”"’』」'
         ):
     
     # for replacement
     period_en: str = '.'
+    comma_en: str = ','
     quote_en: str = '"'
 
     # get valid quotation marks
     valid_quotation_characters = get_valid_quotation_characters(long_text, open_quotes, close_quotes)
-    valid_splitors = valid_quotation_characters + [period_char]
+    valid_splitors = valid_quotation_characters + [period_char, comma_char]
 
     # build splitor regex
     regx_splitor = f"(?:\\n+)|" + f"(?:[{re.escape(''.join(valid_splitors))}])"
@@ -175,6 +178,13 @@ def split_long_text_by_sentence_and_quotation(
                 ext_characters[idx] = period_en
             else:
                 ext_characters[idx] = period_en + " "
+        elif ext_characters[idx] == comma_char:
+            if idx == len(ext_characters) - 1:
+                ext_characters[idx] = comma_en
+            elif ext_characters[idx+1] in close_quotes:
+                ext_characters[idx] = comma_en
+            else:
+                ext_characters[idx] = comma_en + " "
         elif ext_characters[idx] in open_quotes:
             ext_characters[idx] = " " + quote_en
         elif ext_characters[idx] in close_quotes:
@@ -187,6 +197,20 @@ def split_long_text_by_sentence_and_quotation(
     print (len(passages), len(ext_characters))
 
     return passages, ext_characters
+
+def replace_doi_terms(text: str, lang: str="zh"):
+    """
+    Fast replace domain of interest terms from chinese to english
+    """
+    if lang == "zh":
+        dict_terms = read_mapping_zh_en()
+
+        for k,v in dict_terms.items():
+            text = text.replace(k,v)
+
+        return text
+    else:
+        return text
 
 
 if __name__ == "__main__":
