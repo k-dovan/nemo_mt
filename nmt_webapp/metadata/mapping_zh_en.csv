@@ -796,7 +796,6 @@
 兵器,weapons
 外军,foreign troops
 军粮,military rations
-发言人,spokesman
 防务,defense
 部队,force
 兵团,corps
@@ -810,18 +809,14 @@
 日常,daily
 机队建设,Fleet construction
 机队,fleet
-任务,Task
 义务,obligation
 装备,equipment
 军事,military
 旅,brigade
 对抗,confrontation
 演练,drill
-体系,system
-磨,sharpen
-组织,organization
 攻,attack
-防,Defend
+防,defend
 战术,tactics
 手段,means
 灵活,flexible
@@ -839,13 +834,12 @@
 力量,force
 侦察,reconnaissance
 进行,conduct
-目标,Target
+目标,target
 分析,analyze
 属性,Attributes
 结果,result
 作战,combat
 单元,unit
-舰,ship
 战训,battle training
 海上,maritime
 铁拳,iron fist
@@ -938,8 +932,7 @@
 国防,national defense
 火炮身管,artillery barrel
 防务政策,defense policy
-军工,Military industry
-艘,ship
+军工,military industry
 起飞,take off
 弹射器,Catapult
 装甲车,armored vehicle
@@ -947,12 +940,12 @@
 战衣,battle suit
 多用途战斗机,multi-role fighter
 卫星,satellite
-自行研制,Self-developed
+自行研制,self-developed
 部署,deploy
 应对,response
 远程弹道导弹,long range ballistic missile
 航空,aviation
-实战,Actual combat
+实战,actual combat
 喷气式飞机,jet plane
 教练机,trainer aircraft
 机载弹药,airborne ammunition
@@ -961,10 +954,10 @@
 挫,defeat
 遇,encounter
 空射快速响应武器,air-launched rapid response weapon
-全备弹,Fully equipped
+全备弹,fully equipped
 巡航导弹,cruise missile
 任务飞机,mission aircraft
-协同作战,Coordinated operations
+协同作战,coordinated operations
 航电设备,avionics equipment
 长距离作战,Long distance combat
 少不了,indispensable
@@ -973,7 +966,6 @@
 火炮系统,artillery system
 核潜艇,nuclear submarine
 核动力,nuclear power
-潜艇,submarine
 海军陆战,Marine Corps
 地对空导弹,surface to air missile
 自行火炮,Self-propelled artillery
