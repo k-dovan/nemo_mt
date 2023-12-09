@@ -98,22 +98,30 @@ def merge_english_chunks(translated_en_paragraphs: list, ext_characters: list):
     cur_paragraph = ""
     last_ext_character = ""
     for p,ext in zip(translated_en_paragraphs, ext_characters):
-        if p.strip() != "" and (last_ext_character.strip() == "," or last_ext_character.startswith("\"")):
+        if p.strip(" ") != "" and (last_ext_character.strip(" ") == "," or last_ext_character.startswith("\"")):
             p = p[0].lower() + p[1:]
-        if ext.strip() == ".":
-            cur_paragraph += (p.strip() + ext.strip())
+        
+        if (ext.strip(" ") != "" and ext.strip(" ")[0] == "\n"):
+            cur_paragraph += p.strip(" ")
+            merged_paragraphs.append(cur_paragraph)
+            # make empty list of ext_characters to have the same structure
+            # as not merging english chunks
+            merged_ext_characters.append(ext) 
+            cur_paragraph = ""
+        elif ext.strip(" ") == ".":
+            cur_paragraph += (p.strip(" ") + ext.strip(" "))
             merged_paragraphs.append(cur_paragraph)
             # make empty list of ext_characters to have the same structure
             # as not merging english chunks
             merged_ext_characters.append(' ') 
             cur_paragraph = ""
         else:
-            cur_paragraph += (p.strip() + ext)
+            cur_paragraph += (p.strip(" ") + ext)
         
         last_ext_character = ext
     # check very last chunk
-    if cur_paragraph.strip() != "":
-        merged_paragraphs.append(cur_paragraph.strip())
+    if cur_paragraph.strip(" ") != "":
+        merged_paragraphs.append(cur_paragraph.strip(" "))
         # make empty list of ext_characters to have the same structure 
         # as not merging english chunks
         merged_ext_characters.append('')
@@ -137,7 +145,7 @@ def translate(src_text: str, langpair: str,
     time_s = time.time()
     max_length = max_length
 
-    # remove troll characters from text if exists
+    # remove troll characters if exists
     src_text = remove_troll_characters(src_text)
 
     # ---------------------------------------------
@@ -146,7 +154,7 @@ def translate(src_text: str, langpair: str,
     if replace_doi_terms:
         src_text = replace_doi_terms(src_text, lang=source_lang)
 
-    print ("replaced src text:", src_text)
+        print ("replaced src text:", src_text)
 
     if source_lang == "zh":
         period_char = "。"
@@ -193,7 +201,7 @@ def translate(src_text: str, langpair: str,
     if mt_model is not None:
 
         # if there's no text to translate
-        if len(src_text.strip()) == 0:
+        if len(src_text.strip(" ")) == 0:
             return write_response("")
         
         if not is_translate_by_sentence:
@@ -221,7 +229,7 @@ def translate(src_text: str, langpair: str,
         # we translate single paragraph at a time and combine them
         translated_paragraphs = []
         for p in paragraphs:
-            if p.strip() == "":
+            if p.strip(" ") == "":
                 translated_p = [""]
             else:
                 translated_p = mt_model.translate([p],
@@ -240,11 +248,12 @@ def translate(src_text: str, langpair: str,
             if is_merge_english_chunks:
                 translated_paragraphs, ext_characters = merge_english_chunks(translated_paragraphs, ext_characters)
 
-                print ("> After merging, translated_paragraphs: ", translated_paragraphs)
+                print ("> After merging:\n> translated_paragraphs: ", translated_paragraphs)
+                print ("> > ext_characters: ", ext_characters)
 
             translated_to_vi_paragraphs = []
             for p in translated_paragraphs: 
-                if p.strip() == "":
+                if p.strip(" ") == "":
                     translated_p = [""]
                 else:
                     translated_p = translate_en2vi([p])
@@ -262,13 +271,13 @@ def translate(src_text: str, langpair: str,
         last_ext_chr = ""
         comma_en = ","
         for text, ext_chr in zip(translated_paragraphs, ext_characters): 
-            # if text.strip() != "" and last_ext_chr.strip() == comma_en:
+            # if text.strip(" ") != "" and last_ext_chr.strip(" ") == comma_en:
             #     text = text[0].lower() + text[1:]               
-            translated_text += (text.strip() + ext_chr)
+            translated_text += (text.strip(" ") + ext_chr)
             last_ext_chr = ext_chr
 
         # strip last space character
-        translated_text = translated_text.strip()
+        translated_text = translated_text.strip(" ")
 
         duration = time.time() - time_s
         logging.info(
@@ -290,8 +299,8 @@ def get_translation():
         
         translated_text = translate(src_text, langpair, 
                                     replace_doi_terms=False,
-                                    merge_en_chunks=False,
-                                    translate_by_sentence=False,
+                                    merge_en_chunks=True,
+                                    translate_by_sentence=True,
                                     max_length=64)
         
         return write_response(translated_text)
