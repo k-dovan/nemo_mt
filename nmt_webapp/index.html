@@ -121,6 +121,16 @@
       $("#translate_button").button();
       $("#translate_button").click(function (event) {
         // alert($('#cur_src_lang').val() + '-' + $('#cur_tgt_lang').val())
+        // alert ($("#cbox_segmented").is(":checked"))
+
+        if ($("#cbox_segmented").is(":checked") == false) {
+          // alert ($("#src_text").val().length)
+          if ($("#src_text").val().length > 512){
+            alert('Làm ơn chọn `Dịch tách đoạn` để dịch nội dung dài hơn 512 ký tự. Độ dài nội dung hiện tại: ' + $("#src_text").val().length);
+            return;
+          }
+        }
+
         // show progress bar
         $("#progress_bar").show();
         $.ajax({
@@ -156,10 +166,10 @@
       <h1>Phần mềm dịch máy đa ngôn ngữ</h1>
       </br>
       <fieldset style="padding: 5px;">
-        <legend style="font-size: x-large;">Chọn ngôn ngữ nguồn-đích cần dịch </legend>
+        <legend style="font-size: x-large;">Chọn ngôn ngữ nguồn-đích cần dịch</legend>
         <div style="float: left;">
           <div style="display: inline-block; margin: 5px 10px;">
-            <label for="src_langs" style="font-size: larger;">Ngôn ngữ nguồn:</label>
+            <label for="src_langs" style="font-size: larger;">Ngôn ngữ nguồn</label>
             <select name="src_langs" id="src_langs" value="zh" style="font-size: larger;">
               <!-- <option value="zh" selected="selected">Tiếng Trung</option> -->
               <option value="km" selected="selected">Tiếng Khmer</option>
@@ -169,7 +179,7 @@
             <input type="hidden" id="cur_src_lang" name="cur_src_lang" value="km">
           </div>
           <div style="display: inline-block; margin: 5px 10px;">
-            <label for="tgt_langs" style="font-size: larger;">Ngôn ngữ đích:</label>
+            <label for="tgt_langs" style="font-size: larger;">Ngôn ngữ đích</label>
             <select name="tgt_langs" id="tgt_langs" value="en" style="font-size: larger;">
               <!-- <option value="en">Tiếng Anh</option> -->
               <option value="vi" selected="selected">Tiếng Việt</option>
@@ -177,9 +187,9 @@
             <input type="hidden" id="cur_tgt_lang" name="cur_tgt_lang" value="vi">
           </div>   
           <div style="display: inline-block; margin: 0px 50px 0px 20px;">
-            <label for="opt_segmented" style="font-size: larger;">Dịch tách đoạn:</label>
+            <label for="opt_segmented" style="font-size: larger;">Dịch tách đoạn</label>
             <label class="switch">
-              <input type="checkbox" checked>
+              <input type="checkbox" id="cbox_segmented" checked>
               <span class="slider round"></span>
             </label>
           </div>         
