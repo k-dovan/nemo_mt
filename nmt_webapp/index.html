@@ -46,6 +46,9 @@
         }
         // alert($('#cur_dst_lang').val())
       });
+      $( "#src_text" ).change(function(){
+        alert(this.scrollHeight);
+      });
       $( "#translate_button" ).button();
       $( "#translate_button" ).click( function( event ) {
         // alert($('#cur_src_lang').val() + '-' + $('#cur_dst_lang').val())

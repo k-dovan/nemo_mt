@@ -1,2 +1,5 @@
 venv/
 .vscode/
+__pycache__/
+nmt_web_app/__pycache__/
+

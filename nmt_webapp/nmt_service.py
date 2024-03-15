@@ -21,6 +21,7 @@ from flask_cors import CORS
 
 import nemo.collections.nlp as nemo_nlp
 from nemo.utils import logging
+from utils import split_long_text
 
 MODELS_DICT = {}
 
@@ -63,26 +64,45 @@ def initialize(config_file_path: str):
     logging.info("NMT service started")
 
 
-@api.route('/translate', methods=['GET', 'POST', 'OPTIONS'])
+@api.route('/translate', methods=['GET'])
 def get_translation():
     try:
         time_s = time.time()
+        max_length = 256       
         langpair = request.args["langpair"]
+        if "zh-" in langpair or "jp-" in langpair:
+            period_char = "。"
+        else:
+            period_char = "."
         src = request.args["text"]
         do_moses = request.args.get('do_moses', False)
         if langpair in MODELS_DICT:
+            # deal with long source text            
             if do_moses:
-                result = MODELS_DICT[langpair].translate(
-                    [src], source_lang=langpair.split('-')[0], target_lang=langpair.split('-')[1]
-                )
+                if len(src) <= max_length:
+                    results = MODELS_DICT[langpair].translate(
+                        [src], source_lang=langpair.split('-')[0], target_lang=langpair.split('-')[1]
+                    )
+                else:
+                    passages = split_long_text(src, max_length=max_length, period_char=period_char)
+                    
+                    results = MODELS_DICT[langpair].translate(
+                    passages, source_lang=langpair.split('-')[0], target_lang=langpair.split('-')[1])
             else:
-                result = MODELS_DICT[langpair].translate([src])
+                if len(src) <= max_length:
+                    results = MODELS_DICT[langpair].translate([src])
+                else:
+                    passages = split_long_text(src, max_length=max_length, period_char=period_char)
+                    results = MODELS_DICT[langpair].translate(passages)
+            
+            # combine translated text
+            translated_text = ''.join(results)
 
             duration = time.time() - time_s
             logging.info(
-                f"Translated in {duration}. Input was: {request.args['text']} <############> Translation was: {result[0]}"
+                f"Translated in {duration}. Input was: {request.args['text']} <############> Translation was: {translated_text}"
             )
-            res = {'translation': result[0]}
+            res = {'translation': translated_text}
             response = flask.jsonify(res, )
             response.headers.add('Access-Control-Allow-Origin', '*')
             return response
