@@ -98,14 +98,14 @@ def merge_english_chunks(translated_en_paragraphs: list, ext_characters: list):
     cur_paragraph = ""
     last_ext_character = ""
     for p,ext in zip(translated_en_paragraphs, ext_characters):
-        if last_ext_character.strip() == "," and p.strip() != "":
+        if p.strip() != "" and (last_ext_character.strip() == "," or last_ext_character.startswith("\"")):
             p = p[0].lower() + p[1:]
         if ext.strip() == ".":
-            cur_paragraph += (p.strip() + ext)
+            cur_paragraph += (p.strip() + ext.strip())
             merged_paragraphs.append(cur_paragraph)
             # make empty list of ext_characters to have the same structure
             # as not merging english chunks
-            merged_ext_characters.append('') 
+            merged_ext_characters.append(' ') 
             cur_paragraph = ""
         else:
             cur_paragraph += (p.strip() + ext)
@@ -113,7 +113,7 @@ def merge_english_chunks(translated_en_paragraphs: list, ext_characters: list):
         last_ext_character = ext
     # check very last chunk
     if cur_paragraph.strip() != "":
-        merged_paragraphs.append(cur_paragraph)
+        merged_paragraphs.append(cur_paragraph.strip())
         # make empty list of ext_characters to have the same structure 
         # as not merging english chunks
         merged_ext_characters.append('')
@@ -145,16 +145,31 @@ def translate(src_text: str, langpair: str,
 
     print ("replaced src text:", src_text)
 
-    if source_lang == "zh" or source_lang == "jp":
+    if source_lang == "zh":
         period_char = "。"
         comma_char = "，"
-        # open_quotes: str =  '“"‘『「'
-        # close_quotes: str = '”"’』」'
+        open_quotes: str =  '“‘『「'
+        close_quotes: str = '”’』」'
+    elif source_lang == "jp":
+        period_char = "。"
+        comma_char = "，"
+        open_quotes: str =  '“‘『「'
+        close_quotes: str = '”’』」'
+    elif source_lang == "km":
+        period_char = "។"
+        comma_char = ","
+        open_quotes: str =  '«“'
+        close_quotes: str = '»”'
+    elif source_lang == "lo":
+        period_char = "."
+        comma_char = ","
+        open_quotes: str =  '“'
+        close_quotes: str = '”'
     else:
         period_char = "."
         comma_char = ","
-        # open_quotes: str =  '"'
-        # close_quotes: str = '"'
+        open_quotes: str =  '"'
+        close_quotes: str = '"'
     
     use_en2vi = False
     if target_lang == "vi":
@@ -167,8 +182,8 @@ def translate(src_text: str, langpair: str,
     mt_model = None
     if langpair in NEMO_MODELS_DICT:
         mt_model = NEMO_MODELS_DICT[langpair]
-    # elif langpair in SEAMLESS_SUPPORTED_LANG_PAIRS:
-    #     mt_model = nmt_multi_model
+    elif langpair in SEAMLESS_SUPPORTED_LANG_PAIRS:
+        mt_model = nmt_multi_model
     else:
         logging.error(f"Got the following langpair: {langpair} which was not found")
 
@@ -183,10 +198,16 @@ def translate(src_text: str, langpair: str,
             # bool array `paragaph_flags` with same length as `passages` array 
             # indicating if passage at index `i` of `passages` finishes current paragraph
             # and the next passage will belong to a new paragraph
-            paragraphs, ext_characters = split_long_text(src_text, max_length=max_length, period_char=period_char)
+            paragraphs, ext_characters = split_long_text(src_text, 
+                                                         max_length=max_length, 
+                                                         period_char=period_char)
         else:
             paragraphs, ext_characters = split_long_text_by_sentence_and_quotation(
-                                                long_text=src_text, period_char=period_char)
+                                                long_text=src_text, 
+                                                period_char=period_char,
+                                                comma_char=comma_char,
+                                                open_quotes=open_quotes,
+                                                close_quotes=close_quotes)
 
         # print ('>>> paragraphs splitted: ', paragraphs)
         logging.info(f"paragraphs: {paragraphs}")
@@ -238,8 +259,8 @@ def translate(src_text: str, langpair: str,
         last_ext_chr = ""
         comma_en = ","
         for text, ext_chr in zip(translated_paragraphs, ext_characters): 
-            if text.strip() != "" and last_ext_chr.strip() == comma_en:
-                text = text[0].lower() + text[1:]               
+            # if text.strip() != "" and last_ext_chr.strip() == comma_en:
+            #     text = text[0].lower() + text[1:]               
             translated_text += (text.strip() + ext_chr)
             last_ext_chr = ext_chr
 
@@ -264,7 +285,11 @@ def get_translation():
         src_text = request.args["text"]   
         langpair = request.args["langpair"]
         
-        translated_text = translate(src_text, langpair)
+        translated_text = translate(src_text, langpair, 
+                                    replace_doi_terms=False,
+                                    merge_en_chunks=False,
+                                    translate_by_sentence=False,
+                                    max_length=64)
         
         return write_response(translated_text)
         
@@ -273,5 +298,5 @@ def get_translation():
 
 if __name__ == '__main__':
     init_nemo('config.json')
-    # init_nmt_multi()
+    init_nmt_multi()
     serve(api, host="0.0.0.0", port=5000)
