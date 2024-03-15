@@ -377,3 +377,20 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 192.168.1.200 - - [12/Oct/2023 07:58:26] code 404, message File not found
 192.168.1.200 - - [12/Oct/2023 07:58:26] "GET /favicon.ico HTTP/1.1" 404 -
 192.168.1.200 - - [12/Oct/2023 07:58:50] "GET / HTTP/1.1" 304 -
+192.168.1.200 - - [17/Oct/2023 03:20:48] "GET / HTTP/1.1" 304 -
+192.168.1.200 - - [17/Oct/2023 03:20:48] "GET /styles/circular_progressbar.css HTTP/1.1" 304 -
+192.168.1.200 - - [17/Oct/2023 03:20:48] code 404, message File not found
+192.168.1.200 - - [17/Oct/2023 03:20:48] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.200 - - [17/Oct/2023 08:08:28] "GET / HTTP/1.1" 304 -
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+192.168.1.112 - - [20/Oct/2023 02:05:44] "GET / HTTP/1.1" 304 -
+192.168.1.112 - - [20/Oct/2023 02:05:44] "GET /style.css HTTP/1.1" 304 -
+192.168.1.112 - - [20/Oct/2023 02:05:44] code 404, message File not found
+192.168.1.112 - - [20/Oct/2023 02:05:44] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.112 - - [20/Oct/2023 06:42:00] code 404, message File not found
+192.168.1.112 - - [20/Oct/2023 06:42:00] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.112 - - [23/Oct/2023 01:10:41] "GET / HTTP/1.1" 304 -
+192.168.1.112 - - [23/Oct/2023 01:10:41] "GET /styles/circular_progressbar.css HTTP/1.1" 304 -
+192.168.1.112 - - [23/Oct/2023 01:10:42] code 404, message File not found
+192.168.1.112 - - [23/Oct/2023 01:10:42] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.1.112 - - [23/Oct/2023 03:08:35] "GET / HTTP/1.1" 304 -

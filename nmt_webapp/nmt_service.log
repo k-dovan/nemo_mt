@@ -4704,3 +4704,912 @@ Traceback (most recent call last):
   File "/home/tdh/nemo_mt/nmt_webapp/venv/lib/python3.8/site-packages/flask/json/provider.py", line 122, in _default
     raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
 TypeError: Object of type AssertionError is not JSON serializable
+[NeMo I 2023-10-20 02:04:37 nmt_service:50] Starting NMT service
+[NeMo I 2023-10-20 02:04:37 nmt_service:51] I will attempt to load all the models listed in config.json.
+[NeMo I 2023-10-20 02:04:37 nmt_service:52] Edit config.json to disable models you don't need.
+[NeMo I 2023-10-20 02:04:37 nmt_service:54] CUDA is available. Running on GPU
+[NeMo I 2023-10-20 02:04:37 nmt_service:64] Loading model for zh-en from file: NGC/nmt_zh_en_transformer24x6
+[NeMo I 2023-10-20 02:04:37 cloud:58] Found existing object /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo.
+[NeMo I 2023-10-20 02:04:37 cloud:64] Re-using file from: /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo
+[NeMo I 2023-10-20 02:04:37 common:913] Instantiating model from pre-trained checkpoint
+[NeMo I 2023-10-20 02:04:50 tokenizer_utils:179] Getting YouTokenToMeTokenizer with model: /tmp/tmp08exevkg/ee189b32ae0a4c12b7ba4c4d7c1a2391_tokenizer.decoder.32000.BPE.model with r2l: False.
+[NeMo I 2023-10-20 02:04:50 tokenizer_utils:179] Getting YouTokenToMeTokenizer with model: /tmp/tmp08exevkg/e23f0b142e474fcb86db8bc428a03e8a_tokenizer.encoder.32000.BPE.model with r2l: False.
+[NeMo W 2023-10-20 02:04:50 modelPT:161] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    src_file_name: null
+    tgt_file_name: null
+    use_tarred_dataset: true
+    tar_files:
+    - /data/tarred_dataset_old_plus_paracrawl_4k_tokens/parallel.batches.tokens.4000._OP_0..769_CL_.tar
+    - /data/tarred_dataset_old_plus_paracrawl_zh_en_r2l_distilled_4k_tokens/parallel.batches.tokens.4000._OP_0..745_CL_.tar
+    metadata_file:
+    - /data/tarred_dataset_old_plus_paracrawl_4k_tokens/metadata.tokens.4000.json
+    - /data/tarred_dataset_old_plus_paracrawl_zh_en_r2l_distilled_4k_tokens/metadata.tokens.4000.json
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 100
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: true
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: true
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: true
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: random
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities:
+    - 0.6
+    - 0.4
+    
+[NeMo W 2023-10-20 02:04:50 modelPT:168] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    src_file_name:
+    - /data/wmt19-zh-en.clean.tok.src
+    - /data/wmt20-zh-en.clean.tok.src
+    - /data/wmt18-zh-en.clean.tok.src
+    tgt_file_name:
+    - /data/wmt19-zh-en.clean.tok.ref
+    - /data/wmt20-zh-en.clean.tok.ref
+    - /data/wmt18-zh-en.clean.tok.ref
+    use_tarred_dataset: false
+    tar_files: null
+    metadata_file: null
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 1000
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: false
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: false
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: false
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities: null
+    
+[NeMo W 2023-10-20 02:04:50 modelPT:174] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    src_file_name: /data/wmt19-en-zh.clean.tok.src
+    tgt_file_name: /data/wmt19-en-zh.clean.tok.src
+    use_tarred_dataset: false
+    tar_files: null
+    metadata_file: null
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 1000
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: false
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: false
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: false
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities: null
+    
+[NeMo W 2023-10-20 02:04:50 nlp_overrides:253] Apex was not found. Please see the NeMo README for installation instructions: https://github.com/NVIDIA/apex
+    Megatron-based models require Apex to function correctly.
+[NeMo I 2023-10-20 02:04:55 save_restore_connector:249] Model MTEncDecModel was successfully restored from /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo.
+[NeMo I 2023-10-20 02:04:55 nmt_service:74] NMT service started
+2023-10-20 02:04:55,299 INFO -- waitress: Serving on http://0.0.0.0:5000
+replaced src text: 琼航警103/23，北部湾，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E
+['琼航警103/23，北部湾，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E'] ['']
+1 1
+[NeMo I 2023-10-20 02:05:56 nmt_service:158] paragraphs: ['琼航警103/23，北部湾，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E']
+[NeMo I 2023-10-20 02:05:56 nmt_service:159] ext_characters: ['']
+Building prefix dict from the default dictionary ...
+2023-10-20 02:05:56,299 DEBUG -- jieba: Building prefix dict from the default dictionary ...
+Dumping model to file cache /tmp/jieba.cache
+2023-10-20 02:05:56,714 DEBUG -- jieba: Dumping model to file cache /tmp/jieba.cache
+Loading model cost 0.453 seconds.
+2023-10-20 02:05:56,752 DEBUG -- jieba: Loading model cost 0.453 seconds.
+Prefix dict has been built successfully.
+2023-10-20 02:05:56,752 DEBUG -- jieba: Prefix dict has been built successfully.
+[NeMo I 2023-10-20 02:05:58 nmt_service:178] translated_paragraphs: ['Joan Air Police 103 / 23, Beibu Bay, September 13 0800hrs to September 14 1200hrs will be at 19-59.0N / 109-11.0E']
+[NeMo W 2023-10-20 02:05:58 nemo_logging:349] /home/tdh/nemo_mt/nmt_webapp/venv/lib/python3.8/site-packages/transformers/generation/utils.py:1369: UserWarning: Using `max_length`'s default (1024) to control the generation length. This behaviour is deprecated and will be removed from the config in v5 of Transformers -- we recommend using `max_new_tokens` to control the maximum length of the generation.
+      warnings.warn(
+    
+[NeMo I 2023-10-20 02:05:58 nmt_service:195] translated_to_vi_paragraphs: ['Joan Air Police 103 / 23, Vịnh Beibu, tháng 9 13 0800hrs đến tháng 9 14 1200hrs sẽ ở 19-59.0N / 109-11.0E']
+[NeMo I 2023-10-20 02:05:58 nmt_service:205] Translated in 2.4273855686187744
+    Input was: 琼航警103/23，北部湾，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E
+    Translation was: Joan Air Police 103 / 23, Vịnh Beibu, tháng 9 13 0800hrs đến tháng 9 14 1200hrs sẽ ở 19-59.0N / 109-11.0E
+replaced src text: Cảnh sát hàng không Qiong103/23，Vịnh Bắc Bộ，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E
+['Cảnh sát hàng không Qiong103/23，Vịnh Bắc Bộ，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E'] ['']
+1 1
+[NeMo I 2023-10-20 02:06:19 nmt_service:158] paragraphs: ['Cảnh sát hàng không Qiong103/23，Vịnh Bắc Bộ，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E']
+[NeMo I 2023-10-20 02:06:19 nmt_service:159] ext_characters: ['']
+[NeMo I 2023-10-20 02:06:20 nmt_service:178] translated_paragraphs: ['Cnh st hng khng Qiong 103 / 23, Vnh Bc Bnh, September 13th 0800hrs to September 14th 1200hrs will be at 19-59.0N / 109-11.0E']
+[NeMo I 2023-10-20 02:06:20 nmt_service:195] translated_to_vi_paragraphs: ['Cnh st hng khng Qiong 103 / 23, Vnh Bc Bnh, ngày 13 tháng 9 0800hrs đến ngày 14 tháng 9 1200hrs sẽ ở 19-59.0N / 109-11.0E']
+[NeMo I 2023-10-20 02:06:20 nmt_service:205] Translated in 0.8680374622344971
+    Input was: Cảnh sát hàng không Qiong103/23，Vịnh Bắc Bộ，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E
+    Translation was: Cnh st hng khng Qiong 103 / 23, Vnh Bc Bnh, ngày 13 tháng 9 0800hrs đến ngày 14 tháng 9 1200hrs sẽ ở 19-59.0N / 109-11.0E
+replaced src text: Cảnh sát hàng không Qiong 103/23，Vịnh Bắc Bộ，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E
+['Cảnh sát hàng không Qiong 103/23，Vịnh Bắc Bộ，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E'] ['']
+1 1
+[NeMo I 2023-10-20 02:06:36 nmt_service:158] paragraphs: ['Cảnh sát hàng không Qiong 103/23，Vịnh Bắc Bộ，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E']
+[NeMo I 2023-10-20 02:06:36 nmt_service:159] ext_characters: ['']
+[NeMo I 2023-10-20 02:06:36 nmt_service:178] translated_paragraphs: ['Cnh st hng khng Qiong 103 / 23, Vnh Bc Bnh, September 13th 0800hrs to September 14th 1200hrs will be at 19-59.0N / 109-11.0E']
+[NeMo I 2023-10-20 02:06:37 nmt_service:195] translated_to_vi_paragraphs: ['Cnh st hng khng Qiong 103 / 23, Vnh Bc Bnh, ngày 13 tháng 9 0800hrs đến ngày 14 tháng 9 1200hrs sẽ ở 19-59.0N / 109-11.0E']
+[NeMo I 2023-10-20 02:06:37 nmt_service:205] Translated in 0.8451862335205078
+    Input was: Cảnh sát hàng không Qiong 103/23，Vịnh Bắc Bộ，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E
+    Translation was: Cnh st hng khng Qiong 103 / 23, Vnh Bc Bnh, ngày 13 tháng 9 0800hrs đến ngày 14 tháng 9 1200hrs sẽ ở 19-59.0N / 109-11.0E
+replaced src text: Qiong Aviation Police103/23，北部湾，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E
+['Qiong Aviation Police103/23，北部湾，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E'] ['']
+1 1
+[NeMo I 2023-10-20 02:07:14 nmt_service:158] paragraphs: ['Qiong Aviation Police103/23，北部湾，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E']
+[NeMo I 2023-10-20 02:07:14 nmt_service:159] ext_characters: ['']
+[NeMo I 2023-10-20 02:07:14 nmt_service:178] translated_paragraphs: ['Qiong Aviation Police 103 / 23, Beibu Bay, September 13 0800hrs to September 14 1200hrs will be at 19-59.0N / 109-11.0E']
+[NeMo I 2023-10-20 02:07:15 nmt_service:195] translated_to_vi_paragraphs: ['Cảnh sát hàng không Qiong 103 / 23, Vịnh Beibu, tháng 9 13 0800hrs đến tháng 9 14 1200hrs sẽ ở 19-59.0N / 109-11.0E']
+[NeMo I 2023-10-20 02:07:15 nmt_service:205] Translated in 0.7177348136901855
+    Input was: Qiong Aviation Police103/23，北部湾，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E
+    Translation was: Cảnh sát hàng không Qiong 103 / 23, Vịnh Beibu, tháng 9 13 0800hrs đến tháng 9 14 1200hrs sẽ ở 19-59.0N / 109-11.0E
+replaced src text: Qiong Aviation Police103/23，northern bay，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E
+['Qiong Aviation Police103/23，northern bay，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E'] ['']
+1 1
+[NeMo I 2023-10-20 02:08:00 nmt_service:158] paragraphs: ['Qiong Aviation Police103/23，northern bay，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E']
+[NeMo I 2023-10-20 02:08:00 nmt_service:159] ext_characters: ['']
+[NeMo I 2023-10-20 02:08:00 nmt_service:178] translated_paragraphs: ['Qiong Aviation Police 103 / 23, northern bay, 0800 hours on September 13 to 1200 hours on September 14 will be at 19-59.0 N / 109-11.0 E']
+[NeMo I 2023-10-20 02:08:01 nmt_service:195] translated_to_vi_paragraphs: ['Qiong Aviation Police 103 / 23, vịnh phía bắc, 0800 giờ vào ngày 13 đến 1200 giờ vào ngày 14 tháng 9 sẽ ở 19-59.0 N / 109-11.0 E']
+[NeMo I 2023-10-20 02:08:01 nmt_service:205] Translated in 0.6991095542907715
+    Input was: Qiong Aviation Police103/23，northern bay，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E
+    Translation was: Qiong Aviation Police 103 / 23, vịnh phía bắc, 0800 giờ vào ngày 13 đến 1200 giờ vào ngày 14 tháng 9 sẽ ở 19-59.0 N / 109-11.0 E
+replaced src text: 琼航警87/23，南海，自2023年7月29日0000时至8月2日2400时，在20-22.55N/111-12.32E、17-04.60N/114-28.52E、15-42.25N/113-16.53E和18-28.93N/110-32.73E四点连线水域范围内进行军事训练，禁止驶入。
+
+['琼航警87/23，南海，自2023年7月29日0000时至8月2日2400时，在20-22.55N/111-12.32E、17-04.60N/114-28.52E、15-42.25N/113-16.53E和18-28.93N/110-32.73E四点连线水域范围内进行军事训练，禁止驶入', '', ''] ['. ', '\n', '']
+3 3
+[NeMo I 2023-10-20 02:18:20 nmt_service:158] paragraphs: ['琼航警87/23，南海，自2023年7月29日0000时至8月2日2400时，在20-22.55N/111-12.32E、17-04.60N/114-28.52E、15-42.25N/113-16.53E和18-28.93N/110-32.73E四点连线水域范围内进行军事训练，禁止驶入', '', '']
+[NeMo I 2023-10-20 02:18:20 nmt_service:159] ext_characters: ['. ', '\n', '']
+[NeMo I 2023-10-20 02:18:21 nmt_service:178] translated_paragraphs: ['Joan Aviation Police 87 / 23, South China Sea, from 0000 hours on 29 July 2023 to 2400 hours on 2 August 2023, military training within the four-point link waters of 20-22.55 N / 111-12.32E, 17-04.60 N / 114-28.52E, 15-42.25 N / 113-16.53E and 18-28.93 N / 110-32.73E prohibited entry', '', '']
+[NeMo I 2023-10-20 02:18:22 nmt_service:195] translated_to_vi_paragraphs: ['Joan Aviation Police 87-23, Biển Đông, từ 0000 giờ vào ngày 29 tháng 7 năm 2023 đến 2400 giờ vào ngày 2 tháng 8 năm 2023, huấn luyện quân sự trong vùng biển liên kết bốn điểm 20-22,55 N / 111-12,32E, 17-04.60 N / 114-28,52E, 15-42,25 N / 113-16,53E và 18-28,93 N / 110-32,73E cấm nhập cảnh', '', '']
+[NeMo I 2023-10-20 02:18:22 nmt_service:205] Translated in 1.8724298477172852
+    Input was: 琼航警87/23，南海，自2023年7月29日0000时至8月2日2400时，在20-22.55N/111-12.32E、17-04.60N/114-28.52E、15-42.25N/113-16.53E和18-28.93N/110-32.73E四点连线水域范围内进行军事训练，禁止驶入。
+    
+    Translation was: Joan Aviation Police 87-23, Biển Đông, từ 0000 giờ vào ngày 29 tháng 7 năm 2023 đến 2400 giờ vào ngày 2 tháng 8 năm 2023, huấn luyện quân sự trong vùng biển liên kết bốn điểm 20-22,55 N / 111-12,32E, 17-04.60 N / 114-28,52E, 15-42,25 N / 113-16,53E và 18-28,93 N / 110-32,73E cấm nhập cảnh.
+replaced src text: 琼航警103/23，北部湾，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E及20-05.0N/109-11.0E诸点连线水域范围内进行实弹射击训练。禁止驶入。
+['琼航警103/23，北部湾，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E及20-05.0N/109-11.0E诸点连线水域范围内进行实弹射击训练', '禁止驶入', ''] ['. ', '.', '']
+3 3
+[NeMo I 2023-10-20 02:20:38 nmt_service:158] paragraphs: ['琼航警103/23，北部湾，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E及20-05.0N/109-11.0E诸点连线水域范围内进行实弹射击训练', '禁止驶入', '']
+[NeMo I 2023-10-20 02:20:38 nmt_service:159] ext_characters: ['. ', '.', '']
+[NeMo I 2023-10-20 02:20:38 nmt_service:178] translated_paragraphs: ['Joan Aviation Police 103 / 23, Beibu Gulf, from 0800 hours on 13 September to 1200 hours on 14 September, live fire training will be conducted in the areas of 19-59.0 N / 109-11.0E, 19-59.0 N / 109-17.0E, 20-05.0 N / 109-17.0E and 20-05.0 N / 109-11.0E', 'No Entry', '']
+[NeMo I 2023-10-20 02:20:39 nmt_service:195] translated_to_vi_paragraphs: ['Joan Aviation Police 103 / 23, Vịnh Beibu, từ 0800 giờ ngày 13 tháng 9 đến 1200 giờ ngày 14 tháng 9, huấn luyện bắn trực tiếp sẽ được tiến hành trong các khu vực 19-59.0 N / 109-11.0E, 19-59.0 N / 109-17.0E, 20-05.0 N / 109-17.0E và 20-05.0 N / 109-11.0E', 'Không có mục nhập', '']
+[NeMo I 2023-10-20 02:20:39 nmt_service:205] Translated in 1.4521026611328125
+    Input was: 琼航警103/23，北部湾，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E及20-05.0N/109-11.0E诸点连线水域范围内进行实弹射击训练。禁止驶入。
+    Translation was: Joan Aviation Police 103 / 23, Vịnh Beibu, từ 0800 giờ ngày 13 tháng 9 đến 1200 giờ ngày 14 tháng 9, huấn luyện bắn trực tiếp sẽ được tiến hành trong các khu vực 19-59.0 N / 109-11.0E, 19-59.0 N / 109-17.0E, 20-05.0 N / 109-17.0E và 20-05.0 N / 109-11.0E. Không có mục nhập.
+replaced src text: 19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E
+['19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E'] ['']
+1 1
+[NeMo I 2023-10-20 02:28:30 nmt_service:158] paragraphs: ['19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E']
+[NeMo I 2023-10-20 02:28:30 nmt_service:159] ext_characters: ['']
+[NeMo I 2023-10-20 02:28:30 nmt_service:178] translated_paragraphs: ['19-59.0 N / 109-11.0E, 19-59.0 N / 109-17.0E, 20-05.0 N / 109-17.0E']
+[NeMo I 2023-10-20 02:28:30 nmt_service:195] translated_to_vi_paragraphs: ['19-59,0 N / 108-09,0E, 19-59,0 N / 108-09,0E, 20-05.0 N / 108-09,0E']
+[NeMo I 2023-10-20 02:28:30 nmt_service:205] Translated in 0.638664960861206
+    Input was: 19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E
+    Translation was: 19-59,0 N / 108-09,0E, 19-59,0 N / 108-09,0E, 20-05.0 N / 108-09,0E
+replaced src text: 琼航警103/23, 19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E
+['琼航警103/23, 19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E'] ['']
+1 1
+[NeMo I 2023-10-20 02:28:46 nmt_service:158] paragraphs: ['琼航警103/23, 19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E']
+[NeMo I 2023-10-20 02:28:46 nmt_service:159] ext_characters: ['']
+[NeMo I 2023-10-20 02:28:46 nmt_service:178] translated_paragraphs: ['Joan Air Police 103 / 23, 19-59.0 N / 109-11.0E, 19-59.0 N / 109-17.0E, 20-05.0 N / 109-17.0E']
+[NeMo I 2023-10-20 02:28:47 nmt_service:195] translated_to_vi_paragraphs: ['Cảnh sát hàng không Joan 103 23, 19-59,0 N / 109-11.0E, 19-59,0 N / 109-17.0E, 20-05.0 N / 109-17.0E']
+[NeMo I 2023-10-20 02:28:47 nmt_service:205] Translated in 0.7156732082366943
+    Input was: 琼航警103/23, 19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E
+    Translation was: Cảnh sát hàng không Joan 103 23, 19-59,0 N / 109-11.0E, 19-59,0 N / 109-17.0E, 20-05.0 N / 109-17.0E
+replaced src text: 琼航警103/23, 北部湾，19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E
+['琼航警103/23, 北部湾，19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E'] ['']
+1 1
+[NeMo I 2023-10-20 02:29:31 nmt_service:158] paragraphs: ['琼航警103/23, 北部湾，19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E']
+[NeMo I 2023-10-20 02:29:31 nmt_service:159] ext_characters: ['']
+[NeMo I 2023-10-20 02:29:31 nmt_service:178] translated_paragraphs: ['Joan Air Police 103 / 23, Beibu Bay, 19-59.0 N / 109-11.0E, 19-59.0 N / 109-17.0E, 20-05.0 N / 109-17.0E']
+[NeMo I 2023-10-20 02:29:32 nmt_service:195] translated_to_vi_paragraphs: ['Joan Air Police 103 / 23, Vịnh Beibu, 19-59,0 B / 109-1,0 E, 19-59,0 B / 109-07,0 E, 20-05.0 B / 109-07,0 E']
+[NeMo I 2023-10-20 02:29:32 nmt_service:205] Translated in 0.7932102680206299
+    Input was: 琼航警103/23, 北部湾，19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E
+    Translation was: Joan Air Police 103 / 23, Vịnh Beibu, 19-59,0 B / 109-1,0 E, 19-59,0 B / 109-07,0 E, 20-05.0 B / 109-07,0 E
+replaced src text: 琼航警103/23, 北部湾，19-59.0 North /109-11.0 East、19-59.0N/109-17.0E、20-05.0N/109-17.0E
+['琼航警103/23, 北部湾，19-59.0 North /109-11.0 East、19-59.0N/109-17.0E、20-05.0N/109-17.0E'] ['']
+1 1
+[NeMo I 2023-10-20 02:30:32 nmt_service:158] paragraphs: ['琼航警103/23, 北部湾，19-59.0 North /109-11.0 East、19-59.0N/109-17.0E、20-05.0N/109-17.0E']
+[NeMo I 2023-10-20 02:30:32 nmt_service:159] ext_characters: ['']
+[NeMo I 2023-10-20 02:30:33 nmt_service:178] translated_paragraphs: ['Joan Air Police 103 / 23, Beibu Bay, 19-59.0 North / 109-11.0 East, 19-59.0 N / 109-17.0 E, 20-05.0 N / 109-17.0 E']
+[NeMo I 2023-10-20 02:30:33 nmt_service:195] translated_to_vi_paragraphs: ['Joan Air Police 103 / 23, Vịnh Beibu, 19-59.0 Bắc / 109-1,0 Đông, 19-59.0 Bắc / 109-07,0 E, 20-05.0 Bắc / 109-07,0 E']
+[NeMo I 2023-10-20 02:30:33 nmt_service:205] Translated in 0.8050754070281982
+    Input was: 琼航警103/23, 北部湾，19-59.0 North /109-11.0 East、19-59.0N/109-17.0E、20-05.0N/109-17.0E
+    Translation was: Joan Air Police 103 / 23, Vịnh Beibu, 19-59.0 Bắc / 109-1,0 Đông, 19-59.0 Bắc / 109-07,0 E, 20-05.0 Bắc / 109-07,0 E
+replaced src text: 母狗
+['母狗'] ['']
+1 1
+[NeMo I 2023-10-20 02:31:20 nmt_service:158] paragraphs: ['母狗']
+[NeMo I 2023-10-20 02:31:20 nmt_service:159] ext_characters: ['']
+[NeMo I 2023-10-20 02:31:20 nmt_service:178] translated_paragraphs: ['Female']
+[NeMo I 2023-10-20 02:31:20 nmt_service:195] translated_to_vi_paragraphs: ['Nữ']
+[NeMo I 2023-10-20 02:31:20 nmt_service:205] Translated in 0.12302184104919434
+    Input was: 母狗
+    Translation was: Nữ
+[NeMo I 2023-10-20 02:50:22 nmt_service:50] Starting NMT service
+[NeMo I 2023-10-20 02:50:22 nmt_service:51] I will attempt to load all the models listed in config.json.
+[NeMo I 2023-10-20 02:50:22 nmt_service:52] Edit config.json to disable models you don't need.
+[NeMo I 2023-10-20 02:50:22 nmt_service:54] CUDA is available. Running on GPU
+[NeMo I 2023-10-20 02:50:22 nmt_service:64] Loading model for zh-en from file: NGC/nmt_zh_en_transformer24x6
+[NeMo I 2023-10-20 02:50:22 cloud:58] Found existing object /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo.
+[NeMo I 2023-10-20 02:50:22 cloud:64] Re-using file from: /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo
+[NeMo I 2023-10-20 02:50:22 common:913] Instantiating model from pre-trained checkpoint
+[NeMo I 2023-10-20 02:50:32 tokenizer_utils:179] Getting YouTokenToMeTokenizer with model: /tmp/tmpbvrl7vq_/ee189b32ae0a4c12b7ba4c4d7c1a2391_tokenizer.decoder.32000.BPE.model with r2l: False.
+[NeMo I 2023-10-20 02:50:32 tokenizer_utils:179] Getting YouTokenToMeTokenizer with model: /tmp/tmpbvrl7vq_/e23f0b142e474fcb86db8bc428a03e8a_tokenizer.encoder.32000.BPE.model with r2l: False.
+[NeMo W 2023-10-20 02:50:32 modelPT:161] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    src_file_name: null
+    tgt_file_name: null
+    use_tarred_dataset: true
+    tar_files:
+    - /data/tarred_dataset_old_plus_paracrawl_4k_tokens/parallel.batches.tokens.4000._OP_0..769_CL_.tar
+    - /data/tarred_dataset_old_plus_paracrawl_zh_en_r2l_distilled_4k_tokens/parallel.batches.tokens.4000._OP_0..745_CL_.tar
+    metadata_file:
+    - /data/tarred_dataset_old_plus_paracrawl_4k_tokens/metadata.tokens.4000.json
+    - /data/tarred_dataset_old_plus_paracrawl_zh_en_r2l_distilled_4k_tokens/metadata.tokens.4000.json
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 100
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: true
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: true
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: true
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: random
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities:
+    - 0.6
+    - 0.4
+    
+[NeMo W 2023-10-20 02:50:32 modelPT:168] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    src_file_name:
+    - /data/wmt19-zh-en.clean.tok.src
+    - /data/wmt20-zh-en.clean.tok.src
+    - /data/wmt18-zh-en.clean.tok.src
+    tgt_file_name:
+    - /data/wmt19-zh-en.clean.tok.ref
+    - /data/wmt20-zh-en.clean.tok.ref
+    - /data/wmt18-zh-en.clean.tok.ref
+    use_tarred_dataset: false
+    tar_files: null
+    metadata_file: null
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 1000
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: false
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: false
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: false
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities: null
+    
+[NeMo W 2023-10-20 02:50:32 modelPT:174] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    src_file_name: /data/wmt19-en-zh.clean.tok.src
+    tgt_file_name: /data/wmt19-en-zh.clean.tok.src
+    use_tarred_dataset: false
+    tar_files: null
+    metadata_file: null
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 1000
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: false
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: false
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: false
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities: null
+    
+[NeMo W 2023-10-20 02:50:32 nlp_overrides:253] Apex was not found. Please see the NeMo README for installation instructions: https://github.com/NVIDIA/apex
+    Megatron-based models require Apex to function correctly.
+[NeMo I 2023-10-20 02:50:37 save_restore_connector:249] Model MTEncDecModel was successfully restored from /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo.
+[NeMo I 2023-10-20 02:50:37 nmt_service:74] NMT service started
+2023-10-20 02:50:37,612 INFO -- waitress: Serving on http://0.0.0.0:5000
+replaced src text: Northern Gulf
+['Northern Gulf'] ['']
+1 1
+[NeMo I 2023-10-20 02:50:41 nmt_service:158] paragraphs: ['Northern Gulf']
+[NeMo I 2023-10-20 02:50:41 nmt_service:159] ext_characters: ['']
+Building prefix dict from the default dictionary ...
+2023-10-20 02:50:41,014 DEBUG -- jieba: Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+2023-10-20 02:50:41,014 DEBUG -- jieba: Loading model from cache /tmp/jieba.cache
+Loading model cost 0.437 seconds.
+2023-10-20 02:50:41,451 DEBUG -- jieba: Loading model cost 0.437 seconds.
+Prefix dict has been built successfully.
+2023-10-20 02:50:41,452 DEBUG -- jieba: Prefix dict has been built successfully.
+[NeMo I 2023-10-20 02:50:41 nmt_service:178] translated_paragraphs: ['Northern Gulf']
+[NeMo W 2023-10-20 02:50:41 nemo_logging:349] /home/tdh/nemo_mt/nmt_webapp/venv/lib/python3.8/site-packages/transformers/generation/utils.py:1369: UserWarning: Using `max_length`'s default (1024) to control the generation length. This behaviour is deprecated and will be removed from the config in v5 of Transformers -- we recommend using `max_new_tokens` to control the maximum length of the generation.
+      warnings.warn(
+    
+[NeMo I 2023-10-20 02:50:42 nmt_service:195] translated_to_vi_paragraphs: ['Vịnh Bắc Bộ']
+[NeMo I 2023-10-20 02:50:42 nmt_service:205] Translated in 1.1667962074279785
+    Input was: Northern Gulf
+    Translation was: Vịnh Bắc Bộ
+replaced src text: "琼航警99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。",
+['', '琼航警99/23,South China Sea,2023年8月30日至9月1日，', '海洋石油676', '拖带钻井平台', '海洋石油944', '自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节', '请宽让', '', ','] [' "', ' "', '" ', ' "', '" ', '. ', '.', ' "', '']
+9 9
+[NeMo I 2023-10-20 06:42:03 nmt_service:158] paragraphs: ['', '琼航警99/23,South China Sea,2023年8月30日至9月1日，', '海洋石油676', '拖带钻井平台', '海洋石油944', '自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节', '请宽让', '', ',']
+[NeMo I 2023-10-20 06:42:03 nmt_service:159] ext_characters: [' "', ' "', '" ', ' "', '" ', '. ', '.', ' "', '']
+[NeMo I 2023-10-20 06:42:03 nmt_service:178] translated_paragraphs: ['', 'Qiong Hang Police 99 / 23, South China Sea, 30 August - 1 September 2023,', 'Offshore Oil676', 'Towing rig', 'Offshore Oil 944', 'Towing from 18-35.61 N 107-45.78E to 18-37.24 N 107-43.73E, tow length 300m, speed 4 knots', 'Please let', '', ',']
+[NeMo I 2023-10-20 06:42:09 nmt_service:195] translated_to_vi_paragraphs: ['', 'Qiong Hang Police 99 / 23, South China Sea, 30 August - ngày 1 tháng 9 năm 2023,', 'Dầu ngoài khơi676', 'Giàn khoan', 'Dầu ngoài khơi 944', 'Kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E, kéo dài 300m, tốc độ 4 hải lý', 'Xin vui lòng cho', '', ',']
+[NeMo I 2023-10-20 06:42:09 nmt_service:205] Translated in 6.775465726852417
+    Input was: "琼航警99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。",
+    Translation was: "Qiong Hang Police 99 / 23, South China Sea, 30 August - ngày 1 tháng 9 năm 2023, "Dầu ngoài khơi676" Giàn khoan "Dầu ngoài khơi 944" Kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E, kéo dài 300m, tốc độ 4 hải lý. Xin vui lòng cho. ",
+replaced src text: 琼航警99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让
+['琼航警99/23,South China Sea,2023年8月30日至9月1日，', '海洋石油676', '拖带钻井平台', '海洋石油944', '自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节', '请宽让'] [' "', '" ', ' "', '" ', '.', '']
+6 6
+[NeMo I 2023-10-20 06:42:25 nmt_service:158] paragraphs: ['琼航警99/23,South China Sea,2023年8月30日至9月1日，', '海洋石油676', '拖带钻井平台', '海洋石油944', '自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节', '请宽让']
+[NeMo I 2023-10-20 06:42:25 nmt_service:159] ext_characters: [' "', '" ', ' "', '" ', '.', '']
+[NeMo I 2023-10-20 06:42:26 nmt_service:178] translated_paragraphs: ['Qiong Hang Police 99 / 23, South China Sea, 30 August - 1 September 2023,', 'Offshore Oil676', 'Towing rig', 'Offshore Oil 944', 'Towing from 18-35.61 N 107-45.78E to 18-37.24 N 107-43.73E, tow length 300m, speed 4 knots', 'Please let']
+[NeMo I 2023-10-20 06:42:32 nmt_service:195] translated_to_vi_paragraphs: ['Qiong Hang Police 99 / 23, South China Sea, 30 August - ngày 1 tháng 9 năm 2023,', 'Dầu ngoài khơi676', 'Giàn khoan', 'Dầu ngoài khơi 944', 'Kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E, kéo dài 300m, tốc độ 4 hải lý', 'Xin vui lòng cho']
+[NeMo I 2023-10-20 06:42:32 nmt_service:205] Translated in 6.428315877914429
+    Input was: 琼航警99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让
+    Translation was: Qiong Hang Police 99 / 23, South China Sea, 30 August - ngày 1 tháng 9 năm 2023, "Dầu ngoài khơi676" Giàn khoan "Dầu ngoài khơi 944" Kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E, kéo dài 300m, tốc độ 4 hải lý.Xin vui lòng cho
+replaced src text: 琼航警99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+['琼航警99/23,South China Sea,2023年8月30日至9月1日，', '海洋石油676', '拖带钻井平台', '海洋石油944', '自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节', '请宽让', ''] [' "', '" ', ' "', '" ', '. ', '.', '']
+7 7
+[NeMo I 2023-10-20 06:43:27 nmt_service:158] paragraphs: ['琼航警99/23,South China Sea,2023年8月30日至9月1日，', '海洋石油676', '拖带钻井平台', '海洋石油944', '自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节', '请宽让', '']
+[NeMo I 2023-10-20 06:43:27 nmt_service:159] ext_characters: [' "', '" ', ' "', '" ', '. ', '.', '']
+[NeMo I 2023-10-20 06:43:28 nmt_service:178] translated_paragraphs: ['Qiong Hang Police 99 / 23, South China Sea, 30 August - 1 September 2023,', 'Offshore Oil676', 'Towing rig', 'Offshore Oil 944', 'Towing from 18-35.61 N 107-45.78E to 18-37.24 N 107-43.73E, tow length 300m, speed 4 knots', 'Please let', '']
+[NeMo I 2023-10-20 06:43:33 nmt_service:195] translated_to_vi_paragraphs: ['Qiong Hang Police 99 / 23, South China Sea, 30 August - ngày 1 tháng 9 năm 2023,', 'Dầu ngoài khơi676', 'Giàn khoan', 'Dầu ngoài khơi 944', 'Kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E, kéo dài 300m, tốc độ 4 hải lý', 'Xin vui lòng cho', '']
+[NeMo I 2023-10-20 06:43:33 nmt_service:205] Translated in 6.227579355239868
+    Input was: 琼航警99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+    Translation was: Qiong Hang Police 99 / 23, South China Sea, 30 August - ngày 1 tháng 9 năm 2023, "Dầu ngoài khơi676" Giàn khoan "Dầu ngoài khơi 944" Kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E, kéo dài 300m, tốc độ 4 hải lý. Xin vui lòng cho.
+replaced src text: 海洋石油
+['海洋石油'] ['']
+1 1
+[NeMo I 2023-10-20 06:44:28 nmt_service:158] paragraphs: ['海洋石油']
+[NeMo I 2023-10-20 06:44:28 nmt_service:159] ext_characters: ['']
+[NeMo I 2023-10-20 06:44:29 nmt_service:178] translated_paragraphs: ['Offshore Oil']
+[NeMo I 2023-10-20 06:44:29 nmt_service:195] translated_to_vi_paragraphs: ['Dầu ngoài khơi']
+[NeMo I 2023-10-20 06:44:29 nmt_service:205] Translated in 0.6124284267425537
+    Input was: 海洋石油
+    Translation was: Dầu ngoài khơi
+replaced src text: 琼航警99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。
+['琼航警99/23,South China Sea,2023年8月30日至9月1日，', '海洋石油676', '拖带钻井平台', '海洋石油944', '自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节', ''] [' "', '" ', ' "', '" ', '.', '']
+6 6
+[NeMo I 2023-10-20 06:44:39 nmt_service:158] paragraphs: ['琼航警99/23,South China Sea,2023年8月30日至9月1日，', '海洋石油676', '拖带钻井平台', '海洋石油944', '自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节', '']
+[NeMo I 2023-10-20 06:44:39 nmt_service:159] ext_characters: [' "', '" ', ' "', '" ', '.', '']
+[NeMo I 2023-10-20 06:44:40 nmt_service:178] translated_paragraphs: ['Qiong Hang Police 99 / 23, South China Sea, 30 August - 1 September 2023,', 'Offshore Oil676', 'Towing rig', 'Offshore Oil 944', 'Towing from 18-35.61 N 107-45.78E to 18-37.24 N 107-43.73E, tow length 300m, speed 4 knots', '']
+[NeMo I 2023-10-20 06:44:45 nmt_service:195] translated_to_vi_paragraphs: ['Qiong Hang Police 99 / 23, South China Sea, 30 August - ngày 1 tháng 9 năm 2023,', 'Dầu ngoài khơi676', 'Giàn khoan', 'Dầu ngoài khơi 944', 'Kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E, kéo dài 300m, tốc độ 4 hải lý', '']
+[NeMo I 2023-10-20 06:44:45 nmt_service:205] Translated in 5.903534889221191
+    Input was: 琼航警99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。
+    Translation was: Qiong Hang Police 99 / 23, South China Sea, 30 August - ngày 1 tháng 9 năm 2023, "Dầu ngoài khơi676" Giàn khoan "Dầu ngoài khơi 944" Kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E, kéo dài 300m, tốc độ 4 hải lý.
+replaced src text: 海洋石油676
+['海洋石油676'] ['']
+1 1
+[NeMo I 2023-10-20 06:45:01 nmt_service:158] paragraphs: ['海洋石油676']
+[NeMo I 2023-10-20 06:45:01 nmt_service:159] ext_characters: ['']
+[NeMo I 2023-10-20 06:45:01 nmt_service:178] translated_paragraphs: ['Offshore Oil676']
+[NeMo I 2023-10-20 06:45:02 nmt_service:195] translated_to_vi_paragraphs: ['Dầu ngoài khơi676']
+[NeMo I 2023-10-20 06:45:02 nmt_service:205] Translated in 0.7974464893341064
+    Input was: 海洋石油676
+    Translation was: Dầu ngoài khơi676
+replaced src text: 琼航警99/23,South China Sea,2023年8月30日至9月1日，
+['琼航警99/23,South China Sea,2023年8月30日至9月1日，'] ['']
+1 1
+[NeMo I 2023-10-20 06:45:31 nmt_service:158] paragraphs: ['琼航警99/23,South China Sea,2023年8月30日至9月1日，']
+[NeMo I 2023-10-20 06:45:31 nmt_service:159] ext_characters: ['']
+[NeMo I 2023-10-20 06:45:31 nmt_service:178] translated_paragraphs: ['Qiong Hang Police 99 / 23, South China Sea, 30 August - 1 September 2023,']
+[NeMo I 2023-10-20 06:45:32 nmt_service:195] translated_to_vi_paragraphs: ['Qiong Hang Police 99 / 23, South China Sea, 30 August - ngày 1 tháng 9 năm 2023,']
+[NeMo I 2023-10-20 06:45:32 nmt_service:205] Translated in 1.6829915046691895
+    Input was: 琼航警99/23,South China Sea,2023年8月30日至9月1日，
+    Translation was: Qiong Hang Police 99 / 23, South China Sea, 30 August - ngày 1 tháng 9 năm 2023,
+[NeMo I 2023-10-20 06:49:51 nmt_service:50] Starting NMT service
+[NeMo I 2023-10-20 06:49:51 nmt_service:51] I will attempt to load all the models listed in config.json.
+[NeMo I 2023-10-20 06:49:51 nmt_service:52] Edit config.json to disable models you don't need.
+[NeMo I 2023-10-20 06:49:51 nmt_service:54] CUDA is available. Running on GPU
+[NeMo I 2023-10-20 06:49:51 nmt_service:64] Loading model for zh-en from file: NGC/nmt_zh_en_transformer24x6
+[NeMo I 2023-10-20 06:49:51 cloud:58] Found existing object /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo.
+[NeMo I 2023-10-20 06:49:51 cloud:64] Re-using file from: /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo
+[NeMo I 2023-10-20 06:49:51 common:913] Instantiating model from pre-trained checkpoint
+[NeMo I 2023-10-20 06:50:02 tokenizer_utils:179] Getting YouTokenToMeTokenizer with model: /tmp/tmpvjhhjoai/ee189b32ae0a4c12b7ba4c4d7c1a2391_tokenizer.decoder.32000.BPE.model with r2l: False.
+[NeMo I 2023-10-20 06:50:02 tokenizer_utils:179] Getting YouTokenToMeTokenizer with model: /tmp/tmpvjhhjoai/e23f0b142e474fcb86db8bc428a03e8a_tokenizer.encoder.32000.BPE.model with r2l: False.
+[NeMo W 2023-10-20 06:50:02 modelPT:161] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    src_file_name: null
+    tgt_file_name: null
+    use_tarred_dataset: true
+    tar_files:
+    - /data/tarred_dataset_old_plus_paracrawl_4k_tokens/parallel.batches.tokens.4000._OP_0..769_CL_.tar
+    - /data/tarred_dataset_old_plus_paracrawl_zh_en_r2l_distilled_4k_tokens/parallel.batches.tokens.4000._OP_0..745_CL_.tar
+    metadata_file:
+    - /data/tarred_dataset_old_plus_paracrawl_4k_tokens/metadata.tokens.4000.json
+    - /data/tarred_dataset_old_plus_paracrawl_zh_en_r2l_distilled_4k_tokens/metadata.tokens.4000.json
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 100
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: true
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: true
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: true
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: random
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities:
+    - 0.6
+    - 0.4
+    
+[NeMo W 2023-10-20 06:50:02 modelPT:168] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    src_file_name:
+    - /data/wmt19-zh-en.clean.tok.src
+    - /data/wmt20-zh-en.clean.tok.src
+    - /data/wmt18-zh-en.clean.tok.src
+    tgt_file_name:
+    - /data/wmt19-zh-en.clean.tok.ref
+    - /data/wmt20-zh-en.clean.tok.ref
+    - /data/wmt18-zh-en.clean.tok.ref
+    use_tarred_dataset: false
+    tar_files: null
+    metadata_file: null
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 1000
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: false
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: false
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: false
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities: null
+    
+[NeMo W 2023-10-20 06:50:02 modelPT:174] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    src_file_name: /data/wmt19-en-zh.clean.tok.src
+    tgt_file_name: /data/wmt19-en-zh.clean.tok.src
+    use_tarred_dataset: false
+    tar_files: null
+    metadata_file: null
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 1000
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: false
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: false
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: false
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities: null
+    
+[NeMo W 2023-10-20 06:50:02 nlp_overrides:253] Apex was not found. Please see the NeMo README for installation instructions: https://github.com/NVIDIA/apex
+    Megatron-based models require Apex to function correctly.
+[NeMo I 2023-10-20 06:50:07 save_restore_connector:249] Model MTEncDecModel was successfully restored from /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo.
+[NeMo I 2023-10-20 06:50:07 nmt_service:74] NMT service started
+2023-10-20 06:50:07,875 INFO -- waitress: Serving on http://0.0.0.0:5000
+replaced src text: 琼航警99/23,South China Sea,2023年8月30日至9月1日，
+[NeMo I 2023-10-20 06:50:18 nmt_service:158] paragraphs: ['琼航警99/23,South China Sea,2023年8月30日至9月1日，']
+[NeMo I 2023-10-20 06:50:18 nmt_service:159] ext_characters: [' ']
+Building prefix dict from the default dictionary ...
+2023-10-20 06:50:18,994 DEBUG -- jieba: Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+2023-10-20 06:50:18,994 DEBUG -- jieba: Loading model from cache /tmp/jieba.cache
+Loading model cost 0.456 seconds.
+2023-10-20 06:50:19,450 DEBUG -- jieba: Loading model cost 0.456 seconds.
+Prefix dict has been built successfully.
+2023-10-20 06:50:19,451 DEBUG -- jieba: Prefix dict has been built successfully.
+[NeMo I 2023-10-20 06:50:19 nmt_service:178] translated_paragraphs: ['Qiong Hang Police 99 / 23, South China Sea, 30 August - 1 September 2023,']
+[NeMo W 2023-10-20 06:50:19 nemo_logging:349] /home/tdh/nemo_mt/nmt_webapp/venv/lib/python3.8/site-packages/transformers/generation/utils.py:1369: UserWarning: Using `max_length`'s default (1024) to control the generation length. This behaviour is deprecated and will be removed from the config in v5 of Transformers -- we recommend using `max_new_tokens` to control the maximum length of the generation.
+      warnings.warn(
+    
+[NeMo I 2023-10-20 06:50:21 nmt_service:195] translated_to_vi_paragraphs: ['Qiong Hang Police 99 / 23, South China Sea, 30 August - ngày 1 tháng 9 năm 2023,']
+[NeMo I 2023-10-20 06:50:21 nmt_service:205] Translated in 2.1508212089538574
+    Input was: 琼航警99/23,South China Sea,2023年8月30日至9月1日，
+    Translation was: Qiong Hang Police 99 / 23, South China Sea, 30 August - ngày 1 tháng 9 năm 2023,
+replaced src text: 琼航警99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+[NeMo I 2023-10-20 06:50:45 nmt_service:158] paragraphs: ['琼航警99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节。', '请宽让。。']
+[NeMo I 2023-10-20 06:50:45 nmt_service:159] ext_characters: [' ', ' ']
+[NeMo I 2023-10-20 06:50:45 nmt_service:178] translated_paragraphs: ['Qiong Hang Police 99 / 23, South China Sea, August 30 to September 1, 2023, "Offshore Oil 676" towing rig "Offshore Oil 944" towed from 18-35.61N 107-45.78E to 18-37.24N 107-43.73E, tow length 300 meters, speed 4 knots', 'Please be generous']
+[NeMo I 2023-10-20 06:50:51 nmt_service:195] translated_to_vi_paragraphs: ['Cảnh sát Qiong Hang 99 23, Biển Đông, ngày 30 tháng 8 đến ngày 1 tháng 9 năm 2023, giàn khoan "Dầu ngoài khơi 676" "Dầu ngoài khơi 944" được kéo từ 18-35,61N 107-45,78E đến 18-37,24N 107-43,73E, chiều dài kéo 300 mét, tốc độ 4 hải lý', 'Xin hãy rộng lượng']
+[NeMo I 2023-10-20 06:50:51 nmt_service:205] Translated in 6.658938884735107
+    Input was: 琼航警99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+    Translation was: Cảnh sát Qiong Hang 99 23, Biển Đông, ngày 30 tháng 8 đến ngày 1 tháng 9 năm 2023, giàn khoan "Dầu ngoài khơi 676" "Dầu ngoài khơi 944" được kéo từ 18-35,61N 107-45,78E đến 18-37,24N 107-43,73E, chiều dài kéo 300 mét, tốc độ 4 hải lý Xin hãy rộng lượng
+replaced src text: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+[NeMo I 2023-10-20 06:54:46 nmt_service:158] paragraphs: ['Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节。', '请宽让。。']
+[NeMo I 2023-10-20 06:54:46 nmt_service:159] ext_characters: [' ', ' ']
+[NeMo I 2023-10-20 06:54:47 nmt_service:178] translated_paragraphs: ['Qiong Aviation Police 99 / 23, South China Sea, August 30 to September 1, 2023, "Offshore Oil 676" towing rig "Offshore Oil 944" towed from 18-35.61N 107-45.78E to 18-37.24N 107-43.73E, tow length 300 meters, speed 4 knots', 'Please be generous']
+[NeMo I 2023-10-20 06:54:53 nmt_service:195] translated_to_vi_paragraphs: ['Cảnh sát hàng không Qiong 99-23, Biển Đông, ngày 30 tháng 8 đến ngày 1 tháng 9 năm 2023, giàn khoan "Dầu ngoài khơi 676" "Dầu ngoài khơi 944" được kéo từ 18-35,61N 107-45,78E đến 18-37,24N 107-43,73E, chiều dài kéo 300 mét, tốc độ 4 hải lý', 'Xin hãy rộng lượng']
+[NeMo I 2023-10-20 06:54:53 nmt_service:205] Translated in 6.68474555015564
+    Input was: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+    Translation was: Cảnh sát hàng không Qiong 99-23, Biển Đông, ngày 30 tháng 8 đến ngày 1 tháng 9 năm 2023, giàn khoan "Dầu ngoài khơi 676" "Dầu ngoài khơi 944" được kéo từ 18-35,61N 107-45,78E đến 18-37,24N 107-43,73E, chiều dài kéo 300 mét, tốc độ 4 hải lý Xin hãy rộng lượng
+replaced src text: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“<GIAN_KHOAN>676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+[NeMo I 2023-10-20 06:56:27 nmt_service:158] paragraphs: ['Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“<GIAN_KHOAN>676”拖带钻井平台“海洋石油944”自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节。', '请宽让。。']
+[NeMo I 2023-10-20 06:56:27 nmt_service:159] ext_characters: [' ', ' ']
+[NeMo I 2023-10-20 06:56:28 nmt_service:178] translated_paragraphs: ['Qiong Aviation Police 99 / 23, South China Sea, August 30-September 1, 2023, "GIAN _ KHOAN > 676" towed rig "Offshore Oil 944" towed from 18-35.61 N 107-45.78E to 18-37.24 N 107-43.73E with a total length of 300 meters and a speed of 4 knots', 'Please be generous']
+[NeMo I 2023-10-20 06:56:34 nmt_service:195] translated_to_vi_paragraphs: ['Qiong Aviation Police 99 23, Biển Đông, ngày 30 tháng 8 - 1 tháng 9 năm 2023, "GIAN _ KHOAN > 676" giàn khoan kéo "Dầu ngoài khơi 944" được kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E với tổng chiều dài 300 mét và tốc độ 4 hải lý', 'Xin hãy rộng lượng']
+[NeMo I 2023-10-20 06:56:34 nmt_service:205] Translated in 6.644052743911743
+    Input was: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“<GIAN_KHOAN>676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+    Translation was: Qiong Aviation Police 99 23, Biển Đông, ngày 30 tháng 8 - 1 tháng 9 năm 2023, "GIAN _ KHOAN > 676" giàn khoan kéo "Dầu ngoài khơi 944" được kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E với tổng chiều dài 300 mét và tốc độ 4 hải lý Xin hãy rộng lượng
+replaced src text: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“GIAN_KHOAN676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+[NeMo I 2023-10-20 06:56:47 nmt_service:158] paragraphs: ['Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“GIAN_KHOAN676”拖带钻井平台“海洋石油944”自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节。', '请宽让。。']
+[NeMo I 2023-10-20 06:56:47 nmt_service:159] ext_characters: [' ', ' ']
+[NeMo I 2023-10-20 06:56:48 nmt_service:178] translated_paragraphs: ['Qiong Aviation Police 99 / 23, South China Sea, August 30 to September 1, 2023, "GIAN _ KHOAN676" towed rig "Offshore Oil 944" towed from 18-35.61 N 107-45.78E to 18-37.24 N 107-43.73E, tow length 300 meters, speed 4 knots', 'Please be generous']
+[NeMo I 2023-10-20 06:56:53 nmt_service:195] translated_to_vi_paragraphs: ['Qiong Aviation Police 99 23, Biển Đông, ngày 30 tháng 8 đến ngày 1 tháng 9 năm 2023, "GIAN _ KHOAN676" giàn khoan kéo "Dầu ngoài khơi 944" được kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E, chiều dài kéo 300 mét, tốc độ 4 hải lý', 'Xin hãy rộng lượng']
+[NeMo I 2023-10-20 06:56:53 nmt_service:205] Translated in 6.350320100784302
+    Input was: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“GIAN_KHOAN676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+    Translation was: Qiong Aviation Police 99 23, Biển Đông, ngày 30 tháng 8 đến ngày 1 tháng 9 năm 2023, "GIAN _ KHOAN676" giàn khoan kéo "Dầu ngoài khơi 944" được kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E, chiều dài kéo 300 mét, tốc độ 4 hải lý Xin hãy rộng lượng
+replaced src text: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“Offshore oil676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+[NeMo I 2023-10-20 06:57:36 nmt_service:158] paragraphs: ['Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“Offshore oil676”拖带钻井平台“海洋石油944”自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节。', '请宽让。。']
+[NeMo I 2023-10-20 06:57:36 nmt_service:159] ext_characters: [' ', ' ']
+[NeMo I 2023-10-20 06:57:36 nmt_service:178] translated_paragraphs: ['Qiong Aviation Police 99 / 23, South China Sea, August 30 to September 1, 2023, "Offshore oil676" towing rig "Offshore Oil 944" towed from 18-35.61N 107-45.78E to 18-37.24N 107-43.73E, tow length 300 meters, speed 4 knots', 'Please be generous']
+[NeMo I 2023-10-20 06:57:42 nmt_service:195] translated_to_vi_paragraphs: ['Cảnh sát hàng không Qiong 99-23, Biển Đông, ngày 30 tháng 8 đến ngày 1 tháng 9 năm 2023, giàn khoan "Dầu ngoài khơi 676" "Dầu ngoài khơi 944" được kéo từ 18-35,61N 107-45,78E đến 18-37,24N 107-43,73E, chiều dài kéo 300 mét, tốc độ 4 hải lý', 'Xin hãy rộng lượng']
+[NeMo I 2023-10-20 06:57:42 nmt_service:205] Translated in 6.551594018936157
+    Input was: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“Offshore oil676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+    Translation was: Cảnh sát hàng không Qiong 99-23, Biển Đông, ngày 30 tháng 8 đến ngày 1 tháng 9 năm 2023, giàn khoan "Dầu ngoài khơi 676" "Dầu ngoài khơi 944" được kéo từ 18-35,61N 107-45,78E đến 18-37,24N 107-43,73E, chiều dài kéo 300 mét, tốc độ 4 hải lý Xin hãy rộng lượng
+replaced src text: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+[NeMo I 2023-10-20 07:03:34 nmt_service:158] paragraphs: ['Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节。', '请宽让。。']
+[NeMo I 2023-10-20 07:03:34 nmt_service:159] ext_characters: [' ', ' ']
+[NeMo I 2023-10-20 07:03:35 nmt_service:178] translated_paragraphs: ['Qiong Aviation Police 99 / 23, South China Sea, August 30 to September 1, 2023, "Offshore Oil 676" towing rig "Offshore Oil 944" towed from 18-35.61N 107-45.78E to 18-37.24N 107-43.73E, tow length 300 meters, speed 4 knots', 'Please be generous']
+[NeMo I 2023-10-20 07:03:41 nmt_service:195] translated_to_vi_paragraphs: ['Cảnh sát hàng không Qiong 99-23, Biển Đông, ngày 30 tháng 8 đến ngày 1 tháng 9 năm 2023, giàn khoan "Dầu ngoài khơi 676" "Dầu ngoài khơi 944" được kéo từ 18-35,61N 107-45,78E đến 18-37,24N 107-43,73E, chiều dài kéo 300 mét, tốc độ 4 hải lý', 'Xin hãy rộng lượng']
+[NeMo I 2023-10-20 07:03:41 nmt_service:205] Translated in 6.820953607559204
+    Input was: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+    Translation was: Cảnh sát hàng không Qiong 99-23, Biển Đông, ngày 30 tháng 8 đến ngày 1 tháng 9 năm 2023, giàn khoan "Dầu ngoài khơi 676" "Dầu ngoài khơi 944" được kéo từ 18-35,61N 107-45,78E đến 18-37,24N 107-43,73E, chiều dài kéo 300 mét, tốc độ 4 hải lý Xin hãy rộng lượng
+replaced src text: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“HAI YANG SHI YOU 676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+[NeMo I 2023-10-20 07:04:25 nmt_service:158] paragraphs: ['Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“HAI YANG SHI YOU 676”拖带钻井平台“海洋石油944”自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节。', '请宽让。。']
+[NeMo I 2023-10-20 07:04:25 nmt_service:159] ext_characters: [' ', ' ']
+[NeMo I 2023-10-20 07:04:26 nmt_service:178] translated_paragraphs: ['Qiong Aviation Police 99 / 23, South China Sea, August 30-September 1, 2023, "HAI YANG SHI YOU 676" towed rig "Haiyang Oil 944" towed from 18-35.61 N 107-45.78E to 18-37.24 N 107-43.73E with a total length of 300 meters and a speed of 4 knots', 'Please be generous']
+[NeMo I 2023-10-20 07:04:31 nmt_service:195] translated_to_vi_paragraphs: ['Cảnh sát hàng không Qiong 99-23, Biển Đông, 30 tháng 8 - 1 tháng 9 năm 2023, "HAI YANG SHI YOU 676" giàn khoan kéo "Haiyang Oil 944" được kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E với tổng chiều dài 300 mét và tốc độ 4 hải lý', 'Xin hãy rộng lượng']
+[NeMo I 2023-10-20 07:04:31 nmt_service:205] Translated in 6.131622314453125
+    Input was: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“HAI YANG SHI YOU 676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+    Translation was: Cảnh sát hàng không Qiong 99-23, Biển Đông, 30 tháng 8 - 1 tháng 9 năm 2023, "HAI YANG SHI YOU 676" giàn khoan kéo "Haiyang Oil 944" được kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E với tổng chiều dài 300 mét và tốc độ 4 hải lý Xin hãy rộng lượng
+replaced src text: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+[NeMo I 2023-10-20 07:05:04 nmt_service:158] paragraphs: ['Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节。', '请宽让。。']
+[NeMo I 2023-10-20 07:05:04 nmt_service:159] ext_characters: [' ', ' ']
+[NeMo I 2023-10-20 07:05:04 nmt_service:178] translated_paragraphs: ['Qiong Aviation Police 99 / 23, South China Sea, August 30 to September 1, 2023, "Offshore Oil 676" towing rig "Offshore Oil 944" towed from 18-35.61N 107-45.78E to 18-37.24N 107-43.73E, tow length 300 meters, speed 4 knots', 'Please be generous']
+[NeMo I 2023-10-20 07:05:10 nmt_service:195] translated_to_vi_paragraphs: ['Cảnh sát hàng không Qiong 99-23, Biển Đông, ngày 30 tháng 8 đến ngày 1 tháng 9 năm 2023, giàn khoan "Dầu ngoài khơi 676" "Dầu ngoài khơi 944" được kéo từ 18-35,61N 107-45,78E đến 18-37,24N 107-43,73E, chiều dài kéo 300 mét, tốc độ 4 hải lý', 'Xin hãy rộng lượng']
+[NeMo I 2023-10-20 07:05:10 nmt_service:205] Translated in 6.571109294891357
+    Input was: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+    Translation was: Cảnh sát hàng không Qiong 99-23, Biển Đông, ngày 30 tháng 8 đến ngày 1 tháng 9 năm 2023, giàn khoan "Dầu ngoài khơi 676" "Dầu ngoài khơi 944" được kéo từ 18-35,61N 107-45,78E đến 18-37,24N 107-43,73E, chiều dài kéo 300 mét, tốc độ 4 hải lý Xin hãy rộng lượng
+replaced src text: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“Tug/Supply Vessel 676”拖带钻井平台“Tug/Supply Vessel 944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+[NeMo I 2023-10-20 07:06:03 nmt_service:158] paragraphs: ['Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“Tug/Supply Vessel 676”拖带钻井平台“Tug/Supply Vessel 944”自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节。', '请宽让。。']
+[NeMo I 2023-10-20 07:06:03 nmt_service:159] ext_characters: [' ', ' ']
+[NeMo I 2023-10-20 07:06:04 nmt_service:178] translated_paragraphs: ['Qiong Aviation Police 99 / 23, South China Sea, August 30-September 1, 2023, "Tug / Supply Vessel 676" towing rig "Tug / Supply Vessel 944" towed from 18-35.61 N 107-45.78E to 18-37.24 N 107-43.73E with a total length of 300 meters and a speed of 4 knots', 'Please be generous']
+[NeMo I 2023-10-20 07:06:09 nmt_service:195] translated_to_vi_paragraphs: ['Cảnh sát hàng không Qiong 99-23, Biển Đông, 30 tháng 8 - 1 tháng 9 năm 2023, giàn kéo "Tug / Tàu cung cấp 676" "Tug / Tàu cung cấp 944" được kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E với tổng chiều dài 300 mét và tốc độ 4 hải lý', 'Xin hãy rộng lượng']
+[NeMo I 2023-10-20 07:06:09 nmt_service:205] Translated in 6.601407289505005
+    Input was: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“Tug/Supply Vessel 676”拖带钻井平台“Tug/Supply Vessel 944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+    Translation was: Cảnh sát hàng không Qiong 99-23, Biển Đông, 30 tháng 8 - 1 tháng 9 năm 2023, giàn kéo "Tug / Tàu cung cấp 676" "Tug / Tàu cung cấp 944" được kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E với tổng chiều dài 300 mét và tốc độ 4 hải lý Xin hãy rộng lượng
+replaced src text: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“Supply Vessel 676”拖带钻井平台“Supply Vessel 944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+[NeMo I 2023-10-20 07:06:24 nmt_service:158] paragraphs: ['Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“Supply Vessel 676”拖带钻井平台“Supply Vessel 944”自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节。', '请宽让。。']
+[NeMo I 2023-10-20 07:06:24 nmt_service:159] ext_characters: [' ', ' ']
+[NeMo I 2023-10-20 07:06:25 nmt_service:178] translated_paragraphs: ['Qiong Aviation Police 99 / 23, South China Sea, August 30-September 1, 2023, "Supply Vessel 676" towing rig "Supply Vessel 944" towed from 18-35.61 N 107-45.78E to 18-37.24 N 107-43.73E with a total length of 300 meters and a speed of 4 knots', 'Please be generous']
+[NeMo I 2023-10-20 07:06:31 nmt_service:195] translated_to_vi_paragraphs: ['Cảnh sát hàng không Qiong 99-23, Biển Đông, 30 tháng 8 - 1 tháng 9 năm 2023, "Tàu cung cấp 676" giàn khoan kéo "Tàu cung cấp 944" được kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E với tổng chiều dài 300 mét và tốc độ 4 hải lý một giờ', 'Xin hãy rộng lượng']
+[NeMo I 2023-10-20 07:06:31 nmt_service:205] Translated in 6.386765718460083
+    Input was: Qiong Aviation Police99/23,South China Sea,2023年8月30日至9月1日，“Supply Vessel 676”拖带钻井平台“Supply Vessel 944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+    Translation was: Cảnh sát hàng không Qiong 99-23, Biển Đông, 30 tháng 8 - 1 tháng 9 năm 2023, "Tàu cung cấp 676" giàn khoan kéo "Tàu cung cấp 944" được kéo từ 18-35,61 N 107-45,78E đến 18-37,24 N 107-43,73E với tổng chiều dài 300 mét và tốc độ 4 hải lý một giờ Xin hãy rộng lượng
+replaced src text: 拖带钻井平台
+[NeMo I 2023-10-20 07:07:09 nmt_service:158] paragraphs: ['拖带钻井平台']
+[NeMo I 2023-10-20 07:07:09 nmt_service:159] ext_characters: [' ']
+[NeMo I 2023-10-20 07:07:09 nmt_service:178] translated_paragraphs: ['Towing rig']
+[NeMo I 2023-10-20 07:07:10 nmt_service:195] translated_to_vi_paragraphs: ['Giàn khoan']
+[NeMo I 2023-10-20 07:07:10 nmt_service:205] Translated in 0.5342702865600586
+    Input was: 拖带钻井平台
+    Translation was: Giàn khoan
+replaced src text: 琼航警99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+[NeMo I 2023-10-20 07:07:42 nmt_service:158] paragraphs: ['琼航警99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自\xa018-35.61N\xa0107-45.78E\xa0拖往18-37.24N\xa0107-43.73E,拖带总长300米，航速4节。', '请宽让。。']
+[NeMo I 2023-10-20 07:07:42 nmt_service:159] ext_characters: [' ', ' ']
+[NeMo I 2023-10-20 07:07:43 nmt_service:178] translated_paragraphs: ['Qiong Hang Police 99 / 23, South China Sea, August 30 to September 1, 2023, "Offshore Oil 676" towing rig "Offshore Oil 944" towed from 18-35.61N 107-45.78E to 18-37.24N 107-43.73E, tow length 300 meters, speed 4 knots', 'Please be generous']
+[NeMo I 2023-10-20 07:07:48 nmt_service:195] translated_to_vi_paragraphs: ['Cảnh sát Qiong Hang 99 23, Biển Đông, ngày 30 tháng 8 đến ngày 1 tháng 9 năm 2023, giàn khoan "Dầu ngoài khơi 676" "Dầu ngoài khơi 944" được kéo từ 18-35,61N 107-45,78E đến 18-37,24N 107-43,73E, chiều dài kéo 300 mét, tốc độ 4 hải lý', 'Xin hãy rộng lượng']
+[NeMo I 2023-10-20 07:07:48 nmt_service:205] Translated in 6.5398125648498535
+    Input was: 琼航警99/23,South China Sea,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+    Translation was: Cảnh sát Qiong Hang 99 23, Biển Đông, ngày 30 tháng 8 đến ngày 1 tháng 9 năm 2023, giàn khoan "Dầu ngoài khơi 676" "Dầu ngoài khơi 944" được kéo từ 18-35,61N 107-45,78E đến 18-37,24N 107-43,73E, chiều dài kéo 300 mét, tốc độ 4 hải lý Xin hãy rộng lượng
+replaced src text: 中新网9月29日电 据“国防部发布”微信公众号消息，9月29日下午，国防部举行例行记者会，国防部新闻局副局长、国防部新闻发言人谭克非大校答记者问。谭克非介绍，根据中俄两军年度合作计划，中国人民解放军抽组精干力量赴俄罗斯乌苏里斯克市谢尔盖耶夫斯基训练场和日本海相关海域，参加于2022年8月31日至9月7日举行的“东方-2022”演习，共有包括中俄在内的14个国家参加此次演习。
+[NeMo I 2023-10-20 07:11:00 nmt_service:158] paragraphs: ['中新网9月29日电 据“国防部发布”微信公众号消息，9月29日下午，国防部举行例行记者会，国防部新闻局副局长、国防部新闻发言人谭克非大校答记者问。', '谭克非介绍，根据中俄两军年度合作计划，中国人民解放军抽组精干力量赴俄罗斯乌苏里斯克市谢尔盖耶夫斯基训练场和日本海相关海域，参加于2022年8月31日至9月7日举行的“东方-2022”演习，共有包括中俄在内的14个国家参加此次演习。', '。']
+[NeMo I 2023-10-20 07:11:00 nmt_service:159] ext_characters: [' ', ' ', ' ']
+[NeMo I 2023-10-20 07:11:01 nmt_service:178] translated_paragraphs: ['On the afternoon of September 29, the Ministry of Defense held a regular press conference, Deputy Director General of the Ministry of Defense Information Bureau and Ministry of Defense Press Spokesperson Major Jiang Kefei answered reporters', 'According to the annual cooperation plan between the two militaries, the Chinese People\'s Liberation Army (PLA) has drawn capable forces to participate in the "Dongfang-2022" exercise held from August 31 to September 7, 2022 at the Sergeyevsky training ground in Ussuriysk, Russia and the relevant waters of the Sea of Japan', '']
+[NeMo I 2023-10-20 07:11:09 nmt_service:195] translated_to_vi_paragraphs: ['Vào chiều ngày 29 tháng 9, Bộ Quốc phòng đã tổ chức một cuộc họp báo thường kỳ, Phó Cục trưởng Cục Thông tin Bộ Quốc phòng và Người phát ngôn Báo chí Bộ Quốc phòng Thiếu tá Jiang Kefei trả lời các phóng viên', 'Theo kế hoạch hợp tác hàng năm giữa quân đội hai nước, Quân đội Giải phóng Nhân dân Trung Quốc (PLA) đã thu hút các lực lượng có khả năng tham gia cuộc tập trận "Đông Phương-2022" được tổ chức từ ngày 31 tháng 8 đến ngày 7 tháng 9 năm 2022 tại sân tập Sergeyevsky ở Ussuriysk, Nga và các vùng biển liên quan của Biển Nhật Bản', '']
+[NeMo I 2023-10-20 07:11:09 nmt_service:205] Translated in 9.02335786819458
+    Input was: 中新网9月29日电 据“国防部发布”微信公众号消息，9月29日下午，国防部举行例行记者会，国防部新闻局副局长、国防部新闻发言人谭克非大校答记者问。谭克非介绍，根据中俄两军年度合作计划，中国人民解放军抽组精干力量赴俄罗斯乌苏里斯克市谢尔盖耶夫斯基训练场和日本海相关海域，参加于2022年8月31日至9月7日举行的“东方-2022”演习，共有包括中俄在内的14个国家参加此次演习。
+    Translation was: Vào chiều ngày 29 tháng 9, Bộ Quốc phòng đã tổ chức một cuộc họp báo thường kỳ, Phó Cục trưởng Cục Thông tin Bộ Quốc phòng và Người phát ngôn Báo chí Bộ Quốc phòng Thiếu tá Jiang Kefei trả lời các phóng viên Theo kế hoạch hợp tác hàng năm giữa quân đội hai nước, Quân đội Giải phóng Nhân dân Trung Quốc (PLA) đã thu hút các lực lượng có khả năng tham gia cuộc tập trận "Đông Phương-2022" được tổ chức từ ngày 31 tháng 8 đến ngày 7 tháng 9 năm 2022 tại sân tập Sergeyevsky ở Ussuriysk, Nga và các vùng biển liên quan của Biển Nhật Bản
+replaced src text: 中新网9月29日电 据“国防部发布”微信公众号消息
+[NeMo I 2023-10-20 07:11:29 nmt_service:158] paragraphs: ['中新网9月29日电 据“国防部发布”微信公众号消息']
+[NeMo I 2023-10-20 07:11:29 nmt_service:159] ext_characters: [' ']
+[NeMo I 2023-10-20 07:11:29 nmt_service:178] translated_paragraphs: ['On September 29, according to the "Ministry of Defense released" WeChat public number news']
+[NeMo I 2023-10-20 07:11:31 nmt_service:195] translated_to_vi_paragraphs: ['Vào ngày 29 tháng 9, theo "Bộ Quốc phòng đã công bố" tin tức số công khai WeChat']
+[NeMo I 2023-10-20 07:11:31 nmt_service:205] Translated in 1.796302080154419
+    Input was: 中新网9月29日电 据“国防部发布”微信公众号消息
+    Translation was: Vào ngày 29 tháng 9, theo "Bộ Quốc phòng đã công bố" tin tức số công khai WeChat
+replaced src text: 9月29日下午
+[NeMo I 2023-10-20 07:11:46 nmt_service:158] paragraphs: ['9月29日下午']
+[NeMo I 2023-10-20 07:11:46 nmt_service:159] ext_characters: [' ']
+[NeMo I 2023-10-20 07:11:46 nmt_service:178] translated_paragraphs: ['29 September afternoon']
+[NeMo I 2023-10-20 07:11:46 nmt_service:195] translated_to_vi_paragraphs: ['Chiều 29 tháng 9']
+[NeMo I 2023-10-20 07:11:46 nmt_service:205] Translated in 0.5669488906860352
+    Input was: 9月29日下午
+    Translation was: Chiều 29 tháng 9
+replaced src text: 中新网9月29日电 据“国防部发布”微信公众号消息，
+9月29日下午，国防部举行例行记者会，国防部新闻局副局长、国防部新闻发言人谭克非大校答记者问。谭克非介绍，根据中俄两军年度合作计划，中国人民解放军抽组精干力量赴俄罗斯乌苏里斯克市谢尔盖耶夫斯基训练场和日本海相关海域，参加于2022年8月31日至9月7日举行的“东方-2022”演习，共有包括中俄在内的14个国家参加此次演习。
+[NeMo I 2023-10-20 07:12:03 nmt_service:158] paragraphs: ['中新网9月29日电 据“国防部发布”微信公众号消息，', '9月29日下午，国防部举行例行记者会，国防部新闻局副局长、国防部新闻发言人谭克非大校答记者问。', '谭克非介绍，根据中俄两军年度合作计划，中国人民解放军抽组精干力量赴俄罗斯乌苏里斯克市谢尔盖耶夫斯基训练场和日本海相关海域，参加于2022年8月31日至9月7日举行的“东方-2022”演习，共有包括中俄在内的14个国家参加此次演习。', '。']
+[NeMo I 2023-10-20 07:12:03 nmt_service:159] ext_characters: ['\n', ' ', ' ', ' ']
+[NeMo I 2023-10-20 07:12:04 nmt_service:178] translated_paragraphs: ['On September 29, according to the "Ministry of Defense released" WeChat public number information,', 'On the afternoon of September 29, the Ministry of Defence held a regular press conference during which Deputy Director of the Ministry of Defense Information Bureau and Ministry of Defense Press Spokesperson Major General', 'According to the annual cooperation plan between the two militaries, the Chinese People\'s Liberation Army (PLA) has drawn capable forces to participate in the "Dongfang-2022" exercise held from August 31 to September 7, 2022 at the Sergeyevsky training ground in Ussuriysk, Russia and the relevant waters of the Sea of Japan', '']
+[NeMo I 2023-10-20 07:12:13 nmt_service:195] translated_to_vi_paragraphs: ['Vào ngày 29 tháng 9, theo "Bộ Quốc phòng đã công bố" thông tin số công khai WeChat,', 'Chiều ngày 29/9, Bộ Quốc phòng đã tổ chức họp báo thường kỳ, trong đó có Phó Cục trưởng Cục Thông tin Bộ Quốc phòng và Người phát ngôn báo chí Bộ Quốc phòng, Thiếu tướng', 'Theo kế hoạch hợp tác hàng năm giữa quân đội hai nước, Quân đội Giải phóng Nhân dân Trung Quốc (PLA) đã thu hút các lực lượng có khả năng tham gia cuộc tập trận "Đông Phương-2022" được tổ chức từ ngày 31 tháng 8 đến ngày 7 tháng 9 năm 2022 tại sân tập Sergeyevsky ở Ussuriysk, Nga và các vùng biển liên quan của Biển Nhật Bản', '']
+[NeMo I 2023-10-20 07:12:13 nmt_service:205] Translated in 10.251912117004395
+    Input was: 中新网9月29日电 据“国防部发布”微信公众号消息，
+    9月29日下午，国防部举行例行记者会，国防部新闻局副局长、国防部新闻发言人谭克非大校答记者问。谭克非介绍，根据中俄两军年度合作计划，中国人民解放军抽组精干力量赴俄罗斯乌苏里斯克市谢尔盖耶夫斯基训练场和日本海相关海域，参加于2022年8月31日至9月7日举行的“东方-2022”演习，共有包括中俄在内的14个国家参加此次演习。
+    Translation was: Vào ngày 29 tháng 9, theo "Bộ Quốc phòng đã công bố" thông tin số công khai WeChat,
+    Chiều ngày 29/9, Bộ Quốc phòng đã tổ chức họp báo thường kỳ, trong đó có Phó Cục trưởng Cục Thông tin Bộ Quốc phòng và Người phát ngôn báo chí Bộ Quốc phòng, Thiếu tướng Theo kế hoạch hợp tác hàng năm giữa quân đội hai nước, Quân đội Giải phóng Nhân dân Trung Quốc (PLA) đã thu hút các lực lượng có khả năng tham gia cuộc tập trận "Đông Phương-2022" được tổ chức từ ngày 31 tháng 8 đến ngày 7 tháng 9 năm 2022 tại sân tập Sergeyevsky ở Ussuriysk, Nga và các vùng biển liên quan của Biển Nhật Bản
+replaced src text: 中新网9月29日电 据“国防部发布”微信公众号消息，9月29日下午，国防部举行例行记者会，国防部新闻局副局长、国防部新闻发言人谭克非大校答记者问。
+[NeMo I 2023-10-20 07:14:04 nmt_service:158] paragraphs: ['中新网9月29日电 据“国防部发布”微信公众号消息，9月29日下午，国防部举行例行记者会，国防部新闻局副局长、国防部新闻发言人谭克非大校答记者问。', '。']
+[NeMo I 2023-10-20 07:14:04 nmt_service:159] ext_characters: [' ', ' ']
+[NeMo I 2023-10-20 07:14:05 nmt_service:178] translated_paragraphs: ['On the afternoon of September 29, the Ministry of Defense held a regular press conference, Deputy Director General of the Ministry of Defense Information Bureau and Ministry of Defense Press Spokesperson Major Jiang Kefei answered reporters', '']
+[NeMo I 2023-10-20 07:14:08 nmt_service:195] translated_to_vi_paragraphs: ['Vào chiều ngày 29 tháng 9, Bộ Quốc phòng đã tổ chức một cuộc họp báo thường kỳ, Phó Cục trưởng Cục Thông tin Bộ Quốc phòng và Người phát ngôn Báo chí Bộ Quốc phòng Thiếu tá Jiang Kefei trả lời các phóng viên', '']
+[NeMo I 2023-10-20 07:14:08 nmt_service:205] Translated in 3.4596071243286133
+    Input was: 中新网9月29日电 据“国防部发布”微信公众号消息，9月29日下午，国防部举行例行记者会，国防部新闻局副局长、国防部新闻发言人谭克非大校答记者问。
+    Translation was: Vào chiều ngày 29 tháng 9, Bộ Quốc phòng đã tổ chức một cuộc họp báo thường kỳ, Phó Cục trưởng Cục Thông tin Bộ Quốc phòng và Người phát ngôn Báo chí Bộ Quốc phòng Thiếu tá Jiang Kefei trả lời các phóng viên
+[NeMo I 2023-10-23 01:59:48 nmt_service:50] Starting NMT service
+[NeMo I 2023-10-23 01:59:48 nmt_service:51] I will attempt to load all the models listed in config.json.
+[NeMo I 2023-10-23 01:59:48 nmt_service:52] Edit config.json to disable models you don't need.
+[NeMo I 2023-10-23 01:59:48 nmt_service:54] CUDA is available. Running on GPU
+[NeMo I 2023-10-23 01:59:48 nmt_service:64] Loading model for zh-en from file: NGC/nmt_zh_en_transformer24x6
+[NeMo I 2023-10-23 01:59:48 cloud:58] Found existing object /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo.
+[NeMo I 2023-10-23 01:59:48 cloud:64] Re-using file from: /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo
+[NeMo I 2023-10-23 01:59:48 common:913] Instantiating model from pre-trained checkpoint
+[NeMo I 2023-10-23 01:59:59 tokenizer_utils:179] Getting YouTokenToMeTokenizer with model: /tmp/tmpbwu10cx2/ee189b32ae0a4c12b7ba4c4d7c1a2391_tokenizer.decoder.32000.BPE.model with r2l: False.
+[NeMo I 2023-10-23 01:59:59 tokenizer_utils:179] Getting YouTokenToMeTokenizer with model: /tmp/tmpbwu10cx2/e23f0b142e474fcb86db8bc428a03e8a_tokenizer.encoder.32000.BPE.model with r2l: False.
+[NeMo W 2023-10-23 01:59:59 modelPT:161] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    src_file_name: null
+    tgt_file_name: null
+    use_tarred_dataset: true
+    tar_files:
+    - /data/tarred_dataset_old_plus_paracrawl_4k_tokens/parallel.batches.tokens.4000._OP_0..769_CL_.tar
+    - /data/tarred_dataset_old_plus_paracrawl_zh_en_r2l_distilled_4k_tokens/parallel.batches.tokens.4000._OP_0..745_CL_.tar
+    metadata_file:
+    - /data/tarred_dataset_old_plus_paracrawl_4k_tokens/metadata.tokens.4000.json
+    - /data/tarred_dataset_old_plus_paracrawl_zh_en_r2l_distilled_4k_tokens/metadata.tokens.4000.json
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 100
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: true
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: true
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: true
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: random
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities:
+    - 0.6
+    - 0.4
+    
+[NeMo W 2023-10-23 01:59:59 modelPT:168] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    src_file_name:
+    - /data/wmt19-zh-en.clean.tok.src
+    - /data/wmt20-zh-en.clean.tok.src
+    - /data/wmt18-zh-en.clean.tok.src
+    tgt_file_name:
+    - /data/wmt19-zh-en.clean.tok.ref
+    - /data/wmt20-zh-en.clean.tok.ref
+    - /data/wmt18-zh-en.clean.tok.ref
+    use_tarred_dataset: false
+    tar_files: null
+    metadata_file: null
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 1000
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: false
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: false
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: false
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities: null
+    
+[NeMo W 2023-10-23 01:59:59 modelPT:174] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    src_file_name: /data/wmt19-en-zh.clean.tok.src
+    tgt_file_name: /data/wmt19-en-zh.clean.tok.src
+    use_tarred_dataset: false
+    tar_files: null
+    metadata_file: null
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 1000
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: false
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: false
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: false
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities: null
+    
+[NeMo W 2023-10-23 01:59:59 nlp_overrides:253] Apex was not found. Please see the NeMo README for installation instructions: https://github.com/NVIDIA/apex
+    Megatron-based models require Apex to function correctly.
+[NeMo I 2023-10-23 02:00:04 save_restore_connector:249] Model MTEncDecModel was successfully restored from /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo.
+[NeMo I 2023-10-23 02:00:04 nmt_service:74] NMT service started
+2023-10-23 02:00:04,234 INFO -- waitress: Serving on http://0.0.0.0:5000
+replaced src text: 自“South China Sea仲裁案”闹剧发生后，South China Sea形势进一步复杂化，但在中国及相关国家的努力下，近两年有了明显的缓和。然而，近日外媒报道，越占Spratly IslandsWest Reef地区出现include疑似干船坞在内的新设施，相关资料显示，仅2016年越南就在其所占的10座岛礁上conduct了“改造和填充”。这表明越南在希望维持South China Sea稳定的同时并未真正减少在South China Sea的侵权活动。并且越南曾多次公开表示，欢迎美日印澳等域外国家在South China Sea发挥“建设性作用”，并且还加强了与日本、韩国、印尼、菲律宾和马来西亚等与中国有海洋纠纷的国家之间的maritime合作，加强了与有关国家在officer员互访和培训、联合drill、执法经验交流等方面的maritime合作。
+['自', 'South China Sea仲裁案', '闹剧发生后', 'South China Sea形势进一步复杂化', '但在中国及相关国家的努力下', '近两年有了明显的缓和', '然而', '近日外媒报道', '越占Spratly IslandsWest Reef地区出现include疑似干船坞在内的新设施', '相关资料显示', '仅2016年越南就在其所占的10座岛礁上conduct了', '改造和填充', '', '这表明越南在希望维持South China Sea稳定的同时并未真正减少在South China Sea的侵权活动', '并且越南曾多次公开表示', '欢迎美日印澳等域外国家在South China Sea发挥', '建设性作用', '', '并且还加强了与日本、韩国、印尼、菲律宾和马来西亚等与中国有海洋纠纷的国家之间的maritime合作', '加强了与有关国家在officer员互访和培训、联合drill、执法经验交流等方面的maritime合作', ''] [' "', '" ', ', ', ', ', ', ', '. ', ', ', ', ', ', ', ', ', ' "', '" ', '. ', '. ', ', ', ' "', '" ', ', ', ', ', '.', '']
+21 21
+[NeMo I 2023-10-23 03:08:50 nmt_service:190] paragraphs: ['自', 'South China Sea仲裁案', '闹剧发生后', 'South China Sea形势进一步复杂化', '但在中国及相关国家的努力下', '近两年有了明显的缓和', '然而', '近日外媒报道', '越占Spratly IslandsWest Reef地区出现include疑似干船坞在内的新设施', '相关资料显示', '仅2016年越南就在其所占的10座岛礁上conduct了', '改造和填充', '', '这表明越南在希望维持South China Sea稳定的同时并未真正减少在South China Sea的侵权活动', '并且越南曾多次公开表示', '欢迎美日印澳等域外国家在South China Sea发挥', '建设性作用', '', '并且还加强了与日本、韩国、印尼、菲律宾和马来西亚等与中国有海洋纠纷的国家之间的maritime合作', '加强了与有关国家在officer员互访和培训、联合drill、执法经验交流等方面的maritime合作', '']
+[NeMo I 2023-10-23 03:08:50 nmt_service:191] ext_characters: [' "', '" ', ', ', ', ', ', ', '. ', ', ', ', ', ', ', ', ', ' "', '" ', '. ', '. ', ', ', ' "', '" ', ', ', ', ', '.', '']
+Building prefix dict from the default dictionary ...
+2023-10-23 03:08:50,970 DEBUG -- jieba: Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+2023-10-23 03:08:50,970 DEBUG -- jieba: Loading model from cache /tmp/jieba.cache
+Loading model cost 0.436 seconds.
+2023-10-23 03:08:51,406 DEBUG -- jieba: Loading model cost 0.436 seconds.
+Prefix dict has been built successfully.
+2023-10-23 03:08:51,406 DEBUG -- jieba: Prefix dict has been built successfully.
+[NeMo I 2023-10-23 03:08:53 nmt_service:210] translated_paragraphs: ['Self', 'South China Sea Arbitration', 'After the farce', 'South China Sea situation further complicates', 'But with the efforts of China and related countries', 'There has been a marked easing in nearly two years', 'Yet', 'Recent foreign media reports', 'New facility including suspected dry dock appears in the West Reef area of the Spratly Islands', 'Related information show', 'Vietnam conducted on 10 reefs it occupies in 2016 alone', 'Retrofitting and filling', '', "This shows that Vietnam's desire to maintain stability in the South China Sea has not really reduced its abuses in the South China Sea", 'and Vietnam has said many times publicly', 'Welcome to the US, Japan, Australia and other countries to play in the South China Sea', 'Constructive role', '', 'It has also strengthened maritime cooperation with countries with maritime disputes with China such as Japan, South Korea, Indonesia, the Philippines and Malaysia', 'Strengthened maritime cooperation with relevant countries in the areas of officer exchange visits and training, joint drills, law enforcement experience exchange, etc', '']
+> After merging, translated_paragraphs:  ['Self "South China Sea Arbitration" After the farce, south China Sea situation further complicates, but with the efforts of China and related countries, there has been a marked easing in nearly two years. ', 'Yet, recent foreign media reports, new facility including suspected dry dock appears in the West Reef area of the Spratly Islands, related information show, vietnam conducted on 10 reefs it occupies in 2016 alone "Retrofitting and filling" . ', "This shows that Vietnam's desire to maintain stability in the South China Sea has not really reduced its abuses in the South China Sea. ", 'and Vietnam has said many times publicly, welcome to the US, Japan, Australia and other countries to play in the South China Sea "Constructive role" , it has also strengthened maritime cooperation with countries with maritime disputes with China such as Japan, South Korea, Indonesia, the Philippines and Malaysia, strengthened maritime cooperation with relevant countries in the areas of officer exchange visits and training, joint drills, law enforcement experience exchange, etc.']
+[NeMo W 2023-10-23 03:08:53 nemo_logging:349] /home/tdh/nemo_mt/nmt_webapp/venv/lib/python3.8/site-packages/transformers/generation/utils.py:1369: UserWarning: Using `max_length`'s default (1024) to control the generation length. This behaviour is deprecated and will be removed from the config in v5 of Transformers -- we recommend using `max_new_tokens` to control the maximum length of the generation.
+      warnings.warn(
+    
+[NeMo I 2023-10-23 03:09:07 nmt_service:233] translated_to_vi_paragraphs: ["Tự xưng là 'Trọng tài Biển Đông' Sau trò hề này, tình hình Biển Đông càng trở nên phức tạp hơn, nhưng với những nỗ lực của Trung Quốc và các nước liên quan, đã có một sự nới lỏng rõ rệt trong gần hai năm.", 'Tuy nhiên, báo cáo phương tiện truyền thông nước ngoài gần đây, cơ sở mới bao gồm cả ụ cạn nghi ngờ xuất hiện trong khu vực rạn san hô phía Tây của quần đảo Trường Sa, thông tin liên quan cho thấy, Việt Nam đã tiến hành trên 10 rạn san hô mà nó chiếm trong 2016 một mình "Trang bị thêm và làm đầy"..', 'Điều này cho thấy mong muốn duy trì ổn định ở Biển Đông của Việt Nam đã không thực sự làm giảm sự lạm dụng ở Biển Đông.', 'và Việt Nam đã nhiều lần tuyên bố công khai, hoan nghênh Hoa Kỳ, Nhật Bản, Úc và các nước khác đóng "vai trò xây dựng" ở Biển Đông, đồng thời tăng cường hợp tác hàng hải với các nước có tranh chấp hàng hải với Trung Quốc như Nhật Bản, Hàn Quốc, Indonesia, Philippines và Malaysia, tăng cường hợp tác hàng hải với các nước có liên quan trong các lĩnh vực thăm và đào tạo trao đổi sĩ quan, tập trận chung, trao đổi kinh nghiệm thực thi pháp luật, v.v.']
+[NeMo I 2023-10-23 03:09:07 nmt_service:248] Translated in 16.793177366256714
+    Input was: 自“South China Sea仲裁案”闹剧发生后，South China Sea形势进一步复杂化，但在中国及相关国家的努力下，近两年有了明显的缓和。然而，近日外媒报道，越占Spratly IslandsWest Reef地区出现include疑似干船坞在内的新设施，相关资料显示，仅2016年越南就在其所占的10座岛礁上conduct了“改造和填充”。这表明越南在希望维持South China Sea稳定的同时并未真正减少在South China Sea的侵权活动。并且越南曾多次公开表示，欢迎美日印澳等域外国家在South China Sea发挥“建设性作用”，并且还加强了与日本、韩国、印尼、菲律宾和马来西亚等与中国有海洋纠纷的国家之间的maritime合作，加强了与有关国家在officer员互访和培训、联合drill、执法经验交流等方面的maritime合作。
+    Translation was: Tự xưng là 'Trọng tài Biển Đông' Sau trò hề này, tình hình Biển Đông càng trở nên phức tạp hơn, nhưng với những nỗ lực của Trung Quốc và các nước liên quan, đã có một sự nới lỏng rõ rệt trong gần hai năm.Tuy nhiên, báo cáo phương tiện truyền thông nước ngoài gần đây, cơ sở mới bao gồm cả ụ cạn nghi ngờ xuất hiện trong khu vực rạn san hô phía Tây của quần đảo Trường Sa, thông tin liên quan cho thấy, Việt Nam đã tiến hành trên 10 rạn san hô mà nó chiếm trong 2016 một mình "Trang bị thêm và làm đầy"..Điều này cho thấy mong muốn duy trì ổn định ở Biển Đông của Việt Nam đã không thực sự làm giảm sự lạm dụng ở Biển Đông.và Việt Nam đã nhiều lần tuyên bố công khai, hoan nghênh Hoa Kỳ, Nhật Bản, Úc và các nước khác đóng "vai trò xây dựng" ở Biển Đông, đồng thời tăng cường hợp tác hàng hải với các nước có tranh chấp hàng hải với Trung Quốc như Nhật Bản, Hàn Quốc, Indonesia, Philippines và Malaysia, tăng cường hợp tác hàng hải với các nước có liên quan trong các lĩnh vực thăm và đào tạo trao đổi sĩ quan, tập trận chung, trao đổi kinh nghiệm thực thi pháp luật, v.v.
+replaced src text: 东海ship队8ship主力ship出宫古，或是东、南联合军演—根据日本Defend卫省发布的消息，9月11号，中国navy8ship驱护ship通过宫古海峡进入西太活动，8shipship艇分别为052C型驱逐ship郑州ship、052D型驱逐ship包头ship、绍兴ship、厦门ship、054A型护卫ship红河ship、宜兴ship(红河ship和宜兴ship是新批次的054A，也是首次远洋)、以及两ship现代级驱逐ship福州ship和宁波ship。
+与此同时，9月11号，山东ship航母formation通过巴士海峡进入西太活动(图6为以前图片)。根据作者 发布的消息，至少有13ship解放军军ship在台岛附近活动。山东ship航母formation加上东海ship队的8ship驱护ship，制空、Defend空、反ship、反潜、对地打strike没有短板，妥妥的“灭国ship队”。
+['东海ship队8ship主力ship出宫古', '或是东、南联合军演—根据日本Defend卫省发布的消息', '9月11号', '中国navy8ship驱护ship通过宫古海峡进入西太活动', '8shipship艇分别为052C型驱逐ship郑州ship、052D型驱逐ship包头ship、绍兴ship、厦门ship、054A型护卫ship红河ship、宜兴ship(红河ship和宜兴ship是新批次的054A', '也是首次远洋)、以及两ship现代级驱逐ship福州ship和宁波ship', '', '与此同时', '9月11号', '山东ship航母formation通过巴士海峡进入西太活动(图6为以前图片)', '根据作者 发布的消息', '至少有13ship解放军军ship在台岛附近活动', '山东ship航母formation加上东海ship队的8ship驱护ship', '制空、Defend空、反ship、反潜、对地打strike没有短板', '妥妥的', '灭国ship队', '', ''] [', ', ', ', ', ', ', ', ', ', '. ', '\n', ', ', ', ', '. ', ', ', '. ', ', ', ', ', ' "', '" ', '.', '']
+18 18
+[NeMo I 2023-10-23 03:14:25 nmt_service:190] paragraphs: ['东海ship队8ship主力ship出宫古', '或是东、南联合军演—根据日本Defend卫省发布的消息', '9月11号', '中国navy8ship驱护ship通过宫古海峡进入西太活动', '8shipship艇分别为052C型驱逐ship郑州ship、052D型驱逐ship包头ship、绍兴ship、厦门ship、054A型护卫ship红河ship、宜兴ship(红河ship和宜兴ship是新批次的054A', '也是首次远洋)、以及两ship现代级驱逐ship福州ship和宁波ship', '', '与此同时', '9月11号', '山东ship航母formation通过巴士海峡进入西太活动(图6为以前图片)', '根据作者 发布的消息', '至少有13ship解放军军ship在台岛附近活动', '山东ship航母formation加上东海ship队的8ship驱护ship', '制空、Defend空、反ship、反潜、对地打strike没有短板', '妥妥的', '灭国ship队', '', '']
+[NeMo I 2023-10-23 03:14:25 nmt_service:191] ext_characters: [', ', ', ', ', ', ', ', ', ', '. ', '\n', ', ', ', ', '. ', ', ', '. ', ', ', ', ', ' "', '" ', '.', '']
+[NeMo I 2023-10-23 03:14:26 nmt_service:210] translated_paragraphs: ['Tokai ship team 8ship main ship', 'Or joint east-south military exercises - according to the Defend Ministry of Japan', '11 September', 'China navy8ship drives ship through Miyako Strait into Western Pacific activities', '8shipship boats are 052C type expulsion ship Zhengzhou ship, 052D type expulsion ship Baotou ship, Shaoxing ship, Xiamen ship, 054A type escort ship Honghe ship, Yixing ship (Honghe ship and Yixing ship are the new batch of 054A)', 'Also the first ocean-going ship), as well as two ship modern expulsion ship Fuzhou ship and Ningbo ship', '', 'Meanwhile', '11 September', 'Shandong ship carrier formation enters the western Pacific through the bus strait (Figure 6 is the previous picture)', 'According to a message posted by the author', "At least 13ship People's Liberation Army ships operating near Tai Island", "Shandong ship carrier formation plus Donghai ship team's 8ship drive ship", 'Empty, Defend Empty, Anti-ship, Anti-submarine, Strike No Shortboard', 'Well done', 'Destroyer Ship Team', '', '']
+> After merging, translated_paragraphs:  ['Tokai ship team 8ship main ship, or joint east-south military exercises - according to the Defend Ministry of Japan, 11 September, china navy8ship drives ship through Miyako Strait into Western Pacific activities, 8shipship boats are 052C type expulsion ship Zhengzhou ship, 052D type expulsion ship Baotou ship, Shaoxing ship, Xiamen ship, 054A type escort ship Honghe ship, Yixing ship (Honghe ship and Yixing ship are the new batch of 054A), also the first ocean-going ship), as well as two ship modern expulsion ship Fuzhou ship and Ningbo ship. ', '\nMeanwhile, 11 September, shandong ship carrier formation enters the western Pacific through the bus strait (Figure 6 is the previous picture). ', "According to a message posted by the author, at least 13ship People's Liberation Army ships operating near Tai Island. ", 'Shandong ship carrier formation plus Donghai ship team\'s 8ship drive ship, empty, Defend Empty, Anti-ship, Anti-submarine, Strike No Shortboard, well done "Destroyer Ship Team" .']
+[NeMo I 2023-10-23 03:14:44 nmt_service:233] translated_to_vi_paragraphs: ['Tokai đội tàu 8ship tàu chính, hoặc tập trận quân sự đông-nam chung - theo Bộ Quốc phòng Nhật Bản, 11 tháng 9, hải quân Trung Quốc8ship lái tàu qua eo biển Miyako vào các hoạt động Tây Thái Bình Dương, 8shipship thuyền là 052C loại tàu trục xuất tàu Trịnh Châu, 052D loại tàu trục xuất tàu Baotou, Thiệu Hưng tàu, Hạ Môn tàu, 054A loại tàu hộ tống Tàu Honghe, tàu Yixing (Honghe tàu và tàu Yixing là lô mới của 054A), cũng là con tàu đi biển đầu tiên), cũng như hai tàu tàu trục xuất hiện đại tàu Phúc Châu và tàu Ningbo. ', 'Trong khi đó, ngày 11 tháng 9, đội hình tàu sân bay Sơn Đông tiến vào Tây Thái Bình Dương qua eo biển xe buýt (Hình 6 là hình trước).', 'Theo một thông điệp do tác giả đăng tải, ít nhất 13 tàu của Quân đội Giải phóng Nhân dân hoạt động gần đảo Thái.', 'Đội tàu sân bay Sơn Đông cộng với đội tàu 8 tàu của đội tàu Đông Hải, trống rỗng, Bảo vệ trống rỗng, Chống tàu, Chống tàu ngầm, Strike No Shortboard, làm tốt "Đội tàu khu trục".']
+[NeMo I 2023-10-23 03:14:44 nmt_service:248] Translated in 19.259411573410034
+    Input was: 东海ship队8ship主力ship出宫古，或是东、南联合军演—根据日本Defend卫省发布的消息，9月11号，中国navy8ship驱护ship通过宫古海峡进入西太活动，8shipship艇分别为052C型驱逐ship郑州ship、052D型驱逐ship包头ship、绍兴ship、厦门ship、054A型护卫ship红河ship、宜兴ship(红河ship和宜兴ship是新批次的054A，也是首次远洋)、以及两ship现代级驱逐ship福州ship和宁波ship。
+    与此同时，9月11号，山东ship航母formation通过巴士海峡进入西太活动(图6为以前图片)。根据作者 发布的消息，至少有13ship解放军军ship在台岛附近活动。山东ship航母formation加上东海ship队的8ship驱护ship，制空、Defend空、反ship、反潜、对地打strike没有短板，妥妥的“灭国ship队”。
+    Translation was: Tokai đội tàu 8ship tàu chính, hoặc tập trận quân sự đông-nam chung - theo Bộ Quốc phòng Nhật Bản, 11 tháng 9, hải quân Trung Quốc8ship lái tàu qua eo biển Miyako vào các hoạt động Tây Thái Bình Dương, 8shipship thuyền là 052C loại tàu trục xuất tàu Trịnh Châu, 052D loại tàu trục xuất tàu Baotou, Thiệu Hưng tàu, Hạ Môn tàu, 054A loại tàu hộ tống Tàu Honghe, tàu Yixing (Honghe tàu và tàu Yixing là lô mới của 054A), cũng là con tàu đi biển đầu tiên), cũng như hai tàu tàu trục xuất hiện đại tàu Phúc Châu và tàu Ningbo.Trong khi đó, ngày 11 tháng 9, đội hình tàu sân bay Sơn Đông tiến vào Tây Thái Bình Dương qua eo biển xe buýt (Hình 6 là hình trước).Theo một thông điệp do tác giả đăng tải, ít nhất 13 tàu của Quân đội Giải phóng Nhân dân hoạt động gần đảo Thái.Đội tàu sân bay Sơn Đông cộng với đội tàu 8 tàu của đội tàu Đông Hải, trống rỗng, Bảo vệ trống rỗng, Chống tàu, Chống tàu ngầm, Strike No Shortboard, làm tốt "Đội tàu khu trục".

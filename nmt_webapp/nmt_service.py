@@ -22,7 +22,7 @@ from waitress import serve
 
 import nemo.collections.nlp as nemo_nlp
 from nemo.utils import logging
-from utils import split_long_text, split_long_text_by_sentence_and_quotation
+from utils import split_long_text, split_long_text_by_sentence_and_quotation, replace_doi_terms
 
 from nmt_multi import My_NMT_T2TT
 from nmt_en2vi import translate_en2vi
@@ -92,117 +92,181 @@ def free_cache(used_thresh: int = 0.5):
     if free/total < used_thresh:
         torch.cuda.empty_cache()
 
-@api.route('/translate', methods=['GET'])
-def get_translation():
-    try:
-        # translate by sentence or by chunk of texts
-        translate_by_sentence = True
-        
-        time_s = time.time()
-        max_length = 64
-        
-        src = request.args["text"]   
-        langpair = request.args["langpair"]
-        source_lang = langpair.split('-')[0]
-        target_lang = langpair.split('-')[1]
-
-        if source_lang == "zh" or source_lang == "jp":
-            period_char = "。"
-            open_quotes: str =  '“"‘『「'
-            close_quotes: str = '”"’』」'
+def merge_english_chunks(translated_en_paragraphs: list, ext_characters: list):
+    merged_paragraphs = []
+    merged_ext_characters = []
+    cur_paragraph = ""
+    last_ext_character = ""
+    for p,ext in zip(translated_en_paragraphs, ext_characters):
+        if last_ext_character.strip() == "," and p.strip() != "":
+            p = p[0].lower() + p[1:]
+        if ext.strip() == ".":
+            cur_paragraph += (p.strip() + ext)
+            merged_paragraphs.append(cur_paragraph)
+            # make empty list of ext_characters to have the same structure
+            # as not merging english chunks
+            merged_ext_characters.append('') 
+            cur_paragraph = ""
         else:
-            period_char = "."
-            open_quotes: str =  '"'
-            close_quotes: str = '"'
+            cur_paragraph += (p.strip() + ext)
         
-        use_en2vi = False
-        if target_lang == "vi":
-            use_en2vi = True
-            # update langpair to `-en`
-            langpair = f'{source_lang}-en'
-            target_lang = 'en'
+        last_ext_character = ext
+    # check very last chunk
+    if cur_paragraph.strip() != "":
+        merged_paragraphs.append(cur_paragraph)
+        # make empty list of ext_characters to have the same structure 
+        # as not merging english chunks
+        merged_ext_characters.append('')
+    
+    return merged_paragraphs, merged_ext_characters
 
-        # set mt model
-        mt_model = None
-        if langpair in NEMO_MODELS_DICT:
-            mt_model = NEMO_MODELS_DICT[langpair]
-        # elif langpair in SEAMLESS_SUPPORTED_LANG_PAIRS:
-        #     mt_model = nmt_multi_model
+def translate(src_text: str, langpair: str, 
+              merge_en_chunks: bool = True, 
+              replace_doi_terms: bool = True,
+              translate_by_sentence: bool = True, 
+              max_length: int = 64):
+    
+    source_lang = langpair.split('-')[0]
+    target_lang = langpair.split('-')[1]
+
+    # whether to merge english chunks before translating from en to vi
+    is_merge_english_chunks = merge_en_chunks
+    # translate by sentence or by chunk of texts
+    is_translate_by_sentence = translate_by_sentence
+    
+    time_s = time.time()
+    max_length = max_length
+
+    # ---------------------------------------------
+    # replace special terms for given language
+    # ---------------------------------------------
+    if replace_doi_terms:
+        src_text = replace_doi_terms(src_text, lang=source_lang)
+
+    print ("replaced src text:", src_text)
+
+    if source_lang == "zh" or source_lang == "jp":
+        period_char = "。"
+        comma_char = "，"
+        # open_quotes: str =  '“"‘『「'
+        # close_quotes: str = '”"’』」'
+    else:
+        period_char = "."
+        comma_char = ","
+        # open_quotes: str =  '"'
+        # close_quotes: str = '"'
+    
+    use_en2vi = False
+    if target_lang == "vi":
+        use_en2vi = True
+        # update langpair to `-en`
+        langpair = f'{source_lang}-en'
+        target_lang = 'en'
+
+    # set mt model
+    mt_model = None
+    if langpair in NEMO_MODELS_DICT:
+        mt_model = NEMO_MODELS_DICT[langpair]
+    # elif langpair in SEAMLESS_SUPPORTED_LANG_PAIRS:
+    #     mt_model = nmt_multi_model
+    else:
+        logging.error(f"Got the following langpair: {langpair} which was not found")
+
+    if mt_model is not None:
+
+        # if there's no text to translate
+        if len(src_text.strip()) == 0:
+            return write_response("")
+        
+        if not is_translate_by_sentence:
+            # deal with long source text
+            # bool array `paragaph_flags` with same length as `passages` array 
+            # indicating if passage at index `i` of `passages` finishes current paragraph
+            # and the next passage will belong to a new paragraph
+            paragraphs, ext_characters = split_long_text(src_text, max_length=max_length, period_char=period_char)
         else:
-            logging.error(f"Got the following langpair: {langpair} which was not found")
+            paragraphs, ext_characters = split_long_text_by_sentence_and_quotation(
+                                                long_text=src_text, period_char=period_char)
 
-        if mt_model is not None:
-
-            # if there's no text to translate
-            if len(src.strip()) == 0:
-                return write_response("")
-            
-            if not translate_by_sentence:
-                # deal with long source text
-                # bool array `paragaph_flags` with same length as `passages` array 
-                # indicating if passage at index `i` of `passages` finishes current paragraph
-                # and the next passage will belong to a new paragraph
-                paragraphs, ext_characters = split_long_text(src, max_length=max_length, period_char=period_char)
+        # print ('>>> paragraphs splitted: ', paragraphs)
+        logging.info(f"paragraphs: {paragraphs}")
+        logging.info(f"ext_characters: {ext_characters}")
+        
+        # same interface for both nemo and seamless models
+        # due to missing translation with batch translation 
+        # we translate single paragraph at a time and combine them
+        translated_paragraphs = []
+        for p in paragraphs:
+            if p.strip() == "":
+                translated_p = [""]
             else:
-                paragraphs, ext_characters = split_long_text_by_sentence_and_quotation(
-                                                    long_text=src, period_char=period_char)
-
-            # print ('>>> paragraphs splitted: ', paragraphs)
-            logging.info(f"paragraphs: {paragraphs}")
-            logging.info(f"ext_characters: {ext_characters}")
+                translated_p = mt_model.translate([p],
+                                        source_lang=source_lang, 
+                                        target_lang=target_lang)
             
-            # same interface for both nemo and seamless models
-            # due to missing translation with batch translation 
-            # we translate single paragraph at a time and combine them
-            translated_paragraphs = []
-            for p in paragraphs:
+            # clean punctuations and quotations
+            translated_p[0] = translated_p[0].strip('." ')
+            
+            translated_paragraphs.extend(translated_p)            
+
+        logging.info(f"translated_paragraphs: {translated_paragraphs}")
+        
+        # check if we need to translate to vi
+        if use_en2vi:
+            if is_merge_english_chunks:
+                translated_paragraphs, ext_characters = merge_english_chunks(translated_paragraphs, ext_characters)
+
+                print ("> After merging, translated_paragraphs: ", translated_paragraphs)
+
+            translated_to_vi_paragraphs = []
+            for p in translated_paragraphs: 
                 if p.strip() == "":
                     translated_p = [""]
                 else:
-                    translated_p = mt_model.translate([p],
-                                            source_lang=source_lang, 
-                                            target_lang=target_lang)
+                    translated_p = translate_en2vi([p])
                 
-                # clean punctuations and quotations
-                translated_p[0] = translated_p[0].strip('." ')
-                
-                translated_paragraphs.extend(translated_p)            
-
-            logging.info(f"translated_paragraphs: {translated_paragraphs}")
-            
-            # check if we need to translate to vi
-            if use_en2vi:
-                translated_to_vi_paragraphs = []
-                for p in translated_paragraphs: 
-                    if p.strip() == "":
-                        translated_p = [""]
-                    else:
-                        translated_p = translate_en2vi([p])
-                    
+                if not is_merge_english_chunks:
                     # clean punctuations and quotations
                     translated_p[0] = translated_p[0].strip('." ')
 
-                    translated_to_vi_paragraphs.extend(translated_p)
-                translated_paragraphs = translated_to_vi_paragraphs
+                translated_to_vi_paragraphs.extend(translated_p)
+            translated_paragraphs = translated_to_vi_paragraphs
 
-                logging.info(f"translated_to_vi_paragraphs: {translated_to_vi_paragraphs}")
+            logging.info(f"translated_to_vi_paragraphs: {translated_to_vi_paragraphs}")
 
-            translated_text = ""
-            for text, ext_chr in zip(translated_paragraphs, ext_characters):                
-                translated_text += (text.strip() + ext_chr)
+        translated_text = ""
+        last_ext_chr = ""
+        comma_en = ","
+        for text, ext_chr in zip(translated_paragraphs, ext_characters): 
+            if text.strip() != "" and last_ext_chr.strip() == comma_en:
+                text = text[0].lower() + text[1:]               
+            translated_text += (text.strip() + ext_chr)
+            last_ext_chr = ext_chr
 
-            # strip last space character
-            translated_text = translated_text.strip()
+        # strip last space character
+        translated_text = translated_text.strip()
 
-            duration = time.time() - time_s
-            logging.info(
-                f"Translated in {duration}\nInput was: {src}\nTranslation was: {translated_text}"
-            )
+        duration = time.time() - time_s
+        logging.info(
+            f"Translated in {duration}\nInput was: {src_text}\nTranslation was: {translated_text}"
+        )
 
-            # try to free cache if necessary
-            free_cache()
+        # try to free cache if necessary
+        free_cache()
 
-            return write_response(translated_text)
+        return translated_text
+    else:
+        return f"Got the following langpair: {langpair} which was not found."
+
+@api.route('/translate', methods=['GET'])
+def get_translation():
+    try:
+        src_text = request.args["text"]   
+        langpair = request.args["langpair"]
+        
+        translated_text = translate(src_text, langpair)
+        
+        return write_response(translated_text)
         
     except Exception as ex:
         return write_response(ex)
