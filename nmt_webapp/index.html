@@ -98,17 +98,17 @@
           <div style="display: inline-block; margin: 5px 10px;">
             <label for="src_langs" style="font-size: larger;">Ngôn ngữ nguồn:</label>
             <select name="src_langs" id="src_langs" value="zh" style="font-size: larger;">
-              <option value="km" selected="selected">Tiếng Khmer</option>
-              <option value="zh">Tiếng Trung</option>
-              <option value="ru">Tiếng Nga</option>
+              <!-- <option value="km">Tiếng Khmer</option> -->
+              <option value="zh" selected="selected">Tiếng Trung</option>
+              <!-- <option value="ru">Tiếng Nga</option> -->
             </select>
-            <input type="hidden" id="cur_src_lang" name="cur_src_lang" value="km">
+            <input type="hidden" id="cur_src_lang" name="cur_src_lang" value="zh">
           </div>
           <div style="display: inline-block; margin: 5px 10px;">
             <label for="tgt_langs" style="font-size: larger;">Ngôn ngữ đích:</label>
             <select name="tgt_langs" id="tgt_langs" value="en" style="font-size: larger;">
               <option value="en" selected="selected">Tiếng Anh</option>
-              <option value="vi">Tiếng Việt</option>
+              <!-- <option value="vi">Tiếng Việt</option> -->
             </select>
             <input type="hidden" id="cur_tgt_lang" name="cur_tgt_lang" value="en">
           </div>
@@ -124,14 +124,14 @@
         <textarea id="src_text" oninput="auto_grow(this, document.getElementById('tgt_text'))"
           style="margin: 3px; font-size: larger; width: 50%; height: 150px; line-height: 130%; padding: 10px; background-color: white; text-emphasis-color: blue; border-radius: 7px; border-width: 2px;"
           placeholder="Nhập nội dung cần dịch vào đây..."></textarea>
-        <textarea id="tgt_text" onchange="{alert('OK');}" oninput="auto_grow(document.getElementById('src_text'), this)"
+        <textarea id="tgt_text" oninput="auto_grow(document.getElementById('src_text'), this)"
           style="margin: 3px; font-size: larger; width: 50%; height: 150px; line-height: 130%; padding: 10px; background-color: white; text-emphasis-color: blue; border-radius: 7px; border-width: 2px;"
           readonly></textarea>
       </div>
     </div>
     <div style="flex: 10%; font-size: larger; line-height: 50%; text-align: center;">
       <p>
-        Liên hệ chính: TS. Nguyễn Thế Hùng, SĐT: 0976.788.617; ThS. Đỗ Văn Khánh, SĐT: 038.304.7626.
+        Liên hệ chính: TS. Nguyễn Thế Hùng, SĐT: 0976.788.617; ThS. Đỗ Văn Khánh, SĐT: 0383.047.626.
       <p>
       <p>&copy; 2023 Nhóm nghiên cứu NLP, Phòng Hệ thống Tự động hóa Chỉ huy-Điều khiển/Viện 10.</p>
       </p>

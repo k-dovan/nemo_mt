@@ -82,6 +82,15 @@ def write_response(content: str):
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
+def free_cache(used_thresh: int = 0.5):
+    # delete cache data from GPU if the used memory larger than 50% out of total
+    memory_info = torch.cuda.mem_get_info()
+    free = memory_info[0]
+    total = memory_info[1]
+
+    if free/total < used_thresh:
+        torch.cuda.empty_cache()
+
 @api.route('/translate', methods=['GET'])
 def get_translation():
     try:
@@ -98,8 +107,8 @@ def get_translation():
         mt_model = None
         if langpair in NEMO_MODELS_DICT:
             mt_model = NEMO_MODELS_DICT[langpair]
-        elif langpair in SEAMLESS_SUPPORTED_LANG_PAIRS:
-            mt_model = seamless_model
+        # elif langpair in SEAMLESS_SUPPORTED_LANG_PAIRS:
+        #     mt_model = seamless_model
         else:
             logging.error(f"Got the following langpair: {langpair} which was not found")
 
@@ -131,6 +140,9 @@ def get_translation():
                 f"Translated in {duration}. Input was: {request.args['text']} <############> Translation was: {translated_text}"
             )
 
+            # try to free cache if necessary
+            free_cache()
+
             return write_response(translated_text)
         
     except Exception as ex:
@@ -138,5 +150,5 @@ def get_translation():
 
 if __name__ == '__main__':
     init_nemo('config.json')
-    init_seamless_m4t()
+    # init_seamless_m4t()
     serve(api, host="0.0.0.0", port=5000)
