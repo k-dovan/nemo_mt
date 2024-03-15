@@ -1,0 +1,982 @@
+安徽省,Anhui Province
+福建省,Fujian Province
+广东省,Guangdong Province
+甘肃省,Gansu Province
+贵州省,Guizhou Province
+河南省,Henan Province
+湖北省,Hubei Province
+河北省,Hebei Province
+海南省,Hainan Province
+黑龙江省,Heilongjiang Province
+湖南省,Hunan Province
+吉林省,Jilin Province
+江苏省,Jiangsu Province
+江西省,Jiangxi Province
+辽宁省,Liaoning Province
+青海省,Qinghai Province
+四川省,Sichuan Province
+山东省,Shandong Province
+陕西省,Shaanxi Province
+山西省,Shanxi Province
+台湾省,Taiwan Province
+云南省,Yunnan Province
+浙江省,Zhejiang Province
+北京市,Beijing
+重庆市,Chongqing
+上海市,Shanghai
+天津市,Tianjin
+安庆市,Anqing
+蚌埠市,Bengbu
+亳州市,Bozhou
+巢湖市,Chaohu
+池州市,Chizhou
+滁州市,Chuzhou
+阜阳市,Fuyang
+广德市,Guangde
+合肥市,Hefei
+淮北市,Huaibei
+淮南市,Huainan
+黄山市,Huangshan
+界首市,Jieshou
+六安市,Lu'an
+马鞍山市,Ma'anshan
+明光市,Mingguang
+宁国市,Ningguo
+潜山市,Qianshan
+宿州市,Suzhou
+天长市,Tianchang
+桐城市,Tongcheng
+铜陵市,Tongling
+芜湖市,Wuhu
+无为市,Wuwei
+宣城市,Xuancheng
+福安市,Fu'an
+福鼎市,Fuding
+福清市,Fuqing
+福州市,Fuzhou
+建瓯市,Jian'ou
+晋江市,Jinjiang
+龙海市,Longhai
+龙岩市,Longyan
+南安市,Nan'an
+南平市,Nanping
+宁德市,Ningde
+莆田市,Putian
+泉州市,Quanzhou
+三明市,Sanming
+邵武市,Shaowu
+石狮市,Shishi
+武夷山市,Wuyishan
+厦门市,Xiamen
+永安市,Yong'an
+漳平市,Zhangping
+漳州市,Zhangzhou
+白银市,Baiyin
+定西市,Dingxi
+敦煌市,Dunhuang
+合作市,Hezuo
+华亭市,Huating
+嘉峪关市,Jiayuguan
+金昌市,Jinchang
+酒泉市,Jiuquan
+兰州市,Lanzhou
+临夏市,Linxia
+陇南市,Longnan
+平凉市,Pingliang
+庆阳市,Qingyang
+天水市,Tianshui
+武威市,Wuwei
+玉门市,Yumen
+张掖市,Zhangye
+潮州市,Chaozhou
+东莞市,Dongguan
+恩平市,Enping
+佛山市,Foshan
+高州市,Gaozhou
+广州市,Guangzhou
+鹤山市,Heshan
+河源市,Heyuan
+化州市,Huazhou
+惠州市,Huizhou
+江门市,Jiangmen
+揭阳市,Jieyang
+开平市,Kaiping
+乐昌市,Lechang
+雷州市,Leizhou
+廉江市,Lianjiang
+连州市,Lianzhou
+陆丰市,Lufeng
+罗定市,Luoding
+茂名市,Maoming
+梅州市,Meizhou
+南雄市,Nanxiong
+普宁市,Puning
+清远市,Qingyuan
+汕头市,Shantou
+汕尾市,Shanwei
+韶关市,Shaoguan
+深圳市,Shenzhen
+四会市,Sihui
+台山市,Taishan
+吴川市,Wuchuan
+兴宁市,Xingning
+信宜市,Xinyi
+阳春市,Yangchun
+阳江市,Yangjiang
+英德市,Yingde
+云浮市,Yunfu
+湛江市,Zhanjiang
+肇庆市,Zhaoqing
+中山市,Zhongshan
+珠海市,Zhuhai
+百色市,Baise
+北海市,Beihai
+北流市,Beiliu
+岑溪市,Cenxi
+崇左市,Chongzuo
+东兴市,Dongxing
+防城港市,Fangchenggang
+贵港市,Guigang
+桂林市,Guilin
+桂平市,Guiping
+河池市,Hechi
+横州市 ,Hengzhou 
+合山市,Heshan
+贺州市,Hezhou
+靖西市,Jingxi
+来宾市,Laibin
+荔浦市,Lipu
+柳州市,Liuzhou
+南宁市,Nanning
+平果市,Pingguo
+凭祥市,Pingxiang
+钦州市,Qinzhou
+梧州市,Wuzhou
+玉林市,Yulin
+安顺市,Anshun
+毕节市,Bijie
+赤水市,Chishui
+都匀市,Duyun
+福泉市,Fuquan
+贵阳市,Guiyang
+凯里市,Kaili
+六盘水市,Liupanshui
+盘州市,Panzhou
+黔西市 ,Qianxi 
+清镇市,Qingzhen
+仁怀市,Renhuai
+铜仁市,Tongren
+兴仁市,Xingren
+兴义市,Xingyi
+遵义市,Zunyi
+儋州市,Danzhou
+东方市,Dongfang
+海口市,Haikou
+琼海市,Qionghai
+三沙市,Sansha
+三亚市,Sanya
+万宁市,Wanning
+文昌市,Wenchang
+五指山市,Wuzhishan
+安国市,Anguo
+保定市,Baoding
+霸州市,Bazhou
+泊头市,Botou
+沧州市,Cangzhou
+承德市,Chengde
+定州市,Dingzhou
+高碑店市,Gaobeidian
+邯郸市,Handan
+衡水市,Hengshui
+河间市,Hejian
+黄骅市,Huanghua
+晋州市,Jinzhou
+廊坊市,Langfang
+滦州市,Luanzhou
+南宫市,Nangong
+平泉市,Pingquan
+迁安市,Qian'an
+秦皇岛市,Qinhuangdao
+任丘市,Renqiu
+三河市,Sanhe
+沙河市,Shahe
+深州市,Shenzhou
+石家庄市,Shijiazhuang
+唐山市,Tangshan
+辛集市,Xinji
+武安市,Wu'an
+邢台市,Xingtai
+新乐市,Xinle
+张家口市,Zhangjiakou
+涿州市,Zhuozhou
+遵化市,Zunhua
+安达市,Anda
+北安市,Bei'an
+大庆市,Daqing
+东宁市,Dongning
+富锦市,Fujin
+抚远市,Fuyuan
+海林市,Hailin
+海伦市,Hailun
+哈尔滨市,Harbin
+鹤岗市,Hegang
+黑河市,Heihe
+虎林市,Hulin
+佳木斯市,Jiamusi
+鸡西市,Jixi
+密山市,Mishan
+漠河市,Mohe
+牡丹江市,Mudanjiang
+穆棱市,Muling
+讷河市,Nehe
+嫩江市,Nenjiang
+宁安市,Ning'an
+齐齐哈尔市,Qiqihar
+七台河市,Qitaihe
+尚志市,Shangzhi
+双鸭山市,Shuangyashan
+绥芬河市,Suifenhe
+绥化市,Suihua
+铁力市,Tieli
+同江市,Tongjiang
+五常市,Wuchang
+五大连池市,Wudalianchi
+伊春市,Yichun
+肇东市,Zhaodong
+安阳市,Anyang
+长葛市,Changge
+长垣市,Changyuan
+登封市,Dengfeng
+邓州市,Dengzhou
+巩义市,Gongyi
+鹤壁市,Hebi
+辉县市,Huixian
+焦作市,Jiaozuo
+济源市,Jiyuan
+开封市,Kaifeng
+灵宝市,Lingbao
+林州市,Linzhou
+漯河市,Luohe
+洛阳市,Luoyang
+孟州市,Mengzhou
+南阳市,Nanyang
+平顶山市,Pingdingshan
+濮阳市,Puyang
+沁阳市,Qinyang
+汝州市,Ruzhou
+三门峡市,Sanmenxia
+商丘市,Shangqiu
+卫辉市,Weihui
+舞钢市,Wugang
+项城市,Xiangcheng
+荥阳市,Xingyang
+新密市,Xinmi
+新乡市,Xinxiang
+信阳市,Xinyang
+新郑市,Xinzheng
+许昌市,Xuchang
+偃师市,Yanshi
+义马市,Yima
+永城市,Yongcheng
+禹州市,Yuzhou
+郑州市,Zhengzhou
+周口市,Zhoukou
+驻马店市,Zhumadian
+安陆市,Anlu
+赤壁市,Chibi
+当阳市,Dangyang
+丹江口市,Danjiangkou
+大冶市,Daye
+恩施市,Enshi
+鄂州市,Ezhou
+广水市,Guangshui
+汉川市,Hanchuan
+洪湖市,Honghu
+黄冈市,Huanggang
+黄石市,Huangshi
+监利市,Jianli
+荆门市,Jingmen
+京山市,Jingshan
+荆州市,Jingzhou
+老河口市,Laohekou
+利川市,Lichuan
+麻城市,Macheng
+潜江市,Qianjiang
+石首市,Shishou
+十堰市,Shiyan
+随州市,Suizhou
+松滋市,Songzi
+天门市,Tianmen
+武汉市,Wuhan
+武穴市,Wuxue
+襄阳市,Xiangyang
+咸宁市,Xianning
+仙桃市,Xiantao
+孝感市,Xiaogan
+宜昌市,Yichang
+宜城市,Yicheng
+宜都市,Yidu
+应城市,Yingcheng
+枣阳市,Zaoyang
+枝江市,Zhijiang
+钟祥市,Zhongxiang
+常德市,Changde
+常宁市,Changning
+长沙市,Changsha
+郴州市,Chenzhou
+衡阳市,Hengyang
+洪江市,Hongjiang
+怀化市,Huaihua
+津市市,Jinshi
+吉首市,Jishou
+耒阳市,Leiyang
+冷水江市,Lengshuijiang
+涟源市,Lianyuan
+醴陵市,Liling
+临湘市,Linxiang
+浏阳市,Liuyang
+娄底市,Loudi
+汨罗市,Miluo
+宁乡市,Ningxiang
+韶山市,Shaoshan
+邵东市,Shaodong
+邵阳市,Shaoyang
+武冈市,Wugang
+湘潭市,Xiangtan
+湘乡市,Xiangxiang
+益阳市,Yiyang
+永州市,Yongzhou
+沅江市,Yuanjiang
+岳阳市,Yueyang
+张家界市,Zhangjiajie
+株洲市,Zhuzhou
+资兴市,Zixing
+阿尔山市,Arxan
+包头市,Baotou
+巴彦淖尔市,Bayannur
+赤峰市,Chifeng
+二连浩特市,Erenhot
+额尔古纳市,Ergun
+丰镇市,Fengzhen
+根河市,Genhe
+呼和浩特市,Hohhot
+霍林郭勒市,Holingol
+呼伦贝尔市,Hulunbuir
+满洲里市,Manzhouli
+鄂尔多斯市,Ordos
+通辽市,Tongliao
+乌兰浩特市,Ulanhot
+乌兰察布市,Ulanqab
+乌海市,Wuhai
+锡林浩特市,Xilinhot
+牙克石市,Yakeshi
+扎兰屯市,Zhalantun
+常熟市,Changshu
+常州市,Changzhou
+丹阳市,Danyang
+东台市,Dongtai
+高邮市,Gaoyou
+海安市,Hai'an
+淮安市,Huai'an
+江阴市,Jiangyin
+靖江市,Jingjiang
+句容市,Jurong
+溧阳市,Liyang
+连云港市,Lianyungang
+昆山市,Kunshan
+南京市,Nanjing
+南通市,Nantong
+邳州市,Pizhou
+启东市,Qidong
+如皋市,Rugao
+宿迁市,Suqian
+苏州市,Suzhou
+太仓市,Taicang
+泰兴市,Taixing
+泰州市,Taizhou
+无锡市,Wuxi
+兴化市,Xinghua
+新沂市,Xinyi
+徐州市,Xuzhou
+盐城市,Yancheng
+扬中市,Yangzhong
+扬州市,Yangzhou
+宜兴市,Yixing
+仪征市,Yizheng
+张家港市,Zhangjiagang
+镇江市,Zhenjiang
+德兴市,Dexing
+丰城市,Fengcheng
+抚州市,Fuzhou
+赣州市,Ganzhou
+高安市,Gao'an
+共青城市,Gongqingcheng
+贵溪市,Guixi
+吉安市,Ji'an
+景德镇市,Jingdezhen
+井冈山市,Jinggangshan
+九江市,Jiujiang
+乐平市,Leping
+龙南市,Longnan
+庐山市,Lushan
+南昌市,Nanchang
+萍乡市,Pingxiang
+瑞昌市,Ruichang
+瑞金市,Ruijin
+上饶市,Shangrao
+新余市,Xinyu
+宜春市,Yichun
+鹰潭市,Yingtan
+樟树市,Zhangshu
+白城市,Baicheng
+白山市,Baishan
+长春市,Changchun
+大安市,Da'an
+德惠市,Dehui
+敦化市,Dunhua
+扶余市,Fuyu
+公主岭市,Gongzhuling
+和龙市,Helong
+桦甸市,Huadian
+珲春市,Hunchun
+集安市,Ji'an
+蛟河市,Jiaohe
+吉林市,Jilin
+辽源市,Liaoyuan
+临江市,Linjiang
+龙井市,Longjing
+梅河口市,Meihekou
+磐石市,Panshi
+双辽市,Shuangliao
+舒兰市,Shulan
+四平市,Siping
+松原市,Songyuan
+洮南市,Taonan
+通化市,Tonghua
+图们市,Tumen
+延吉市,Yanji
+榆树市,Yushu
+鞍山市,Anshan
+本溪市,Benxi
+北票市,Beipiao
+北镇市,Beizhen
+朝阳市,Chaoyang
+大连市,Dalian
+丹东市,Dandong
+大石桥市,Dashiqiao
+灯塔市,Dengta
+调兵山市,Diaobingshan
+东港市,Donggang
+凤城市,Fengcheng
+抚顺市,Fushun
+阜新市,Fuxin
+盖州市,Gaizhou
+海城市,Haicheng
+葫芦岛市,Huludao
+锦州市,Jinzhou
+开原市,Kaiyuan
+辽阳市,Liaoyang
+凌海市,Linghai
+凌源市,Lingyuan
+盘锦市,Panjin
+沈阳市,Shenyang
+铁岭市,Tieling
+瓦房店市,Wafangdian
+兴城市,Xingcheng
+新民市,Xinmin
+营口市,Yingkou
+庄河市,Zhuanghe
+固原市,Guyuan
+灵武市,Lingwu
+青铜峡市,Qingtongxia
+石嘴山市,Shizuishan
+吴忠市,Wuzhong
+银川市,Yinchuan
+中卫市,Zhongwei
+德令哈市,Delingha
+格尔木市,Golmud
+海东市,Haidong
+茫崖市,Mangnai
+同仁市,Tongren
+西宁市,Xining
+玉树市,Yushu
+安康市,Ankang
+宝鸡市,Baoji
+彬州市,Binzhou
+韩城市,Hancheng
+汉中市,Hanzhong
+华阴市,Huayin
+商洛市,Shangluo
+神木市,Shenmu
+铜川市,Tongchuan
+渭南市,Weinan
+西安市,Xi'an
+咸阳市,Xianyang
+兴平市,Xingping
+旬阳市 ,Xunyang 
+延安市,Yan'an
+榆林市,Yulin
+子长市,Zichang
+安丘市,Anqiu
+滨州市,Binzhou
+昌邑市,Changyi
+德州市,Dezhou
+东营市,Dongying
+肥城市,Feicheng
+高密市,Gaomi
+海阳市,Haiyang
+菏泽市,Heze
+胶州市,Jiaozhou
+济南市,Jinan
+济宁市,Jining
+莱西市,Laixi
+莱阳市,Laiyang
+莱州市,Laizhou
+乐陵市,Leling
+聊城市,Liaocheng
+临清市,Linqing
+临沂市,Linyi
+龙口市,Longkou
+平度市,Pingdu
+青岛市,Qingdao
+青州市,Qingzhou
+栖霞市,Qixia
+曲阜市,Qufu
+日照市,Rizhao
+荣成市,Rongcheng
+乳山市,Rushan
+寿光市,Shouguang
+泰安市,Tai'an
+滕州市,Tengzhou
+潍坊市,Weifang
+威海市,Weihai
+新泰市,Xintai
+烟台市,Yantai
+禹城市,Yucheng
+枣庄市,Zaozhuang
+招远市,Zhaoyuan
+诸城市,Zhucheng
+淄博市,Zibo
+邹城市,Zoucheng
+邹平市,Zouping
+长治市,Changzhi
+大同市,Datong
+汾阳市,Fenyang
+高平市,Gaoping
+古交市,Gujiao
+河津市,Hejin
+侯马市,Houma
+怀仁市,Huairen
+霍州市,Huozhou
+介休市,Jiexiu
+晋城市,Jincheng
+晋中市,Jinzhong
+临汾市,Linfen
+吕梁市,Lüliang
+朔州市,Shuozhou
+太原市,Taiyuan
+孝义市,Xiaoyi
+忻州市,Xinzhou
+阳泉市,Yangquan
+永济市,Yongji
+运城市,Yuncheng
+原平市,Yuanping
+马尔康市,Barkam
+巴中市,Bazhong
+成都市,Chengdu
+崇州市,Chongzhou
+达州市,Dazhou
+德阳市,Deyang
+都江堰市,Dujiangyan
+峨眉山市,Emeishan
+广安市,Guang'an
+广汉市,Guanghan
+广元市,Guangyuan
+华蓥市,Huaying
+会理市 ,Huili 
+江油市,Jiangyou
+简阳市,Jianyang
+康定市,Kangding
+阆中市,Langzhong
+乐山市,Leshan
+隆昌市,Longchang
+泸州市,Luzhou
+绵竹市,Mianzhu
+眉山市,Meishan
+绵阳市,Mianyang
+南充市,Nanchong
+内江市,Neijiang
+攀枝花市,Panzhihua
+彭州市,Pengzhou
+邛崃市,Qionglai
+什邡市,Shifang
+射洪市,Shehong
+遂宁市,Suining
+万源市,Wanyuan
+西昌市,Xichang
+雅安市,Ya'an
+宜宾市,Yibin
+自贡市,Zigong
+资阳市,Ziyang
+拉萨市,Lhasa
+那曲市,Nagqu
+林芝市,Nyingchi
+昌都市,Qamdo
+山南市,Shannan
+日喀则市,Xigazê
+阿克苏市,Aksu
+阿拉山口市,Alashankou
+阿勒泰市,Altay
+阿拉尔市,Aral
+阿图什市,Artux
+北屯市,Beitun
+博乐市,Bole
+昌吉市,Changji
+阜康市,Fukang
+哈密市,Hami
+和田市,Hotan
+胡杨河市,Huyanghe
+克拉玛依市,Karamay
+喀什市,Kashgar
+霍尔果斯市,Khorgas
+可克达拉市,Kokdala
+库尔勒市,Korla
+昆玉市,Kunyu
+库车市,Kuqa
+奎屯市,Kuytun
+沙湾市 ,Shawan 
+石河子市,Shihezi
+双河市,Shuanghe
+塔城市,Tacheng
+铁门关市,Tiemenguan
+图木舒克市,Tumxuk
+吐鲁番市,Turpan
+乌鲁木齐市,Ürümqi
+五家渠市,Wujiaqu
+乌苏市,Wusu
+新星市 ,Xinxing 
+伊宁市,Yining
+安宁市,Anning
+保山市,Baoshan
+澄江市,Chengjiang
+楚雄市,Chuxiong
+大理市,Dali
+个旧市,Gejiu
+景洪市,Jinghong
+开远市,Kaiyuan
+昆明市,Kunming
+临沧市,Lincang
+丽江市,Lijiang
+禄丰市 ,Lufeng 
+泸水市,Lushui
+芒市,Mangshi
+蒙自市,Mengzi
+弥勒市,Mile
+普洱市,Pu'er
+曲靖市,Qujing
+瑞丽市,Ruili
+香格里拉市,Shangri-La
+水富市,Shuifu
+腾冲市,Tengchong
+文山市,Wenshan
+宣威市,Xuanwei
+玉溪市,Yuxi
+昭通市,Zhaotong
+慈溪市,Cixi
+东阳市,Dongyang
+海宁市,Haining
+杭州市,Hangzhou
+湖州市,Huzhou
+建德市,Jiande
+江山市,Jiangshan
+嘉兴市,Jiaxing
+金华市,Jinhua
+兰溪市,Lanxi
+临海市,Linhai
+丽水市,Lishui
+龙港市,Longgang
+龙泉市,Longquan
+宁波市,Ningbo
+平湖市,Pinghu
+衢州市,Quzhou
+瑞安市,Ruian
+绍兴市,Shaoxing
+嵊州市,Shengzhou
+台州市,Taizhou
+桐乡市,Tongxiang
+温岭市,Wenling
+温州市,Wenzhou
+义乌市,Yiwu
+永康市,Yongkang
+乐清市,Yueqing
+玉环市,Yuhuan
+余姚市,Yuyao
+舟山市,Zhoushan
+诸暨市,Zhuji
+北部湾,Northern Gulf
+南海,South China Sea
+江苏省苏州市,Suzhou City, Jiangsu Province
+鸿庥岛,Hongxiu Island
+蓬勃堡,Bombay Castle(South China Sea)
+石岛,Rocky Island
+赵述岛,Tree Island
+西沙洲,West Sand
+永兴岛,Woody Island
+琛航岛,Duncan Island
+金银岛,Money Island
+西沙群岛,Xisha Islands
+珊瑚岛,Pattle Island
+甘泉岛,Ganquan Island
+鸭公岛,Yagong Island
+浪花礁,Bombay Reef
+中建岛,Triton Island
+南沙群岛,Spratly Islands
+太平島,Taiping Island
+费信岛,Flat Island
+杨信沙洲,Lankiam Cay
+南钥岛,Loaita Island
+马欢岛,Nanshan Island
+北子岛,Northeast Cay
+中业岛,Thitu Island
+西月岛,West York Island
+安波沙洲,Amboyna Cay
+鸿庥岛,Namyit Island
+景宏岛,Sin Cowe Island
+染青沙洲,Grierson Reef
+南威岛,Spratly Island
+敦谦沙洲,Sand Cay
+南子岛,Southwest Cay
+中洲礁,Ban Than Reef,Zhongzhou Reef
+华阳礁,Cuarteron Reef
+永暑礁,Fiery Cross Reef
+西南礁,Gaven Reefs
+东门礁,Hughes Reef
+赤瓜礁,Johnson South Reef
+美济礁,Mischief Reef
+渚碧礁,Subi Reef
+司令礁,Commodore Reef
+半月礁,Half Moon Shoal
+火艾礁,Irving Reef
+仁爱礁,Second Thomas Shoal
+鬼喊礁,Collins Reef
+南华礁,Cornwallis South Reef
+日积礁,Ladd Reef
+西礁,West Reef
+光星仔礁,Ardasier Reef
+光星礁,Dallas Reef
+簸箕礁,Erica Reef
+榆亚暗沙,Investigator Shoal
+鲁克尼亚暗沙,Ruknian Shoals
+南海礁,Mariveles Reef
+燕子島,Swallow Reef
+南通礁,Louisa Reef
+下川岛,Xiachuan Island
+上川岛,Shangchuan Island
+横琴岛,Hengqin
+萬山群島,Wanshan Islands
+南澳县,Nanao County
+战略,strategy
+备战,Prepare for war
+军委,Military Commission
+战区,war zone
+陆军,army
+军媒,military media
+海军,navy
+空军,air force
+火箭军,rocket army
+战支,war branch
+武警,armed police
+特战,special warfare
+维和,Peacekeeping
+边关,border
+老兵,veteran
+军属,Military dependents
+动员,mobilization
+军史,military history
+兵器,weapons
+外军,foreign troops
+军粮,military rations
+发言人,spokesman
+防务,defense
+部队,force
+兵团,corps
+编队,formation
+外交,diplomatic
+政策,policy
+训练,train
+练习,practise
+演习,exercise
+操作能力,Operation ability
+日常,daily
+机队建设,Fleet construction
+机队,fleet
+任务,Task
+义务,obligation
+装备,equipment
+军事,military
+旅,brigade
+对抗,confrontation
+演练,drill
+体系,system
+磨,sharpen
+组织,organization
+攻,attack
+防,Defend
+战术,tactics
+手段,means
+灵活,flexible
+火力,firepower
+控制,control
+指挥,command
+检验,test
+包括,include
+战斗,fighting
+协同,Collaboration
+合成,synthesis
+分队,detachment
+潜入,sneak into
+确定,determine
+力量,force
+侦察,reconnaissance
+进行,conduct
+目标,Target
+分析,analyze
+属性,Attributes
+结果,result
+作战,combat
+单元,unit
+舰,ship
+战训,battle training
+海上,maritime
+铁拳,iron fist
+警报,alarm
+兵,soldiers
+官,officer
+对抗,confrontation
+雷达,radar
+屏,Screen
+电磁,electromagnetic
+导弹,missile
+对空导弹,anti-air missile
+舰长,captain
+模拟,simulation
+模拟攻击,simulated attack
+命中,hit
+保障能力,Support capability
+物资,supplies
+弹药,ammunition
+枪支,firearms
+东部战区某,Eastern Theater Command
+战斗,Combat
+示范,demonstration
+姿态,posture
+战场,battlefield
+推动,promote
+后勤,logistics
+西部战区空,Western Theater Command
+挑战,challenge
+特种兵,special forces
+陆战队员,Marines
+油罐车,tank car
+炮兵部队,Artillery Corps
+飞机,aircraft
+拦截,intercept
+抗击,counter attack
+边界,boundary
+才能,Talent
+党委,party committee
+战备,combat readiness
+情况,situation
+敌,enemy
+战斗警报,battle alert
+战位,battle position
+舰炮,naval gun
+战机,fighter plane
+空降,airborne
+僵局,deadlock
+战友,Comrades
+飞行员,pilot
+综合,comprehensive
+性能,performance
+射击,shooting
+反无人机,anti-drone
+无人机,drone
+自杀式无人机,suicide drone
+巡,patrol
+实施,implement
+发现,Discover
+任务,mission
+攻击,attack
+矛,spear
+盾,shield
+态势,situation
+产生,produce
+影响,Influence
+占据,occupy
+试图,attempt
+威胁,threaten
+战略步枪,strategic rifle
+发射,emission
+步枪,rifle
+榴弹,grenade
+美军,U.S. military
+军事基地,military base
+航空母舰,aircraft carrier
+枪,gun
+电子战,Electronic warfare
+网络空间,Cyberspace 
+网络空间战,Cyberspace warfare
+电子战飞机,electronic warfare aircraft
+击,strike
+北约,NATO
+武器,weapons
+火箭炮,rocket launcher
+发射箱,launch box
+局部冲突,local conflict
+火箭炮系统,rocket launcher system
+空中作战,air combat
+国防,national defense
+火炮身管,artillery barrel
+防务政策,defense policy
+军工,Military industry
+艘,ship
+起飞,take off
+弹射器,Catapult
+装甲车,armored vehicle
+迷彩,camouflage
+战衣,battle suit
+多用途战斗机,multi-role fighter
+卫星,satellite
+自行研制,Self-developed
+部署,deploy
+应对,response
+远程弹道导弹,long range ballistic missile
+航空,aviation
+实战,Actual combat
+喷气式飞机,jet plane
+教练机,trainer aircraft
+机载弹药,airborne ammunition
+运输机,Transport aircraft
+超音速武器,hypersonic weapons
+挫,defeat
+遇,encounter
+空射快速响应武器,air-launched rapid response weapon
+全备弹,Fully equipped
+巡航导弹,cruise missile
+任务飞机,mission aircraft
+协同作战,Coordinated operations
+航电设备,avionics equipment
+长距离作战,Long distance combat
+少不了,indispensable
+炮兵定位雷达,artillery positioning radar
+高超音速巡航导弹,hypersonic cruise missile
+火炮系统,artillery system
+核潜艇,nuclear submarine
+核动力,nuclear power
+潜艇,submarine
+海军陆战,Marine Corps
+地对空导弹,surface to air missile
+自行火炮,Self-propelled artillery
+隐形飞机,stealth aircraft
+副驾驶,co-pilot
+榴弹发射器,grenade launcher
