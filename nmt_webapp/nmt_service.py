@@ -95,7 +95,7 @@ def free_cache(used_thresh: int = 0.5):
 def get_translation():
     try:
         time_s = time.time()
-        max_length = 256       
+        max_length = 128       
         langpair = request.args["langpair"]
         if "zh-" in langpair or "jp-" in langpair:
             period_char = "。"

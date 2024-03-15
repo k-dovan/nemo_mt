@@ -2846,3 +2846,635 @@ Prefix dict has been built successfully.
 [NeMo I 2023-09-13 06:40:35 nmt_service:139] Translated in 0.5369606018066406. Input was: 视频：中国这些发展让多国年轻人赞叹
     青年是世界的未来，是推动全球发展、建设美好世界的主力军。近日，首届“清华国际青年对话”举行，60多名世界各地的青年在深圳、成都、北京等地感受中国发展，并齐聚清华园展开对话讨论。 <############> Translation was: Video: China's development makes young people from many countries marvel
     Youth are the future of the world and the main force in promoting global development and building a better world. Recently, the first Tsinghua International Youth Dialogue was held. More than 60 young people from all over the world experienced China's development in Shenzhen, Chengdu and Beijing and gathered at Tsinghua Park for dialogue and discussion.
+[NeMo I 2023-09-13 06:42:24 nmt_service:139] Translated in 1.4734060764312744. Input was: 壮大合力，让“大外宣”交响广为传扬。中国日报与中国美术学院等6所国内顶尖美术学院共建美院国传联盟，通过“美术+国传”的融合发展模式，推进美学话语创新、艺术表达创新、传播方式创新。与国家文物局联合开展“文明瑰宝 互鉴使者”全媒体传播作品推介，与敦煌研究院联合开展数字敦煌项目海外传播，积极推动文化遗产领域国际合作。与国家文物局、辽宁省委宣传部联合举办以“文化传承发展 探源中华文明”为主题的新时代大讲堂，以红山文化为切入口，对外宣介“全球文明倡议”等重要理念，展示中华文化风采和我国在世界文明起源研究方面的突出成果。大力推进“未来工程”，打造“少年会客厅”“中国让我没想到”等全球“Z世代”交流活动品牌。今年6月30日播出的《少年会客厅》第三季第一期节目《架起中华文明与世界文明之桥》在英国伦敦拍摄，来自5个国家的青少年畅言文明因平等交流而丰富多彩，传播量超1200万。近年来，分别与上海市委外宣办、山东省政府新闻办共同举办“Z世代唱享中国”、山东对话全球“Z世代”分享交流会等活动，着力搭建世界青年互学互鉴、共同成长的新平台。 <############> Translation was: China Daily, together with China Academy of Fine Arts and other six leading art academies in China, established the National Passion Alliance of China Academy of Fine Arts to promote aesthetic discourse innovation, artistic expression innovation and communication innovation through the integrated development model of "art and national tradition." The New Era Lecture Hall was jointly held with the State Administration of Cultural Heritage and the Publicity Department of Liaoning Provincial Party Committee with the theme of "Cultural Inheritance and Exploration of the Source of Chinese Civilization." The lecture hall was held with the theme of "Cultural Heritage and Development of Chinese Civilization." The lecture hall featured the important concepts of "Global Civilization Initiative" and other important concepts. In recent years, together with the Foreign Publicity Office of the Shanghai Municipal Committee and the Information Office of the Shandong Provincial Government, we have jointly organized activities such as "Generation Z Singing and Enjoying China" and the Global "Generation Z" Sharing and Exchange Meeting of Shandong Dialogue to build a new platform for world youth to learn from each other and grow together.
+[NeMo I 2023-09-14 00:44:14 nmt_service:139] Translated in 0.25134944915771484. Input was: 金正恩没有先于普京进入会议室，而是停一步等待普京一同进入——该视频出现在社交网络上。 <############> Translation was: Instead of entering the meeting room before Putin, Kim Jong-un paused to wait for Putin to join him - a video that appeared on social networks.
+[NeMo I 2023-09-14 00:46:16 nmt_service:139] Translated in 0.2932894229888916. Input was: 这就是冰川河的样子~在加拿大北部一座2000米高的巨大冰川的底部，冰川河流从内部深处喷涌而出，形成了一个巨大的喷泉。 <############> Translation was: This is what Glacier River looks like - at the bottom of a massive 2,000-meter-high glacier in northern Canada, glacial rivers spew out from deep inside, creating a giant fountain.
+[NeMo I 2023-09-14 01:50:03 nmt_service:139] Translated in 0.46793198585510254. Input was: 美国总统大选又又又烧钱 100亿美元广告费创新高
+    美国广告咨询公司AdImpact周二发布最新预测称，2024年的美国总统选举周期将是有史以来最昂贵的一次选举周期，预计所有的政治广告支出将达到102亿美元，这比2020年的总统选举周期多13%，比2016年多292%。 <############> Translation was: The US presidential election has burned another $10 billion advertising spending record high
+    The 2024 U.S. presidential election cycle will be the most expensive ever, with all political ad spending expected to reach $10.2 billion, 13 percent more than the 2020 presidential election cycle and 292 percent more than 2016, advertising consultancy AdImpact said on Tuesday.
+[NeMo I 2023-09-14 03:20:25 nmt_service:139] Translated in 0.9892849922180176. Input was: 谭克非介绍，根据中俄两军年度合作计划，中国人民解放军抽组精干力量赴俄罗斯乌苏里斯克市谢尔盖耶夫斯基训练场和日本海相关海域，参加于2022年8月31日至9月7日举行的“东方-2022”演习，共有包括中俄在内的14个国家参加此次演习。中方此次参演充分利用陌生复杂环境，按照各领域覆盖、多层级参演、大体系支撑、全要素联动的要求，精心编组功能完备的指挥、作战和支援保障力量，精心组织跨境投送、作战筹划、实兵行动和野战保障，全面锻炼提升了境外遂行军事行动的能力。演习期间，多国部队联合战役指挥部合帐筹谋，共同研究探讨战术战法，多国实兵部队同台竞技，相互之间联得紧、融得深，交流了经验做法，加深了战斗友谊。 <############> Translation was: According to Cao Kefei, according to the annual cooperation plan between the two militaries, the Chinese People's Liberation Army (PLA) has drawn capable forces to participate in the "Dongfang-2022" exercise, which will be held from August 31 to September 7, 2022. A total of 14 countries including China and Russia participated in the exercise. During the exercise, the joint operational command of the multinational force jointly planned, jointly studied and discussed tactical methods of warfare, multinational real troops competed with each other, closely linked with each other, deeply integrated, exchanged experience and practices, and deepened combat friendship.
+[NeMo I 2023-09-14 03:36:38 nmt_service:139] Translated in 0.43813133239746094. Input was: 习近平指出，中国—中亚合作论坛成立以来，规模不断扩大，影响力日益提升。中国同中亚五国通过这一论坛共谋合作、共享发展，有力增进了相互了解和传统友谊，谱写了睦邻友好、携手共进的新篇章。 <############> Translation was: Xi Jinping pointed out that since the establishment of the China-Central Asia Cooperation Forum (CACF), China and the five Central Asian countries have sought joint cooperation and shared development through this forum, which has effectively enhanced mutual understanding and traditional friendship and written a new chapter of good neighborliness, friendship and joint progress.
+[NeMo I 2023-09-14 06:45:38 nmt_service:139] Translated in 0.5508434772491455. Input was: 琼航警103/23，北部湾，9月13日0800时至9月14日1200时将在19-59.0N/109-11.0E、19-59.0N/109-17.0E、20-05.0N/109-17.0E及20-05.0N/109-11.0E诸点连线水域范围内进行实弹射击训练。禁止驶入。 <############> Translation was: Joan Air Police 103 / 23, Beibu Gulf, 0800 hours on 13 September to 1200 hours on 14 September will conduct live fire training within the waters of the 19-59.0 N / 109-11.0E, 19-59.0 N / 109-17.0E, 20-05.0 N / 109-17.0E and 20-05.0 N / 109-11.0E points. Entry is prohibited.
+[NeMo I 2023-09-14 06:48:14 nmt_service:139] Translated in 0.6265485286712646. Input was: 琼航警100/23，南海，自2023年9月8日至9月10日，每日0600时至1830时，在18-51.87N/110-30.65E、18-51.87N/110-36.35E、18-46.47N/110-36.35E和18-46.47N/110-30.65E四点连线水域范围内进行军事训练，禁止驶入。 <############> Translation was: Joan Aviation Police 100 / 23, South China Sea, from 8 September to 10 September 2023, from 0600 hours to 1830 hours daily, military training is prohibited within the four-point linked waters 18-51.87 N / 110-30.65E, 18-51.87 N / 110-36.35E, 18-46.47 N / 110-36.35E and 18-46.47 N / 110-30.65E.
+[NeMo I 2023-09-14 06:48:32 nmt_service:139] Translated in 0.6314330101013184. Input was: 琼航警87/23，南海，自2023年7月29日0000时至8月2日2400时，在20-22.55N/111-12.32E、17-04.60N/114-28.52E、15-42.25N/113-16.53E和18-28.93N/110-32.73E四点连线水域范围内进行军事训练，禁止驶入。 <############> Translation was: Qiong Aviation Police 87 / 23, South China Sea, from 0000 hours on 29 July 2023 to 2400 hours on 2 August 2023, military training is prohibited within the four-point link waters of 20-22.55 N / 111-12.32E, 17-04.60 N / 114-28.52E, 15-42.25 N / 113-16.53E and 18-28.93 N / 110-32.73E.
+[NeMo I 2023-09-14 06:49:28 nmt_service:139] Translated in 0.9596295356750488. Input was: 一、作业时间
+    2023年9月2日至2023年10月31日。
+    二、作业船舶
+    钻井平台：“勘探三号”轮；
+    作业船舶：“海洋石油671”轮、“海洋石油670”轮。
+    三、作业内容
+    海上钻井作业。
+    四、作业范围
+    以18°10′38.492″N，110°45′22.014″E为中心，半径为1海里的范围内区域。
+    五、注意事项
+    （一）钻井平台按有关规定显示信号，夜间船体四周有信号灯闪烁，井架顶部有红色闪烁灯。
+    （二）作业船舶联系方式为VHF16、VHF8。
+    （三）过往船舶应加强瞭望，注意避让，避免穿越安全作业区，以策安全。
+    （四）如施工作业提前结束，将不再另行通告。
+    特此通告。
+     <############> Translation was: I. Operating time
+    It runs from 2 September to 31 October 2023.
+    II. Operating ships
+    Drilling platform: "Exploration No. 3" wheel;
+    Operating ships: "offshore oil 671" ship, "offshore oil 670" ship.
+    Third, the work content
+    Offshore drilling operations.
+    IV. Scope of operation
+    It is centered at 18 10 38.492 N, 110 45 22.014 E with a radius of 1 nautical mile.
+    V. Precautions
+    (1) The drilling platform displays the signal according to relevant regulations. There are signal lights flashing around the hull at night and red flashing lights at the top of the derrick.
+    (2) VHF16 and VHF8 are the contact details of the operating vessels.
+    (3) Ships in the past shall strengthen their lookout, pay attention to avoidance, and avoid crossing safe operating areas to take measures for safety.
+    (4) No further notice will be given if construction work is completed ahead of schedule.
+    You are hereby notified.
+[NeMo I 2023-09-14 06:51:13 nmt_service:139] Translated in 0.7728848457336426. Input was: 琼航警99/23,南海,2023年8月30日至9月1日，“海洋石油676”拖带钻井平台“海洋石油944”自 18-35.61N 107-45.78E 拖往18-37.24N 107-43.73E,拖带总长300米，航速4节。请宽让。
+    琼航警93/23，琼州海峡，2023年8月16日1200时起，南海伏季休渔期结束，将有大量渔船通过琼州海峡出海作业。希过往船舶加强了望、谨慎驾驶、注意避让。
+    
+     <############> Translation was: Qiong Hang Police 99 / 23, South China Sea, August 30 to September 1, 2023, "Haiyang Oil 676" towing rig "Haiyang Oil 944" from 18-35.61N 107-45.78E towed to 18-37.24N 107-43.73E, tow length 300 meters, speed 4 knots. Please let go.
+    Qiong Aviation Police 93 / 23, Qiongzhou Strait, from 1200 hours on August 16, 2023, the South China Sea Vuji fishing period will end, there will be a large number of fishing boats through the Qiongzhou Strait to sea operations. I hope that passing ships strengthen their lookout, careful driving, pay attention to avoidance.
+[NeMo I 2023-09-14 06:52:19 nmt_service:139] Translated in 0.435091495513916. Input was: 琼航警93/23，琼州海峡，2023年8月16日1200时起，南海伏季休渔期结束，将有大量渔船通过琼州海峡出海作业。希过往船舶加强了望、谨慎驾驶、注意避让。
+    
+     <############> Translation was: Qiong Aviation Police 93 / 23, Qiongzhou Strait, from 1200 hours on August 16, 2023, the South China Sea Vuji fishing period will end, there will be a large number of fishing boats through the Qiongzhou Strait to sea operations. I hope that passing ships will strengthen their lookout,
+[NeMo I 2023-09-14 06:52:44 nmt_service:139] Translated in 0.47240114212036133. Input was: 琼航警93/23，琼州海峡，2023年8月16日1200时起，南海伏季休渔期结束，将有大量渔船通过琼州海峡出海作业。希过往船舶加强了望、谨慎驾驶、注意避让。
+    
+     <############> Translation was: Qiong Aviation Police 93 / 23, Qiongzhou Strait, from 1200 hours on August 16, 2023, the South China Sea Vuji fishing period will end, there will be a large number of fishing boats through the Qiongzhou Strait to sea operations. I hope that passing ships will strengthen their lookout,
+[NeMo I 2023-09-14 06:53:15 nmt_service:139] Translated in 1.0600037574768066. Input was: 琼航警62/23，南海，自2023年6月23日1000时至6月24日1800时在20-04.50N/110-55.50E、20-04.50N/111-21.33E、19-46.83N/111-21.33E、19-46.83N/111-00.00E四点连线水域和18-59.00N/110-31.00E、18-59.00N/110-44.50E、18-43.33N/110-44.50E、18-43.33N/110-31.00E四点连线水域范围内进行军事训练，禁止驶入。
+    
+     <############> Translation was: Joan Aviation Police 62 / 23, South China Sea, from 1000 hours on 23 June 2023 to 1800 hours on 24 June 2023, military training is prohibited within the four-point linked waters of 20-04.50 N / 110-55.50E, 20-04.50 N / 111-21.33E, 19-46.83 N / 111-21.33E, 19-46.83N / 111-00.00E and 18-59.00N / 110-31.00E, 18-59.00N / 110-44.50E, 18-43.33N / 110-44.50E, 18-43.33N / 110-31.00E.
+[NeMo I 2023-09-14 06:53:51 nmt_service:139] Translated in 0.5523080825805664. Input was: 在9月13日外交部例行记者会上，有记者提问称，美国和加拿大军舰通过台湾海峡，近日有报道称，中国在台湾岛附近进行大型军事演习，外交部能否进一步介绍有关情况？
+    　　毛宁表示，关于美加军舰过航台湾海峡，中国人民解放军东部战区的新闻发言人已经发表了谈话，你可以查阅。
+    　　毛宁强调，台湾是中国领土不可分割的一部分，中国捍卫国家主权和领土完整的决心是坚定不移的，有关方面应当立即停止此类的挑衅行动，不要做台海和平稳定的麻烦制造者。
+    
+     <############> Translation was: At the regular press conference of the Foreign Ministry on September 13, some journalists asked that US and Canadian warships pass through the Taiwan Strait. There are recent reports that China is conducting large-scale military exercises near Taiwan Island. Can the Foreign Ministry give more information about this?
+    Mao Ning said that regarding the passage of US-Canada warships through the Taiwan Strait, the press spokesperson of the People's Liberation Army Eastern Theater has issued a statement, you can check.
+    Mao Ning stressed that Taiwan is an integral part of China's territory. China's determination to safeguard national sovereignty and territorial integrity is unwavering. Relevant parties should immediately stop such provocative actions and refrain from being troublemakers for peace and stability in the Taiwan Straits.
+[NeMo I 2023-09-14 06:56:15 nmt_service:139] Translated in 0.9947879314422607. Input was:  据中国媒体公开报道，中泰双方400余名联训官兵3日在泰国梭桃邑军港参加“蓝色突击—2023”海军联合训练开训仪式。泰国海军消息显示，中国海军039潜艇也罕见地同时期抵达梭桃邑海军基地。军事专家对《环球时报》表示，中国海军潜艇抵泰主要是为了展示其综合性能，让泰国更好了解和熟悉中国潜艇。
+        据“人民海军”发布消息称，此次联训是落实中泰两国两军领导人达成共识的有力举措，是自2010年首次举行系列联训的延续。公开报道显示，2010年10月至11月，“蓝色突击―2010”中泰海军陆战队联合训练在泰国举行，此后，“蓝色突击”系列演习相继举行了三次。
+     <############> Translation was: According to Chinese media reports, more than 400 officers and soldiers from China and Thailand participated in the "Blue Assault-2023" joint training and training ceremony at Suotaozhan military port in Thailand on March 3. Thai navy sources showed that the Chinese navy submarine 039 also rarely arrived at Suotaozhan naval base at the same time.
+    According to the news release of the People's Navy, this joint training is a strong measure to implement the consensus reached by the leaders of the two militaries, and is a continuation of the series of joint training held for the first time since 2010. Public reports show that from October to November 2010, the "Blue Assault-2010" joint training of Chinese and Thai marines was held in Thailand, and since then, the "Blue Assault" series of exercises have been held three times.
+[NeMo I 2023-09-14 06:56:56 nmt_service:139] Translated in 0.9711546897888184. Input was:  这段时间台海方向闹出的幺蛾子太多了，不光是岛内那帮“台独”分子在上蹿下跳，一些域外国家，主要就是美国，始终不愿放弃他们“以台制华”的野心，还要拉着一些“盟友”来挑事，是可忍孰不可忍？
+    最近美国、日本、法国在琉球群岛东部以及东海部分海域，举行了一场海上联合军演。
+    这场军演其中最大的看点，就是美国和日本总计出动了3艘航母参加，美军派出了两艘“尼米兹”级核动力航母，分别是“里根”号和“尼米兹”号，同时美军还派出了B-52战略轰炸机。
+    
+     <############> Translation was: This time there have been too many dice in the direction of the Taiwan Straits. Not only are the "Taiwan independence" elements jumping up and down on the island, but some foreign countries, mainly the United States, have been unwilling to give up their ambitions of "making China with Taiwan," and still have to pull some "allies" to provoke things. Is it tolerable and intolerable?
+    Recently, the United States, Japan, and France held a joint naval exercise in the eastern part of the Ryukyu Islands and parts of the East China Sea.
+    One of the highlights of the exercise was the participation of three aircraft carriers from the United States and Japan, two Nimitz-class nuclear-powered aircraft carriers, Reagan and Nimitz, and B-52 strategic bombers.
+[NeMo I 2023-09-14 06:57:42 nmt_service:139] Translated in 1.666574478149414. Input was:  月9日至28日，中国人民解放军与老挝人民军在老挝库玛丹学院训练场，共同组织了“友谊盾牌-2023”联合演习，这是两军首次组织的实战课目演习，对于巩固双边传统友谊、提升联合行动能力、维护地区安全稳定具有重要意义。联演主要有3个特点：一是内容紧贴实战。参演兵力按实战要求联合编组，课目设置符合两军实战规范，重在检验提升两军实战能力。二是指挥精准高效。双方组建联合导演部、指挥所，编设指挥组和4个作战指挥控制中心，议定作战指挥要则，探索完善联合指挥机制。三是行动协同密切。区分火力突击、冲击突破、合力拔点、分割围剿4个阶段组织综合演练，精确控制联合行动，实战验证分布聚能、强插快打、合围歼敌等战法。
+    中新网9月29日电 据“国防部发布”微信公众号消息，9月29日下午，国防部举行例行记者会，国防部新闻局副局长、国防部新闻发言人谭克非大校答记者问。谭克非介绍，根据中俄两军年度合作计划，中国人民解放军抽组精干力量赴俄罗斯乌苏里斯克市谢尔盖耶夫斯基训练场和日本海相关海域，参加于2022年8月31日至9月7日举行的“东方-2022”演习，共有包括中俄在内的14个国家参加此次演习。
+    
+    
+     <############> Translation was: The "Friendship Shield-2023" joint exercise was organized by the People's Liberation Army of China and the Lao People's Army at the training ground of Kumadan College, Laos. It was the first combat course exercise organized by the two militaries. It is of great significance to consolidate bilateral traditional friendship, enhance joint operational capabilities and maintain regional security and stability. Organize comprehensive drills in four stages: fire assault, impact breakout, joint pull-out, and siege division, and accurately control joint operations.
+    According to the official WeChat account of the Ministry of Defense, on the afternoon of September 29, the Ministry of Defense held a regular press conference. Deputy Director of the Information Bureau of the Ministry of Defense and Spokesperson of the Ministry of Defense, Major Cao Kefei, said that according to the annual cooperation plan between the two militaries, the Chinese People's Liberation Army has drawn lean forces to participate in the "Orient-2022" drill held from August 31 to September 7, 2022.
+[NeMo I 2023-09-14 06:59:01 nmt_service:139] Translated in 0.7058384418487549. Input was:  中新网9月29日电 据“国防部发布”微信公众号消息，9月29日下午，国防部举行例行记者会，国防部新闻局副局长、国防部新闻发言人谭克非大校答记者问。谭克非介绍，根据中俄两军年度合作计划，中国人民解放军抽组精干力量赴俄罗斯乌苏里斯克市谢尔盖耶夫斯基训练场和日本海相关海域，参加于2022年8月31日至9月7日举行的“东方-2022”演习，共有包括中俄在内的14个国家参加此次演习。
+    
+    
+     <############> Translation was: According to the official WeChat account of the Ministry of Defense, on the afternoon of September 29, the Ministry of Defense held a regular press conference. Deputy Director General of the Information Bureau of the Ministry of Defense and Spokesperson of the Ministry of Defense, Major Cao Kefei, said that according to the annual cooperation plan between the two militaries, the Chinese People's Liberation Army (PLA)...
+[NeMo I 2023-09-14 06:59:31 nmt_service:139] Translated in 0.9935517311096191. Input was:  谭克非介绍，根据中俄两军年度合作计划，中国人民解放军抽组精干力量赴俄罗斯乌苏里斯克市谢尔盖耶夫斯基训练场和日本海相关海域，参加于2022年8月31日至9月7日举行的“东方-2022”演习，共有包括中俄在内的14个国家参加此次演习。中方此次参演充分利用陌生复杂环境，按照各领域覆盖、多层级参演、大体系支撑、全要素联动的要求，精心编组功能完备的指挥、作战和支援保障力量，精心组织跨境投送、作战筹划、实兵行动和野战保障，全面锻炼提升了境外遂行军事行动的能力。演习期间，多国部队联合战役指挥部合帐筹谋，共同研究探讨战术战法，多国实兵部队同台竞技，相互之间联得紧、融得深，交流了经验做法，加深了战斗友谊。
+    
+     <############> Translation was: According to Cao Kefei, according to the annual cooperation plan between the two militaries, the Chinese People's Liberation Army (PLA) has drawn capable forces to participate in the "Dongfang-2022" exercise, which will be held from August 31 to September 7, 2022. A total of 14 countries including China and Russia participated in the exercise. During the exercise, the joint operational command of the multinational force jointly planned, jointly studied and discussed tactical methods of warfare, multinational real troops competed with each other, closely linked with each other, deeply integrated, exchanged experience and practices, and deepened combat friendship.
+[NeMo I 2023-09-14 07:00:11 nmt_service:139] Translated in 0.7601358890533447. Input was: 手持新加坡 SAR-21 步枪的解放军战士
+    6 月，中国海军参加了印尼举行的 " 科莫多 -2023" 多国海上联合演习，另外中国和越南各派出两艘军舰在北部湾进行了第 34 次联合巡逻。
+    7 月，中国与泰国空军联合组织了 " 鹰击 -2023" 演习。在日本海，中国与俄罗斯举行了 " 北部 · 联合 -2023" 海上军事演习。另外在新疆举行了 " 锋刃 -2023" 国际狙击手比赛。
+    8 月，中国与阿联酋空军在新疆举行首次联训。然后还有中泰陆军 " 突击 -2023" 联合训练。
+    9 月，中泰海军又举行了 " 蓝色突击 -2023" 联合演习。几乎同时，中国又派出部队前往新加坡，参加中新 " 合作 -2023" 陆军联合训练。
+    
+    
+    
+     <############> Translation was: People's Liberation Army fighters armed with Singapore SAR-21 rifles
+    In June, the Chinese navy participated in Indonesia's "Komodo-2023" multinational maritime joint exercise, and China and Vietnam each sent two warships to conduct their 34th joint patrol in the Beibu Gulf.
+    In July, China and the Thai air force jointly organized the Hawk-2023 exercise. In the Sea of Japan, China and Russia held the Beibei Joint-2023 naval exercise. In addition, an international sniper competition was held in Xinjiang.
+    In August, China and the UAE Air Force held their first joint training in Xinjiang, followed by joint training of the Sino-Thailand Army Commando-2023.
+    In September, the Chinese and Thai navies held a joint exercise called "Blue Assault-2023." Almost simultaneously, China sent troops to Singapore to participate in the joint training of the Sino-Singapore "Cooperation-2023" army.
+[NeMo I 2023-09-14 07:01:00 nmt_service:139] Translated in 0.6114499568939209. Input was: 另外还有一些多国联合演习，也是外交意义大于实战意义，例如今年 6 月去印尼参加的 " 科莫多 -2023" 联合演习，一共有来自印尼、中国、美国、俄罗斯、新加坡、巴基斯坦等国的 40 多艘舰艇，那么多国家不同型号的军舰混在一起，真要搞实兵对抗演练显然不现实。
+    因此，演习期间进行了舰队阅兵、医疗、工程、文化、海军乐队等交流。演练了海上拦截、海上搜救、损管等科目。真正的意义是实现了多国军队之间的沟通联系。
+    
+    
+    
+    
+     <############> Translation was: In addition, there are some multinational joint exercises that have greater diplomatic significance than actual combat significance. For example, the Komodo-2023 joint exercise, which went to Indonesia in June this year, involved more than 40 ships from Indonesia, China, the United States, Russia, Singapore, Pakistan and other countries.
+    Therefore, during the exercise, there were exchanges between the fleet military parade, medical, engineering, culture and naval band. The subjects of maritime interdiction, maritime search and rescue and damage management were rehearsed. The real meaning was to achieve communication between multinational armies.
+[NeMo I 2023-09-14 07:03:28 nmt_service:139] Translated in 0.5109732151031494. Input was: 9月06日，美空军一架WC-135R核侦察机从嘉手纳起飞，穿过中国东海防空识别区后抵近中国大陆海岸，而后沿东海海岸径直向北，至青岛以南黄海海域对华进行抵近侦察，最近距连云港附近的领海基点约21海里。
+    
+    
+    
+     <############> Translation was: On September 6, a US Air Force WC-135R nuclear reconnaissance aircraft took off from Kadena, crossed China's East China Sea Air Defense Identification Zone and reached the mainland coast of China. It then proceeded north along the East China Sea coast to the Yellow Sea south of Qingdao to conduct near miss reconnaissance to China, about 21 nautical miles away from the territorial sea base near Lian
+[NeMo I 2023-09-14 07:04:16 nmt_service:139] Translated in 0.5098280906677246. Input was: 9月06日，美空军一架WC-135R核侦察机从嘉手纳起飞，穿过中国东海防空识别区后抵近中国大陆海岸，而后沿东海海岸径直向北，至青岛以南黄海海域对华进行抵近侦察，最近距连云港附近的领海基点约21海里。 <############> Translation was: On September 6, a US Air Force WC-135R nuclear reconnaissance aircraft took off from Kadena, crossed China's East China Sea Air Defense Identification Zone and reached the mainland coast of China. It then proceeded north along the East China Sea coast to the Yellow Sea south of Qingdao to conduct near miss reconnaissance to China, about 21 nautical miles away from the territorial sea base near Lian
+[NeMo I 2023-09-14 07:07:53 nmt_service:139] Translated in 1.0905897617340088. Input was: 据“哨兵”卫星影像显示，2021年3月至2023年8月，越南在其侵占的南沙岛礁上的扩建工程进展迅猛。过去30个月以来，越南已在鸿庥岛（图2）、敦谦沙洲（图3）、毕生礁（图4）、无乜礁（图5）、柏礁（图6）这5处岛礁新增扩建面积约2.78km²。
+    其中，柏礁的填海造陆规模空前，至今已扩建近1km²，不排除修建机场的可能性。
+     <############> Translation was: From March 2021 to August 2023, Vietnam has made rapid progress in expanding its occupied Nansha Islands and reefs, according to Sentinel satellite images. Over the past 30 months, Vietnam has added about 2.78 km of additional area to 5 reefs, namely, Hung Nguyen Island (Figure 2), Dun Khien Sandbank (Figure 3), Lifeng Reef (Figure 4), Wudi Reef (Figure 5) and Bai Cay (Figure 6).
+    Among them, the unprecedented scale of land reclamation at Bay Reef has been expanded by nearly 1km, which does not exclude the possibility of building an airport.
+[NeMo I 2023-09-14 07:12:26 nmt_service:139] Translated in 0.7841575145721436. Input was: 8月11日，根据美海军“里根”号航母舰载机“灰狗”C-2A（AE045E）飞行轨迹判断，航母打击群在菲律宾东部海域航行。综合AIS、舰载机ADS-B和遥感影像，里根号航母在7月11日经过巽他海峡，7月16日在印度尼西亚巴厘岛进行港口访问，8月1日停靠在澳大利亚达尔文基地，8月7日在苏拉威西海活动，然后进入菲律宾海北上。
+     <############> Translation was: On August 11, according to the flight trajectory of US Navy aircraft carrier Reagan Greyhound C-2A (AE045E), the carrier strike group sailed in the eastern waters of the Philippines. Combined with AIS, ADS-B and remote sensing images, the aircraft carrier Reagan passed through the Sunda Strait on July 11, conducted a port visit in Bali, Indonesia on July 16, docked at Darwin base in Australia on August 1, in the Sulawesi Sea on August 7, and then entered the Philippine Sea to the north.
+[NeMo I 2023-09-14 07:12:51 nmt_service:139] Translated in 0.7230162620544434. Input was: 综合菲律宾武装部队和中国海警局消息，北京时间2023年8月5日上午9时许，中国海警对试图向仁爱礁坐滩军舰运送建筑材料的菲补给船进行了拦截，同时放行了另一艘运送日常物品的补给船。此举再次表明了中方在该问题上的严正态度，基于人道主义精神，中方允许菲进行日常物品补给，但坚决反对任何试图运送加固材料的举动
+     <############> Translation was: Combined with information from the Armed Forces of the Philippines and the China Coast Guard Bureau, at around 9: 00 am Beijing time on August 5, 2023, the Chinese coast guard intercepted a Philippine supply ship that was trying to deliver construction materials to the beach warship at Ren'ai Reef and released another supply ship carrying everyday items. This once again demonstrates China's solemn attitude on this issue. Based on the humanitarian spirit, China allows the Philippines to supply daily supplies, but firmly opposes any attempt to deliver reinforced materials.
+[NeMo I 2023-09-14 07:13:16 nmt_service:139] Translated in 0.453998327255249. Input was: 6月14日，根据美海军“里根”号航母舰载机“灰狗”C-2A（AE0455、AE045E）飞行轨迹判断，“里根”号航母正在穿越巴士海峡，进入南海活动。
+    6月07日至10日，根据日本海上自卫队发布消息，美海军“里根”号航母与“尼米兹”号航母参加了美日法三国在冲绳以东海域至东海海域举行的联合军演（Multi Big-Deck Event）。
+     <############> Translation was: On 14 June, judging by the flight trajectory of US Navy carrier aircraft Greyhound C-2A (AE0455, AE045E) Reagan was crossing the Bus Strait and entering the South China Sea.
+    On June 7-10, according to Japan's Maritime Self-Defense Forces, the U.S. Navy carrier Reagan and Nimitz participated in a joint U.S.-Japan-French military exercise east of Okinawa to the East China Sea.
+[NeMo I 2023-09-14 07:13:44 nmt_service:139] Translated in 1.1131811141967773. Input was: AIS信号显示，2月20日，尼米兹号航母打击群成员“迪云”号与“韦恩·迈耶”号驱逐舰经苏里高海峡进入菲律宾海。2月19日，打击群成员“迪卡特”号与“韦恩·迈耶”号驱逐舰在苏禄海活动，同日，一架美海军P-8A反潜巡逻机自菲律宾克拉克机场起飞，提供ISR（情报、侦察、监视）支援。据三艘驱逐舰航行轨迹推断，尼米兹号航母打击群已于2月18日自巴拉巴克海峡进入苏禄海，结束此次南海部署。
+    尼米兹号航母打击群此次部署活动时间长，轨迹呈闭环。打击群于1月12日自巴士海峡进入南海，活动时间长达38天，是近年来美海军航母在南海部署时间最长的一次。部署期间，除短暂访问新加坡和配合美防长访菲外，长时间位印马交界水域和万安盆地以南海域活动。2月11日开始，尼米兹号航母打击群还与马金岛号两栖戒备群在此进行了“联合远征打击力量（ESF）”作战训练
+    
+     <############> Translation was: AIS signals indicate that on February 20, the destroyers Diyun and Wayne Meyer entered the Philippine Sea via the Surigao Strait. On February 19, the destroyers Decatur and Wayne Meyer were operating in the Sulu Sea. On the same day, a U.S. Navy P-8A anti-submarine patrol aircraft took off from Clark Airport in the Philippines to provide ISR (intelligence, reconnaissance, surveillance) support.
+    The aircraft carrier strike group Nimitz was deployed in a closed loop. The strike group entered the South China Sea from the Bus Strait on January 12 and lasted for 38 days, making it the longest deployment of U.S. Navy aircraft carriers in the South China Sea in recent years.
+[NeMo I 2023-09-14 07:14:17 nmt_service:139] Translated in 0.5506138801574707. Input was: 今天，菲律宾海军第41特遣部队的何塞·黎刹号（BRP Jose Rizal，FF-150）护卫舰和美国海军第七舰队的拉尔夫·约翰逊号（USS Ralph Johnson，DDG-114）驱逐舰在巴拉望岛以西的南海进行师级战术演习。
+    菲官方称，这项活动是在共同防御委员会-安全参与委员会框架下进行的，旨在发展两国海军之间的作战互操作性。
+    
+     <############> Translation was: Today, frigate BRP Jose Rizal (FF-150) of Philippine Navy Task Force 41 and destroyer USS Ralph Johnson (DDG-114) of the U.S. Navy's Seventh Fleet conduct divisional tactical exercises in the South China Sea west of Palawan.
+    The Philippine official said the activity was conducted under the framework of the Joint Defense Committee-Security Engagement Committee and aimed at developing operational interoperability between the two navies.
+[NeMo I 2023-09-14 07:14:41 nmt_service:139] Translated in 0.7240304946899414. Input was: 尼米兹号航母打击群此次部署活动时间长，轨迹呈闭环。打击群于1月12日自巴士海峡进入南海，活动时间长达38天，是近年来美海军航母在南海部署时间最长的一次。部署期间，除短暂访问新加坡和配合美防长访菲外，长时间位印马交界水域和万安盆地以南海域活动。2月11日开始，尼米兹号航母打击群还与马金岛号两栖戒备群在此进行了“联合远征打击力量（ESF）”作战训练
+    
+     <############> Translation was: The aircraft carrier strike group Nimitz was deployed in a closed loop. The strike group entered the South China Sea from the Bus Strait on January 12 and lasted for 38 days, making it the longest deployment of U.S. Navy aircraft carriers in the South China Sea in recent years. During the deployment period, apart from a brief visit to Singapore and a visit to the Philippines with the United States Secretary of Defense, Nimitz operated in waters bordering India and south of the Wan'an Basin for a long time.
+[NeMo I 2023-09-14 07:14:53 nmt_service:139] Translated in 0.505856990814209. Input was: 今天，菲律宾海军第41特遣部队的何塞·黎刹号（BRP Jose Rizal，FF-150）护卫舰和美国海军第七舰队的拉尔夫·约翰逊号（USS Ralph Johnson，DDG-114）驱逐舰在巴拉望岛以西的南海进行师级战术演习。
+    菲官方称，这项活动是在共同防御委员会-安全参与委员会框架下进行的，旨在发展两国海军之间的作战互操作性。
+    
+     <############> Translation was: Today, frigate BRP Jose Rizal (FF-150) of Philippine Navy Task Force 41 and destroyer USS Ralph Johnson (DDG-114) of the U.S. Navy's Seventh Fleet conduct divisional tactical exercises in the South China Sea west of Palawan.
+    The Philippine official said the activity was conducted under the framework of the Joint Defense Committee-Security Engagement Committee and aimed at developing operational interoperability between the two navies.
+[NeMo I 2023-09-14 07:16:28 nmt_service:139] Translated in 0.7469754219055176. Input was: 2021年10月下旬，越南陆续在其非法占领的南沙群岛毕生礁、无乜礁、鸿庥岛、敦谦沙洲和柏礁等岛礁启动了大规模填海造岛工程。特别是毕生礁，越南计划将毕生礁陆地面积将扩大至76万平方米，扩建后的港池可以停靠多艘“猎豹”3.9级导弹护卫舰等大型军舰。。越南通过扩建毕生礁和无乜礁，组建战斗群，可以形成攻防兼备、互为犄角、相互支援的态势，加强对航道的控制，增加对邻国的军事压力，具有长远的战略意义。
+    
+     <############> Translation was: In late October 2021, Vietnam launched large-scale island reclamation projects on the illegally occupied islands of Lifetime Reef, Mundu Reef, Hong Lao Island, Dunqian Shachang and Bai Cay in the Nansha Qundao. In particular, Lifetime Reef plans to expand its land area to 760,000 square meters. The expanded port pool will be able to dock many large warships such as Cheetah 3.9-class missile frigates.
+[NeMo I 2023-09-14 07:16:59 nmt_service:139] Translated in 0.9545040130615234. Input was: 菲律宾军方正在考虑使用舰载直升机突破中国海警船的封锁，为仁爱礁破船守军运送物资。
+    但他们私下承认：这是毫无意义的。
+    因为目前菲军的舰载直升机太小，只能运送少量的补给品，而中国并不会在海上拦截这种正常的补给。菲律宾真正需要的是运送建筑材料。
+    菲军已经有了携带直升机的船坞登陆舰，但真正需要的，是大型直升机，例如美制CH-47支奴干直升机（购买俄制米-17的合同已经被取消）。
+    但是，低空抛投建筑材料，会直接砸毁破船。大型直升机在破船上降落，也会压垮破船。所以，空运建筑材料的前提，是先海运建筑材料以加固破船的甲板，这样还是会被中国海警拦截。（其实CH-47能在LST甲板上降落半截就不错了）
+    
+     <############> Translation was: The Philippine military is considering using ship-borne helicopters to break through the blockade by Chinese coast guard ships and deliver supplies to the shipwreckers of Renai Reef.
+    But they privately admit: This is pointless.
+    Because the Philippine military's ship-borne helicopters are currently too small to carry only small quantities of supplies, and China will not intercept such normal supplies at sea.What the Philippines really needs is the delivery of construction materials.
+    The Philippines already had dock landing ships carrying helicopters, but what was really needed were larger helicopters, such as the US-made CH-47 Nugan (the contract to buy the Russian Mi-17 had been cancelled).
+    However, dropping construction materials at low altitude will directly destroy the ship. Large helicopters landing on the ship will also crush the ship. Therefore, the premise of air transport construction materials is to ship construction materials first to strengthen the ship's deck, so it will still be intercepted by the Chinese coast guard.
+[NeMo I 2023-09-14 07:17:52 nmt_service:139] Translated in 0.6108653545379639. Input was: 菲律宾国防部7月的一份报告中，确认了菲律宾空军多用途战斗机采购项目的状态，即采购“鹰狮”战斗机，仅等待与瑞典签署谅解备忘录。
+    萨博将出售10架单座JAS-39C和4架双座JAS-39D。这些飞机是由萨博部分制造的，以保持工厂正常运转，直到生产更新的JAS-39E/F“鹰狮 NG”。
+    配置不详，可能是MS20+。
+    
+    
+     <############> Translation was: A July report by the Philippine Defense Ministry confirmed the status of the Philippine Air Force's multi-role fighter procurement project, the procurement of Eagle fighter jets, only pending the signing of a memorandum of understanding with Sweden.
+    Saab will sell 10 single-seater JAS-39C and four two-seater JAS-39D. These aircraft are partially manufactured by Saab to keep the plant running until production of the updated JAS-39E / F "Eagle NG."
+    Configuration unknown, probably MS20.
+[NeMo I 2023-09-14 07:18:32 nmt_service:139] Translated in 0.8842337131500244. Input was: 据印度《第一新闻》（firstpost）报道，菲律宾外交部长恩里克·A·马纳洛 (Enrique A. Manalo) 于6月27日至30日访问印度，同印度外长苏杰生共同主持“印菲双边合作委员会第五次会议”并发表《联合声明》。
+    
+    在《联合声明》中，两国外长强调需要和平解决争端并遵守国际法，特别是《联合国海洋法公约》和2016年南海仲裁案。这是印度首次反对中国的海事主张，要求北京遵守2016年南海仲裁案的裁决。
+    
+    此前，印度已向菲律宾销售3个团的布拉莫斯岸基反舰导弹系统。合同价值3.75亿美元，2023年底开始交付，2024年将交付完成第一个“移动综合体”，包括指挥车、雷达、发射系统等，到2025年，所有3个导弹团都将交付完成
+    
+    
+    
+     <############> Translation was: According to India's First News (firstpost), Philippine Foreign Minister Enrique A. Manalo visited India from June 27 to 30 and co-chaired the Fifth Meeting of the India-Philippines Bilateral Cooperation Council with Indian Foreign Minister Su Jaitson and issued the Joint Statement.
+    
+    In the Joint Statement, the two foreign ministers stressed the need for peaceful settlement of disputes and compliance with international law, particularly the UN Convention on the Law of the Sea and the 2016 South China Sea arbitration. This is the first time India has opposed China's maritime claims and asked Beijing to abide by the 2016 South China Sea arbitration ruling.
+    
+    Previously, India has sold three regiments of Bramos shore-based anti-ship missile systems to the Philippines. The contract is worth $375 million and will be delivered by the end of 2023. The first "mobile complex" including command vehicles, radars and launch systems will be delivered by 2024. All three regiments will be delivered by 2025.
+[NeMo I 2023-09-14 07:19:25 nmt_service:139] Translated in 1.6337149143218994. Input was: 🇵🇭菲律宾和🇺🇸美国海军陆战队将于7月13日在“2023年海军陆战队航空支援活动”抗登陆联合演习期间，在三描礼士圣安东尼奥海岸附近举行另一次击沉演习（SINKEX）。两支部队将在离岸10至12英里处，击沉一艘退役的菲律宾海军军舰——BRP Lake Caliraya“卡里拉亚湖”号油料补给舰。
+    这是菲律宾海军第一艘补给舰，也是菲律宾海军最大的舰艇，拥有岸对舰、舰对岸、舰对舰加油能力。该舰原系中国浙江台州市中兴船舶有限公司2007年建造的“拉普-拉普”号民用成品油船。该船在2014年3月被菲律宾国家石油公司捐给菲律宾海军后，菲律宾海军在八打雁和甲米地的干船坞对该船进行了维修，然后加入现役。2020年退役。
+    这次抗登陆联合演习，有菲律宾武装部队的约1257名人员（其中115名预备役军人）参加，另外1444名人员来自美军。
+    
+    
+    
+     <############> Translation was: This is the first supply ship of the Philippine Navy and the largest ship of the Philippine Navy. It has shore-to-shore, ship-to-shore and ship-to-ship refueling capabilities. The ship was originally built in 2007 by Zhongxing Shipbuilding Co., Ltd., Taizhou City, Zhejiang Province, China.
+    The joint anti-landing exercise involved approximately 1,257 personnel from the Armed Forces of the Philippines (115 reservists) and 1,444 personnel from the United States Army.
+[NeMo I 2023-09-14 07:20:17 nmt_service:139] Translated in 0.46091580390930176. Input was: 5月29日至6月4日，菲律宾当局邀请了来自瑞士、澳大利亚和法国的一批旅行者，乘坐民船非法开展南沙群岛旅游。他们曾一度登上中业岛附近的沙洲，还收到了来自渚碧礁基站的手机短信“欢迎来到中国”。
+    
+    
+    
+     <############> Translation was: From May 29 to June 4, Philippine authorities invited a group of travelers from Switzerland, Australia and France to illegally travel to the Nansha Qundao by civilian boat. They once boarded a sandbank near Zhongye Island and received a text message "Welcome to China" from the Lobi Reef Base Station.
+[NeMo I 2023-09-14 07:23:04 nmt_service:139] Translated in 0.7182588577270508. Input was: 悉尼大学美国研究中心外交政策与国防项目研究员布莱克·赫辛格建议：因为菲律宾的坐滩废旧登陆舰即将解体，美国海军陆战队应该直接对南沙仁爱礁实施军事占领。
+    具体做法是：把二手的油气平台（图片仅供参考）拖到南沙，架设在仁爱礁的礁盘上，美菲两军陆战队联合驻扎。美国海军负责施工中的护航，不用害怕中国的海警船和渔船。
+    作者认为，美军进驻菲律宾，引发杜特尔特等菲国人士的不满，说是把菲律宾本土变成了战场，并非真实帮菲保卫南海。现在美军可以一步到位，将战场转移到远海，并履行了保卫盟友的诺言
+    
+    
+    
+    
+    
+     <############> Translation was: Blake Hersinger, a research fellow in the Foreign Policy and Defense Program at the University of Sydney's American Studies Center, suggested that, because the Philippines "old beach landing ship was about to disintegrate, the United States Marine Corps should directly occupy Nansha Renai Reef.
+    To do this: tow the second-hand oil and gas platform (pictures are for reference only) to the Nansha and install it on the reef of Renai Reef, where the U.S. and Philippine Marines are stationed. The U.S. Navy escorts the construction without fear of Chinese coast guard ships and fishing boats.
+    The author believes that the presence of US troops in the Philippines has caused displeasure among Filipinos such as Duterte, who say that they have turned the Philippines mainland into a battlefield rather than actually helping the Philippines defend the South China Sea. Now the US military can move the battlefield to the distant sea and fulfill its promise to defend its allies
+[NeMo I 2023-09-14 07:58:59 nmt_service:139] Translated in 0.9256665706634521. Input was: 王毅说，近年来，在双方共同努力下，中意关系保持高水平发展，走在中欧关系前列。两国领导人保持密切交往，为双边关系把舵定向，夯实互信根基。中意文化和旅游年精彩纷呈，古罗马文明展吸引超过30万中国民众，两国相互支持办好北京和米兰冬奥会，古丝绸之路传承的千年友谊历久弥新。共建“一带一路”合作硕果累累。过去5年，中意贸易额从500亿美元增长至近800亿美元，意大利对华出口增长约30%。依托上海进博会、海南消博会等平台，各类意大利优质商品走进中国千家万户。中意合作的首艘中国国产大型邮轮顺利起航，意企业参与CR929大飞机项目进展顺利，双方形成两轮第三方市场重点合作项目清单。 <############> Translation was: Wang Yi said that China-Italy relations have maintained a high level of development and are at the forefront of China-EU relations in recent years. Leaders of the two countries have maintained close exchanges to orient bilateral relations and solidify the foundation of mutual trust. China-Italy culture and tourism year has been wonderful. The ancient Roman civilization exhibition attracted more than 300,000 Chinese people. The first Chinese-made large cruise ship of Sino-Italian cooperation successfully set sail. The Italian company participated in the CR929 large aircraft project smoothly, and the two sides formed two rounds of list of key cooperation projects in the third-party market.
+[NeMo I 2023-09-14 08:04:41 nmt_service:139] Translated in 1.388364315032959. Input was: 当前，世界之变、时代之变、历史之变正以前所未有的方式展开，和平赤字、发展赤字、安全赤字、治理赤字不断加重，人类前途命运再次来到何去何从的十字路口。同时，世界多极化、经济全球化持续演进，和平、发展、合作、共赢的时代潮流不可阻挡，讲团结、促合作、求进步仍然是人心所向。
+    今年是习近平主席提出构建人类命运共同体理念十周年。面对世界百年未有之大变局，习近平主席立足中国，胸怀世界，创造性提出构建人类命运共同体理念，为世界未来发展指明方向，为应对共同挑战提供方案。十年来，构建人类命运共同体从理念转化为行动，从愿景转变为现实。中国呼吁国际社会践行真正的多边主义，维护以联合国为核心的国际体系，支持联合国在国际事务中发挥核心作用，推动全球治理体系发展完善，共同构建人类命运共同体。
+     <############> Translation was: At present, changes in the world, times and history are unfolding in unprecedented ways. The deficits of peace, development, security and governance continue to grow, and the future and destiny of mankind are once again at a crossroads. Meanwhile, world multipolarism and economic globalization continue to evolve. The trend of the times of peace, development, cooperation and win-win cooperation is unstoppable.
+    This year marks the tenth anniversary of President Xi Jinping's proposal to build a community with a shared future for mankind. In the face of major changes not seen in the world in a century, President Xi Jinping has creatively proposed the concept of building a community with a shared future for mankind based on China, with the world in mind, so as to chart a course for the future development of the world and provide solutions to common challenges. Over the past decade, the building of a community with a shared future for mankind has been transformed from concept to action and from vision to reality. China calls upon the international community to practice
+[NeMo I 2023-09-14 08:05:24 nmt_service:139] Translated in 1.3108978271484375. Input was: 汪文斌：中方对瑞士返还中国文物表示赞赏。中瑞两国2013年签订《中华人民共和国政府与瑞士联邦委员会关于非法进出境文化财产及其返还的协定》。协定签署后，双方在此框架下开展了一系列务实交流合作。2014年12月，瑞方首次向中方返还1件汉代陶俑。上周，瑞方第二次向中方归还了在近两年的4起刑事案件中查获并没收的5件中国文物，其中包括4件陶瓷器和1枚钱币。此次文物返还是中瑞两国在文化遗产保护领域合作的又一次成功实践，对增进两国人民之间的相互了解与友谊发挥了积极作用，也对在全球范围打击文物走私、保护文物安全、扩大政府间合作具有示范意义。中方愿继续与瑞方深化在文物追索返还、古代文明研究、联合考古、古迹修复等领域合作，携手促进文明交流互鉴，为中瑞关系发展创造更多亮点。
+     <############> Translation was: In December 2014, Switzerland returned to China for the first time a piece of Han Dynasty pottery. Last week, Switzerland returned to China for the second time five Chinese artefacts seized and confiscated in four criminal cases in the past two years, including four ceramics and one coin. The return of cultural relics is another successful practice of China-Sweden cooperation in the field of cultural heritage protection. It has played a positive role in enhancing mutual understanding and friendship between the two peoples. It is also of exemplary significance in combating the smuggling of cultural relics around the world, protecting their safety and expanding intergovernmental cooperation. China is willing to continue to deepen cooperation with Switzerland in such areas as the recovery and return of cultural relics, research on ancient civilizations, joint archaeology and restoration of monuments, and jointly promote exchanges and mutual learning among civilizations so as to create more highlights for
+[NeMo I 2023-09-14 08:14:22 nmt_service:139] Translated in 0.43215465545654297. Input was: 琼航警93/23，琼州海峡，2023年8月16日1200时起，南海伏季休渔期结束，将有大量渔船通过琼州海峡出海作业。希过往船舶加强了望、谨慎驾驶、注意避让。
+    
+    
+    
+    
+    
+     <############> Translation was: Qiong Aviation Police 93 / 23, Qiongzhou Strait, from 1200 hours on August 16, 2023, the South China Sea Vuji fishing period will end, there will be a large number of fishing boats through the Qiongzhou Strait to sea operations. I hope that passing ships will strengthen their lookout,
+[NeMo I 2023-09-14 08:51:15 nmt_service:139] Translated in 1.6039962768554688. Input was: 汪文斌：“振华28”轮在美国佛罗里达州杰克逊维尔港遭遇美执法人员无理盘查滋扰，部分船员个人电子设备遭收缴扣押，离美航行计划被迫推迟，船方后续运营及船员工作生活受到影响。中方已向美方提出严正交涉。
+    必须指出，近年来，美国以各种借口对中国公民入境设置障碍，无理干涉持有正常签证的中国留学生入境，特别是屡屡以中方人员政治信仰和共产党员身份等为借口无端盘查滋扰，这是赤裸裸的意识形态偏见和冷战思维的体现，中方对此强烈不满、坚决反对。我们敦促美方纠正错误做法，停止对中方赴美人员无理盘查滋扰，停止侵犯中方人员合法权益，停止打着国家安全旗号阻挠、破坏中美间正常人文交流和经贸合作，避免此类事件再次发生。中方将采取一切必要措施坚决维护中国公民合法权益。
+     <############> Translation was: Wang Wenbin: The Zhenhua 28 suffered unjustified investigation and harassment by US law enforcement officers at Port Jacksonville, Florida. Some of the crew members' personal electronic devices were seized and seized.
+    It must be pointed out that in recent years, the US has used various pretexts to set up barriers to the entry of Chinese citizens and unreasonably interfered with the entry of Chinese students holding normal visas. In particular, it has repeatedly conducted unwarranted investigations and harassment under the pretext of Chinese people's political beliefs and membership of the Communist Party. This is a manifestation of blatant ideological prejudice and Cold War thinking. China is strongly dissatisfied with and firmly opposed to this. We urge the US side to correct its wrong practices, stop unjustifiably investigating and harassing Chinese people visiting the US, stop violating the lawful rights and interests of Chinese people, stop obstructing and undermining normal
+[NeMo I 2023-09-14 08:56:55 nmt_service:139] Translated in 0.394761323928833. Input was: 汪文斌：中方已多次就日本核污染水排海问题表明严正立场。对于日本政府强行启动向海洋排放核污染水这种自私自利、极不负责任的行径，国际社会普遍给予批评并采取相关防范措施。中方主管部门依据中国法律法规以及世贸组织《实施卫生与植物卫生措施协定》相关规定，对原产地为日本的水产品采取紧急措施，完全正当、合理、必要。 <############> Translation was: Wang Wenbin: China has repeatedly stated its solemn position on the issue of Japan's nuclear contaminated water drainage. The international community has criticized and taken preventive measures against the Japanese government's self-serving and highly irresponsible act of forcibly discharging nuclear contaminated water into the sea.
+[NeMo I 2023-09-14 08:57:29 nmt_service:139] Translated in 0.8298792839050293. Input was: 两年多来，福岛核污染水排海计划的正当性、合法性、安全性一直受到国际社会质疑。日方迄未解决国际社会关于核污染水净化装置长期可靠性、核污染水数据真实准确性、排海监测安排的有效性等重大关切。中方等利益攸关方多次指出，如果核污染水是安全的，就没有必要排海，如果不安全，就更不应该排海。日本强推核污染水排海，不正当、不合理、不必要。 <############> Translation was: For more than two years, the legitimacy, legality and safety of the Fukushima nuclear polluted water drainage plan have been questioned by the international community. Japan has yet to address the international community's major concerns regarding the long-term reliability of nuclear polluted water purification devices, the true accuracy of nuclear polluted water data, and the effectiveness of sea drainage monitoring arrangements. China and other stakeholders have repeatedly pointed out that if nuclear contaminated water is safe, there is no need to discharge the sea, and if it is not safe, it should not be discharged. Japan's push for nuclear poll
+[NeMo I 2023-09-14 08:58:02 nmt_service:139] Translated in 0.5342974662780762. Input was: 中方对柬埔寨选举产生新一届国会并成立新一届政府表示热烈祝贺。相信在洪玛奈首相领导下，柬新政府将在国家建设事业中取得新的更大成就。
+    中柬是“铁杆”朋友，两国友谊历经国际风云变幻，始终坚如磐石。中方将一如既往支持柬埔寨国家建设发展，愿同柬新政府一道，致力于构建高质量、高水平、高标准的新时代中柬命运共同体，持续深化中柬全面战略合作伙伴关系，让中柬“铁杆”友谊焕发出更大的生机活力，更好造福两国人民。
+     <############> Translation was: China warmly congratulates Cambodia on the election of a new National Assembly and the establishment of a new government. We believe that under the leadership of Prime Minister Hun Manai, the new Cambodian government will achieve new and greater achievements in national construction.
+    China and Cambodia are "hardcore" friends. China will continue to support Cambodia's national development and development. China stands ready to work with the new Cambodian government to build a community with a shared future in the new era featuring high quality, high standards and high standards.
+[NeMo I 2023-09-14 08:59:37 nmt_service:139] Translated in 1.116194248199463. Input was: 金砖合作倡导开放包容、互利共赢，为的是实现共同发展、普遍繁荣，不搞阵营对抗，与“小圈子”“小集团”有本质不同。金砖机制的蓬勃发展，是南南合作平台的拓展，是维护和平力量的增强，是世界正义阵线的扩大，是发展中国家团结合作的又一个重要里程碑，受到绝大多数国家欢迎。我们将同金砖伙伴一道，继续深化金砖战略伙伴关系，拓展“金砖+”合作模式，充实政治安全、经贸财金、人文交流“三轮驱动”合作架构，不断谱写新兴市场国家和发展中国家团结合作谋发展的新篇章，为推动构建人类命运共同体贡献力量。
+     <############> Translation was: The BRICS cooperation advocates openness, inclusiveness, mutual benefit and win-win results in order to achieve common development and universal prosperity without engaging in camp confrontation. It is fundamentally different from the "small circle" and "small group." The flourishing development of the BRICS mechanism is the expansion of the platform for South-South cooperation, the strengthening of the force for peace, the expansion of the front for world justice and another important milestone for solidarity and cooperation among developing countries, which is welcomed by the vast majority of countries. We will work with BRICS partners to continue to deepen the BRICS strategic partnership, expand the "BRICS Plus" cooperation model, enrich the "three-wheel driven" cooperation framework for political security, economic, trade and financial
+[NeMo I 2023-09-14 09:00:12 nmt_service:139] Translated in 0.6127281188964844. Input was: 这次是习近平主席第四次对南非进行国事访问。当地时间昨天上午，习近平主席在比勒陀利亚同南非总统拉马福萨举行了富有成果的会谈并共同会见记者。两国元首就新时代中南关系发展以及共同关心的国际和地区问题深入交换意见，达成重要共识，一致同意，携手推动中南全面战略伙伴关系不断迈上新台阶，携手构建高水平中南命运共同体。
+     <############> Translation was: This is President Xi Jinping's fourth state visit to South Africa. Yesterday morning local time, President Xi Jinping held fruitful talks with South African President Ramaphosa in Pretoria and jointly met with the press. The two heads of state exchanged in-depth views on the development of China-South Africa relations in the new era and international and regional issues of common concern and reached important consensus. They agreed to work together to elevate China-South Africa comprehensive strategic partnership to a new level and
+[NeMo I 2023-09-14 09:01:49 nmt_service:139] Translated in 1.2277171611785889. Input was: 昨天，外交部副部长孙卫东召见日本驻华大使垂秀夫，就此向日方提出严正交涉。中方指出，日本政府无视国际社会的强烈质疑和反对，执意宣布即将启动福岛核污染水排海。这一行径公然向包括中国在内的周边国家和国际社会转嫁核污染风险、将一己私利凌驾于地区和世界各国民众长远福祉之上，极其自私自利，极不负责任。中方表示严重关切和强烈反对。
+    海洋是全人类赖以生存的蓝色家园，不容日方随意倾倒核污染水。日方强推核污染水排海，无疑是在拿全球海洋环境和全人类健康当赌注。如果日方真有诚意解决邻国的关切，就应当立即停止强推排海计划，在不预设结果的前提下开展交流，充分讨论所有可能的安全处置方案。
+     <############> Translation was: Yesterday, Vice Foreign Minister Sun Weidong summoned Japanese Ambassador to China Suhiuo and lodged solemn representations with the Japanese side in this regard. China pointed out that the Japanese government has ignored the strong doubts and objections of the international community and insists on announcing that it is about to start the Fukushima nuclear polluted water and sea drainage. This act is extremely self-serving and extremely irresponsible in blatantly passing on the risk of nuclear pollution to neighboring countries including China and the international community and putting its own private interests above the long-term well-being of people in the
+    The sea is the blue home on which all mankind depends for its survival. Japan cannot dump nuclear polluted water at will. The Japanese side is undoubtedly betting on the global marine environment and the health of all mankind. If the Japanese side is truly sincere in addressing the concerns of its neighbors, it should immediately stop pushing forward plans for sea discharge, conduct exchanges without predetermined results and fully discuss all possible safe disposal options.
+[NeMo I 2023-09-14 09:02:14 nmt_service:139] Translated in 0.7351357936859131. Input was: 方一贯坚决反对建交国与中国台湾地区进行任何形式的官方往来，包括商签任何具有主权意涵和官方性质的协定。美方行径违反一个中国原则和中美三个联合公报规定，违背美方做出的仅与台保持非官方关系的承诺，向“台独”分裂势力发出错误信号。
+    中方维护国家主权和领土完整的意志坚定不移。我们敦促美方立即改弦更张，撤销所谓“法案”，停止推进“倡议”谈判，不要在错误道路上越走越远。
+     <############> Translation was: China firmly opposes any form of official exchanges between countries with diplomatic ties with China's Taiwan region, including negotiating any agreements with sovereign connotations and official nature. The US actions violate the one-China principle and the provisions of the three China-US joint communiques, violate the US commitment to maintain only unofficial relations with Taiwan and send wrong signals to the separatist forces of "Taiwan independence."
+    China's will to safeguard national sovereignty and territorial integrity is unwavering. We urge the US side to immediately change course, withdraw the so-called "bill," stop advancing "initiative" negotiations and not go further down the wrong path.
+[NeMo I 2023-09-14 09:02:34 nmt_service:139] Translated in 0.7950990200042725. Input was: 中国从不刻意追求贸易顺差，中欧贸易顺差是产业结构、产业分工、贸易方式以及外部因素综合作用的客观结果。长期以来，绝大部分欧盟在华企业从中欧贸易中获利丰厚，这也是他们在华经营展业的根本原因。近年来，欧盟收紧对华高技术产品出口，是影响欧对华出口潜力发挥、造成贸易不平衡的直接原因。如果欧方真想解决贸易不平衡，就不应指责中方，而应取消对华出口限制。
+     <############> Translation was: China never pursues a trade surplus. The trade surplus between China and Europe is the objective result of the combination of industrial structure, industrial division of labor, trade patterns and external factors. For a long time, most EU enterprises in China have benefited from China-EU trade, which is the fundamental reason why they operate in China. In recent years, the EU has tightened exports of high-tech products to China.
+[NeMo I 2023-09-14 09:03:06 nmt_service:139] Translated in 2.8349342346191406. Input was: 关于近日菲律宾向中国南沙群岛仁爱礁非法运送建筑物资并引发海上事态的情况，中国海警局新闻发言人已作了详细介绍。中国外交部已向菲方提出严正交涉。
+    我想强调的是，仁爱礁是中国南沙群岛的一部分。菲方多次明确承诺拖走在该礁非法“坐滩”的军舰，但24年过去了，菲方不但未拖走该军舰，还企图对其大规模维修加固，实现对仁爱礁的永久占领。菲方行为严重违反国际法和中国与东盟国家签署的《南海各方行为宣言》。中方再次敦促菲方立即从仁爱礁拖走“坐滩”军舰，恢复仁爱礁无人无设施的状态。
+    南海仲裁案所谓裁决违反包括《联合国海洋法公约》在内的国际法，是非法的、无效的。中国不接受、不承认该裁决，不接受任何基于该裁决的主张和行动。这一立场是明确的、坚定的，是维护国际法治的正当举措。
+    一段时间以来，中方通过外交渠道多次同菲方就仁爱礁问题进行沟通，明确要求菲方不得向非法“坐滩”军舰运送用于大规模维修加固的建筑物资，并提议双方尽快商谈管控仁爱礁局势的措施。但菲方无视中方的善意和诚意，执意向仁爱礁“坐滩”军舰运送用于维修加固的建筑物资，这是此次事态的起因。中国海警依法采取措施维护中方主权和海洋权益，现场操作专业、克制，无可非议。
+    菲律宾是中国重要的海上邻国，中菲双方曾就管控海上争议达成重要共识。中方愿继续通过对话协商与菲方妥善处理海上问题，共同维护双边关系和海上局势稳定。
+    
+     <############> Translation was: Regarding the recent illegal shipment of construction materials by the Philippines to Renai Reef in China's Nansha Islands, which caused the maritime situation, the spokesperson of the China Coast Guard Bureau has made a detailed briefing and the Chinese Foreign Ministry has lodged solemn representations with the Philippine side.
+    I would like to stress that Ren'ai Reef is part of China's Nansha Islands. The Philippines has repeatedly made clear commitments to tow away the warship that was illegally "beached" on this reef. However, after 24 years, the Philippines has not only failed to tow the warship away, but has also attempted to maintain it on a large scale so as to achieve permanent occupation of Ren'ai Reef. The Philippines' actions seriously violate international law and the Declaration on the Conduct of Parties in the South China Sea signed by China and ASEAN countries.
+    The so-called award in the South China Sea arbitration case violates international law, including the UN Convention on the Law of the Sea, and is illegal and invalid. China does not accept or recognize the award or any claim or action based on it. This position is clear and firm and constitutes a legitimate measure to uphold the international rule of law.
+    For some time now, China has repeatedly communicated with the Philippines on the issue of Renai Reef through diplomatic channels, explicitly asking the Philippines not to deliver construction materials for large-scale maintenance and reinforcement to illegal "beached" warships, and proposing that the two sides discuss measures to control the situation at Renai Reef as soon as possible. However, the Philippines ignored China's goodwill and sincerity and insisted on delivering construction materials for maintenance and reinforcement to the "beached" warships at Renai Reef. This is the cause of this incident. The Chinese coast guard has taken measures in accordance with law to safeguard China's sovereignty and maritime rights
+    The Philippines is an important maritime neighbor of China. China and the Philippines have reached important consensus on managing maritime disputes. China is willing to continue to properly handle maritime issues with the Philippines through dialogue and consultation and jointly safeguard bilateral relations and maritime stability.
+[NeMo I 2023-09-14 09:03:32 nmt_service:139] Translated in 0.6806912422180176. Input was: 近日，在国家计算机病毒应急处理中心会同360公司配合侦办西北工业大学被美国国家安全局（NSA）网络攻击案过程中，成功提取了“二次约会”间谍软件的多个样本，并锁定了这起网络间谍行动背后NSA工作人员的真实身份。报告显示，该软件是NSA开发的网络间谍武器，可实现网络流量窃听劫持、中间人攻击、插入恶意代码等恶意功能，它与其它恶意软件配合可以完成复杂的网络“间谍”活动。经层层溯源，工作人员们发现了上千台遍布各国的网络设备中仍在隐蔽运行“二次约会”间谍软件及其衍生版本，并发现被NSA远程控制的跳板服务器，其中多数分布在德国、日本、韩国、印度和中国台湾。
+     <############> Translation was: Recently, the National Computer Virus Emergency Response Center, together with company 360, successfully extracted multiple samples of "second date" spyware and locked the real identity of the NSA staff behind the cyber espionage operation. The report shows that the software is a cyber espionage weapon developed by the NSA. After several layers of traceability, staff found thousands of network devices across various countries still secretly running "secondary dating" spyware and its derivatives, and found springboard servers remotely controlled by the NSA, mostly in Germany, Japan, South Korea, India, and Taiwan.
+[NeMo I 2023-09-14 09:04:22 nmt_service:139] Translated in 0.46782827377319336. Input was: 9月12日，由中国船舶集团旗下广船国际联合中船贸易建造的7000车双燃料汽车运输船正式交付，这也是华南地区建造的首艘双燃料汽车运输船。汽车运输船就像一座漂浮在海上的巨型“立体车库”，作为运输船型，不仅要考虑安全性，环保经济也是非常重要的指标。为此技术人员为这艘船安装了最新的天然气、燃油双燃料推进系统。
+     <############> Translation was: On September 12, the 7,000-car dual-fuel car carrier built by China Shipbuilding Group's Guangzhou Ship International and China Shipbuilding Trade was officially delivered, which is also the first dual-fuel car carrier built in South China. The car carrier is like a giant "three-dimensional garage" floating on the sea.
+[NeMo I 2023-09-14 09:05:21 nmt_service:139] Translated in 0.8238034248352051. Input was: 9月12日下午，中国和新加坡“合作-2023”陆军联合训练圆满结束，中新双方在新加坡陆军第3师裕廊营区举行联训结束仪式。
+    12日上午，中新联训分队进行联合城市反恐实兵综合演练，参训队员混编为联合特遣队，组织了情报侦察、包围封控、立体突入、火力打击、解救人质、快速撤离等内容演练，有效检验和提升了两军联合行动能力。
+    结束仪式上，两军官兵庄重地奏唱国歌。中新双方观摩团团长共同检阅联训分队，并为优秀参训队员颁发证书。
+    
+     <############> Translation was: On the afternoon of September 12, the joint training of the Chinese and Singaporean "Cooperation-2023" Army was successfully completed. The two sides held a joint training ceremony at Jurong Camp, 3rd Division of the Singapore Army.
+    On the morning of December 12, the Sino-Singapore Joint Training Unit conducted a joint urban anti-terrorist training exercise. The participants were mixed into joint task forces and organized drills on intelligence reconnaissance, siege and control, three-dimensional intrusion, fire strikes, hostage rescue and rapid evacuation, effectively testing and improving the joint operational capabilities of the two militaries.
+    At the end of the ceremony, officers and soldiers of the two militaries solemnly sang the national anthem. The heads of the Chinese and Singapore observation teams jointly reviewed the joint training unit and awarded certificates to the outstanding participants.
+[NeMo I 2023-09-14 09:05:45 nmt_service:139] Translated in 1.2686517238616943. Input was: 有人一直问菲律宾海岸警卫队最近几次补给到底有没有成功将钢板等建材运到仁爱礁非法坐滩的登陆舰上，都回答累了，简单说几句。
+    首先，@中国海警 已经明确说了，不允许运送建材上去，只出于人道主义允许运送食物和水等生存必需品；
+    其次，现场有很多影像资料，进入仁爱礁之前，附近海域不仅有海警船负责抵近查证，还有渔船配合围堵，中国船只的吨位、数量、航速都有压倒性优势，假如发现有不该让他送上去的物资，它能送上去？
+    再次，有人说，有没有可能把物资藏船底，偷偷送上去。海警说了“全程跟监，有效归置”，什么叫全程，什么叫有效，菲船进入仁爱礁盘内的补给期间显然也在中国控制之下。不会以为只有菲律宾的船才能进礁盘吧？
+    最后，也是最直接的一点，就菲律宾那点尿性，把咱出于人道主义的放行都能宣传成重大胜利。如果把建材送上去了，还用得着你在这猜，你信不信它早宣传地比韩国还牛了？
+    
+     <############> Translation was: Some people have been asking whether the Philippine Coast Guard has been successful in carrying steel plates and other building materials to the landing ship that was illegally at Renai Reef.
+    First of all, the Chinese coast guard has made it clear that it is not allowed to transport building materials, only because of humanitarian permission to deliver food and water and other survival necessities;
+    Second, there are a lot of video data on the scene. Before entering Renai Reef, there are not only coast guard ships responsible for approaching verification, but also fishing boats to cooperate with containment. The tonnage, quantity and speed of Chinese vessels have an overwhelming advantage. If you find any materials that shouldn't be sent to him, it can send it?
+    Again, some people say that there is no possibility of hiding the materials at the bottom of the ship and sending them secretly. The coast guard said, "Follow the whole process and effectively locate it." What is the whole process and what is effective?
+    Finally, and the most direct point, in terms of the urine of the Philippines, our humanitarian release can be publicized as a major victory. If you send the building materials, you can still use it here guessing, do you believe it has been advertised as paying more cattle than South Korea?
+[NeMo I 2023-09-14 09:06:04 nmt_service:139] Translated in 0.31841206550598145. Input was: 当地时间9月13日上午，印度尼西亚总统佐科前往位于该国首都雅加达的哈利姆高铁车站，首次乘坐雅万高铁。（总台记者 陶家乐） 
+     <############> Translation was: On the morning of September 13, local time, Indonesian President Joko Widodo went to the Halim High-speed Railway Station in the country's capital Jakarta and took the Yavan High-speed Railway for the first time. (
+[NeMo I 2023-09-14 09:06:47 nmt_service:139] Translated in 0.450488805770874. Input was: 南海研究论坛：南沙群岛越占南威岛2019年卫星图。环岛的礁盘边缘布设有防登陆桩砦类障物。机场跑道两侧，密密麻麻的堑壕体系清晰可见。另外岛东北部还有牵引式火炮的地下掩体和品字形防空导弹阵地，以及越南空军377师292雷达团雷达11站的远程对空预警雷达。 
+     <############> Translation was: South China Sea Research Forum: 2019 satellite map of Vietnam's occupation of Nam Vai Island in the Nansha Islands. There are anti-landing piles and barriers along the rim of the atolls around the island. The dense plow system can be seen on both sides of the airport runway.
+[NeMo I 2023-09-14 09:07:05 nmt_service:139] Translated in 0.6323444843292236. Input was: 越南首次公布了越占南沙柏礁的非法填海施工现场视频。
+    今年4月1日，欧洲哨兵2A（Sentinel-2A）商业卫星图像显示，南沙群岛的越占柏礁的西北侧礁盘内侧出现了新施工点，疑似挖泥船通过在东南侧礁盘上近期挖通的潟湖航道，进入潟湖内部施工。
+    
+     <############> Translation was: For the first time, Vietnam has released videos of illegal reclamation works on Vietnamese-occupied South Sabah Reef.
+    On April 1 this year, Sentinel-2A commercial satellite images showed that a new construction site appeared on the inside of the northwestern reef of Yucca Bay in the Spratly Islands. The suspected dredger entered the interior of the lake through the recently excavated Penghu channel on the southeast reef.
+[NeMo I 2023-09-14 09:08:13 nmt_service:139] Translated in 2.3850314617156982. Input was: 马来西亚海事执法局把3艘越南渔船抢了。
+    4月16日11时左右，越南广义省渔船QNg 90918 TS（图1）在南沙群岛越占南薇滩和越占安波沙洲之间（图2，08°02'N，112°25'E ），遇到了马来西亚海事执法局的Gagah级230吨近海巡逻炮艇KM Bistari 3915（图3）。船老大觉得这里附近都是越南占领的岛礁，已经是马来西亚的200海里控制海域之外了（图4），没当回事。
+    结果，马来西亚持枪海警7人乘坐冲锋舟强行登船，逼迫船长和42名船员全部出舱蹲在船头，交出1万美元和全部手机、手表、戒指、项链后才能放人。船长表示，我们出门不带贵重财物。
+    最后马警察搜查全船，抢走了5部手机和1吨多鱿鱼干，还要船长登上炮艇签字认罪。船长不同意离船，被打了一顿。还有另外两艘越南渔船也被抢。
+    这时，越南两艘值班的渔检船闻讯分别从安波沙洲和南威岛赶来，马海警连忙逃走。
+    
+    
+     <############> Translation was: Malaysia Maritime Enforcement Agency snatched three Vietnamese fishing boats.
+    At around 11: 00 on April 16, Vietnamese fishing vessel QNg 90918 TS (Figure 1) encountered the Malaysian Maritime Enforcement Agency's Gagah class 230-ton offshore patrol gunboat KM Bistari 3915 (Figure 3) between Nam Viet Beach and Ambo Beach in the Nansha Islands (Figure 2, 08 02'N, 112 25'E). The owner felt that the area was near Vietnamese-occupied islands and was already outside Malaysia's 200 nautical mile controlled waters (Figure 4).
+    As a result, seven Malaysian armed coast guards were forced to board the vessel in a sub-machine boat, forcing the captain and 42 crew members to leave the bow and hand over $10,000 and all cellphones, watches, rings and necklaces before releasing them. The captain said we went out without valuables.
+    Finally, the Malaysian police searched the boat and seized five mobile phones and one ton of dried fish. The captain boarded the gunboat to sign a confession. The captain refused to leave the boat and was beaten. Two other Vietnamese fishing boats were also robbed.
+    At this time, two Vietnamese fishing inspection vessels on duty heard that they had arrived from Ambo sandbank and Nam Vi island, respectively, and Ma coast guards fled.
+[NeMo I 2023-09-14 09:08:35 nmt_service:139] Translated in 0.44090890884399414. Input was: 【越南非法扩建南沙群岛无乜礁】越占南沙群岛无乜礁2021年12月28日卫星图现施工迹象，目前判断是开挖潟湖航道。无乜礁是越南侵占南沙群岛最东端，位置极其重要。毕生礁、鸿庥岛、敦谦沙洲、柏礁正在扩建中。无乜礁是越南此批次扩建的第5个岛礁。
+    
+    
+     <############> Translation was: Vietnam Illegally Expands No Causeway Reef in Nansha Qundao December 28, 2021 Satellite images show signs of construction. The location of No Causeway is extremely important because it is the easternmost point of Vietnam's occupation of the Nansha Qundao.
+[NeMo I 2023-09-14 09:08:54 nmt_service:139] Translated in 0.9305973052978516. Input was: 自“南海仲裁案”闹剧发生后，南海形势进一步复杂化，但在中国及相关国家的努力下，近两年有了明显的缓和。然而，近日外媒报道，越占南沙群岛西礁地区出现包括疑似干船坞在内的新设施，相关资料显示，仅2016年越南就在其所占的10座岛礁上进行了“改造和填充”。这表明越南在希望维持南海稳定的同时并未真正减少在南海的侵权活动。并且越南曾多次公开表示，欢迎美日印澳等域外国家在南海发挥“建设性作用”，并且还加强了与日本、韩国、印尼、菲律宾和马来西亚等与中国有海洋纠纷的国家之间的海上合作，加强了与有关国家在官员互访和培训、联合演练、执法经验交流等方面的海上合作。
+    
+    
+     <############> Translation was: The situation in the South China Sea has been further complicated since the South China Sea arbitration case. However, thanks to the efforts of China and relevant countries, the situation in the South China Sea has eased significantly in the past two years. However, recent foreign media reported that new facilities, including suspected drydocks, have appeared in the Western Isles of the Nansha Islands. Vietnam has publicly said many times that it welcomes the "constructive role" of the US, Japan, India, Australia and other non-regional countries in the South China Sea. It has also strengthened maritime cooperation with countries with maritime disputes with China such as Japan, South Korea, Indonesia, the Philippines and Malaysia, and strengthened maritime cooperation with relevant countries in such areas as official visits and training, joint drills, and law enforcement experience exchange.
+[NeMo I 2023-09-14 09:09:53 nmt_service:139] Translated in 1.3777618408203125. Input was: 山东舰航母战斗群位吕宋岛东北——根据日本防卫省发布的消息，9月13号，中国海军山东舰航母战斗群，包括052D型驱逐舰桂林舰、长沙舰，054A型护卫舰咸宁舰、许昌舰以及901型综合补给舰查干湖舰，在宫古岛以南650公里处活动(图2，这块关你小日本啥事？)。
+    山东舰在此处活动，可以看做一石三鸟，可以对台岛进行打击，可以对关岛方向进行拒止，同时威慑菲律宾吕松岛上的美军基地。
+    从日本防卫省发布的照片可以看出，山东舰正在进行歼15舰载战斗机的起飞作业(图3)。目前编队中没有发现055型驱逐舰。
+    日本海上自卫队村雨级驱逐舰有明号(DD-109)负责跟踪监视，有明号于9月11号离开佐世保
+    
+    
+    
+     <############> Translation was: Shandong carrier battle group northeast of Luzon - On September 13, the Chinese Navy's Shandong carrier battle group, consisting of the Type 052D destroyers Guilin and Changsha, the Type 054A frigates Xianning and Xuchang, and the Type 901 complex supply ship Chagan Lake, moved 650 km south of Miyako Island, according to Japan's Ministry of Defense.
+    The Shandong ships were operating here, and could be seen as three birds of stone, capable of striking Taiwan Island, blocking the direction of Guam, and deterring American bases on Luzon Island in the Philippines.
+    As can be seen from photographs released by the Japanese Ministry of Defense, the ship is taking off from the ship carrying fighter jets (Figure 3). No Type 055 destroyers have been seen in the current formation.
+    The Japanese Maritime Self-Defense Force Murayu-class destroyer Ariake (DD-109), which was responsible for tracking surveillance, left Sasebo on September 11
+[NeMo I 2023-09-14 09:10:12 nmt_service:139] Translated in 0.42664194107055664. Input was: 菲军西部司令部9月6日至7日的南沙空中巡逻，在鲎藤礁发现了23艘中国渔船，在仙宾礁发现了5艘中国渔船，在大渊滩发现了2艘中国渔船。
+    大渊滩应该是有史以来首次上新闻。大渊滩在北纬10度04~44分，东经116度02~20分范围内。位于南沙群岛东北部，在费信岛东北方。东北—西南延伸达56公里，宽约13公里。水深一般为18米。
+    
+    
+    
+    
+     <############> Translation was: The Philippine Western Command's aerial patrol of Nansha from September 6 to 7 spotted 23 Chinese fishing boats at Lantau Reef, 5 Chinese fishing boats at Xianbin Reef and 2 Chinese fishing boats at Dayutan Beach.
+    It is located in the northeast of Nansha Islands, in the northeast of Feixin Island. Northeast - southwest extension of 56 kilometers, about 13 kilometers wide. Water depth is generally 18 meters.
+[NeMo I 2023-09-14 09:11:28 nmt_service:139] Translated in 0.5475304126739502. Input was: 9月16日，是第23个#全民国防教育日#。当前，“全民国防教育月”活动正在全国上下广泛开展。近日印发的《关于组织开展2023年“全民国防教育月”活动的通知》强调，要“教育引导广大干部群众强化国防观念和忧患意识 ”。国防观念是保卫国家安全、履行国防义务的思想意识，是牵系国家安危和民族兴衰的重要精神因素。一个国家、一个民族，要赢得生存和发展，国家安全意识须臾不能松懈、国防观念一刻不能缺少。
+    
+    
+    
+     <############> Translation was: On September 16, it was the 23rd National Defense Education Day. At present, "National Defense Education Month" activities are widely carried out throughout the country. Recently issued the "Notice on Organizing and Carrying out National Defense Education Month 2023" activities, stressed that "education should guide the masses to strengthen national defense concept and awareness of concern."
+[NeMo I 2023-09-14 09:11:46 nmt_service:139] Translated in 1.4369516372680664. Input was: 东海舰队8艘主力舰出宫古，或是东、南联合军演——根据日本防卫省发布的消息，9月11号，中国海军8艘驱护舰通过宫古海峡进入西太活动，8艘舰艇分别为052C型驱逐舰郑州舰、052D型驱逐舰包头舰、绍兴舰、厦门舰、054A型护卫舰红河舰、宜兴舰(红河舰和宜兴舰是新批次的054A，也是首次远洋)、以及两艘现代级驱逐舰福州舰和宁波舰。
+    与此同时，9月11号，山东舰航母编队通过巴士海峡进入西太活动(图6为以前图片)。根据作者 发布的消息，至少有13艘解放军军舰在台岛附近活动。山东舰航母编队加上东海舰队的8艘驱护舰，制空、防空、反舰、反潜、对地打击没有短板，妥妥的“灭国舰队”。
+    
+    
+    
+     <############> Translation was: Eight capital ships of the East China Sea Fleet leave Miyako, or joint east and south military exercises - According to Japan's Ministry of Defense, on September 11, eight Chinese Navy frigates entered the Western Pacific through the Miyako Strait, eight ships: Type 052C destroyer Zhengzhou, Type 052D destroyer Baotou, Type 052D destroyer Shaoxing, Type Xiamen, Type 054A frigate Red River, Yixing (Red River and Yixing are the new batch of 054A and the first ocean-going), and two modern-class destroyers Fuzhou and Ningbo.
+    Meanwhile, on September 11, the carrier formation of Shandong entered the Western Pacific through the Bus Strait. [6] According to the author, at least 13 People's Liberation Army warships were operating near Tai Island. The carrier formation of Shandong, along with eight frigates of the East China Sea Fleet, had no short board for air defense, air defense, anti-ship, anti-submarine, and ground strikes, and the proper "destroyer fleet."
+[NeMo I 2023-09-14 09:12:25 nmt_service:139] Translated in 0.47110414505004883. Input was: 9月9号，美国海军拉尔夫•约翰逊号驱逐舰(DDG-114)与加拿大渥太华号护卫舰(FFH-341)穿航台湾海峡期间，声称遇到一艘解放军的“情报船”，船上装有特殊的雷达系统，拍照后还要事后好好研究。经网友@板凳和瓜子 辨认，其实就是一艘钓鱿鱼的渔船，两侧灯用来吸引鱿鱼。
+    
+    
+    
+     <############> Translation was: On September 9, the US Navy destroyer Ralph Johnson (DDG-114) and the Canadian frigate Ottawa (FFH-341) sailed through the Taiwan Strait, claiming to encounter a PLA "intelligence ship," equipped with a special radar system on board, and after taking photos to study.
+[NeMo I 2023-09-14 14:22:52 nmt_service:139] Translated in 0.4349708557128906. Input was: 琼航警93/23，琼州海峡，2023年8月16日1200时起，南海伏季休渔期结束，将有大量渔船通过琼州海峡出海作业。希过往船舶加强了望、谨慎驾驶、注意避让。
+    
+    
+    
+    
+    
+     <############> Translation was: Qiong Aviation Police 93 / 23, Qiongzhou Strait, from 1200 hours on August 16, 2023, the South China Sea Vuji fishing period will end, there will be a large number of fishing boats through the Qiongzhou Strait to sea operations. I hope that passing ships will strengthen their lookout,
+[NeMo I 2023-09-14 14:22:57 nmt_service:139] Translated in 0.5540299415588379. Input was: 另外还有一些多国联合演习，也是外交意义大于实战意义，例如今年 6 月去印尼参加的 " 科莫多 -2023" 联合演习，一共有来自印尼、中国、美国、俄罗斯、新加坡、巴基斯坦等国的 40 多艘舰艇，那么多国家不同型号的军舰混在一起，真要搞实兵对抗演练显然不现实。
+    因此，演习期间进行了舰队阅兵、医疗、工程、文化、海军乐队等交流。演练了海上拦截、海上搜救、损管等科目。真正的意义是实现了多国军队之间的沟通联系。
+    
+    
+    
+    
+    
+     <############> Translation was: In addition, there are some multinational joint exercises that have greater diplomatic significance than actual combat significance. For example, the Komodo-2023 joint exercise, which went to Indonesia in June this year, involved more than 40 ships from Indonesia, China, the United States, Russia, Singapore, Pakistan and other countries.
+    Therefore, during the exercise, there were exchanges between the fleet military parade, medical, engineering, culture and naval band. The subjects of maritime interdiction, maritime search and rescue and damage management were rehearsed. The real meaning was to achieve communication between multinational armies.
+[NeMo I 2023-09-14 14:30:14 nmt_service:139] Translated in 0.6566669940948486. Input was: 江苏省苏州市“2023安辐二号”辐射事故综合应急演习成功在昆山举行。演习以放射源丢失后搜寻和收贮、非密封放射性物质撒落后收贮为背景，事故等级为较大辐射事故，启动Ⅲ应急响应。演习设置了事故报告、应急启动、应急响应、舆情应对、非密封放射性物质洒落收贮、放射源搜寻和处置、应急终止共7个科目。
+    此次演习检验了生态环境、公安、卫生、宣传等相关部门应对两起较大辐射事故的应急响应、组织协调、协同作战能力，检验了应急预案的实用性和可操作性。
+    
+    
+    
+    
+    
+    
+    
+     <############> Translation was: "2023 Anzhao-2" radiation accident comprehensive emergency response exercise was successfully held in Kunshan City, Jiangsu Province. The exercise was conducted in the background of search and storage after loss of radioactive sources, late storage of unsealed radioactive materials. The accident level was for large radiation accidents.
+    The exercise tested the emergency response, organization and coordination and collaborative combat capabilities of relevant departments such as ecological environment, public security, health and publicity in response to two large radiation accidents, and tested the practicality and operability of emergency plans.
+[NeMo I 2023-09-14 15:42:56 nmt_service:139] Translated in 0.7338919639587402. Input was: 悉尼大学美国研究中心外交政策与国防项目研究员布莱克·赫辛格建议：因为菲律宾的坐滩废旧登陆舰即将解体，美国海军陆战队应该直接对南沙仁爱礁实施军事占领。
+    具体做法是：把二手的油气平台（图片仅供参考）拖到南沙，架设在仁爱礁的礁盘上，美菲两军陆战队联合驻扎。美国海军负责施工中的护航，不用害怕中国的海警船和渔船。
+    作者认为，美军进驻菲律宾，引发杜特尔特等菲国人士的不满，说是把菲律宾本土变成了战场，并非真实帮菲保卫南海。现在美军可以一步到位，将战场转移到远海，并履行了保卫盟友的诺言
+    
+    
+    
+    
+    
+    
+    
+    
+     <############> Translation was: Blake Hersinger, a research fellow in the Foreign Policy and Defense Program at the University of Sydney's American Studies Center, suggested that, because the Philippines "old beach landing ship was about to disintegrate, the United States Marine Corps should directly occupy Nansha Renai Reef.
+    To do this: tow the second-hand oil and gas platform (pictures are for reference only) to the Nansha and install it on the reef of Renai Reef, where the U.S. and Philippine Marines are stationed. The U.S. Navy escorts the construction without fear of Chinese coast guard ships and fishing boats.
+    The author believes that the presence of US troops in the Philippines has caused displeasure among Filipinos such as Duterte, who say that they have turned the Philippines mainland into a battlefield rather than actually helping the Philippines defend the South China Sea. Now the US military can move the battlefield to the distant sea and fulfill its promise to defend its allies
+[NeMo I 2023-09-14 15:47:46 nmt_service:139] Translated in 1.3622894287109375. Input was: 国家计算机病毒应急处理中心和360公司今天（4日）联合发布了一份调查报告，揭秘了美国中央情报局利用网络攻击他国的相关情况，披露部分发生在中国和其他国家的网络安全典型案事件的具体过程，全面深入分析美国中央情报局的网络攻击窃密和相关现实危害活动，以及其对美国成为“黑客帝国”所做的贡献。
+    2020年，360公司独立发现一个从未被外界曝光的网络攻击组织，该组织使用与美国中央情报局相关联的网络武器工具，针对中国和其他国家受害目标实施网络攻击，攻击活动最早可以追溯到2011年，相关攻击一直延续至今。被攻击目标涉及各国重要信息基础设施、航空航天、科研机构、石油石化、大型互联网公司以及政府机构等诸多方面。
+    由国家计算机病毒应急处理中心和360公司联合成立的调查组发现在规模庞大的全球性网络攻击行动中，美国中央情报局大量使用“零日”漏洞，其中包括一大批至今未被公开披露的后门和漏洞（部分功能已得到验证），在世界各地建立“僵尸”网络和攻击跳板网络，针对网络服务器、网络终端、交换机和路由器，以及数量众多的工业控制设备分阶段实施攻击入侵行动。
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     <############> Translation was: The National Computer Virus Emergency Response Center and 360 released an investigation report today (4th), revealing the CIA's use of cyberattacks against other countries, revealing the specific process of some typical cyber security cases in China and other countries, comprehensive in-depth analysis of the CIA's cyberattack theft and related real-world harm activities, and its contribution to the United States becoming a "hacking empire."
+    In 2020, 360 independently discovered a cyberattack organization that has never been exposed to the outside world. The organization uses cyber weapons tools linked to the CIA to carry out cyber attacks against Chinese and other countries. The attacks date back to 2011 and have continued to date.
+    An investigation team formed by the National Computer Virus Emergency Response Center and 360 found that the CIA made extensive use of "zero-day" vulnerabilities in large-scale global cyberattacks, including a large number of backdoors and vulnerabilities (some of which have been verified) that have not yet been publicly disclosed, to create "botnet" networks and attack springboard networks around the world, and to conduct phased attacks against network servers, network terminals, switches and routers, as well as numerous industrial control devices.
+[NeMo I 2023-09-14 16:00:48 nmt_service:139] Translated in 1.6269099712371826. Input was: 🇵🇭菲律宾和🇺🇸美国海军陆战队将于7月13日在“2023年海军陆战队航空支援活动”抗登陆联合演习期间，在三描礼士圣安东尼奥海岸附近举行另一次击沉演习（SINKEX）。两支部队将在离岸10至12英里处，击沉一艘退役的菲律宾海军军舰——BRP Lake Caliraya“卡里拉亚湖”号油料补给舰。
+    这是菲律宾海军第一艘补给舰，也是菲律宾海军最大的舰艇，拥有岸对舰、舰对岸、舰对舰加油能力。该舰原系中国浙江台州市中兴船舶有限公司2007年建造的“拉普-拉普”号民用成品油船。该船在2014年3月被菲律宾国家石油公司捐给菲律宾海军后，菲律宾海军在八打雁和甲米地的干船坞对该船进行了维修，然后加入现役。2020年退役。
+    这次抗登陆联合演习，有菲律宾武装部队的约1257名人员（其中115名预备役军人）参加，另外1444名人员来自美军。
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     <############> Translation was: This is the first supply ship of the Philippine Navy and the largest ship of the Philippine Navy. It has shore-to-shore, ship-to-shore and ship-to-ship refueling capabilities. The ship was originally built in 2007 by Zhongxing Shipbuilding Co., Ltd., Taizhou City, Zhejiang Province, China.
+    The joint anti-landing exercise involved approximately 1,257 personnel from the Armed Forces of the Philippines (115 reservists) and 1,444 personnel from the United States Army.
+[NeMo I 2023-09-15 00:54:51 nmt_service:139] Translated in 0.7422208786010742. Input was: 近日，习近平总书记在黑龙江考察期间，连续两次提到了一个新词汇——“新质生产力”，让人眼前一亮，也传递着鲜明信号。什么是“新质生产力”？为什么现在提？为什么在东北提？让我们来打开这三个问号。
+    
+    先从两次提到这个词汇的语境里、前后句中看——
+    
+    9月7日下午，习近平总书记在哈尔滨主持召开新时代推动东北全面振兴座谈会时说，“积极培育新能源、新材料、先进制造、电子信息等战略性新兴产业，积极培育未来产业，加快形成新质生产力，增强发展新动能。”一句话中，出现了五个“新”，落脚点是新动能。 <############> Translation was: Recently, during his visit to Heilongjiang, General Secretary Xi Jinping mentioned a new term - "new quality productivity" twice in a row, which made people shine and also conveyed a clear signal. What is "new quality productivity"? Why now? Why in Northeast China? Let's open these three question marks.
+    
+    First, in the context of the two references to this word, in the preceding sentence --
+    
+    On the afternoon of September 7, General Secretary Xi Jinping said that "actively cultivate new energy, new materials, advanced manufacturing, electronic information and other strategic emerging industries, actively cultivate future industries, accelerate the formation of new quality productivity, enhance the development of new drivers."
+[NeMo I 2023-09-15 01:06:22 nmt_service:139] Translated in 4.060489177703857. Input was: 近日，习近平总书记在黑龙江考察期间，连续两次提到了一个新词汇——“新质生产力”，让人眼前一亮，也传递着鲜明信号。什么是“新质生产力”？为什么现在提？为什么在东北提？让我们来打开这三个问号。
+    
+    先从两次提到这个词汇的语境里、前后句中看——
+    
+    9月7日下午，习近平总书记在哈尔滨主持召开新时代推动东北全面振兴座谈会时说，“积极培育新能源、新材料、先进制造、电子信息等战略性新兴产业，积极培育未来产业，加快形新质生产力，增强发展新动能。”一句话中，出现了五个“新”，落脚点是新动能。中国人民
+    9月8日上午，习近平总书记在听取黑龙江省委省政府工作汇报时强调，“整合科技创新资源，引领发展战略性新兴产业和未来产业，加快形成新质生产力。”和前一天的表述放在一起看，两次都提及了“战略性新兴产业”和“未来产业”。
+    
+    支柱产业、战略性新兴产业、未来产业，这三个经常被提及的关键词，有鲜明的时序感，由近及远，从今天指向明天。换句话说，今天的战略性新兴产业，正逐渐成为支柱产业。而今天的未来产业，将逐渐进入到今天战略性新兴产业的位置。
+    
+    在“十四五”规划纲要里，专门有一章是“发展壮大战略性新兴产业”，其中专门有一节是“前瞻谋划未来产业”。这一章里提到的“战略性新兴产业”，包括新一代信息技术、生物技术、新能源、新材料、高端装备、新能源汽车、绿色环保以及航空航天、海洋装备等；提到的“未来产业”，则包括类脑智能、量子信息、基因技术、未来网络、深海空天开发、氢能与储能等。
+    新技术、新模式，新产业、新业态，新领域、新赛道，新动能、新优势，丰富的“新”，正引申出深刻的“质”：
+    
+    
+    
+    历史唯物主义认为，“物质生产力是全部社会生活的物质前提，同生产力发展一定阶段相适应的生产关系的总和构成社会经济基础”。今天，新的物质生产力，正在信息化、智能化等条件下形成。
+    
+    
+    
+    这是依靠创新驱动形成的生产力，从本质上，已区别于大量消耗资源能源的传统生产力。
+    
+    
+    
+    这是体现高质量发展的生产力。劳动力三要素：劳动者、劳动资料、劳动对象，都面对着高质量发展下的更高要求。
+    
+    
+    
+    这是以高质量发展带来高品质生活的生产力。
+    
+    “新质生产力”，起点是“新”，关键在“质”，落脚于“生产力”。生产力是什么？它是推动社会进步的最活跃、最革命的要素。社会主义的根本任务就是解放和发展社会生产力。党的二十大强调，“科技是第一生产力、人才是第一资源、创新是第一动力”。实验室里的新技术，还需要通过新产业，不断形成推动经济社会发展的新动能。
+    
+    “新质生产力”的焕发，需要跃升式的新逻辑。它不是“1+1+1”之后再多加几个“1”，而是在“1+1+1”的基础上再“×2、×3、×4”。它的成长，告别传统路径，走上新的赛道。它是能改变生产方式和生活方式的生产力。
+    
+    “新质生产力”的形成，还需要不断调整生产关系。全面深化改革的内在逻辑之一，就是不断调整生产关系，以激发社会生产力发展活力。所以，“新质生产力”带来的是发展命题，也是改革命题。围绕创新驱动的体制机制变革至关重要。
+    
+    提出“新质生产力”，为什么是现在，为什么在东北？我们不妨进入“世界百年未有之大变局”的视野来看。这个正加速演进的“大变局”，不仅是指国际力量对比的深刻调整，还指向新一轮科技革命和产业变革的深入发展。 <############> Translation was: Recently, during his visit to Heilongjiang, General Secretary Xi Jinping mentioned a new term - "new quality productivity" twice in a row, which made people shine and also conveyed a clear signal. What is "new quality productivity"? Why now? Why in Northeast China? Let's open these three question marks.
+    
+    First, in the context of the two references to this word, in the preceding sentence --
+    
+    On the afternoon of September 7, General Secretary Xi Jinping said that "actively cultivate new energy, new materials, advanced manufacturing, electronic information and other strategic emerging industries, actively cultivate future industries, accelerate the formation of new quality productivity, enhance the development of new drivers."
+    On the morning of September 8, General Secretary Xi Jinping stressed that "integrate science and technology innovation resources, lead the development of strategic emerging industries and future industries, and accelerate the formation of new quality productivity." And the previous day's statement together, both mentioned "strategic emerging industries" and "future industries."
+    
+    The three frequently mentioned key words, pillar industries, strategic emerging industries, and future industries, have a distinct sense of time sequence. From near and far, from today to tomorrow. In other words, today's strategic emerging industries are gradually becoming pillar industries, and today's future industries will gradually move into the position of today's strategic emerging industries.
+    
+    In the 14th Five-Year Plan Outline, there is a special chapter on "Development and Growth of Strategic Emerging Industries," including a section on "Forward Planning for Future Industries." The "strategic emerging industries" mentioned in this chapter include new generation information technology, biotechnology, new energy, new materials, high-end equipment, new energy vehicles, green environmental protection, aerospace, marine equipment, etc.
+    New technologies, new models, new industries, new formats, new fields, new tracks, new dynamics, new advantages, rich "new," are leading to profound "quality":
+    
+    
+    
+    According to historical materialism, "material productivity is the material premise of all social life, and the sum of production relations corresponding to a certain stage of productive development constitutes the socio-economic foundation." Today, new material productivity is being formed under conditions such as informatization and intelligence.
+    
+    
+    
+    This is productivity driven by innovation, which is essentially different from traditional productivity, which consumes a lot of resources and energy.
+    
+    
+    
+    This is the productivity that reflects high-quality development. Three elements of labor: workers, labor means, and labor objects, all face higher requirements under high-quality development.
+    
+    
+    
+    This is productivity that leads to a high quality of life through quality development.
+    
+    "New quality productivity," the starting point is "new," the key is in "quality," and lies in "productivity." What is productivity? It is the most active and revolutionary factor in promoting social progress. The fundamental task of socialism is to liberate and develop social productive forces.
+    
+    "New quality productivity" requires a new logic of leap forward. It is not "1 1" after "1 1," but "x2, x3, x4" on the basis of "1 1 1." It grows, leaving the traditional path and embarking on a new track. It is productivity that can change the way of production and lifestyle.
+    
+    The formation of "new quality productivity" also requires constant adjustment of production relations. One of the internal logic of comprehensive deepening reform is to constantly adjust production relations to stimulate the development of social productive forces.
+    
+    "New quality productivity" is proposed. Why is it now and why is it in Northeast China? We may wish to enter the perspective of "the world has not seen great changes in a century." This accelerating "big change" not only refers to the profound adjustment of the international balance of power, but also points to the new round of scientific and technological revolution and the in-depth development of industrial change.
+[NeMo I 2023-09-15 11:07:16 nmt_service:139] Translated in 0.6101744174957275. Input was: 波士顿咨询公司（BCG）全球名誉主席汉斯-保罗·博克纳（Hans-Paul Burkner）表示，中国着力推进工业现代化，将助力中国迈向价值链高端，为“中国经济注入创新活力，促进绿色发展，进一步向知识密集型和消费驱动型转变”。他认为，当面对地缘政治及制造业回流等不确定因素时，现代化产业体系有助于中国保持其在全球供应链中的地位。
+    
+    美中贸易全国委员会会长克雷格·艾伦（CraigAllen）认为，“中国在供应链整合方面，很具有吸引力”。他表示，中国供应链的发展规模，激励了美国企业，促使美国通过投资基础设施和人才等举措增强其竞争力。 <############> Translation was: According to Hans-Paul Burkner, Global Honorary Chairman of Boston Consulting Group (BCG), China's focus on industrial modernization will help China move up the value chain and "inject innovation dynamism into the Chinese economy, promote green development and further shift to knowledge-intensive and consumption-driven."
+    
+    "China is attractive in terms of supply chain integration," said Craig Allen, president of the US-China Trade National Council. He said that the scale of China's supply chain development has encouraged US companies to increase their competitiveness by investing in infrastructure and talent initiatives.
+bash: line 1: python: command not found
+[NeMo I 2023-09-20 03:07:49 nmt_service:49] Starting NMT service
+[NeMo I 2023-09-20 03:07:49 nmt_service:50] I will attempt to load all the models listed in config.json.
+[NeMo I 2023-09-20 03:07:49 nmt_service:51] Edit config.json to disable models you don't need.
+[NeMo I 2023-09-20 03:07:49 nmt_service:53] CUDA is available. Running on GPU
+[NeMo I 2023-09-20 03:07:49 nmt_service:63] Loading model for zh-en from file: NGC/nmt_zh_en_transformer24x6
+[NeMo I 2023-09-20 03:07:49 cloud:58] Found existing object /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo.
+[NeMo I 2023-09-20 03:07:49 cloud:64] Re-using file from: /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo
+[NeMo I 2023-09-20 03:07:49 common:913] Instantiating model from pre-trained checkpoint
+[NeMo I 2023-09-20 03:07:59 tokenizer_utils:179] Getting YouTokenToMeTokenizer with model: /tmp/tmp7tr9k_rs/ee189b32ae0a4c12b7ba4c4d7c1a2391_tokenizer.decoder.32000.BPE.model with r2l: False.
+[NeMo I 2023-09-20 03:07:59 tokenizer_utils:179] Getting YouTokenToMeTokenizer with model: /tmp/tmp7tr9k_rs/e23f0b142e474fcb86db8bc428a03e8a_tokenizer.encoder.32000.BPE.model with r2l: False.
+[NeMo W 2023-09-20 03:07:59 modelPT:161] If you intend to do training or fine-tuning, please call the ModelPT.setup_training_data() method and provide a valid configuration file to setup the train data loader.
+    Train config : 
+    src_file_name: null
+    tgt_file_name: null
+    use_tarred_dataset: true
+    tar_files:
+    - /data/tarred_dataset_old_plus_paracrawl_4k_tokens/parallel.batches.tokens.4000._OP_0..769_CL_.tar
+    - /data/tarred_dataset_old_plus_paracrawl_zh_en_r2l_distilled_4k_tokens/parallel.batches.tokens.4000._OP_0..745_CL_.tar
+    metadata_file:
+    - /data/tarred_dataset_old_plus_paracrawl_4k_tokens/metadata.tokens.4000.json
+    - /data/tarred_dataset_old_plus_paracrawl_zh_en_r2l_distilled_4k_tokens/metadata.tokens.4000.json
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 100
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: true
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: true
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: true
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: random
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities:
+    - 0.6
+    - 0.4
+    
+[NeMo W 2023-09-20 03:07:59 modelPT:168] If you intend to do validation, please call the ModelPT.setup_validation_data() or ModelPT.setup_multiple_validation_data() method and provide a valid configuration file to setup the validation data loader(s). 
+    Validation config : 
+    src_file_name:
+    - /data/wmt19-zh-en.clean.tok.src
+    - /data/wmt20-zh-en.clean.tok.src
+    - /data/wmt18-zh-en.clean.tok.src
+    tgt_file_name:
+    - /data/wmt19-zh-en.clean.tok.ref
+    - /data/wmt20-zh-en.clean.tok.ref
+    - /data/wmt18-zh-en.clean.tok.ref
+    use_tarred_dataset: false
+    tar_files: null
+    metadata_file: null
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 1000
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: false
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: false
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: false
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities: null
+    
+[NeMo W 2023-09-20 03:07:59 modelPT:174] Please call the ModelPT.setup_test_data() or ModelPT.setup_multiple_test_data() method and provide a valid configuration file to setup the test data loader(s).
+    Test config : 
+    src_file_name: /data/wmt19-en-zh.clean.tok.src
+    tgt_file_name: /data/wmt19-en-zh.clean.tok.src
+    use_tarred_dataset: false
+    tar_files: null
+    metadata_file: null
+    lines_per_dataset_fragment: 1000000
+    num_batches_per_tarfile: 1000
+    shard_strategy: scatter
+    tokens_in_batch: 512
+    clean: false
+    max_seq_length: 512
+    min_seq_length: 1
+    cache_ids: false
+    cache_data_per_node: false
+    use_cache: false
+    shuffle: false
+    num_samples: -1
+    drop_last: false
+    pin_memory: false
+    num_workers: 8
+    reverse_lang_direction: false
+    load_from_tarred_dataset: false
+    metadata_path: null
+    tar_shuffle_n: 100
+    n_preproc_jobs: -2
+    tar_file_prefix: parallel
+    concat_sampling_technique: temperature
+    concat_sampling_temperature: 5
+    concat_sampling_probabilities: null
+    
+[NeMo W 2023-09-20 03:07:59 nlp_overrides:253] Apex was not found. Please see the NeMo README for installation instructions: https://github.com/NVIDIA/apex
+    Megatron-based models require Apex to function correctly.
+[NeMo I 2023-09-20 03:08:05 save_restore_connector:249] Model MTEncDecModel was successfully restored from /home/tdh/.cache/torch/NeMo/NeMo_1.20.0/zh_en_24x6/a6346d2288a96a4e7c5c9263d2194bee/zh_en_24x6.nemo.
+[NeMo I 2023-09-20 03:08:05 nmt_service:73] NMT service started
+2023-09-20 03:08:05,205 INFO -- waitress: Serving on http://0.0.0.0:5000
+Building prefix dict from the default dictionary ...
+2023-09-20 03:09:17,341 DEBUG -- jieba: Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+2023-09-20 03:09:17,341 DEBUG -- jieba: Loading model from cache /tmp/jieba.cache
+Loading model cost 0.469 seconds.
+2023-09-20 03:09:17,810 DEBUG -- jieba: Loading model cost 0.469 seconds.
+Prefix dict has been built successfully.
+2023-09-20 03:09:17,810 DEBUG -- jieba: Prefix dict has been built successfully.
+[NeMo I 2023-09-20 03:09:18 nmt_service:139] Translated in 1.4026968479156494. Input was: 中国没有出台禁止购买和使用苹果等外国品牌手机的法律法规和政策文件。但我们近期确实注意到，有媒体曝出苹果手机有关安全事件。中国政府高度重视网络和信息安全，对内外资企业一视同仁、平等对待。我们希望在华经营的所有手机企业都能够严格遵守《中华人民共和国数据安全法》、《中华人民共和国个人信息保护法》等法律法规，加强信息安全管理，保护消费者存储在手机中的数据不被任何个人、任何组织窃取，确保信息安全。 <############> Translation was: China has no laws, regulations and policy documents prohibiting the purchase and use of foreign brands such as Apple. However, we have recently noticed that some media have exposed security incidents related to Apple phones. The Chinese government attaches great importance to cyber and information security and treats domestic and foreign companies equally. We hope that all mobile phone companies operating in China can strictly abide by laws and regulations such as the Data Security Law of the People's Republic of China and the Personal Information Protection Law of the People's Republic of China, strengthen information security management, protect consumer data stored in mobile phones from being stolen by any
+[NeMo I 2023-09-20 13:11:53 nmt_service:139] Translated in 0.5320968627929688. Input was: 中国没有出台禁止购买和使用苹果等外国品牌手机的法律法规和政策文件。但我们近期确实注意到，有媒体曝出苹果手机有关安全事件。中国政府高度重视网络和信息安全，对内外资企业一视同仁、平等对待。我们希望在华经营的所有手机企业都能够严格遵守《中华人民共和国数据安全法》、《中华人民共和国个人信息保护法》等法律法规，加强信息安全管理，保护消费者存储在手机中的数据不被任何个人、任何组织窃取，确保信息安全。 <############> Translation was: China has no laws, regulations and policy documents prohibiting the purchase and use of foreign brands such as Apple. However, we have recently noticed that some media have exposed security incidents related to Apple phones. The Chinese government attaches great importance to cyber and information security and treats domestic and foreign companies equally. We hope that all mobile phone companies operating in China can strictly abide by laws and regulations such as the Data Security Law of the People's Republic of China and the Personal Information Protection Law of the People's Republic of China, strengthen information security management, protect consumer data stored in mobile phones from being stolen by any
+[NeMo I 2023-09-20 13:12:23 nmt_service:139] Translated in 0.9095542430877686. Input was: 习近平指出，中国—中亚合作论坛成立以来，规模不断扩大，影响力日益提升。中国同中亚五国通过这一论坛共谋合作、共享发展，有力增进了相互了解和传统友谊，谱写了睦邻友好、携手共进的新篇章。
+    习近平强调，今年是共建“一带一路”倡议提出10周年，中国同中亚国家共建“一带一路”合作走在国际社会前列。今年5月，中国—中亚峰会成功举行，中国同中亚国家关系迈入新时代。新形势下，中国—中亚合作大有可为，也必将大有作为。希望各方以举办第十届中国—中亚合作论坛为契机，充分发挥论坛平台作用，加强互学互鉴，深化共建“一带一路”合作，推动中国同中亚国家关系发展取得更多丰硕成果。 <############> Translation was: Xi Jinping pointed out that since the establishment of the China-Central Asia Cooperation Forum (CACF), China and the five Central Asian countries have sought joint cooperation and shared development through this forum, which has effectively enhanced mutual understanding and traditional friendship and written a new chapter of good neighborliness, friendship and joint progress.
+    Xi Jinping stressed that this year marks the 10th anniversary of the establishment of the Belt and Road Initiative. China and Central Asian countries jointly build the Belt and Road cooperation at the forefront of the international community. In May this year, the China-Central Asia Summit was successfully held and China-Central Asia relations have entered a new era. Under the new circumstances, China-Central Asia cooperation is promising and will We hope that all parties can take the 10th China-Central Asia Cooperation Forum as an opportunity to give full play to its role as a platform, strengthen mutual learning, deepen cooperation in jointly building the Belt and Road Initiative, and promote the development of China-Central Asian relations for more fruitful outcomes.
+[NeMo I 2023-09-20 13:17:26 nmt_service:139] Translated in 1.0912575721740723. Input was: 月9日至28日，中国人民解放军与老挝人民军在老挝库玛丹学院训练场，共同组织了“友谊盾牌-2023”联合演习，这是两军首次组织的实战课目演习，对于巩固双边传统友谊、提升联合行动能力、维护地区安全稳定具有重要意义。联演主要有3个特点：一是内容紧贴实战。参演兵力按实战要求联合编组，课目设置符合两军实战规范，重在检验提升两军实战能力。二是指挥精准高效。双方组建联合导演部、指挥所，编设指挥组和4个作战指挥控制中心，议定作战指挥要则，探索完善联合指挥机制。三是行动协同密切。区分火力突击、冲击突破、合力拔点、分割围剿4个阶段组织综合演练，精确控制联合行动，实战验证分布聚能、强插快打、合围歼敌等战法。 <############> Translation was: From September 9 to 28, the People's Liberation Army and the Lao People's Army jointly organized the "Friendship Shield-2023" joint exercise at the training ground of the Kumadan Academy in Laos. This was the first combat course exercise organized by the two militaries. It is of great significance to consolidate bilateral traditional friendship, enhance joint action capabilities and maintain regional security and stability. The two sides set up a joint director department, command post, set up a command group and four operational command and control centers, agreed on operational command principles, explore and improve the joint command mechanism. Third, the operation of close coordination and coordination. Organize comprehensive drills in four stages: fire assault, impact breakout, joint pulling, and siege division, and accurately control joint operations.
+[NeMo I 2023-09-20 13:24:48 nmt_service:139] Translated in 0.8859128952026367. Input was: 谭克非介绍，根据中俄两军年度合作计划，中国人民解放军抽组精干力量赴俄罗斯乌苏里斯克市谢尔盖耶夫斯基训练场和日本海相关海域，参加于2022年8月31日至9月7日举行的“东方-2022”演习，共有包括中俄在内的14个国家参加此次演习。中方此次参演充分利用陌生复杂环境，按照各领域覆盖、多层级参演、大体系支撑、全要素联动的要求，精心编组功能完备的指挥、作战和支援保障力量，精心组织跨境投送、作战筹划、实兵行动和野战保障，全面锻炼提升了境外遂行军事行动的能力。演习期间，多国部队联合战役指挥部合帐筹谋，共同研究探讨战术战法，多国实兵部队同台竞技，相互之间联得紧、融得深，交流了经验做法，加深了战斗友谊。 <############> Translation was: According to the annual cooperation plan between the two militaries, the Chinese People's Liberation Army (PLA) has drawn capable forces to participate in the "Dongfang-2022" exercise held from August 31 to September 7, 2022 at the Sergeyevsky training ground in Ussuriysk, Russia and the relevant waters of the Sea of Japan. Taking full advantage of the unfamiliar and complex environment, China has carefully organized fully functional command, combat and support forces in accordance with the requirements of covering various fields, multi-level participation, large system support and all-factor linkage, carefully organized cross-border delivery, combat planning, actual military operations and field support, and comprehensively improved its ability to carry out military operations abroad. During the exercise, the joint operational command of the multinational force jointly planned, jointly studied and discussed tactical methods of warfare, multinational real troops competed with each other, closely linked with each other, deeply integrated, exchanged experience and practices, and deepened combat friendship.
