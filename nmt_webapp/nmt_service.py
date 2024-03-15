@@ -22,7 +22,7 @@ from waitress import serve
 
 import nemo.collections.nlp as nemo_nlp
 from nemo.utils import logging
-from utils import split_long_text, split_long_text_by_sentence_and_quotation, replace_doi_terms
+from utils import split_long_text, split_long_text_by_sentence_and_quotation, replace_doi_terms, remove_troll_characters
 
 from nmt_multi import My_NMT_T2TT
 from nmt_en2vi import translate_en2vi
@@ -136,6 +136,9 @@ def translate(src_text: str, langpair: str,
     
     time_s = time.time()
     max_length = max_length
+
+    # remove troll characters from text if exists
+    src_text = remove_troll_characters(src_text)
 
     # ---------------------------------------------
     # replace special terms for given language
