@@ -302,4 +302,4 @@ def get_translation():
 if __name__ == '__main__':
     init_nemo('config.json')
     init_nmt_multi()
-    serve(api, host="0.0.0.0", port=5000)
+    serve(api, host="0.0.0.0", port=5006)

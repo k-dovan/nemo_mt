@@ -8,7 +8,7 @@ import torch
 import random
 import csv
 import numpy as np
-from seamless_communication.models.inference import Translator
+from seamless_communication.inference import Translator
 from typing import List
 
 logging.basicConfig(
@@ -36,17 +36,24 @@ class My_NMT_T2TT:
             dtype = torch.float32
             logger.info(f"Running inference on the CPU in {dtype}.")
     
-        self.translator = Translator(model_name, "vocoder_36langs", device, dtype)
+        self.translator = Translator(
+                            model_name_or_card=model_name,
+                            vocoder_name_or_card="vocoder_36langs",
+                            device=device,
+                            dtype=dtype
+                        )
     
     def translate(self, inputs: List[str], source_lang: str = "km", target_lang: str = "en"):
 
-        translations = [str(self.translator.predict(input_text,
-                                                    task_str="t2tt",
-                                                    tgt_lang=LANGUAGE_MAP[target_lang],
-                                                    src_lang=LANGUAGE_MAP[source_lang],
-                                                    ngram_filtering=False)[0]
-                                                    ) 
-                        for input_text in inputs]
+        translations = []
+        for input_text in inputs:
+            translated_text, _ = self.translator.predict(input_text,
+                                            task_str="t2tt",
+                                            tgt_lang=LANGUAGE_MAP[target_lang],
+                                            src_lang=LANGUAGE_MAP[source_lang]
+                                        )
+            translations.append(translated_text[0].__str__())
+            
         return translations
 
 if __name__ == "__main__":
