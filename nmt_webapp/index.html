@@ -62,7 +62,7 @@
         // show progress bar
         $("#progress_bar").show();
         $.ajax({
-          url: "http://10.16.208.99:5006/translate",
+          url: "http://192.168.1.99:5006/translate",
           type: "GET",
           data: {
             text: $("#src_text").val(),
@@ -98,9 +98,13 @@
           <div style="display: inline-block; margin: 5px 10px;">
             <label for="src_langs" style="font-size: larger;">Ngôn ngữ nguồn:</label>
             <select name="src_langs" id="src_langs" value="zh" style="font-size: larger;">
-              <!-- <option value="km">Tiếng Khmer</option> -->
+              <option value="en">Tiếng Anh</option>
+	            <option value="ru">Tiếng Nga</option>
+	            <option value="fr">Tiếng Pháp</option>
               <option value="zh" selected="selected">Tiếng Trung</option>
-              <!-- <option value="ru">Tiếng Nga</option> -->
+              <option value="km">Tiếng Khmer</option>
+              <option value="lo">Tiếng Lào</option>
+              <option value="th">Tiếng Thái</option>
             </select>
             <input type="hidden" id="cur_src_lang" name="cur_src_lang" value="zh">
           </div>

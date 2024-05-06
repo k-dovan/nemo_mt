@@ -20,8 +20,11 @@ logger = logging.getLogger(__name__)
 # language mapping from common-language-code format to seamless-language-code format
 LANGUAGE_MAP = {
     "en": "eng",
+    "ru": "rus",
+    "fr": "fra",
     "km": "khm",
-    "lo": "lao"
+    "lo": "lao",
+    "th": "tha"
 }
 
 class My_NMT_T2TT:
